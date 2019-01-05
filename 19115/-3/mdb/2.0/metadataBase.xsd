@@ -3,7 +3,7 @@
   xmlns:lan="http://schemas.isotc211.org/19115/-3/lan/1.0" xmlns:mcc="http://schemas.isotc211.org/19115/-3/mcc/1.0" 
   xmlns:mdb="http://schemas.isotc211.org/19115/-3/mdb/2.0" elementFormDefault="qualified" 
   targetNamespace="http://schemas.isotc211.org/19115/-3/mdb/2.0" version="1.0">
-  <include schemaLocation="mdb.xsd"/>
+  <!--<include schemaLocation="mdb.xsd"/> Removed by Ted Habermann 2019-01-04 to resolve A schema cannot contain two global components with the same name;-->
   <import namespace="http://schemas.isotc211.org/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://schemas.isotc211.org/19157/-2/dqc/1.0" schemaLocation="../../../../19157/-2/dqc/1.0/dqc.xsd"/>
   <import namespace="http://schemas.isotc211.org/19115/-3/lan/1.0" schemaLocation="../../../../19115/-3/lan/1.0/lan.xsd"/>
