@@ -6,6 +6,6 @@
   </annotation>
   <include schemaLocation="lineage.xsd"/>
   <include schemaLocation="lineageImagery.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>

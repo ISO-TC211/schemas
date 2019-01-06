@@ -9,12 +9,12 @@
     <documentation>Wrapper namespace to support Catalog Service implementations</documentation>
   </annotation>
   <include schemaLocation="metadataBase.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/cit/2.0" schemaLocation="../../../../19115/-3/cit/2.0/cit.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19157/-2/dqc/1.0" schemaLocation="../../../../19157/-2/dqc/1.0/dqc.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/lan/1.0" schemaLocation="../../../../19115/-3/lan/1.0/lan.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/mri/1.0" schemaLocation="../../../../19115/-3/mri/1.0/mri.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/cit/2.0" schemaLocation="https://schemas.isotc211.org/19115/-3/cit/2.0/cit.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19157/-2/dqc/1.0" schemaLocation="https://schemas.isotc211.org/19157/-2/dqc/1.0/dqc.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/lan/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/lan/1.0/lan.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/mri/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mri/1.0/mri.xsd"/>
   <!-- need to import gex because bounding box is mandatory if metadataScope is dataset -->
-  <import namespace="http://standards.iso.org/iso/19115/-3/gex/1.0" schemaLocation="../../../../19115/-3/gex/1.0/gex.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/gex/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gex/1.0/gex.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>

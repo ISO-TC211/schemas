@@ -5,8 +5,8 @@
   elementFormDefault="qualified" 
   targetNamespace="http://standards.iso.org/iso/19115/-3/cit/2.0" version="1.0">
   <include schemaLocation="cit.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="CI_Address" substitutionGroup="gco:AbstractObject" type="cit:CI_Address_Type">
     <annotation>

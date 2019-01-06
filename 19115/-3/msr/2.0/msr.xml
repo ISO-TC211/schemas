@@ -5,7 +5,7 @@
     xmlns:gco="http://schemas.isotc211.org/19115/-3/gco/1.0"
     xmlns:msr="http://schemas.isotc211.org/19115/-3/msr/2.0"
     xmlns:gml="http://www.opengis.net/gml/3.2"
-    xsi:schemaLocation="http://schemas.isotc211.org/19115/-3/msr/2.0 ../../mds/2.0/mds.xsd">
+    xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/msr/2.0 ../../mds/2.0/mds.xsd">
     <msr:scope>
         <mcc:MD_Scope>
             <mcc:level>

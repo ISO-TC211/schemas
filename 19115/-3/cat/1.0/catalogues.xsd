@@ -3,8 +3,8 @@
     <documentation>Handcrafted</documentation>
   </annotation>
   <include schemaLocation="cat.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/lan/1.0" schemaLocation="../../../../19115/-3/lan/1.0/lan.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/lan/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/lan/1.0/lan.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element abstract="true" name="AbstractCT_Catalogue" substitutionGroup="gco:AbstractObject" type="cat:AbstractCT_Catalogue_Type"/>
   <complexType abstract="true" name="AbstractCT_Catalogue_Type">

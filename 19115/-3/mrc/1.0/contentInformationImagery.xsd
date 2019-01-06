@@ -5,7 +5,7 @@ Position: 5</documentation>
   </annotation>
   <include schemaLocation="content.xsd"/>
   <include schemaLocation="mrc.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="MI_Band" substitutionGroup="mrc:MD_Band" type="mrc:MI_Band_Type">
     <annotation>

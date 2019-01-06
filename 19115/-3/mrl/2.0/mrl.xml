@@ -9,7 +9,7 @@
     xmlns:cit="http://schemas.isotc211.org/19115/-3/cit/2.0"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:gml="http://www.opengis.net/gml/3.2"
-    xsi:schemaLocation="http://schemas.isotc211.org/19115/-3/mrl/2.0 ../../mds/2.0/mds.xsd
+    xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mrl/2.0 ../../mds/2.0/mds.xsd
     http://schemas.isotc211.org/19115/-3/cit/2.0 ../../cit/2.0/cit.xsd">
     <mrl:statement>
         <gco:CharacterString>mrl:statement/gco:CharacterString</gco:CharacterString>

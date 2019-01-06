@@ -8,7 +8,7 @@
     <documentation>Namespace &lt;font color="#1f497d"&gt;that identifies conformance class that allows extended types (gcx) in metadata records&lt;/font&gt;</documentation>
   </annotation>
   <include schemaLocation="metadataWExtendedType.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/gcx/1.0" schemaLocation="../../../../19115/-3/gcx/1.0/gcx.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/mds/2.0" schemaLocation="../../../../19115/-3/mds/2.0/mds.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/gcx/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gcx/1.0/gcx.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/mds/2.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mds/2.0/mds.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>

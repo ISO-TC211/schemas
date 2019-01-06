@@ -5,10 +5,10 @@
   xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/2.0" elementFormDefault="qualified" 
   targetNamespace="http://standards.iso.org/iso/19115/-3/mdt/2.0" version="1.0">
   <include schemaLocation="mdt.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/cat/1.0" schemaLocation="../../../../19115/-3/cat/1.0/cat.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/gcx/1.0" schemaLocation="../../../../19115/-3/gcx/1.0/gcx.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/mda/2.0" schemaLocation="../../../../19115/-3/mda/2.0/mda.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/cat/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/cat/1.0/cat.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/gcx/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gcx/1.0/gcx.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/mda/2.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mda/2.0/mda.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="MX_Aggregate" substitutionGroup="mda:AbstractDS_Aggregate" type="mdt:MX_Aggregate_Type"/>
   <complexType name="MX_Aggregate_Type">
