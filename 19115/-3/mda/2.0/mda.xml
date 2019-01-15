@@ -3,7 +3,7 @@
     xmlns:mda="http://schemas.isotc211.org/19115/-3/mda/2.0" xmlns:mdb="http://schemas.isotc211.org/19115/-3/mdb/2.0" xmlns:mcc="http://schemas.isotc211.org/19115/-3/mcc/1.0"
     xmlns:gco="http://schemas.isotc211.org/19115/-3/gco/1.0" xmlns:mri="http://schemas.isotc211.org/19115/-3/mri/1.0" xmlns:lan="http://schemas.isotc211.org/19115/-3/lan/1.0"
     xmlns:cit="http://schemas.isotc211.org/19115/-3/cit/2.0"
-    xsi:schemaLocation="http://schemas.isotc211.org/19115/-3/mda/2.0 mda.xsd
+    xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mda/2.0 mda.xsd
     http://schemas.isotc211.org/19115/-3/mdb/2.0 ../../mdb/2.0/mdb.xsd
     http://schemas.isotc211.org/19115/-3/cit/2.0 ../../cit/2.0/cit.xsd">
     <!-- 

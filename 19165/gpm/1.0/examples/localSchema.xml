@@ -18,7 +18,7 @@
 	xmlns:mrl="http://schemas.isotc211.org/19115/-3/mrl/1.0" xmlns:mrs="http://schemas.isotc211.org/19115/-3/mrs/1.0" 
 	xmlns:msr="http://schemas.isotc211.org/19115/-3/msr/1.0" xmlns:srv="http://schemas.isotc211.org/19115/-3/srv/2.0" 
 	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:schemaLocation="http://schemas.isotc211.org/19165/gpm/1.0 ../gpm.xsd">
+	xsi:schemaLocation="http://standards.iso.org/iso/19165/gpm/1.0 ../gpm.xsd">
 	<mdb:metadataIdentifier>
 		<mcc:MD_Identifier>
 			<mcc:code>
