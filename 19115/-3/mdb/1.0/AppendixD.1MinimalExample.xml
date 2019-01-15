@@ -10,7 +10,7 @@
     xmlns:mri="http://schemas.isotc211.org/19115/-3/mri/1.0"
     xmlns:gex="http://schemas.isotc211.org/19115/-3/gex/1.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://schemas.isotc211.org/19115/-3/mdb/1.0 mdb.xsd">
+    xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdb/1.0 mdb.xsd">
     <mdb:contact>
         <cit:CI_Responsibility>
             <cit:role>

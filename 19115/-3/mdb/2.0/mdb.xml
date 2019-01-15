@@ -6,7 +6,7 @@
  xmlns:mri="http://schemas.isotc211.org/19115/-3/mri/1.0"
  xmlns:lan="http://schemas.isotc211.org/19115/-3/lan/1.0"
  xmlns:cit="http://schemas.isotc211.org/19115/-3/cit/2.0"
- xsi:schemaLocation="http://schemas.isotc211.org/19115/-3/mdb/2.0 https://schemas.isotc211.org/19115/-3/mdt/2.0/mdt.xsd ">
+ xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdb/2.0 https://schemas.isotc211.org/19115/-3/mdt/2.0/mdt.xsd ">
    <!-- 
    This is a sample metadata record for the minimal metadata conformance class.
    It contains required elements from the mdb, mcc (cit, gco), lan, and mri
