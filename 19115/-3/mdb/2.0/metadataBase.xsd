@@ -64,11 +64,11 @@
           <element maxOccurs="unbounded" minOccurs="0" name="contentInfo" type="mcc:Abstract_ContentInformation_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="distributionInfo" type="mcc:Abstract_Distribution_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="dataQualityInfo" type="dqc:Abstract_DataQuality_PropertyType"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="resourceLineage" type="mcc:Abstract_LineageInformation_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="portrayalCatalogueInfo" type="mcc:Abstract_PortrayalCatalogueInformation_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="metadataConstraints" type="mcc:Abstract_Constraints_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="applicationSchemaInfo" type="mcc:Abstract_ApplicationSchemaInformation_PropertyType"/>
           <element minOccurs="0" name="metadataMaintenance" type="mcc:Abstract_MaintenanceInformation_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="resourceLineage" type="mcc:Abstract_LineageInformation_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="acquisitionInformation" type="mcc:Abstract_AcquisitionInformation_PropertyType"/>
         </sequence>
       </extension>
