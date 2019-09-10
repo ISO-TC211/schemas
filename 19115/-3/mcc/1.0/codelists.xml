@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
-   xmlns:cat="http://schemas.isotc211.org/19115/-3/cat/1.0" xmlns:gco="http://schemas.isotc211.org/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:lan="http://schemas.isotc211.org/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
+<cat:CT_CodelistCatalogue 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:cat="https://schemas.isotc211.org/19115/-3/cat/1.0" 
+   xmlns:lan="https://schemas.isotc211.org/19115/-3/lan/1.0" 
+   xmlns:gco="https://schemas.isotc211.org/19115/-3/gco/1.0" 
+   xmlns:gml="https://www.opengis.net/gml/3.2"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
+   >
    <!--=====Catalogue description=====-->
    <cat:name>
       <gco:CharacterString>Codelists from the Metadata Common Classes (mcc) Namespace</gco:CharacterString>
