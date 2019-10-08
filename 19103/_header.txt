@@ -1,0 +1,1 @@
+Proposal to develop schema(s) for ISO 19103 to replace 19115-3/gco and 19115-3/gcx
