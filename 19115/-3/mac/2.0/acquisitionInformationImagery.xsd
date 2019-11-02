@@ -168,7 +168,7 @@
               <documentation>instance of otherPropertyType that defines attributes not explicitly included in MI_Platform</documentation>
             </annotation>
           </element>
-          <element name="content" type="mcc:Abstract_ContentInformation_PropertyType" maxOccurs="1" minOccurs="0"/>
+          <!-- <element name="content" type="mcc:Abstract_ContentInformation_PropertyType" maxOccurs="1" minOccurs="0"/> -->
           <element name="sensor" type="mac:MI_Sensor_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
           <element name="history" type="mac:MI_InstrumentationEventList_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
         </sequence>
