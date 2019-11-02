@@ -42,11 +42,11 @@
               <documentation>Description: polarisation of the transmitter or detector shortName: polarisation</documentation>
             </annotation>
           </element>
-          <element name="sensor" type="mac:MI_Sensor_PropertyType" minOccurs="0" maxOccurs="1">
+   <!--       <element name="sensor" type="mac:MI_Sensor_PropertyType" minOccurs="0" maxOccurs="1">
             <annotation>
               <documentation>Description: polarisation of the transmitter or detector shortName: polarisation</documentation>
             </annotation>
-          </element>
+          </element> -->
         </sequence>
       </extension>
     </complexContent>
