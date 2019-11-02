@@ -132,7 +132,7 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element maxOccurs="unbounded" minOccurs="0" name="algorithm" type="mrl:LE_Algorithm_PropertyType"/>
+          <!-- <element maxOccurs="unbounded" minOccurs="0" name="algorithm" type="mrl:LE_Algorithm_PropertyType"/> -->
           <element name="identifier" type="mcc:MD_Identifier_PropertyType">
             <annotation>
               <documentation>Description: Information to identify the processing package that produced the data FGDC: Processing_Identifiers Position: 1 shortName: procInfoId</documentation>
@@ -173,7 +173,12 @@
               <documentation>instance of otherPropertyType that defines attributes not explicitly included in LE_Processing</documentation>
             </annotation>
           </element>
-        </sequence>
+                 <element minOccurs="0" maxOccurs="unbounded" name="algarithum" type="mrl:LE_Algorithm_PropertyType">
+            <annotation>
+                  <documentation>details of the methodology by which geographic information was derived from the instrument reading</documentation>
+            </annotation>
+          </element>
+</sequence>
       </extension>
     </complexContent>
   </complexType>
