@@ -69,7 +69,7 @@
           <element maxOccurs="unbounded" minOccurs="0" name="applicationSchemaInfo" type="mcc:Abstract_ApplicationSchemaInformation_PropertyType"/>
           <element minOccurs="0" name="metadataMaintenance" type="mcc:Abstract_MaintenanceInformation_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="resourceLineage" type="mcc:Abstract_LineageInformation_PropertyType"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="acquisitionInformation" type="mcc:Abstract_AcquisitionInformation_PropertyType"/>
+          <!-- <element maxOccurs="unbounded" minOccurs="0" name="acquisitionInformation" type="mcc:Abstract_AcquisitionInformation_PropertyType"/> -->
         </sequence>
       </extension>
     </complexContent>
