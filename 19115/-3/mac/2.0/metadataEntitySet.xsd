@@ -7,7 +7,8 @@
 	xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" elementFormDefault="qualified"
 	targetNamespace="http://standards.iso.org/iso/19115/-3/mac/2.0" version="">
 	<annotation>
-		<documentation>This file was created by Ted Habermann during May 2015 to correct omissions (gmx, MI_EnvironmentalRecord) in existing gmi schema ====== </documentation>
+		<documentation>This file was transfered from gmi to mac by E J Bleys
+			original created by Ted Habermann during May 2015 to correct omissions (gmx, MI_EnvironmentalRecord) in existing gmi schema ====== </documentation>
 	</annotation>
 	<include schemaLocation="acquisitionInformationImagery.xsd"/>
 	<include schemaLocation="event.xsd"/>  
