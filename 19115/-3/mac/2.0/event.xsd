@@ -8,6 +8,7 @@
     <documentation>event.xsd Version 1.0 thabermann@hdfgroup.org</documentation>
     <documentation>Created 2017-01-18 </documentation>
   </annotation>
+  <include schemaLocation="mac.xsd"/>  
   <!-- ================================== Imports ================================== -->
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gmw/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gmw/1.0/gmw.xsd"/>

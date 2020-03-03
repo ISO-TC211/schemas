@@ -5,6 +5,7 @@
   xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
   xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mri/1.0" version="1.0">
 <!--  <include schemaLocation="mri.xsd"/>-->
+  <include schemaLocation="mri.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gmw/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gmw/1.0/gmw.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/lan/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/lan/1.0/lan.xsd"/>
