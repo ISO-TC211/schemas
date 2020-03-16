@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build event type
-        if: event_type
+        id: event_type
         run: |
           echo "##[set-output name=value;]deploy_${GITHUB_REF##*/}"
       - name: Trigger dependent repositories
