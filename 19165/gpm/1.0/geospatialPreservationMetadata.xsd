@@ -17,7 +17,7 @@
 	<import namespace="http://standards.iso.org/iso/19115/-3/mrs/1.0" schemaLocation="http://standards.iso.org/iso/19115/-3/mrs/1.0/mrs.xsd"/>
 	<import namespace="http://standards.iso.org/iso/19115/-3/msr/1.0" schemaLocation="http://standards.iso.org/iso/19115/-3/msr/1.0/msr.xsd"/>
 	<import namespace="http://standards.iso.org/iso/19115/-3/srv/2.0" schemaLocation="http://standards.iso.org/iso/19115/-3/srv/2.0/srv.xsd"/>
-	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../ISO_19136_Schemas/gml.xsd"/>
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
 	<!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 	<element name="GP_Archive" type="gpm:GP_Archive_Type" substitutionGroup="mrd:MD_Distributor">
 		<annotation>

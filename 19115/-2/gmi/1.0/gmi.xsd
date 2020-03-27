@@ -5,10 +5,10 @@
 		<xs:documentation>This file was created by Ted Habermann during May 2015 to correct omissions (gmx, MI_EnvironmentalRecord) in existing gmi schema ====== </xs:documentation>
 	</xs:annotation>
 	<!-- ================================== Imports ================================== -->
-	<xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmd/gmd.xsd"/>
-	<xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
-	<xs:import namespace="http://www.isotc211.org/2005/gss" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gss/gss.xsd"/>
-	<xs:import namespace="http://www.isotc211.org/2005/gmx" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmx/gmx.xsd"/>
+	<xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="https://schemas.isotc211.org/19139/-/gmd/1.0/gmd.xsd"/>
+	<xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="https://schemas.isotc211.org/19139/-/gco/1.0/gco.xsd"/>
+	<xs:import namespace="http://www.isotc211.org/2005/gss" schemaLocation="https://schemas.isotc211.org/19139/-/gss/1.0/gss.xsd"/>
+	<xs:import namespace="http://www.isotc211.org/2005/gmx" schemaLocation="https://schemas.isotc211.org/19139/-/gmx/1.0/gmx.xsd"/>
 	<xs:include schemaLocation="metadataEntitySet.xsd"/>
 	<xs:include schemaLocation="contentInformation.xsd"/>
 	<xs:include schemaLocation="dataQualityInformation.xsd"/>
