@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.isotc211.org/2005/srv" elementFormDefault="qualified" version="0.1">
+<xs:schema 
+	xmlns:srv="http://www.isotc211.org/2005/srv" 
+	xmlns:gmd="http://www.isotc211.org/2005/gmd" 
+	xmlns:gco="http://www.isotc211.org/2005/gco" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.isotc211.org/2005/srv" 
+	elementFormDefault="qualified" 
+	version="0.1">
 	<!-- ================================= Annotation ================================ -->
 	<xs:annotation>
 		<xs:documentation>This file was generated from ISO TC/211 UML class diagrams == 11-15-2006 15:20:33 ====== </xs:documentation>
 	</xs:annotation>
 	<!-- ================================== Imports ================================== -->
-	<xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../gmd/identification.xsd"/>
-	<xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="../gco/gco.xsd"/>
+	<xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="https://schemas.isotc211.org/19139/-/gmd/1.0/identification.xsd"/>
+	<xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="https://schemas.isotc211.org/19139/-/gco/1.0/gco.xsd"/>
 	<xs:include schemaLocation="../srv/serviceModel.xsd"/>
 	<!-- ########################################################################### -->
 	<!-- ########################################################################### -->
