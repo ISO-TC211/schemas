@@ -7,7 +7,7 @@
   elementFormDefault="qualified"
   targetNamespace="http://standards.iso.org/iso/19115/-3/mac/2.0" 
   version="1.0"> 
-  <include schemaLocation="metadataEntityset.xsd"/>
+  <include schemaLocation="metadataEntitySet.xsd"/>
   <include schemaLocation="acquisitionInformationImagery.xsd"/>
   <include schemaLocation="event.xsd"/>  
 </schema>
