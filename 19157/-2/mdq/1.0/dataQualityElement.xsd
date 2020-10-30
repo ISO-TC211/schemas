@@ -119,8 +119,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
- <!-- The following class has been de-activated as it does not appear in either the UML or the textual documents
-   <element name="DQ_DataInspection" substitutionGroup="mdq:DQ_EvaluationMethod" type="mdq:DQ_DataInspection_Type"/>
+   <!-- The following class has been de-activated as it does not appear in either the UML or the textual documents
+  <element name="DQ_DataInspection" substitutionGroup="mdq:DQ_EvaluationMethod" type="mdq:DQ_DataInspection_Type"/>
   <complexType name="DQ_DataInspection_Type">
     <complexContent>
       <extension base="mdq:DQ_EvaluationMethod_Type">
