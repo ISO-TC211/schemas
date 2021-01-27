@@ -453,8 +453,7 @@ shortName: passId</documentation>
           </element>
           <element minOccurs="0" name="extent" type="gmw:GM_Object_PropertyType">
             <annotation>
-              <documentation>Description: Area covered by the pass
-shortName: passExt</documentation>
+              <documentation>Description: Area covered by the pass shortName: passExt</documentation>
             </annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="relatedEvent" type="mac:MI_Event_PropertyType"/>
