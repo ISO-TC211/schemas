@@ -7,7 +7,7 @@
   xmlns:gts="http://www.isotc211.org/2005/gts"
   xmlns:rce="http://standards.iso.org/iso/19111/rce/1.0" -->
   <!-- <include schemaLocation="gex.xsd"/>-->
-  <xs:include schemaLocation="gex.xsd"/>
+  <include schemaLocation="gex.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gmw/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gmw/1.0/gmw.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd"/>
