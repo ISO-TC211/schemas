@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-  <sch:ns prefix="mrs" uri="https://schemas.isotc211.org/19115/-1/mrs/3"/>
+  <sch:ns prefix="mrs" uri="https://schemas.isotc211.org/19115/-1/mrs/1.3"/>
   <!--
     ISO 19115-3 base requirements for metadata instance documents
     
