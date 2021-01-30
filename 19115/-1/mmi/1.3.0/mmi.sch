@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xml:lang="en">
-  <sch:ns prefix="mmi" uri="https://schemas.isotc211.org/19115/-1/mmi/3"/>
-  <sch:ns prefix="gco" uri="https://schemas.isotc211.org/19103/-/gco/1"/>
+  <sch:ns prefix="mmi" uri="https://schemas.isotc211.org/19115/-1/mmi/1.3"/>
+  <sch:ns prefix="gco" uri="https://schemas.isotc211.org/19103/-/gco/1.2"/>
   <!--
     ISO 19115-3 base requirements for metadata instance documents
     

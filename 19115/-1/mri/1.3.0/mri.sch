@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron"  xml:lang="en">
-  <sch:ns prefix="cit" uri="https://schemas.isotc211.org/19115/-1/cit/3"/>
-  <sch:ns prefix="mri" uri="https://schemas.isotc211.org/19115/-1/mri/3"/>
-  <sch:ns prefix="srv" uri="https://schemas.isotc211.org/19115/-1/srv/3"/>
-  <sch:ns prefix="mdb" uri="https://schemas.isotc211.org/19115/-1/mdb/3"/>
-  <sch:ns prefix="gex" uri="https://schemas.isotc211.org/19115/-1/gex/3"/>
-  <sch:ns prefix="mcc" uri="https://schemas.isotc211.org/19115/-1/mcc/3"/>
-  <sch:ns prefix="mrc" uri="https://schemas.isotc211.org/19115/-1/mrc/3"/>
-  <sch:ns prefix="lan" uri="https://schemas.isotc211.org/19115/-1/lan/3"/>
+  <sch:ns prefix="cit" uri="https://schemas.isotc211.org/19115/-1/cit/1.3"/>
+  <sch:ns prefix="mri" uri="https://schemas.isotc211.org/19115/-1/mri/1.3"/>
+  <sch:ns prefix="srv" uri="https://schemas.isotc211.org/19115/-1/srv/1.3"/>
+  <sch:ns prefix="mdb" uri="https://schemas.isotc211.org/19115/-1/mdb/1.3"/>
+  <sch:ns prefix="gex" uri="https://schemas.isotc211.org/19115/-1/gex/1.3"/>
+  <sch:ns prefix="mcc" uri="https://schemas.isotc211.org/19115/-1/mcc/1.3"/>
+  <sch:ns prefix="mrc" uri="https://schemas.isotc211.org/19115/-1/mrc/1.3"/>
+  <sch:ns prefix="lan" uri="https://schemas.isotc211.org/19115/-1/lan/1.3"/>
   <sch:ns prefix="gco" uri="https://schemas.isotc211.org/19103/-/gco/1"/>
   <!--
     ISO 19115-3 base requirements for metadata instance documents
