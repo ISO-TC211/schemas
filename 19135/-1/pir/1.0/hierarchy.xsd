@@ -9,6 +9,7 @@
 	<xs:include schemaLocation="../../../../19135/-1/pir/1.0/extended.xsd"/>
 	<xs:import namespace="http://standards.iso.org/iso/19115/-3/cit/2.0" schemaLocation="https://schemas.isotc211.org/19115/-3/cit/2.0/cit.xsd"/>
 	<xs:import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
+	<!-- _____________________________________ -->
 	<xs:complexType name="SubregisterDescription_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="pir:SubregisterDescription"/>
@@ -16,7 +17,7 @@
 		<xs:attributeGroup ref="gco:ObjectReference"/>
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
-	<xs:element name="SubregisterDescription" substitutionGroup="pir:RegisterItem" type="pir:SubregisterDescription_Type"/>
+	<xs:element name="SubregisterDescription" substitutionGroup="pir:RegisterItem" type="pir:SubregisterDescription_Type" id="ISO19135-1.8.4.2"/>
 	<xs:complexType name="SubregisterDescription_Type">
 		<xs:annotation>
 			<xs:documentation>"SubregisterDescription" is a subclass of "RegisterItem" that
@@ -31,9 +32,8 @@
 		<xs:complexContent>
 					<xs:extension base="pir:RegisterItem_Type">
 						<xs:sequence>
-							<xs:element name="subregisterManager"
-								type="pir:RegisterStakeholder_PropertyType" minOccurs="1"
-								maxOccurs="1">
+							<xs:element name="subregisterManager" type="pir:RegisterStakeholder_PropertyType" minOccurs="1"
+								maxOccurs="1" id="ISO19135-1.8.4.2.1_ISO19135-1.7.3.2">
 								<xs:annotation>
 									<xs:documentation>The role "subregisterManager" identifies the
 										register stakeholder as the manager of the
@@ -41,7 +41,7 @@
 								</xs:annotation>
 							</xs:element>
 							<xs:element name="containedItemClass" type="pir:ItemClass_PropertyType"
-								minOccurs="1" maxOccurs="unbounded">
+								minOccurs="1" maxOccurs="unbounded"  id="ISO19135-1.8.4.2.2_ISO19135-1.7.4.2">
 								<xs:annotation>
 									<xs:documentation>The role "containedItemClass" describes that the
 										"ItemClass" for the association
@@ -53,4 +53,5 @@
 					</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<!-- _____________________________________ -->
 </xs:schema>

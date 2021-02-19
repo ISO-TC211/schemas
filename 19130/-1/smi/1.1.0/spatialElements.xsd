@@ -486,8 +486,7 @@
                     </element>
                     <!-- ============ 19130-2 ============= -->
                     <choice>
-                        <element name="aerialTriangulation" minOccurs="0" maxOccurs="unbounded"
-                            type="smi:SE_AerialTriangulation_PropertyType"/>
+                        <element name="aerialTriangulation" minOccurs="0" maxOccurs="unbounded" type="smi:SE_AerialTriangulation_PropertyType"/>
                     </choice>
                 </sequence>
             </extension>

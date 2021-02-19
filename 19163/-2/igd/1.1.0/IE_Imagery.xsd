@@ -56,8 +56,7 @@
 					<xs:element name="numberofBands" type="xs:integer"/>
 					<xs:element name="processingAction" type="igd:IE_ProcessingActionCode"
 						minOccurs="0" maxOccurs="1"/>
-					<xs:element name="radiometricCalibrationType"
-						type="igd:IE_RadiometricCalibrationTypeCode" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="radiometricCalibrationType" type="igd:IE_RadiometricCalibrationTypeCode" minOccurs="0" maxOccurs="1"/>
 					<!--					<xs:element name="sensorCalibrationValidation" type="CA_CalibrationValidation" minOccurs="0" maxOccurs="1"/>  -->
 					<xs:element name="platformInfo" type="mac:MI_Platform_PropertyType"
 						minOccurs="0" maxOccurs="1"/>

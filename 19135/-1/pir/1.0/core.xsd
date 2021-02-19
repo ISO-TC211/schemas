@@ -9,6 +9,7 @@
 	<xs:include schemaLocation="../../../../19135/-1/pir/1.0/hierarchy.xsd"/>
 	<xs:import namespace="http://standards.iso.org/iso/19115/-3/cit/2.0" schemaLocation="https://schemas.isotc211.org/19115/-3/cit/2.0/cit.xsd"/>
 	<xs:import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
+	<!-- _____________________________________ -->
 	<xs:complexType name="ItemClass_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="pir:ItemClass"/>
@@ -16,7 +17,7 @@
 		<xs:attributeGroup ref="gco:ObjectReference"/>
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
-	<xs:element name="ItemClass" type="pir:ItemClass_Type"/>
+	<xs:element name="ItemClass" type="pir:ItemClass_Type" id="ISO19135-1.7.4.2"/>
 	<xs:complexType name="ItemClass_Type">
 		<xs:annotation>
 			<xs:documentation>The class "ItemClass" is a description of a class of
@@ -28,7 +29,7 @@
 
 				<xs:sequence>
 					<xs:element name="identifier" type="gco:CharacterString_PropertyType" minOccurs="1"
-						maxOccurs="1">
+						maxOccurs="1" id="ISO19135-1.7.4.2.1_ISO19103.CharacterString">
 						<xs:annotation>
 							<xs:documentation>The attribute "identifier"is represented as a
 								CharacterString containing a compact and human-readable designator
@@ -38,12 +39,12 @@
 								the context of the register.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="register" type="pir:Register_PropertyType" minOccurs="1" maxOccurs="unbounded">
+					<xs:element name="register" type="pir:Register_PropertyType" minOccurs="1" maxOccurs="unbounded" id="ISO19135-1.7.4.2.2_ISO19135-1.7.2.2">
 						<xs:annotation>
 							<xs:documentation>The role “register” connects an instance of an item class to a register.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="describedItem" type="pir:RegisterItem_PropertyType" minOccurs="1" maxOccurs="unbounded">
+					<xs:element name="describedItem" type="pir:RegisterItem_PropertyType" minOccurs="1" maxOccurs="unbounded" id="ISO19135-1.7.4.2.3_ISO19135-1.7.5.2">
 						<xs:annotation>
 							<xs:documentation>The role “describedItem” connects an item class to one or more register items.</xs:documentation>
 						</xs:annotation>
@@ -52,6 +53,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<!-- _____________________________________ -->
 	<xs:complexType name="RE_ItemStatus_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="pir:RE_ItemStatus"/>
@@ -100,6 +102,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
+	<!-- _____________________________________ -->
 	<xs:complexType name="Register_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="pir:Register"/>
@@ -191,6 +194,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<!-- _____________________________________ -->
 	<xs:complexType name="RegisterItem_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="pir:RegisterItem"/>
@@ -284,6 +288,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<!-- _____________________________________ -->
 	<xs:complexType name="RegisterStakeholder_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="pir:RegisterStakeholder"/>
@@ -340,4 +345,5 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<!-- _____________________________________ -->
 </xs:schema>
