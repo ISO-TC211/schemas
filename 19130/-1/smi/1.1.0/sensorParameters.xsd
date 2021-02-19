@@ -77,16 +77,14 @@
                                 sensor</documentation>
                         </annotation>
                     </element>
-                    <element name="systemAndOperation"
-                        type="smi:SD_SensorSystemAndOperation_PropertyType">
+                    <element name="systemAndOperation" type="smi:SD_SensorSystemAndOperation_PropertyType">
                         <annotation>
                             <documentation>information describing the sensor specific properties and
                                 operations</documentation>
                         </annotation>
                     </element>
                     <!-- ======= 19130-2 =========== -->
-                    <element name="InSARAntennaPosition" minOccurs="0"
-                        type="smi:SE_InSARDualAntennaPosition_PropertyType">
+                    <element name="InSARAntennaPosition" minOccurs="0" type="smi:SE_InSARDualAntennaPosition_PropertyType">
                         <annotation>
                             <documentation>information about the position of InSAR dual
                                 antennas</documentation>

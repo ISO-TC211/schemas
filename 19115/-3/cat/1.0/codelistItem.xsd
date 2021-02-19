@@ -24,8 +24,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="CT_CodelistCatalogue" substitutionGroup="cat:AbstractCT_Catalogue"
-    type="cat:CT_CodelistCatalogue_Type"/>
+  <element name="CT_CodelistCatalogue" substitutionGroup="cat:AbstractCT_Catalogue" type="cat:CT_CodelistCatalogue_Type"/>
   <complexType name="CT_CodelistCatalogue_Type">
     <complexContent>
       <extension base="cat:AbstractCT_Catalogue_Type">
@@ -42,8 +41,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="CT_CodelistValue" substitutionGroup="cat:AbstractCT_Item"
-    type="cat:CT_CodelistValue_Type"/>
+  <element name="CT_CodelistValue" substitutionGroup="cat:AbstractCT_Item" type="cat:CT_CodelistValue_Type"/>
   <complexType name="CT_CodelistValue_Type">
     <complexContent>
       <extension base="cat:AbstractCT_Item_Type">

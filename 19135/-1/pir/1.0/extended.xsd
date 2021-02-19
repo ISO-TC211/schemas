@@ -533,8 +533,7 @@
 		<xs:attributeGroup ref="gco:ObjectReference"/>
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
-	<xs:element name="RE_ProposalManagementInformation"
-		type="pir:RE_ProposalManagementInformation_Type"/>
+	<xs:element name="RE_ProposalManagementInformation" type="pir:RE_ProposalManagementInformation_Type"/>
 	<xs:complexType name="RE_ProposalManagementInformation_Type" abstract="true">
 		<xs:annotation>
 			<xs:documentation>The class RE_ProposalManagementInformation specifies elements of
@@ -586,8 +585,7 @@
 								the proposal was determined. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="controlBodyDecisionEvent"
-						type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+					<xs:element name="controlBodyDecisionEvent" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>The attribute "controlBodyDecisionEvent" is
 								represented as a CharacterString that identifies a meeting or other
@@ -643,8 +641,7 @@
 		<xs:complexContent>
 			<xs:extension base="gco:AbstractObject_Type">
 				<xs:sequence>
-					<xs:element name="itemIdentifierAtSource"
-						type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+					<xs:element name="itemIdentifierAtSource" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>The attribute "itemIdentifierAtSource" is represented
 								as a CharacterString that provides the value of the item identifier
@@ -725,22 +722,19 @@
 		<xs:complexContent>
 			<xs:extension base="gco:AbstractObject_Type">
 				<xs:sequence>
-					<xs:element name="itemReference"
-						type="pir:RE_Reference_PropertyType" minOccurs="1" maxOccurs="unbounded">
+					<xs:element name="itemReference" type="pir:RE_Reference_PropertyType" minOccurs="1" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The role “itemReference” describes that the information in the RE_ReferenceSource is the
 								citation for one or more RE_References”.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="citation"
-						type="cit:CI_Citation_PropertyType" minOccurs="1" maxOccurs="1">
+					<xs:element name="citation" type="cit:CI_Citation_PropertyType" minOccurs="1" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>information object containing information that directs a reader’s or user’s attention from
 								one resource (4.17) to another, Source ISO 19115-1.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="register"
-						type="pir:RE_Register_PropertyType" minOccurs="1" maxOccurs="unbounded">
+					<xs:element name="register" type="pir:RE_Register_PropertyType" minOccurs="1" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The role “register” describes that the register for the association Reference is the reference
 								for one or more items in the register.</xs:documentation>
@@ -798,8 +792,7 @@
 								landforms in Latin America. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="uniformResourceIdentifier"
-						type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="unbounded">
+					<xs:element name="uniformResourceIdentifier" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The attribute "uniformResourceIdentifier" takes as its
 								value a set of URI's, each referencing information about online
@@ -861,8 +854,7 @@
 		<xs:attributeGroup ref="gco:ObjectReference"/>
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
-	<xs:element name="RE_RegisterItem" substitutionGroup="pir:RegisterItem"
-		type="pir:RE_RegisterItem_Type"/>
+	<xs:element name="RE_RegisterItem" substitutionGroup="pir:RegisterItem" type="pir:RE_RegisterItem_Type"/>
 	<xs:complexType name="RE_RegisterItem_Type">
 		<xs:annotation>
 			<xs:documentation>The class "RE_RegisterItem" specifies elements of information to be
@@ -906,8 +898,7 @@
 								elevator' and 'The shape of a buoy'.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="alternativeExpressions"
-						type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+					<xs:element name="alternativeExpressions" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>The attribute "alternativeExpressions" represents as a
 								set of instances of RE_AlternativeExpression, each specifying an
@@ -961,8 +952,7 @@
 								Navigation'.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="additionInformation"
-						type="pir:RE_AdditionInformation_PropertyType" minOccurs="1"
+					<xs:element name="additionInformation" type="pir:RE_AdditionInformation_PropertyType" minOccurs="1"
 						maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The role "additionInformation" identifies the class
@@ -970,8 +960,7 @@
 								registerItem.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="amendmentInformation"
-						type="pir:RE_AmendmentInformation_PropertyType" minOccurs="0"
+					<xs:element name="amendmentInformation" type="pir:RE_AmendmentInformation_PropertyType" minOccurs="0"
 						maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The role "amendmentInformation" identifies that
@@ -979,8 +968,7 @@
 								RE_AmendmentInformation class.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="clarificationInformation"
-						type="pir:RE_ClarificationInformation_PropertyType" minOccurs="0"
+					<xs:element name="clarificationInformation" type="pir:RE_ClarificationInformation_PropertyType" minOccurs="0"
 						maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The role "clarificationInformation " identifies the
@@ -1020,8 +1008,7 @@
 		<xs:complexContent>
 			<xs:extension base="pir:RegisterStakeholder_Type">
 				<xs:sequence>
-					<xs:element name="proposalInformation"
-						type="pir:RE_ProposalManagementInformation_PropertyType" minOccurs="1"
+					<xs:element name="proposalInformation" type="pir:RE_ProposalManagementInformation_PropertyType" minOccurs="1"
 						maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The role "proposalnformation" identifies that the
@@ -1063,8 +1050,7 @@
 		<xs:complexContent>
 			<xs:extension base="pir:SubregisterDescription_Type">
 				<xs:sequence>
-					<xs:element name="uniformResourceIdentifier"
-						type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+					<xs:element name="uniformResourceIdentifier" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>The attribute "uniformResourceIdentifier" takes as its
 								value a set of URI's, each referencing information about online

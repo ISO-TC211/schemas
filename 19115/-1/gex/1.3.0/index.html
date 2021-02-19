@@ -12,14 +12,13 @@
 					</style>
    </head>
    <body>
-      <h1>Geospatial EXtent (GEX) Version: 1.3</h1><img alt="" src="gex.png"><h2>Description</h2>
+      <h1>Geospatial EXtent (GEX) Version: 1.3</h1>
+      <img title="Classes in the gex namespace" alt="UML diagram of Geographic Extent classes in the gex namespace" width="750" src="./19115-1.gex.ExtentClassesWeb.png"/>
       <p>GEX 1.3 is an XML Schema implementation derived from ISO ISO 19115-1, Geographic Information - Metadata - Part 1: Fundamentals, Clause 6.6.1.  It includes elements for specifying geospatial properties of a resource, including extent and
-         spatial reference systems. The XML schema was encoded using the rules described in ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause
-         8.
+         spatial reference systems. The XML schema was encoded using the rules described in ISO/TS 19139:2007.
       </p>
-      <h2>Sample XML files for gex 1.3</h2><a href="gex_invalid.xml">gex_invalid.xml</a> <a href="gex_valid.xml">gex_valid.xml</a> 
       <h2>XML Namespace for gex 1.3</h2>
-      <p>The namespace URI for gex 1.3 is <b>https://schemas.isotc211.org/19115/-1/gex/1.3.0</b>.
+      <p>The namespace URI for gex 1.3 is <b>https://schemas.isotc211.org/19115/-1/gex/1.3</b>.
       </p>
       <h2>XML Schema for gex 1.3</h2>
       <p><b><a href="gex.xsd">gex.xsd</a></b> is the XML Schema document to be referenced by XML documents containing XML elements
@@ -31,9 +30,17 @@
             and related standards is also <a href="https://schemas.isotc211.org/19115/19115AllNamespaces.zip">available</a>.</i></p>
       <h2>Related XML Schema for gex 1.3</h2>
       <p><b><a href="extent.xsd">extent.xsd</a></b> implements the UML conceptual schema defined in ISO 19115-1, Geographic Information - Metadata - Part 1: Fundamentals, Clause 6.6.1. It was created using the encoding rules defined in ISO 19118, ISO
-         19139, and the implementation approach described in ISO 19115-3 and contains the following
-         classes (codeLists are bold): EX_BoundingPolygon, EX_Extent, EX_GeographicBoundingBox, EX_GeographicDescription, AbstractEX_GeographicExtent, EX_SpatialTemporalExtent, EX_TemporalExtent, and EX_VerticalExtent
-      </p>
+         19139, and the implementation approach described in ISO 19115-3.</p>
+      <a href="https://schemas.isotc211.org/19115/-1/gex/1.3.0/extent.xsd">https://schemas.isotc211.org/19115/-1/gex/1.3.0/extent.xsd</a> contains the folowing classes:<ul>
+         <li>EX_Extent</li>
+         <li>AbstractEX_GeographicExtent</li>
+         <li>EX_BoundingPolygon</li>
+         <li>EX_GeographicBoundingBox</li>
+         <li>EX_GeographicDescription</li>
+         <li>EX_TemporalExtent</li>
+         <li>EX_SpatialTemporalExtent</li>
+         <li>EX_VerticalExtent</li>
+      </ul>
       <h2>Related XML Namespaces for gex 1.3</h2> The gex 1.3 namespace imports these other namespaces: 
       <table>
          <tr>
@@ -43,7 +50,7 @@
             <th>Schema Location</th>
          </tr>
          <tr>
-            <td>Geographic COmmon</td>
+            <td>Geographic Common Objects</td>
             <td>gco</td>
             <td><a href="https://schemas.isotc211.org/19103/-/gco/1.2.0">https://schemas.isotc211.org/19103/-/gco/1.2</a></td>
             <td>../../../../19103/-/gco/1.2/gco.xsd</td>
@@ -51,20 +58,32 @@
          <tr>
             <td>Geographic Markup Wrappers</td>
             <td>gmw</td>
-            <td><a href="https://schemas.isotc211.org/19163/-/gmw/1.2.0">https://schemas.isotc211.org/19163/-/gmw/1.2.0</a></td>
+            <td><a href="https://schemas.isotc211.org/19163/-/gmw/1.2.0">https://schemas.isotc211.org/19163/-/gmw/1.2</a></td>
             <td>../../../../19163/-/gmw/1.2/gmw.xsd</td>
          </tr>
          <tr>
             <td>Metadata Common Classes</td>
             <td>mcc</td>
-            <td><a href="https://schemas.isotc211.org/19115/-1/mcc/1.3.0">https://schemas.isotc211.org/19115/-1/mcc/1.3.0</a></td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/mcc/1.3.0">https://schemas.isotc211.org/19115/-1/mcc/1.3</a></td>
             <td>../../../../19115/-1/mcc/1.3.0/mcc.xsd</td>
+         </tr>
+         <tr>
+            <td>Geospatial Meta-Language</td>
+            <td>gml</td>
+            <td><a href="http://schemas.opengis.net/gml/3.2.1/gml.xsd">http://schemas.opengis.net/gml/3.2</a></td>
+            <td>http://schemas.opengis.net/gml/3.2.1/gml.xsd</td>
+         </tr>
+         <tr>
+            <td>Referencing By Coordinates</td>
+            <td>rbc</td>
+            <td><a href="https://schemas.isotc211.org/19111/-/rbc/3.0.1">https://schemas.isotc211.org/19111/-/rbc/3.0</a></td>
+            <td>../../../../19111/-/rbc/3.0.1/rbc.xsd</td>
          </tr>
       </table>
       <h2>Schematron Validation Rules for gex 1.3</h2> Schematron rules for validating instance documents of the gex 1.3 namespace are in <a href="gex.sch">gex.sch</a>. Other schematron rule sets that are
-      required for a complete validation are: gco.sch, gmw.sch, mcc.sch, and mcc.sch
+      required for a complete validation are: gco.sch, gmw.sch, and mcc.sch
       <h2>Working Versions</h2> When revisions to these schema become necessary, they will be managed in the <a href="https://github.com/ISO-TC211/XML">ISO TC211 Git Repository</a>. 
       <hr>
-      <p class="paraSmall">Written by writeHTMLFiles Version: 2019-01-04 at 2019-01-04T10:27:14.715-07:00</p>
+      <p class="paraSmall">Written by hand. Version: 2021-02-15</p>
    </body>
 </html>

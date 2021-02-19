@@ -46,8 +46,7 @@
         <xs:complexContent>
             <xs:extension base="igd:IE_ThematicGriddedDataType">
                 <xs:sequence>
-                    <xs:element name="classficationDescription"
-                        type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="classficationDescription" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="numberOfCatagories" type="xs:integer"/>
                     <xs:element name="bitsPerValue" type="xs:integer" minOccurs="0" maxOccurs="1"/>
                     <xs:element ref="igd:IE_CategoricalValueAndColour"/>
