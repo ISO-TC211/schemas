@@ -367,8 +367,7 @@
                     <documentation>number of tie points applied</documentation>
                 </annotation>
             </element>
-            <element name="SE_ATAdjustedPointPosition"
-                type="smi:SE_ATAdjustedPointPosition_Type">
+            <element name="SE_ATAdjustedPointPosition" type="smi:SE_ATAdjustedPointPosition_Type">
                 <annotation>
                     <documentation/>
                 </annotation>
