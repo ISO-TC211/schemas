@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SE_SensorModel xmlns:igd="https://schemas.isotc211.org/19163/-2/igd/1.1"
+<SE_SensorModel xmlns:igd="https://schemas.isotc211.org/19163/-2/igd/1.2"
     xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/2.1"
     xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/2.1"
     xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/2.1"
