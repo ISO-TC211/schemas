@@ -7,23 +7,23 @@
   xsi:schemaLocation="http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd">
   <description>Code list for the classifications of roles.&#13;
 </description>
-  <identifier codeSpace="http://schemas.isotc211.org/19110/gfc/1.1">FC_RoleType</identifier>
+  <identifier codeSpace="https://schemas.isotc211.org/19110/gfc/1.1">FC_RoleType</identifier>
   <dictionaryEntry>
     <Definition gml:id="_9016_11462">
       <description>Indicates an ordinary association</description>
-      <identifier codeSpace="http://schemas.isotc211.org/19110/gfc/1.1">ordinary</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19110/gfc/1.1">ordinary</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_9016_11463">
       <description>Indicates a UML aggregation (part role).</description>
-      <identifier codeSpace="http://schemas.isotc211.org/19110/gfc/1.1">aggregation</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19110/gfc/1.1">aggregation</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_9016_11464">
       <description>Indicates a UML composition (part role).</description>
-      <identifier codeSpace="http://schemas.isotc211.org/19110/gfc/1.1">composition</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19110/gfc/1.1">composition</identifier>
     </Definition>
   </dictionaryEntry>
 </Dictionary>
