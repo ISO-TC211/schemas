@@ -5,26 +5,26 @@
   gml:id="RE_Disposition"
   xsi:schemaLocation="http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd">
   <description>Attributedisposition[0..1] Type RE_Disposition</description>
-  <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">RE_Disposition</identifier>
+  <identifier codeSpace="https://schemas.isotc211.org/19135/-2/reg/1.0">RE_Disposition</identifier>
   <dictionaryEntry>
     <Definition gml:id="_9344_12326">
       <description>
       </description>
-      <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">withdrawn</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19135/-2/reg/1.0">withdrawn</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_9344_12327">
       <description>
       </description>
-      <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">accepted</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19135/-2/reg/1.0">accepted</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_9344_12328">
       <description>
       </description>
-      <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">notAccepted</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19135/-2/reg/1.0">notAccepted</identifier>
     </Definition>
   </dictionaryEntry>
 </Dictionary>
