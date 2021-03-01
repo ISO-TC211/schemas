@@ -143,5 +143,5 @@
                 rule.mac.matchInstPropType-success-fr"/>
         </sch:rule>
     </sch:pattern>
-    
+</sch:schema>
     
