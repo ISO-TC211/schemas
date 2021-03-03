@@ -8,7 +8,7 @@
   -->
   
   <!-- 
-    Rule: LI_Source
+    Rule: LE_Source
     Ref: {count(description + scope) > 0}
     -->
   <sch:diagnostics>
@@ -47,7 +47,7 @@
     <sch:title xml:lang="fr">La possibilité de divulgation 
       DOIT définir un destinataire ou une indication</sch:title>
     
-    <sch:rule context="//mrl:LE_Scope">
+    <sch:rule context="//mrl:LI_Scope">
       
       <sch:let name="scope" 
         value="mrl:scope[normalize-space(.) != '']"/>
