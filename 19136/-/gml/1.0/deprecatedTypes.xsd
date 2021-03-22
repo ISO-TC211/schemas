@@ -15,7 +15,7 @@
 			To obtain additional rights of use, visit http://www.opengeospatial.org/legal/ .
 		</documentation>
 	</annotation>
-	<include schemaLocation="gml.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/gml.xsd"/>
 	<element name="Null" type="gml:NilReasonType">
 		<annotation>
 			<appinfo>deprecated</appinfo>

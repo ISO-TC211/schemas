@@ -16,8 +16,8 @@ Copyright (c) 2007,2010 Open Geospatial Consortium, Inc. All Rights Reserved.
 To obtain additional rights of use, visit http://www.opengeospatial.org/legal/ .
 		</documentation>
 	</annotation>
-	<include schemaLocation="gml.xsd"/>
-	<include schemaLocation="geometryBasic0d1d.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/gml.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/geometryBasic0d1d.xsd"/>
 	<element name="direction" type="gml:DirectionPropertyType">
 		<annotation>
 			<documentation>The property gml:direction is intended as a pre-defined property expressing a direction to be assigned to features defined in a GML application schema.</documentation>

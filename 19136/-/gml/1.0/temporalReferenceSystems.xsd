@@ -16,9 +16,9 @@ Copyright (c) 2007,2010 Open Geospatial Consortium, Inc. All Rights Reserved.
 To obtain additional rights of use, visit http://www.opengeospatial.org/legal/ .
 		</documentation>
 	</annotation>
-	<include schemaLocation="gml.xsd"/>
-	<include schemaLocation="temporalTopology.xsd"/>
-	<include schemaLocation="dictionary.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/gml.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/temporalTopology.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/dictionary.xsd"/>
 	<element name="TimeReferenceSystem" type="gml:TimeReferenceSystemType" substitutionGroup="gml:Definition">
 		<annotation>
 			<documentation>A reference system is characterized in terms of its domain of validity: the spatial and temporal extent over which it is applicable. The basic GML element for temporal reference systems is gml:TimeReferenceSystem.  Its content model extends gml:DefinitionType with one additional property, gml:domainOfValidity.</documentation>

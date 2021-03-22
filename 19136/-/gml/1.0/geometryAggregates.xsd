@@ -16,8 +16,8 @@ Copyright (c) 2007,2010 Open Geospatial Consortium, Inc. All Rights Reserved.
 To obtain additional rights of use, visit http://www.opengeospatial.org/legal/ .
 		</documentation>
 	</annotation>
-	<include schemaLocation="gml.xsd"/>
-	<include schemaLocation="geometryPrimitives.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/gml.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/geometryPrimitives.xsd"/>
 	<complexType name="AbstractGeometricAggregateType" abstract="true">
 		<complexContent>
 			<extension base="gml:AbstractGeometryType">
