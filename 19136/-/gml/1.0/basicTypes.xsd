@@ -20,7 +20,7 @@ Copyright (c) 2007,2010 Open Geospatial Consortium, Inc. All Rights Reserved.
 To obtain additional rights of use, visit http://www.opengeospatial.org/legal/ .
 		</documentation>
 	</annotation>
-	<include schemaLocation="gml.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/gml.xsd"/>
 	<simpleType name="NilReasonType">
 		<annotation>
 			<documentation>gml:NilReasonType defines a content model that allows recording of an explanation for a void value or other exception.

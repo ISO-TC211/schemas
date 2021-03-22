@@ -186,24 +186,16 @@
 			<xs:extension base="gco:AbstractObject_Type">
 				<xs:sequence>
 					<xs:element name="typeName" type="gco:LocalName_PropertyType"/>
-					<xs:element name="definition" type="gco:CharacterString_PropertyType"
-						minOccurs="0" maxOccurs="1"/>
-					<xs:element name="code" type="gco:CharacterString_PropertyType" minOccurs="0"
-						maxOccurs="1"/>
+					<xs:element name="definition" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="code" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="isAbstract" type="gco:Boolean_PropertyType"/>
-					<xs:element name="aliases" type="gco:LocalName_PropertyType" minOccurs="0"
-						maxOccurs="unbounded"/>
-					<xs:element name="inheritsFrom" type="gfc:FC_InheritanceRelation_PropertyType"
-						minOccurs="0" maxOccurs="unbounded"/>
-					<xs:element name="inheritsTo" type="gfc:FC_InheritanceRelation_PropertyType"
-						minOccurs="0" maxOccurs="unbounded"/>
-					<xs:element name="featureCatalogue" type="gfc:FC_FeatureCatalogue_PropertyType"
-						minOccurs="1" maxOccurs="1"/>
-					<xs:element name="constrainedBy" type="gfc:FC_Constraint_PropertyType"
-						minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="aliases" type="gco:LocalName_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="inheritsFrom" type="gfc:FC_InheritanceRelation_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="inheritsTo" type="gfc:FC_InheritanceRelation_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="featureCatalogue" type="gfc:FC_FeatureCatalogue_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="constrainedBy" type="gfc:FC_Constraint_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="definitionReference" type="gfc:FC_DefinitionReference_PropertyType" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="carrierOfCharacteristics" type="gfc:FC_CarrierOfCharacteristics_PropertyType" minOccurs="0"
-						maxOccurs="unbounded"/>
+					<xs:element name="carrierOfCharacteristics" type="gfc:FC_CarrierOfCharacteristics_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -262,14 +254,10 @@
 			<xs:extension base="gfc:AbstractFC_PropertyType_Type">
 				<xs:sequence>
 					<xs:element name="signature" type="gco:CharacterString_PropertyType"/>
-					<xs:element name="formalDefinition" type="gco:CharacterString_PropertyType"
-						minOccurs="0" maxOccurs="1"/>
-					<xs:element name="triggeredByValuesOf" type="gfc:FC_CarrierOfCharacteristics_PropertyType" minOccurs="0"
-						maxOccurs="unbounded"/>
-					<xs:element name="affectsValuesOf" type="gfc:FC_CarrierOfCharacteristics_PropertyType" minOccurs="0"
-						maxOccurs="unbounded"/>
-					<xs:element name="observesValuesOf" type="gfc:FC_CarrierOfCharacteristics_PropertyType" minOccurs="0"
-						maxOccurs="unbounded"/>
+					<xs:element name="formalDefinition" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="triggeredByValuesOf" type="gfc:FC_CarrierOfCharacteristics_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="affectsValuesOf" type="gfc:FC_CarrierOfCharacteristics_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="observesValuesOf" type="gfc:FC_CarrierOfCharacteristics_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -295,12 +283,10 @@
 			<xs:extension base="gfc:AbstractFC_CarrierOfCharacteristics_Type">
 				<xs:sequence>
 					<xs:element name="memberName" type="gco:LocalName_PropertyType"/>
-					<xs:element name="definition" type="gco:CharacterString_PropertyType"
-						minOccurs="0" maxOccurs="1"/>
+					<xs:element name="definition" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="cardinality" type="gco:Multiplicity_PropertyType"/>
 					<xs:element name="definitionReference" type="gfc:FC_DefinitionReference_PropertyType" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="featureCatalogue" type="gfc:FC_FeatureCatalogue_PropertyType"
-						minOccurs="0" maxOccurs="1"/>
+					<xs:element name="featureCatalogue" type="gfc:FC_FeatureCatalogue_PropertyType" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>

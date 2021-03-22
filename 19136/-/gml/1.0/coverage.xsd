@@ -19,11 +19,11 @@ Copyright (c) 2007,2010 Open Geospatial Consortium, Inc. All Rights Reserved.
 To obtain additional rights of use, visit http://www.opengeospatial.org/legal/ .
 		</documentation>
 	</annotation>
-	<include schemaLocation="gml.xsd"/>
-	<include schemaLocation="feature.xsd"/>
-	<include schemaLocation="valueObjects.xsd"/>
-	<include schemaLocation="grids.xsd"/>
-	<include schemaLocation="geometryAggregates.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/gml.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/feature.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/valueObjects.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/grids.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/geometryAggregates.xsd"/>
 	<complexType name="AbstractCoverageType" abstract="true">
 		<annotation>
 			<documentation>The base type for coverages is gml:AbstractCoverageType. The basic elements of a coverage can be seen in this content model: the coverage contains gml:domainSet and gml:rangeSet properties. The gml:domainSet property describes the domain of the coverage and the gml:rangeSet property describes the range of the coverage.</documentation>

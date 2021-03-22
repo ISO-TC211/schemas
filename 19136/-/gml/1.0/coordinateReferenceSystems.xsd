@@ -17,10 +17,10 @@ Copyright (c) 2007,2010 Open Geospatial Consortium, Inc. All Rights Reserved.
 To obtain additional rights of use, visit http://www.opengeospatial.org/legal/ .
 		</documentation>
 	</annotation>
-	<include schemaLocation="gml.xsd"/>
-	<include schemaLocation="coordinateSystems.xsd"/>
-	<include schemaLocation="datums.xsd"/>
-	<include schemaLocation="coordinateOperations.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/gml.xsd"/>
+    <include schemaLocation="../../../../19136/-/gml/1.0/coordinateSystems.xsd"/>
+    <include schemaLocation="../../../../19136/-/gml/1.0/datums.xsd"/>
+    <include schemaLocation="../../../../19136/-/gml/1.0/coordinateOperations.xsd"/>
 	<element name="AbstractSingleCRS" type="gml:AbstractCRSType" abstract="true" substitutionGroup="gml:AbstractCRS">
 		<annotation>
 			<documentation>gml:AbstractSingleCRS implements a coordinate reference system consisting of one coordinate system and one datum (as opposed to a Compound CRS).</documentation>

@@ -15,8 +15,8 @@
 			To obtain additional rights of use, visit http://www.opengeospatial.org/legal/ .
 		</documentation>
 	</annotation>
-	<include schemaLocation="gml.xsd"/>
-	<include schemaLocation="geometryBasic0d1d.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/gml.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/geometryBasic0d1d.xsd"/>
 	<complexType name="AbstractSurfaceType" abstract="true">
 		<annotation>
 			<documentation>gml:AbstractSurfaceType is an abstraction of a surface to support the different levels of complexity. A surface is always a continuous region of a plane.</documentation>
