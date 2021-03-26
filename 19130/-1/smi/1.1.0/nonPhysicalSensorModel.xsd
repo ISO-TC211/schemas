@@ -255,15 +255,16 @@
             </extension>
         </complexContent>
     </complexType>
-    <complexType name="CV_InterpolationMethod_PropertyType">
+  <!-- 
+      <complexType name="CV_InterpolationMethod_PropertyType">
         <sequence minOccurs="0">
             <element ref="smi:CV_InterpolationMethod"/>
         </sequence>
         <attribute ref="gco:nilReason"/>
     </complexType>
     <element name="CV_InterpolationMethod" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
-    
-    <!-- ============= Correspondence Model ============== -->
+    -->
+  <!-- ============= Correspondence Model ============== -->
     <complexType name="SD_CorrespondenceModel_PropertyType">
         <sequence minOccurs="0">
             <element ref="smi:SD_CorrespondenceModel"/>
