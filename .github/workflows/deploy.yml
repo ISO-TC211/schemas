@@ -13,9 +13,11 @@ jobs:
         id: event_type
         run: |
           echo "##[set-output name=value;]deploy_${GITHUB_REF##*/}"
+          echo "##[set-output name=value;]deploy_${GITHUB_REF##*/}"
       - name: Trigger dependent repositories
         uses: peter-evans/repository-dispatch@v1
         with:
           token: ${{ secrets.PAT_TOKEN }}
           repository: ISO-TC211/schemas.isotc211.org
-          event-type: ${{ steps.event_type.outputs.value }}
+          event-type: deploy
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
