@@ -21,10 +21,10 @@ jobs:
         with:
           ruby-version: '2.6'
       - uses: actions/checkout@v2
-      - name: Update gems
-        run: |
-          gem install bundler -v "~> 2"
-          bundle install --jobs 4 --retry 3
+      # - name: Update gems
+      #   run: |
+      #     gem install bundler -v "~> 2"
+      #     bundle install --jobs 4 --retry 3
       - name: Build XSD documentation
         run: |
           make _xsddoc
