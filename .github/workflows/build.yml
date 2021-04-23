@@ -1,0 +1,30 @@
+name: build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    name: Generate XSD documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl make libxml2-dev libxslt-dev libnode-dev node-gyp libssl-dev npm openssl xsltproc
+      - name: Setup snaps
+        run: |
+          sudo snap install yq
+      - name: Use Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+      - uses: actions/checkout@v2
+      # - name: Update gems
+      #   run: |
+      #     gem install bundler -v "~> 2"
+      #     bundle install --jobs 4 --retry 3
+      - name: Build XSD documentation
+        run: |
+          make _xsddoc
