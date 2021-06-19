@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/2.0" xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mrl/2.0" version="1.0">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
+  xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
+  xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/2.0" 
+  xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.0" 
+  elementFormDefault="qualified" 
+  targetNamespace="http://standards.iso.org/iso/19115/-3/mrl/2.0" 
+  version="1.0">
   <include schemaLocation="mrl.xsd"/>
   <include schemaLocation="lineage.xsd"/>
    <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
@@ -174,12 +181,12 @@
               <documentation>instance of otherPropertyType that defines attributes not explicitly included in LE_Processing</documentation>
             </annotation>
           </element>
-                 <element minOccurs="0" maxOccurs="unbounded" name="algorithm" type="mrl:LE_Algorithm_PropertyType">
+          <element minOccurs="0" maxOccurs="unbounded" name="algorithm" type="mrl:LE_Algorithm_PropertyType">
             <annotation>
-                  <documentation>details of the methodology by which geographic information was derived from the instrument reading</documentation>
+              <documentation>details of the methodology by which geographic information was derived from the instrument reading</documentation>
             </annotation>
           </element>
-</sequence>
+        </sequence>
       </extension>
     </complexContent>
   </complexType>
@@ -314,5 +321,5 @@
     </sequence>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  
+
 </schema>
