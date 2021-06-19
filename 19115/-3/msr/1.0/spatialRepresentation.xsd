@@ -145,14 +145,14 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="MD_Georectified" substitutionGroup="msr:AbstractMD_SpatialRepresentation" type="msr:MD_Georectified_Type">
+  <element name="MD_Georectified" substitutionGroup="msr:MD_GridSpatialRepresentation" type="msr:MD_Georectified_Type">
     <annotation>
       <documentation>grid whose cells are regularly spaced in a geographic (i.e., lat / long) or map coordinate system defined in the Spatial Referencing System (SRS) so that any cell in the grid can be geolocated given its grid coordinate and the grid origin, cell spacing, and orientation</documentation>
     </annotation>
   </element>
   <complexType name="MD_Georectified_Type">
     <complexContent>
-      <extension base="msr:AbstractMD_SpatialRepresentation_Type">
+      <extension base="msr:MD_GridSpatialRepresentation_Type">
         <sequence>
           <element name="checkPointAvailability" type="gco:Boolean_PropertyType">
             <annotation>
@@ -200,14 +200,14 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="MD_Georeferenceable" substitutionGroup="msr:AbstractMD_SpatialRepresentation" type="msr:MD_Georeferenceable_Type">
+  <element name="MD_Georeferenceable" substitutionGroup="msr:MD_GridSpatialRepresentation" type="msr:MD_Georeferenceable_Type">
     <annotation>
       <documentation>grid with cells irregularly spaced in any given geographic/map projection coordinate system, whose individual cells can be geolocated using geolocation information supplied with the data but cannot be geolocated from the grid properties alone</documentation>
     </annotation>
   </element>
   <complexType name="MD_Georeferenceable_Type">
     <complexContent>
-      <extension base="msr:AbstractMD_SpatialRepresentation_Type">
+      <extension base="msr:MD_GridSpatialRepresentation_Type">
         <sequence>
           <element name="controlPointAvailability" type="gco:Boolean_PropertyType">
             <annotation>
