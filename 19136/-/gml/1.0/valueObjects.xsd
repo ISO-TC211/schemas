@@ -23,9 +23,9 @@ Copyright (c) 2007,2010 Open Geospatial Consortium, Inc. All Rights Reserved.
 To obtain additional rights of use, visit http://www.opengeospatial.org/legal/ .
 		</documentation>
 	</annotation>
-	<include schemaLocation="gml.xsd"/>
-	<include schemaLocation="geometryBasic0d1d.xsd"/>
-	<include schemaLocation="temporal.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/gml.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/geometryBasic0d1d.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/temporal.xsd"/>
 	<element name="Boolean" substitutionGroup="gml:AbstractScalarValue" nillable="true">
 		<complexType>
 			<simpleContent>

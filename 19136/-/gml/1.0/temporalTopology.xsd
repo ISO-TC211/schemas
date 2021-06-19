@@ -15,8 +15,8 @@ Copyright (c) 2007,2010 Open Geospatial Consortium, Inc. All Rights Reserved.
 To obtain additional rights of use, visit http://www.opengeospatial.org/legal/ .
 		</documentation>
 	</annotation>
-	<include schemaLocation="gml.xsd"/>
-	<include schemaLocation="temporal.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/gml.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/temporal.xsd"/>
 	<element name="AbstractTimeTopologyPrimitive" type="gml:AbstractTimeTopologyPrimitiveType" abstract="true" substitutionGroup="gml:AbstractTimePrimitive">
 		<annotation>
 			<documentation>gml:TimeTopologyPrimitive acts as the head of a substitution group for topological temporal primitives.

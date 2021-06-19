@@ -10,6 +10,7 @@
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
     version="1.1.0"
     >
+    <include schemaLocation="../../../../19130/-3/smi/1.1.0/smi.xsd"/>
     <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>   
     <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/baseTypes.xsd"/>   
     <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="http://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
@@ -20,7 +21,8 @@
     
     <!-- =============== 19130-1 ==================== -->
     
-    <element name="SD_ShapeCode" substitutionGroup="gco:CharacterString" type="smi:SD_ShapeCode_Type">
+    <element name="SD_ShapeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+    <!--    <element name="SD_ShapeCode" substitutionGroup="gco:CharacterString" type="smi:SD_ShapeCode_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -40,8 +42,8 @@
         </restriction>
     </simpleType>
     
-    
-    <element name="SD_SurfaceCode" substitutionGroup="gco:CharacterString" type="smi:SD_SurfaceCode_Type">
+    <element name="SD_SurfaceCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+        <!--    <element name="SD_SurfaceCode" substitutionGroup="gco:CharacterString" type="smi:SD_SurfaceCode_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -62,7 +64,8 @@
     </simpleType>
     
      
-    <element name="SD_SAROrientationCode" substitutionGroup="gco:CharacterString" type="smi:SD_SAROrientationCode_Type">
+    <element name="SD_SAROrientationCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+        <!--    <element name="SD_SAROrientationCode" substitutionGroup="gco:CharacterString" type="smi:SD_SAROrientationCode_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -81,7 +84,8 @@
     </simpleType>
     
     
-    <element name="SD_RotationSequence" substitutionGroup="gco:CharacterString" type="smi:SD_RotationSequence_Type">
+    <element name="SD_RotationSequence" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+        <!--<element name="SD_RotationSequence" substitutionGroup="gco:CharacterString" type="smi:SD_RotationSequence_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>

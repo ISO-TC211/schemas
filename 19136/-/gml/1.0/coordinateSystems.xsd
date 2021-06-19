@@ -20,8 +20,8 @@ Copyright (c) 2007,2010 Open Geospatial Consortium, Inc. All Rights Reserved.
 To obtain additional rights of use, visit http://www.opengeospatial.org/legal/ .
 		</documentation>
 	</annotation>
-	<include schemaLocation="gml.xsd"/>
-	<include schemaLocation="referenceSystems.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/gml.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/referenceSystems.xsd"/>
 	<element name="CoordinateSystemAxis" type="gml:CoordinateSystemAxisType" substitutionGroup="gml:Definition">
 		<annotation>
 			<documentation>gml:CoordinateSystemAxis is a definition of a coordinate system axis.</documentation>

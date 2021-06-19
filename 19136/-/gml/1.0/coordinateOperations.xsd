@@ -23,9 +23,9 @@ Copyright (c) 2007,2010 Open Geospatial Consortium, Inc. All Rights Reserved.
 To obtain additional rights of use, visit http://www.opengeospatial.org/legal/ .
 		</documentation>
 	</annotation>
-	<include schemaLocation="gml.xsd"/>
-	<include schemaLocation="referenceSystems.xsd"/>
-	<include schemaLocation="measures.xsd"/>
+	<include schemaLocation="../../../../19136/-/gml/1.0/gml.xsd"/>
+    <include schemaLocation="../../../../19136/-/gml/1.0/referenceSystems.xsd"/>
+    <include schemaLocation="../../../../19136/-/gml/1.0/measures.xsd"/>
 	<import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="https://schemas.isotc211.org/19139/-/gmd/1.0/gmd.xsd"/>
 	<element name="AbstractCoordinateOperation" type="gml:AbstractCoordinateOperationType" abstract="true" substitutionGroup="gml:Definition">
 		<annotation>
