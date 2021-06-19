@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Dataset xmlns="http://sample.net/sample" xmlns:gml="http://www.opengis.net/gml/3.2" 
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" 
+<Dataset xmlns="http://sample.net/sample"    xmlns:gml="http://www.opengis.net/gml/3.2" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    xmlns:xlink="http://www.w3.org/1999/xlink" 
     xsi:schemaLocation="http://sample.net/sample sample_appschema">
     <!--
         Sample application data based on the GML application schema in sampleGMLApplicationSchema.xsd
