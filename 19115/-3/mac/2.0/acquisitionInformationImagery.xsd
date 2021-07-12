@@ -14,7 +14,7 @@
     <complexContent>
       <extension base="mcc:Abstract_AcquisitionInformation_Type">
         <sequence>
-          <element name="scope" type="mcc:MD_Scope_PropertyType">
+          <element name="scope" minOccurs="0" maxOccurs="1" type="mcc:MD_Scope_PropertyType">
             <annotation>
               <documentation>the specific data to which the acquisition information applies</documentation>
             </annotation>
