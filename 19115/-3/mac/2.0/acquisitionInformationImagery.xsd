@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gmw="http://standards.iso.org/iso/19115/-3/gmw/1.0" xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mac/2.0" version="1.0">
+<schema 
+  xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
+  xmlns:gmw="http://standards.iso.org/iso/19115/-3/gmw/1.0" 
+  xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0" 
+  xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
+  elementFormDefault="qualified" 
+  targetNamespace="http://standards.iso.org/iso/19115/-3/mac/2.0" 
+  version="1.0">
   <include schemaLocation="mac.xsd"/>  
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gmw/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gmw/1.0/gmw.xsd"/>
@@ -242,7 +250,7 @@
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="sensingInstrument" type="mac:MI_Instrument_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="pass" type="mac:MI_PlatformPass_PropertyType"/>
-          <element maxOccurs="unbounded" name="objectiveOccurence" type="mac:MI_Event_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="objectiveOccurence" type="mac:MI_Event_PropertyType"/>
         </sequence>
       </extension>
     </complexContent>
@@ -441,7 +449,7 @@
               <documentation>Description: unique name of the pass shortName: passId</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="extent" type="gmw:GM_Object_PropertyType">
+          <element minOccurs="0" name="extent" type="mcc:Abstract_Extent_PropertyType">
             <annotation>
               <documentation>Description: Area covered by the pass shortName: passExt</documentation>
             </annotation>
