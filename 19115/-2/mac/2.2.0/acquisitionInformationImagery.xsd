@@ -811,7 +811,7 @@
               <documentation>use and access constraints</documentation>
             </annotation>
           </element>
-          <element name="instrumentationEvent" minOccurs="0" maxOccurs="unbounded" type="mac:MI_InstrumentEvent_PropertyType" id="ISO19115-2.098_ISO19115-2.099">
+          <element name="instrumentationEvent" minOccurs="0" maxOccurs="unbounded" type="mac:MI_InstrumentationEvent_PropertyType" id="ISO19115-2.098_ISO19115-2.099">
             <annotation>
               <documentation>event(s) in the list of events</documentation>
             </annotation>
@@ -829,13 +829,13 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="MI_InstrumentEvent" substitutionGroup="gco:AbstractObject" type="mac:MI_InstrumentEvent_Type" id="ISO19115-2.099">
+  <element name="MI_InstrumentationEvent" substitutionGroup="gco:AbstractObject" type="mac:MI_InstrumentationEvent_Type" id="ISO19115-2.099">
     <annotation>
       <documentation>Description: requirement to be satisfied by the planned data acquisition shortName: Requirement</documentation>
     </annotation>
   </element>
   <!-- ........................................................................ -->
-  <complexType name="MI_InstrumentEvent_Type">
+  <complexType name="MI_InstrumentationEvent_Type">
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
@@ -849,7 +849,7 @@
               <documentation>description of the instrumentation event</documentation>
             </annotation>
           </element>
-          <element name="extent" minOccurs="0" maxOccurs="unbounded" type="gex:EX_Extent_PropertyType" id="ISO19115-2.102_ISO19115-1.335">
+          <element name="extent" minOccurs="0" maxOccurs="unbounded" type="mcc:Abstract_Extent_PropertyType" id="ISO19115-2.102_ISO19115-1.335">
             <annotation>
               <documentation>extent for the instrumentation event</documentation>
             </annotation>
@@ -869,9 +869,9 @@
     </complexContent>
   </complexType>
   <!-- ........................................................................ -->
-  <complexType name="MI_InstrumentEvent_PropertyType">
+  <complexType name="MI_InstrumentationEvent_PropertyType">
     <sequence minOccurs="0">
-      <element ref="mac:MI_InstrumentEvent"/>
+      <element ref="mac:MI_InstrumentationEvent"/>
     </sequence>
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
