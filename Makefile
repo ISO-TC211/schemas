@@ -13,9 +13,6 @@ XSDMERGEPATH := xsl/xsdmerge.xsl
 
 all: _xsddoc
 
-clean:
-	rm -rf $(XSDDOC)
-
 setup: $(XSDVIPATH) $(XERCESPATH) $(XS3PPATH)
 
 .archive/Xerces-J-bin.2.12.1.tar.gz:
@@ -58,7 +55,7 @@ _site/%/index.html: %.xsd $(XSDVIPATH) $(XS3PPATH) $(XSDMERGEPATH)
 	rm $@.tmp
 
 clean:
-	rm -rf doc xsl xsdvi
+	rm -rf _site xsl xsdvi
 
 distclean: clean
 	rm -rf .archive
