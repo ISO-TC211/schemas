@@ -2,7 +2,7 @@ name: deploy
 
 on:
   push:
-    branches: [ master, staging ]
+    branches: [ main, staging ]
 
 jobs:
   trigger-deploy:
@@ -12,7 +12,6 @@ jobs:
       - name: Build event type
         id: event_type
         run: |
-          echo "##[set-output name=value;]deploy_${GITHUB_REF##*/}"
           echo "##[set-output name=value;]deploy_${GITHUB_REF##*/}"
       - name: Trigger dependent repositories
         uses: peter-evans/repository-dispatch@v1
