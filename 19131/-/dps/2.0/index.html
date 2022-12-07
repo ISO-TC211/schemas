@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Data Product Specification (DPS) Version: 2.2</title>
+      <style>
+						h1 { font-family: Arial; color: DarkBlue; font-size: 14pt; font-weight:bold; }
+						body { font-family: Arial; color: black; font-size: 10pt;}
+						td { font-family: Arial; color: black; font-size: 10pt;}
+						table, th, td {border: 1px solid black; padding: 2px; border-spacing: 1px;}
+						.paraSmall {font-size: 0.7em; font-style: italic;}
+						.metagroup { font-family: Arial; color: #0099FF; font-size: 10pt; font-weight:bold; }
+					</style>
+   </head>
+   
+
+   <body>
+      <h1>Data Product Specification (DPS) Version: 2.2</h1>
+      <img title="Classes in the dps namespace" alt="UML diagram of classes from Data Product Specification (DPS) in the dps namespace" width="750" src="./DtaProdSpecClass.png"/>
+      <h2>Description</h2>
+      <p>Data Product Specification (DPS) is an XML Schema implementation derived from ISO 19131, Geographic Information - Data Product Specification Amendement 1.  
+         It includes elements for defining geometry and functions for coverages. 
+         The XML schema was encoded using the encoding rules defined in ISO 19118, ISO 19139.
+      </p>
+      <h2>XML Namespace for Data Product Specification (DPS) Version: 2.2</h2>
+      <p>The namespace URI for Data Product Specification (DPS) Version: 2.2 is <b>https://schemas.isotc211.org/19131/-/dps/2.2</b>.
+      </p>
+      <h2>XML Schema for Data Product Specification (DPS) Version: 2.2.0</h2>
+      <p>
+         <b><a href="../../../../19131/-/dps/2.0.0/dps.xsd">dps.xsd</a></b> is the XML Schema document to be referenced by XML documents containing XML elements
+         in the dps namespace or by XML Schema documents importing the dps 2.2 namespace. 
+         This XML schema includes (indirectly) all the implemented concepts of the dps namespace.
+      </p>
+      <a href="https://schemas.isotc211.org/19131/-/dps/2.0.0/dps.xsd">https://schemas.isotc211.org/19131/-/dps/2.0.0/dps.xsd</a> contains the folowing classes:
+      <ul>
+         <li>PortrayalSection</li>
+         <li>Purpose</li>
+         <li>ReferenceSystem</li>
+         <li>ReferenceSystemSection</li>
+         <li>ScopeSection</li>
+         <li>ServiceProperty</li>
+         <li>SpecificationDescription</li>
+         <li>SpecificationScope</li>
+         <li>TermEntry</li>
+         <li>UseCase</li>
+         <li>AbbreviationEntry</li>
+         <li>AdditionalInformation</li>
+         <li>AdditionalInformationSection</li>
+         <li>ConformanceQualityLevel</li>
+         <li>DataAcquisitionAndProcessing</li>
+         <li>DataCapture</li>
+         <li>DataCaptureSection</li>
+         <li>DataContentAndStructure</li>
+         <li>DataContentAndStructureSection</li>
+         <li>DataProductSpecification</li>
+         <li>DataQuality</li>
+         <li>DataQualitySection</li>
+         <li>Delivery</li>
+         <li>DeliveryFormat</li>
+         <li>DeliveryMedium</li>
+         <li>DeliverySection</li>
+         <li>IdentificationSection</li>
+         <li>Maintenance</li>
+         <li>MaintenanceAndUpdateFrequency</li>
+         <li>MaintenanceAndUpdateFrequency</li>
+         <li>MaintenanceSection</li>
+         <li>Metadata</li>
+         <li>MetadataElement</li>
+         <li>MetadataSection</li>
+         <li>Portrayal</li>
+      </ul>
+       <h2>Related XML Namespaces for ISO 19131 DPS 2.2</h2> 
+      The DPS 2.2.0 imports these other namespaces: 
+      <table>
+         <tr>
+            <th>Name</th>
+            <th>Standard Prefix</th>
+            <th>Namespace Location</th>
+            <th>Schema Location</th>
+         </tr>
+         <tr>
+            <td>CITation and Responsibility</td>
+            <td>cit</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/cit/1.3">https://schemas.isotc211.org/19115/-1/cit/1.3</a></td>
+            <td>../../../../19115/-1/cit/1.3.0/cit.xsd</td>
+         </tr>
+         <tr>
+            <td>LANguage and localization</td>
+            <td>lan</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/lan/1.3">https://schemas.isotc211.org/19115/-1/lan/1.3</a></td>
+            <td>../../../../19115/-1/lan/1.3.0/lan.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata for Resource Identification</td>
+            <td>mri</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/mri/1.3">https://schemas.isotc211.org/19115/-1/mri/1.3</a></td>
+            <td>../../../../19115/-1/mri/1.3.0/mri.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata for Reference System</td>
+            <td>mrs</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/mrs/1.3">https://schemas.isotc211.org/19115/-1/mrs/1.3</a></td>
+            <td>../../../../19115/-1/mrs/1.3.0/mrs.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata for COnstraints</td>
+            <td>mco</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/mco/1.3">https://schemas.isotc211.org/19115/-1/mco/1.3</a></td>
+            <td>../../../../19115/-1/mco/1.3.0/mco.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata for Common Classes</td>
+            <td>mco</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/mcc/1.3">https://schemas.isotc211.org/19115/-1/mcc/1.3</a></td>
+            <td>../../../../19115/-1/mco/1.3.0/mcc.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata for Maintenance Information</td>
+            <td>mmi</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/mcc/1.3">https://schemas.isotc211.org/19115/-1/mmi/1.3</a></td>
+            <td>../../../../19115/-1/mmi/1.3.0/mmi.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata for Application Systems</td>
+            <td>mas</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/mas/1.3">https://schemas.isotc211.org/19115/-1/mas/1.3</a></td>
+            <td>../../../../19115/-1/mas/1.3.0/mas.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata for Resource Content</td>
+            <td>mrc</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/mrc/1.3">https://schemas.isotc211.org/19115/-1/mrc/1.3</a></td>
+            <td>../../../../19115/-1/mrc/1.3.0/mrc.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata for Resource Lineage</td>
+            <td>mrl</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/mrl/1.3">https://schemas.isotc211.org/19115/-1/mrl/1.3</a></td>
+            <td>../../../../19115/-1/mrl/1.3.0/mrl.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata for Data Quality</td>
+            <td>mdq</td>
+            <td><a href="https://schemas.isotc211.org/19157/-/mdq/1.2">https://schemas.isotc211.org/19115/-/mdq/1.2</a></td>
+            <td>../../../../19157/-/mdq/1.2.0/mrl.xsd</td>
+         </tr>
+      </table>
+      <h2>Working Versions</h2> When revisions to these schema become necessary, they will be managed in the <a href="https://github.com/ISO-TC211/XML">ISO TC211 Git Repository</a>. 
+      <hr>
+      <p class="paraSmall">&#169; ISO. Written by hands Version: 2010-02-26/p>
+   </body>
+</html>
