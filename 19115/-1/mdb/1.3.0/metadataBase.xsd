@@ -7,6 +7,7 @@
   xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
   xmlns:mdb="https://schemas.isotc211.org/19115/-1/mdb/1.3" 
   xmlns:mda="https://schemas.isotc211.org/19115/-1/mda/1.3" 
+  xmlns:msr="https://schemas.isotc211.org/19115/-1/msr/1.3" 
   elementFormDefault="qualified"
   targetNamespace="https://schemas.isotc211.org/19115/-1/mdb/1.3" 
   version="1.3.0">
@@ -14,8 +15,9 @@
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
   <import namespace="https://schemas.isotc211.org/19157/-/dqc/1.2" schemaLocation="../../../../19157/-/dqc/1.2.0/dqc.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/lan/1.3" schemaLocation="../../../../19115/-1/lan/1.3.0/lan.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mda/1.3" schemaLocation="../../../../19115/-1/mda/1.3.0/mda.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mda/1.3" schemaLocation="../../../../19115/-1/mda/1.3.0/mda.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/msr/1.3" schemaLocation="../../../../19115/-1/msr/1.3.0/msr.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- =========================================================================== -->
   <element name="MD_Metadata" substitutionGroup="mcc:Abstract_Metadata" type="mdb:MD_Metadata_Type" id="ISO19115-1.015">
