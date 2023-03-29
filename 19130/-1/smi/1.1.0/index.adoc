@@ -5,22 +5,19 @@
 
 == Sensor Model Implementation Version: 1.1
 
+.Codelist(s) in the ISO 19130-1 smi namespace
+image::./19130-1.smi.SensorDataCodelistsWeb.png[UML diagram of Sensor Model Implementation codelists in the smi namespace,600]
+
 === Description
 
-The XML schema was encoded using the rules described in ISO 19108 and ISO/TS
-19139:2007.
+SMI 1.1 is an XML Schema implementation derived from
+ISO 19130-1, Geographic Information - Imagery Sensor Models for Geopositioning - Part 1: Fundamentals.
 
-SMI 1.1 is an XML Schema implementation derived from:
-
-* ISO 19130-1, Geographic Information - Imagery Sensor Models for Geopositioning -
-Part 1: Fundamentals; and
-* ISO 19130-2, Geographic Information - Imagery Sensor Models for Geopositioning -
-Part 2: SAR, INSAR, lidar and sonar.
+The XML schema was encoded using the rules described in ISO/TS 19139:2007.
 
 === XML Namespace for smi 1.1
 
-The namespace URI for smi 1.1 is
-link:../../../../19130/-3/smi/1.1[*https://schemas.isotc211.org/19130/-3/smi/1.1*].
+The namespace URI for smi 1.1 is *https://schemas.isotc211.org/19130/-3/smi/1.1*.
 
 === XML Schema for smi 1.1
 
@@ -41,7 +38,7 @@ rules defined in ISO 19118, ISO 19139.
 
 .Classes in the ISO 19130-1 smi namespace
 
-image::./SnsrMdlClass.png[UML diagram of Sensor Model Implementation classes in the sim namespace,750]
+image::./SnsrMdlClass.png[UML diagram of Sensor Model Implementation classes in the smi namespace,750]
 
 https://schemas.isotc211.org/19130/-1/smi/1.1.0/sensorModel.xsd[https://schemas.isotc211.org/19130/-1/smi/1.1.0/sensorModel.xsd] contains the following class:
 
@@ -56,7 +53,7 @@ created using the encoding rules defined in ISO 19118, ISO 19139.
 
 .Classes in the ISO 19130-1 smi namespace, ground control points
 
-image::./GrndCntrlPntsClass.png[UML diagram of Sensor Model Implementation classes in the sim namespace, ground control points,750]
+image::./GrndCntrlPntsClass.png[UML diagram of Sensor Model Implementation classes in the smi namespace, ground control points,750]
 
 https://schemas.isotc211.org/19130/-1/smi/1.1.0/groundControlPoints.xsd[https://schemas.isotc211.org/19130/-1/smi/1.1.0/groundControlPoints.xsd]
 contains the following classes:
@@ -77,7 +74,7 @@ the encoding rules defined in ISO 19118, ISO 19139.
 
 .Classes in the ISO 19130-1 smi namespace, physical sensor model
 
-image::./PhsclSnsrMdlClass.png[UML diagram of Sensor Model Implementation classes in the sim namespace, physical sensor model,750]
+image::./PhsclSnsrMdlClass.png[UML diagram of Sensor Model Implementation classes in the smi namespace, physical sensor model,750]
 
 https://schemas.isotc211.org/19130/-1/smi/1.1.0/physicalSensorModel.xsd[https://schemas.isotc211.org/19130/-1/smi/1.1.0/physicalSensorModel.xsd]
 contains the following classes:
@@ -93,7 +90,7 @@ rules defined in ISO 19118, ISO 19139.
 
 .Classes in the ISO 19130-1 smi namespace, non-physical sensor model
 
-image::./NonPhsclSnsrMdlClass.png[UML diagram of Sensor Model Implementation classes in the sim namespace, non-physical sensor model,750]
+image::./NonPhsclSnsrMdlClass.png[UML diagram of Sensor Model Implementation classes in the smi namespace, non-physical sensor model,750]
 
 https://schemas.isotc211.org/19130/-1/smi/1.1.0/spatialElements.xsd[https://schemas.isotc211.org/19130/-1/smi/1.1.0/spatialElements.xsd] contains the following classes:
 
@@ -117,7 +114,7 @@ rules defined in ISO 19118, ISO 19139.
 
 .Classes in the ISO 19130-1 smi namespace, sensor parameters
 
-image::./SnsrParamClass.png[UML diagram of Sensor Model Implementation classes in the sim namespace, sensor parameters,750]
+image::./SnsrParamClass.png[UML diagram of Sensor Model Implementation classes in the smi namespace, sensor parameters,750]
 
 https://schemas.isotc211.org/19130/-1/smi/1.1.0/sensorParameters.xsd[https://schemas.isotc211.org/19130/-1/smi/1.1.0/sensorParameters.xsd] contains the following classes:
 
