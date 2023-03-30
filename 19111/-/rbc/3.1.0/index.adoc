@@ -5,7 +5,7 @@
 == Simplified stub for Referencing By Coordinates (RBC) Version: 3.1.0
 
 .Classes in the rbc namespace
-image::./CoordRefSysClass.png[UML diagram of Referencing By Coordinates classes in the rbc namespace,750]
+image::CoordRefSysClass.png[UML diagram of Referencing By Coordinates classes in the rbc namespace,750]
 
 === Description
 

@@ -5,7 +5,7 @@
 == Metadata for Data Quality (MDQ) Version 1.2.0
 
 .Overview of classes in the mdq namespace
-image::./mdqOverviewClass.png[Overview UML diagram of classes from Metadata for Data Quality (MDQ) in the mdq namespace,750]
+image::mdqOverviewClass.png[Overview UML diagram of classes from Metadata for Data Quality (MDQ) in the mdq namespace,750]
 
 === Description
 
@@ -35,7 +35,7 @@ Data Quality. It was created using the encoding rules defined in ISO 19118, ISO
 19139.
 
 .Classes in the data quality elements schema of mdq namespace
-image::./mdqElementsClass.png[UML diagram of classes in the data quality elements schema from Metadata for Data Quality (MDQ) in the mdq namespace,750]
+image::mdqElementsClass.png[UML diagram of classes in the data quality elements schema from Metadata for Data Quality (MDQ) in the mdq namespace,750]
 
 https://schemas.isotc211.org/19157/-/mdq/1.2.0/dataQualityElement.xsd contains the following classes:
 
@@ -72,7 +72,7 @@ Data Quality. It was created using the encoding rules defined in ISO 19118, ISO
 19139.
 
 .Classes in the data quality results schema of mdq namespace
-image::./mdqResultsClass.png[UML diagram of classes in the data quality results schema from Metadata for Data Quality (MDQ) in the mdq namespace,750]
+image::mdqResultsClass.png[UML diagram of classes in the data quality results schema from Metadata for Data Quality (MDQ) in the mdq namespace,750]
 
 https://schemas.isotc211.org/19157/-/mdq/1.2.0/dataQualityResult.xsd contains the following classes:
 
@@ -87,7 +87,7 @@ Data Quality. It was created using the encoding rules defined in ISO 19118, ISO
 19139.
 
 .Classes in the data quality evaluation schema of mdq namespace
-image::./mdqEvaluationClass.png[UML diagram of classes in the data quality evaluation schema from Metadata for Data Quality (MDQ) in the mdq namespace,750]
+image::mdqEvaluationClass.png[UML diagram of classes in the data quality evaluation schema from Metadata for Data Quality (MDQ) in the mdq namespace,750]
 
 https://schemas.isotc211.org/19157/-/mdq/1.2.0/dataQualityEvaluation.xsd
 contains the following classes:
@@ -106,7 +106,7 @@ Data Quality. It was created using the encoding rules defined in ISO 19118, ISO
 19139.
 
 .Classes in the data quality metaquality schema of mdq namespace
-image::./mdqMetaqualityClass.png[UML diagram of classes in the data quality metaquality schema from Metadata for Data Quality (MDQ) in the mdq namespace,750]
+image::mdqMetaqualityClass.png[UML diagram of classes in the data quality metaquality schema from Metadata for Data Quality (MDQ) in the mdq namespace,750]
 
 https://schemas.isotc211.org/19157/-/mdq/1.2.0/metaquality.xsd contains the following classes:
 
@@ -121,7 +121,7 @@ Data Quality Amendment 1: Describing data quality using coverages. It was create
 using the encoding rules defined in ISO 19118, ISO 19139.
 
 .Classes in the data quality information - imagery schema of mdq namespace
-image::./mdqInfoImageryClass.png[UML diagram of classes in the data quality information - imagery schema from Metadata for Data Quality (MDQ) in the mdq namespace,750]
+image::mdqInfoImageryClass.png[UML diagram of classes in the data quality information - imagery schema from Metadata for Data Quality (MDQ) in the mdq namespace,750]
 
 https://schemas.isotc211.org/19157/-/mdq/1.2.0/dataQualityImagery.xsd contains the following classes:
 

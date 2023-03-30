@@ -5,10 +5,10 @@
 == Metadata for Spatial Representation (MSR) Version: 1.3
 
 .Classes in the msr namespace
-image::./SpatialRepClass.png[UML diagram of Metadata for Spatial Representation classes in the msr namespace,750]
+image::SpatialRepClass.png[UML diagram of Metadata for Spatial Representation classes in the msr namespace,750]
 
 .Code list(s) in the msr namespace
-image::./SpatialRepCodeList.png[UML diagram of Metadata for Spatial Representation codelists in the msr namespace,750]
+image::SpatialRepCodeList.png[UML diagram of Metadata for Spatial Representation codelists in the msr namespace,750]
 
 
 === Description

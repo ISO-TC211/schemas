@@ -5,10 +5,10 @@
 == Metadata for Acquisition (MAC) Version: 2.2
 
 .Classes in the mac namespace
-image::./AcquisitionClass.png[UML diagram of Metadata for Acquisition classes in the mac namespace,750]
+image::AcquisitionClass.png[UML diagram of Metadata for Acquisition classes in the mac namespace,750]
 
 .Codelists in the mac namespace
-image::./AcquisitionCodelist.png[UML diagram of Metadata for Acquisition codelists in the mac namespace,600]
+image::AcquisitionCodelist.png[UML diagram of Metadata for Acquisition codelists in the mac namespace,600]
 
 === Description
 

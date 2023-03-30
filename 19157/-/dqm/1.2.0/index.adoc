@@ -5,7 +5,7 @@
 == Data Quality Measures (DQM) Version 1.2.0
 
 .Classes in the dqm namespace
-image::./DtaQualMeasrClass.png[UML diagram of packages from Data Quality Measures (DQM) in the dqm namespace,750]
+image::DtaQualMeasrClass.png[UML diagram of packages from Data Quality Measures (DQM) in the dqm namespace,750]
 
 === Description
 

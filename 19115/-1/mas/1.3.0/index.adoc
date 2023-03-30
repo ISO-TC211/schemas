@@ -5,7 +5,7 @@
 == Metadata for Application Schema (MAS) Version: 1.3
 
 .Classes in the mas namespace
-image::./appSchemaClass.png[UML diagram of Metadata for Application Schemas classes in the mas namespace,750]
+image::appSchemaClass.png[UML diagram of Metadata for Application Schemas classes in the mas namespace,750]
 
 === Description
 
