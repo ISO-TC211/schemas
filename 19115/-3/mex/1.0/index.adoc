@@ -1,7 +1,6 @@
 ﻿= Metadata with Schema Extensions (MEX)
 :edition: 1.0
 :revdate: 2019-01-04
-:stem:
 
 == Metadata with Schema Extensions (MEX) Version: 1.0
 

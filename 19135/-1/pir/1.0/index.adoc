@@ -1,6 +1,5 @@
 ﻿= Procedures for item registration Pt 2
 :revdate: 2021-02-04
-:stem:
 
 == Geographic Information - Procedures for item registration - Part 2: XML implementation Amendment 1
 

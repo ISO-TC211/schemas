@@ -1,7 +1,6 @@
 ﻿= Data Quality Common Classes (DQC)
 :edition: 1.0
 :revdate: 2019-01-04
-:stem:
 
 == Data Quality Common Classes (DQC) Version: 1.0
 

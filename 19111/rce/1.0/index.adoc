@@ -1,7 +1,6 @@
 ﻿= Referencing By Coordinates Common (RCE)
 :edition: 1.0
 :revdate: 2015-06-06
-:stem:
 
 == Referencing By Coordinates Common (RCE) Version: 1.0
 

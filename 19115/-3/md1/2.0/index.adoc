@@ -1,7 +1,6 @@
 ﻿= Metadata for Data and Services with Geospatial Common Extensions (MD1)
 :edition: 2.0
 :revdate: 2019-01-04
-:stem:
 
 == Metadata for Data and Services with Geospatial Common Extensions (MD1) Version: 2.0
 

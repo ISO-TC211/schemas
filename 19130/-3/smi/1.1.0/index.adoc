@@ -1,7 +1,6 @@
 ﻿= Sensor Model Implementation (SMI)
 :edition: 1.1
 :revdate: 2021-02-15
-:stem:
 
 == Sensor Model Implementation Version: 1.1
 

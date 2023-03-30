@@ -1,7 +1,6 @@
 ﻿= Geospatial EXtent (GEX)
 :edition: 1.3
 :revdate: 2021-02-15
-:stem:
 
 == Geospatial EXtent (GEX) Version: 1.3
 

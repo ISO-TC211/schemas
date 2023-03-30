@@ -1,7 +1,6 @@
 = Geospatial Common objects eXtended (GCX)
 :edition: 1.2
 :revdate: 2022-09-16
-:stem:
 
 == Geospatial Common objects eXtended (GCX) Version: 1.2
 

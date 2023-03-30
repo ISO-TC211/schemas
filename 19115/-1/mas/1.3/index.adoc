@@ -1,7 +1,6 @@
 ﻿= Metadata for Application Schema (MAS)
 :edition: 1.3
 :revdate: 2021-02-15
-:stem:
 
 == Metadata for Application Schema (MAS) Version: 1.3
 

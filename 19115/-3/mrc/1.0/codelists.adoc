@@ -1,7 +1,6 @@
 ﻿= Codelist Catalog
 :edition: 1.1
 :revdate: 2017-09-10
-:stem:
 
 == Codelist Catalog
 

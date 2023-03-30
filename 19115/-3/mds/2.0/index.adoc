@@ -1,7 +1,6 @@
 ﻿= Metadata for Data and Services (MDS)
 :edition: 2.0
 :revdate: 2019-01-04
-:stem:
 
 == Metadata for Data and Services (MDS) Version: 2.0
 

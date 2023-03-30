@@ -1,7 +1,6 @@
 ﻿= Codelists from the Metadata Common Classes (mcc) Namespace
 :edition: 1.1
 :revdate: 2017-09-10
-:stem:
 
 == Codelist Catalog
 
