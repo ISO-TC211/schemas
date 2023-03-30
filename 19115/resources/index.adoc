@@ -47,7 +47,7 @@ https://schemas.isotc211.org/19139/-/cat/1.2.0/uomItem.xsd[uomItem.xsd]
 | citation-metadata
 | https://schemas.isotc211.org/19115/-1/cit/1.3
 | image::/19115/-1/cit/1.3.0/citationClass.png[thumbnail of CIT UML and attributes,200]
-| \<\<Leaf\>\> Citation
+| `<<Leaf>>` Citation
 | https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.xsd[cit.xsd]
 | https://schemas.isotc211.org/19115/-1/cit/1.3.0/citation.xsd[citation.xsd]
 | gco.1.2, mcc.1.3
@@ -117,7 +117,7 @@ https://schemas.isotc211.org/19139/-/cat/1.2.0/uomItem.xsd[uomItem.xsd]
 | extended-types
 | `https://schemas.isotc211.org/19103/-/gcx/1.2.0`
 | image::/19103/-/gcx/1.2.0/gcx.png[Thumbnail of Geographic Common objects Extension UML and attributes,200]
-| \<\<Leaf\>\> Extended Types
+| `<<Leaf>>` Extended Types
 | https://schemas.isotc211.org/19103/-/gcx/1.2.0/gcx.xsd[gcx.xsd]
 | https://schemas.isotc211.org/19103/-/gcx/1.2.0/extendedTypes.xsd[extendedTypes.xsd]
 | gco.1.2, xlink.1999, mcc.1.3
@@ -132,7 +132,7 @@ including extent and spatial reference systems.
 | geospatial-extent
 | `https://schemas.isotc211.org/19115/-1/gex/1.3.0`
 | image::/19115/-1/gex/1.3.0/extentClass.png[Thumbnail of Geographic EXtent UML and attributes,200]
-| \<\<Leaf\>\> Extent
+| `<<Leaf>>` Extent
 | https://schemas.isotc211.org/19115/-1/gex/1.3.0/gex.xsd[gex.xsd]
 | https://schemas.isotc211.org/19115//-1/gex/1.3.0/extent.xsd[extent.xsd]
 | mcc.1.3, gco.1.2, gmw.1.2
@@ -198,7 +198,7 @@ https://schemas.isotc211.org/19123/-/cis/1.1.0/gmlcovAll.xsd[gridPoint.xsd]
 |
 | https://schemas.isotc211.org/19163/-1/igd/1.1
 | image::/19163/-1/igd/1.1.0/igdStandardsPackageRelationships.png[Thumbnail of Image and Gridded Data UML and attributes,200]
-| \<\<Leaf\>\> Image and Gridded Data
+| `<<Leaf>>` Image and Gridded Data
 | https://schemas.isotc211.org/19163/-1/igd/1.1.0/igd.xsd[igd.xsd]
 a| https://schemas.isotc211.org/19163/-1/igd/1.1.0/IE_Imagery.xsd[IE_Imagery.xsd] +
 https://schemas.isotc211.org/19163/-1/igd/1.1.0/IE_ImageryAndGriddedData.xsd[IE_ImageryAndGriddedData.xsd] +
@@ -214,7 +214,7 @@ https://schemas.isotc211.org/19163/-1/igd/1.1.0/IE_ThematicGriddedData.xsd[IE_Th
 | language-localization
 | https://schemas.isotc211.org/19115/-1/lan/1.3
 | image::/19115/-1/lan/1.3.0/languageClass.png[Thumbnail of LNguage and localization UML and attributes,200]
-| \<\<Leaf\>\> Language
+| `<<Leaf>>` Language
 | https://schemas.isotc211.org/19115/-1/lan/1.3.0/lan.xsd[lan.xsd]
 | https://schemas.isotc211.org/19115/-1/lan/1.3.0/language.xsd[language.xsd]
 | gco.1.1, cit.1.3
@@ -245,7 +245,7 @@ https://schemas.isotc211.org/19115/-2/mac/2.2.0/event.xsd[event.xsd]
 | application-schema
 | `https://schemas.isotc211.org/19115/-1/mas/1.3.0`
 | image::/19115/-1/mas/1.3.0/appSchemaClass.png[Thumbnail of Metadata for Application Schema UML and attributes,200]
-| \<\<Leaf\>\> Application Schema
+| `<<Leaf>>` Application Schema
 | https://schemas.isotc211.org/19115/-1/mas/1.3.0/mas.xsd[mas.xsd]
 | https://schemas.isotc211.org/19115/-1/mas/1.3.0/applicationSchema.xsd[applicationSchema.xsd]
 | gco.1.2, mcc.1.3, cit.1.30
@@ -259,7 +259,7 @@ https://schemas.isotc211.org/19115/-2/mac/2.2.0/event.xsd[event.xsd]
 | common-classes
 | `https://schemas.isotc211.org/19115/-1/mcc/1.3.0`
 | image::/19115/-1/mcc/1.3.0/CommonClass.png[Thumbnail of Metadata Common Classes UML and attributes,200]
-| \<\<Leaf\>\>
+| `<<Leaf>>`
 | https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd[mcc.xsd]
 a|
 https://schemas.isotc211.org/19115/-1/mcc/1.3.0/AbstractCommonClasses.xsd[AbstractCommonClasses.xsd] +
@@ -275,7 +275,7 @@ https://schemas.isotc211.org/19115/-1/mcc/1.3.0/commonClasses.xsd[commonClasses.
 | constraints
 | `https://schemas.isotc211.org/19115/-1/mco/1.3.0`
 | image::/19115/-1/mco/1.3.0/ConstraintClass.png[Thumbnail of Metadata for COnstraints UML and attributes,200]
-| \<\<Leaf\>\> Constraints
+| `<<Leaf>>` Constraints
 | https://schemas.isotc211.org/19115/-1/mco/1.3.0/mco.xsd[mco.xsd]
 | https://schemas.isotc211.org/19115/-1/mco/1.3.0/constraints.xsd[constraints.xsd]
 | gco.1.2, mcc.1.3
@@ -289,7 +289,7 @@ https://schemas.isotc211.org/19115/-1/mcc/1.3.0/commonClasses.xsd[commonClasses.
 | metadata-application
 | `https://schemas.isotc211.org/19115/-1/mda/1.3.0`
 | image::/19115/-1/mda/1.3.0/MetadataApplicationClass.png[Thumbnail of metadata-application UML and attributes,200]
-| \<\<Leaf\>\> Metadata Application
+| `<<Leaf>>` Metadata Application
 | https://schemas.isotc211.org/19115/-1/mda/1.3.0/mda.xsd[mda.xsd]
 | https://schemas.isotc211.org/19115/-1/mda/1.3.0/metadataApplication.xsd[metadataApplication.xsd]
 | gco.1.2, mdb.1.3
@@ -336,7 +336,7 @@ https://schemas.isotc211.org/19157/-/mdq/1.2.0/metaquality.xsd[metaquality.xsd]
 | metadata-extension
 | `https://schemas.isotc211.org/19115/-1/mex/1.3.0`
 | image::/19115/-1/mex/1.3.0/MdExtensionClass.png[Thumbnail of Metadata with schema EXtensions UML and attributes,200]
-| \<\<Leaf\>\> Metadata Extension
+| `<<Leaf>>` Metadata Extension
 | https://schemas.isotc211.org/19115/-1/mex/1.3.0/mex.xsd[mex.xsd]
 | https://schemas.isotc211.org/19115/-1/mex/1.3.0/metadataExtension.xsd[metadataExtension.xsd]
 | mcc.1.3, gco.1.2
@@ -350,7 +350,7 @@ https://schemas.isotc211.org/19157/-/mdq/1.2.0/metaquality.xsd[metaquality.xsd]
 | maintenance-information
 | `https://schemas.isotc211.org/19115/-1/mmi/1.3.0`
 | image::/19115/-1/mmi/1.3.0/MaintenanceClass.png[Thumbnail of Metadata for Maintenance Information UML and attributes,200]
-| \<\<Leaf\>\> Maintenance
+| `<<Leaf>>` Maintenance
 | https://schemas.isotc211.org/19115/-1/mmi/1.3.0/mmi.xsd[mmi.xsd]
 | https://schemas.isotc211.org/19115/-1/mmi/1.3.0/maintenance.xsd[maintenance.xsd]
 | mcc.1.3, gco.1.2
@@ -364,7 +364,7 @@ https://schemas.isotc211.org/19157/-/mdq/1.2.0/metaquality.xsd[metaquality.xsd]
 | portrayal-catalog
 | `https://schemas.isotc211.org/19115/-1/mpc/1.3.0`
 | image::/19115/-1/mpc/1.3.0/PortrayalCatClass.png[Thumbnail of Metadata for Portrayal Catalog UML and attributes,200]
-| \<\<Leaf\>\> Portrayal Catalog
+| `<<Leaf>>` Portrayal Catalog
 | https://schemas.isotc211.org/19115/-1/mpc/1.3.0/mpc.xsd[mpc.xsd]
 | https://schemas.isotc211.org/19115/-1/mpc/1.3.0/portrayalCatalogue.xsd[portrayalCatalogue.xsd]
 | gco.1.2, mcc.1.3
@@ -378,7 +378,7 @@ https://schemas.isotc211.org/19157/-/mdq/1.2.0/metaquality.xsd[metaquality.xsd]
 | resource-content
 | `https://schemas.isotc211.org/19115/-1/mrc/1.3.0`
 | image::/19115/-1/mrc/1.3.0/ContentClass.png[Thumbnail of Metadata for Resource Content UML and attributes,200]
-| \<\<Leaf\>\> Resource Content
+| `<<Leaf>>` Resource Content
 | https://schemas.isotc211.org/19115/-1/mrc/1.3.0/mrc.xsd[mrc.xsd]
 a|
 https://schemas.isotc211.org/19115/-1/mrc/1.3.0/content.xsd[content.xsd] +
@@ -395,7 +395,7 @@ for Resource Distribution
 | resource-distribution
 | `https://schemas.isotc211.org/19115/-1/mrd/1.3.0`
 | image::/19115/-1/mrd/1.3.0/DistributionClass.png[Thumbnail of Metadata for Resource Distribution UML and attributes,200]
-| \<\<Leaf\>\> Distribution Information
+| `<<Leaf>>` Distribution Information
 | https://schemas.isotc211.org/19115/-1/mrd/1.3.0/mrd.xsd[mrd.xsd]
 | https://schemas.isotc211.org/19115/-1/mrd/1.3.0/distribution.xsd[distribution.xsd]
 | gco.1.2, mcc.1.3
@@ -409,7 +409,7 @@ for Resource Distribution
 | resource-identification
 | `https://schemas.isotc211.org/19115/-1/mri/1.3.0`
 | image::/19115/-1/mri/1.3.0/IdentificationClass.png[Thumbnail of Metadata for Resource Identification UML and attributes,200]
-| \<\<Leaf\>\> Identification Information
+| `<<Leaf>>` Identification Information
 | https://schemas.isotc211.org/19115/-1/mri/1.3.0/mri.xsd[mri.xsd]
 | https://schemas.isotc211.org/19115/-1/mri/1.3.0/identification.xsd[identification.xsd]
 | lan.1.3, mcc.1.3, gco.1.2, gmw.1.2
@@ -423,7 +423,7 @@ for Resource Distribution
 | lineage
 | `https://schemas.isotc211.org/19115/-1/mrl/1.3.0`
 | image::/19115/-1/mrl/1.3.0/LineageClass.png[Thumbnail of Metadata for Resource Lineage UML and attributes,200]
-| \<\<Leaf\>\>
+| `<<Leaf>>`
 | https://schemas.isotc211.org/19115/-1/mrl/1.3.0/mrl.xsd[mrl.xsd]
 a|
 https://schemas.isotc211.org/19115/-1/mrl/1.3.0/lineage.xsd[lineage.xsd] +
@@ -439,7 +439,7 @@ https://schemas.isotc211.org/19115/-2/mrl/2.2.0/lineageImagery.xsd[lineageImager
 | reference-system
 | `https://schemas.isotc211.org/19115/-1/mrs/1.3.0`
 | image::/19115/-1/mrs/1.3.0/ReferenceSysClass.png[Thumbnail of Metadata for Reference System UML and attributes,200]
-| \<\<Leaf\>\> Reference System
+| `<<Leaf>>` Reference System
 | https://schemas.isotc211.org/19115/-1/mrs/1.3.0/mrs.xsd[mrs.xsd]
 | https://schemas.isotc211.org/19115/-1/mrs/1.3.0/referenceSystem.xsd[referenceSystem.xsd]
 | gco.1.2, mcc.1.3
@@ -453,7 +453,7 @@ https://schemas.isotc211.org/19115/-2/mrl/2.2.0/lineageImagery.xsd[lineageImager
 | spatial-representation
 | `https://schemas.isotc211.org/19115/-1/msr/1.3.0`
 | image::/19115/-1/msr/1.3.0/SpatialRepClass.png[Thumbnail of Metadata for Spatial Representation UML and attributes,200]
-| \<\<Leaf\>\> Spatial Representation
+| `<<Leaf>>` Spatial Representation
 | https://schemas.isotc211.org/19115/-1/msr/1.3.0/msr.xsd[msr.xsd]
 a|
 https://schemas.isotc211.org/19115/-1/msr/1.3.0/spatialRepresentation.xsd[spatialRepresentation.xsd]
@@ -508,7 +508,7 @@ coordinates from one coordinate reference system to another.
 | services
 | `https://schemas.isotc211.org/19115/-1/srv/1.3.0`
 | image::/19115/-1/srv/1.3.0/ServiceClass.png[Thumbnail of Metadata for SeRVices UML and attributes,200]
-| \<\<Leaf\>\> Services
+| `<<Leaf>>` Services
 | https://schemas.isotc211.org/19115/-1/srv/1.3.0/srv.xsd[srv.xsd]
 | https://schemas.isotc211.org/19115/-1/srv/1.3.0/serviceInformation.xsd[serviceInformation.xsd]
 | gco.1.2, mcc.1.3, mri.1.3
@@ -548,7 +548,7 @@ https://schemas.isotc211.org/19115/-3/cat/1.0/uomItem.xsd[uomItem.xsd]
 | citation-metadata
 | `https://schemas.isotc211.org/19115/-3/cit/2.0`
 | image::/19115/-3/cit/2.0/cit.png[,200]
-| \<\<Leaf\>\> Citation
+| `<<Leaf>>` Citation
 | https://schemas.isotc211.org/19115/-3/cit/2.0/cit.xsd[cit.xsd]
 | https://schemas.isotc211.org/19115/-3/cit/2.0/citation.xsd[citation.xsd]
 | gco.1.0, mcc.1.0
@@ -620,7 +620,7 @@ Geographic Information - Data Quality, 6.5
 | extended-types
 | `https://schemas.isotc211.org/19115/-3/gcx/1.0`
 | image::/19115/-3/gcx/1.0/gcx.png[,200]
-| \<\<Leaf\>\> Extended Types
+| `<<Leaf>>` Extended Types
 | https://schemas.isotc211.org/19115/-3/gcx/1.0/gcx.xsd[gcx.xsd]
 | https://schemas.isotc211.org/19115/-3/gcx/1.0/extendedTypes.xsd[extendedTypes.xsd]
 | gco.1.0, xlink.1999, mcc.1.0
@@ -634,7 +634,7 @@ Geographic Information - Data Quality, 6.5
 | geospatial-extent
 | `https://schemas.isotc211.org/19115/-3/gex/1.0`
 | image::/19115/-3/gex/1.0/gex.png[,200]
-| \<\<Leaf\>\> Extent
+| `<<Leaf>>` Extent
 | https://schemas.isotc211.org/19115/-3/gex/1.0/gex.xsd[gex.xsd]
 | https://schemas.isotc211.org/19115/-3/gex/1.0/extent.xsd[extent.xsd]
 | mcc.1.0, gco.1.0, gmw.1.0
@@ -683,7 +683,7 @@ geographic data.
 | language-localization
 | `https://schemas.isotc211.org/19115/-3/lan/1.0`
 | image::/19115/-3/lan/1.0/lan.png[,200]
-| \<\<Leaf\>\> Language
+| `<<Leaf>>` Language
 | https://schemas.isotc211.org/19115/-3/lan/1.0/lan.xsd[lan.xsd]
 | https://schemas.isotc211.org/19115/-3/lan/1.0/language.xsd[language.xsd]
 | gco.1.0, cit.1.0
@@ -726,7 +726,7 @@ https://schemas.isotc211.org/19115/-3/mac/2.0/event.xsd[event.xsd]
 | application-schema
 | `https://schemas.isotc211.org/19115/-3/mas/1.0`
 | image::/19115/-3/mas/1.0/mas.png[,200]
-| \<\<Leaf\>\> Application Schema
+| `<<Leaf>>` Application Schema
 | https://schemas.isotc211.org/19115/-3/mas/1.0/mas.xsd[mas.xsd]
 | https://schemas.isotc211.org/19115/-3/mas/1.0/applicationSchema.xsd[applicationSchema.xsd]
 | gco.1.0, mcc.1.0, cit.1.0
@@ -740,7 +740,7 @@ https://schemas.isotc211.org/19115/-3/mac/2.0/event.xsd[event.xsd]
 | common-classes
 | `https://schemas.isotc211.org/19115/-3/mcc/1.0`
 | image::/19115/-3/mcc/1.0/mcc.png[,200]
-| \<\<Leaf\>\>
+| `<<Leaf>>`
 | https://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd[mcc.xsd]
 | https://schemas.isotc211.org/19115/-3/mcc/1.0/AbstractCommonClasses.xsd[AbstractCommonClasses.xsd]
 https://schemas.isotc211.org/19115/-3/mcc/1.0/commonClasses.xsd[commonClasses.xsd]
@@ -755,7 +755,7 @@ https://schemas.isotc211.org/19115/-3/mcc/1.0/commonClasses.xsd[commonClasses.xs
 | constraints
 | `https://schemas.isotc211.org/19115/-3/mco/1.0`
 | image::/19115/-3/mco/1.0/mco.png[,200]
-| \<\<Leaf\>\> Constraints
+| `<<Leaf>>` Constraints
 | https://schemas.isotc211.org/19115/-3/mco/1.0/mco.xsd[mco.xsd]
 | https://schemas.isotc211.org/19115/-3/mco/1.0/constraints.xsd[constraints.xsd]
 | gco.1.0, mcc.1.0
@@ -830,7 +830,7 @@ extensions (MD_MetadataExtensionInformation) elements (mex).
 | metadata-application
 | `https://schemas.isotc211.org/19115/-3/mda/1.0`
 | image::/19115/-3/mda/1.0/mda.png[,200]
-| \<\<Leaf\>\> Metadata Application
+| `<<Leaf>>` Metadata Application
 | https://schemas.isotc211.org/19115/-3/mda/1.0/mda.xsd[mda.xsd]
 | https://schemas.isotc211.org/19115/-3/mda/1.0/metadataApplication.xsd[metadataApplication.xsd]
 | md2.1.0, gco.1.0, mdb.1.0
@@ -844,7 +844,7 @@ extensions (MD_MetadataExtensionInformation) elements (mex).
 | metadata-application
 | `https://schemas.isotc211.org/19115/-3/mda/2.0`
 | image::/19115/-3/mda/2.0/mda.png[,200]
-| \<\<Leaf\>\> Metadata Application
+| `<<Leaf>>` Metadata Application
 | https://schemas.isotc211.org/19115/-3/mda/2.0/mda.xsd[mda.xsd]
 | https://schemas.isotc211.org/19115/-3/mda/2.0/metadataApplication.xsd[metadataApplication.xsd]
 | md2.2.0, gco.1.0, mdb.2.0
@@ -909,7 +909,7 @@ Information - Metadata - Part 1: Fundamentals, 6.5.2
 | metadata-data-or-services
 | `https://schemas.isotc211.org/19115/-3/mds/1.0`
 | image::/19115/-3/mds/1.0/mds.png[,200]
-| \<\<Leaf\>\>
+| `<<Leaf>>`
 | https://schemas.isotc211.org/19115/-3/mds/1.0/mds.xsd[mds.xsd]
 | https://schemas.isotc211.org/19115/-3/mds/1.0/metadataDataServices.xsd[metadataDataServices.xsd]
 | fcc.1.0, gex.1.0, mac.1.0, mas.1.0, mco.1.0, mdb.1.0, mdq.1.0, mmi.1.0, mpc.1.0, mrc.1.0, mrd.1.0, mrl.1.0, mrs.1.0, msr.1.0, srv.2.0
@@ -926,7 +926,7 @@ geospatial common extensions (gex), extenbsions to the schema (mex), data series
 | metadata-data-or-services
 | `https://schemas.isotc211.org/19115/-3/mds/2.0`
 | image::/19115/-3/mds/2.0/mds.png[,200]
-| \<\<Leaf\>\>
+| `<<Leaf>>`
 | https://schemas.isotc211.org/19115/-3/mds/2.0/mds.xsd[mds.xsd]
 | https://schemas.isotc211.org/19115/-3/mds/2.0/metadataDataServices.xsd[metadataDataServices.xsd]
 | fcc.1.0, gex.1.0, mac.2.0, mas.1.0, mco.1.0, mdb.2.0, mdq.1.0, mmi.1.0, mpc.1.0, mrc.2.0, mrd.1.0, mrl.2.0, mrs.1.0, msr.2.0, srv.2.0
@@ -943,7 +943,7 @@ used in situations where all 19115-3 capabilities are required.
 | data-transfer
 | `https://schemas.isotc211.org/19115/-3/mdt/1.0`
 | image::/19115/-3/mdt/1.0/mdt.png[,200]
-| \<\<Leaf\>\> Metadata-based Data Transfers
+| `<<Leaf>>` Metadata-based Data Transfers
 | https://schemas.isotc211.org/19115/-3/mdt/1.0/mdt.xsd[mdt.xsd]
 | https://schemas.isotc211.org/19115/-3/mdt/1.0/metadataTransfer.xsd[metadataTransfer.xsd]
 | cat.1.0, gcx.1.0, mda.1.0, gco.1.0
@@ -960,7 +960,7 @@ used in situations where all 19115-3 capabilities are required.
 | data-transfer
 | `https://schemas.isotc211.org/19115/-3/mdt/2.0`
 | image::/19115/-3/mdt/2.0/mdt.png[,200]
-| \<\<Leaf\>\> Metadata-based Data Transfers
+| `<<Leaf>>` Metadata-based Data Transfers
 | https://schemas.isotc211.org/19115/-3/mdt/2.0/mdt.xsd[mdt.xsd]
 | https://schemas.isotc211.org/19115/-3/mdt/2.0/metadataTransfer.xsd[metadataTransfer.xsd]
 | cat.1.0, gcx.1.0, mda.2.0, gco.1.0
@@ -974,7 +974,7 @@ used in situations where all 19115-3 capabilities are required.
 | metadata-extension
 | `https://schemas.isotc211.org/19115/-3/mex/1.0`
 | image::/19115/-3/mex/1.0/mex.png[,200]
-| \<\<Leaf\>\> Metadata Extension
+| `<<Leaf>>` Metadata Extension
 | https://schemas.isotc211.org/19115/-3/mex/1.0/mex.xsd[mex.xsd]
 | https://schemas.isotc211.org/19115/-3/mex/1.0/metadataExtension.xsd[metadataExtension.xsd]
 | mcc.1.0, gco.1.0
@@ -988,7 +988,7 @@ used in situations where all 19115-3 capabilities are required.
 | maintenance-information
 | `https://schemas.isotc211.org/19115/-3/mmi/1.0`
 | image::/19115/-3/mmi/1.0/mmi.png[,200]
-| \<\<Leaf\>\> Maintenance
+| `<<Leaf>>` Maintenance
 | https://schemas.isotc211.org/19115/-3/mmi/1.0/mmi.xsd[mmi.xsd]
 | https://schemas.isotc211.org/19115/-3/mmi/1.0/maintenance.xsd[maintenance.xsd]
 | mcc.1.0, gco.1.0
@@ -1002,7 +1002,7 @@ used in situations where all 19115-3 capabilities are required.
 | portrayal-catalog
 | `https://schemas.isotc211.org/19115/-3/mpc/1.0`
 | image::/19115/-3/mpc/1.0/mpc.png[,200]
-| \<\<Leaf\>\> Portrayal Catalog
+| `<<Leaf>>` Portrayal Catalog
 | https://schemas.isotc211.org/19115/-3/mpc/1.0/mpc.xsd[mpc.xsd]
 | https://schemas.isotc211.org/19115/-3/mpc/1.0/portrayalCatalogue.xsd[portrayalCatalogue.xsd]
 | gco.1.0, mcc.1.0
@@ -1016,7 +1016,7 @@ used in situations where all 19115-3 capabilities are required.
 | resource-content
 | `https://schemas.isotc211.org/19115/-3/mrc/1.0`
 | image::/19115/-3/mrc/1.0/mrc.png[,200]
-| \<\<Leaf\>\> Resource Content
+| `<<Leaf>>` Resource Content
 | https://schemas.isotc211.org/19115/-3/mrc/1.0/mrc.xsd[mrc.xsd]
 |
 https://schemas.isotc211.org/19115/-3/mrc/1.0/content.xsd[content.xsd]
@@ -1033,7 +1033,7 @@ https://schemas.isotc211.org/19115/-3/mrc/1.0/contentInformationImagery.xsd[cont
 | resource-content
 | `https://schemas.isotc211.org/19115/-3/mrc/2.0`
 | image::/19115/-3/mrc/2.0/mrc.png[,200]
-| \<\<Leaf\>\> Resource Content
+| `<<Leaf>>` Resource Content
 | https://schemas.isotc211.org/19115/-3/mrc/2.0/mrc.xsd[mrc.xsd]
 |
 https://schemas.isotc211.org/19115/-3/mrc/2.0/content.xsd[content.xsd]
@@ -1050,7 +1050,7 @@ https://schemas.isotc211.org/19115/-3/mrc/2.0/contentInformationImagery.xsd[cont
 | resource-distribution
 | `https://schemas.isotc211.org/19115/-3/mrd/1.0`
 | image::/19115/-3/mrd/1.0/mrd.png[,200]
-| \<\<Leaf\>\> Distribution Information
+| `<<Leaf>>` Distribution Information
 | https://schemas.isotc211.org/19115/-3/mrd/1.0/mrd.xsd[mrd.xsd]
 | https://schemas.isotc211.org/19115/-3/mrd/1.0/distribution.xsd[distribution.xsd]
 | gco.1.0, mcc.1.0
@@ -1065,7 +1065,7 @@ Geographic Information - Metadata - Part 1: Fundamentals, 6.5.3
 | resource-identification
 | `https://schemas.isotc211.org/19115/-3/mri/1.0`
 | image::/19115/-3/mri/1.0/mri.png[,200]
-| \<\<Leaf\>\> Identification Information
+| `<<Leaf>>` Identification Information
 | https://schemas.isotc211.org/19115/-3/mri/1.0/mri.xsd[mri.xsd]
 | https://schemas.isotc211.org/19115/-3/mri/1.0/identification.xsd[identification.xsd]
 | lan.1.0, mcc.1.0, gco.1.0, gmw.1.0
@@ -1079,7 +1079,7 @@ Geographic Information - Metadata - Part 1: Fundamentals, 6.5.3
 | lineage
 | `https://schemas.isotc211.org/19115/-3/mrl/1.0`
 | image::/19115/-3/mrl/1.0/mrl.png[,200]
-| \<\<Leaf\>\>
+| `<<Leaf>>`
 | https://schemas.isotc211.org/19115/-3/mrl/1.0/mrl.xsd[mrl.xsd]
 |
 https://schemas.isotc211.org/19115/-3/mrl/1.0/lineage.xsd[lineage.xsd]
@@ -1096,7 +1096,7 @@ https://schemas.isotc211.org/19115/-3/mrl/1.0/lineageImagery.xsd[lineageImagery.
 | lineage
 | `https://schemas.isotc211.org/19115/-3/mrl/2.0`
 | image::/19115/-3/mrl/2.0/mrl.png[,200]
-| \<\<Leaf\>\>
+| `<<Leaf>>`
 | https://schemas.isotc211.org/19115/-3/mrl/2.0/mrl.xsd[mrl.xsd]
 | https://schemas.isotc211.org/19115/-3/mrl/2.0/lineage.xsd[lineage.xsd]
 https://schemas.isotc211.org/19115/-3/mrl/2.0/lineageImagery.xsd[lineageImagery.xsd]
@@ -1111,7 +1111,7 @@ https://schemas.isotc211.org/19115/-3/mrl/2.0/lineageImagery.xsd[lineageImagery.
 | reference-system
 | `https://schemas.isotc211.org/19115/-3/mrs/1.0`
 | image::/19115/-3/mrs/1.0/mrs.png[,200]
-| \<\<Leaf\>\> Reference System
+| `<<Leaf>>` Reference System
 | https://schemas.isotc211.org/19115/-3/mrs/1.0/mrs.xsd[mrs.xsd]
 | https://schemas.isotc211.org/19115/-3/mrs/1.0/referenceSystem.xsd[referenceSystem.xsd]
 | gco.1.0, mcc.1.0
@@ -1125,7 +1125,7 @@ https://schemas.isotc211.org/19115/-3/mrl/2.0/lineageImagery.xsd[lineageImagery.
 | spatial-representation
 | `https://schemas.isotc211.org/19115/-3/msr/1.0`
 | image::/19115/-3/msr/1.0/msr.png[,200]
-| \<\<Leaf\>\> Spatial Representation
+| `<<Leaf>>` Spatial Representation
 | https://schemas.isotc211.org/19115/-3/msr/1.0/msr.xsd[msr.xsd]
 | https://schemas.isotc211.org/19115/-3/msr/1.0/spatialRepresentation.xsd[spatialRepresentation.xsd]
 https://schemas.isotc211.org/19115/-3/msr/1.0/spatialRepresentationImagery.xsd[spatialRepresentationImagery.xsd]
@@ -1140,7 +1140,7 @@ https://schemas.isotc211.org/19115/-3/msr/1.0/spatialRepresentationImagery.xsd[s
 | spatial-representation
 | `https://schemas.isotc211.org/19115/-3/msr/2.0`
 | image::/19115/-3/msr/2.0/msr.png[,200]
-| \<\<Leaf\>\> Spatial Representation
+| `<<Leaf>>` Spatial Representation
 | https://schemas.isotc211.org/19115/-3/msr/2.0/msr.xsd[msr.xsd]
 | https://schemas.isotc211.org/19115/-3/msr/2.0/spatialRepresentation.xsd[spatialRepresentation.xsd]
 https://schemas.isotc211.org/19115/-3/msr/2.0/spatialRepresentationImagery.xsd[spatialRepresentationImagery.xsd]
@@ -1189,7 +1189,7 @@ one coordinate reference system to another.
 | services
 | `https://schemas.isotc211.org/19115/-3/srv/2.0`
 | image::/19115/-3/srv/2.0/srv.png[,200]
-| \<\<Leaf\>\> Services
+| `<<Leaf>>` Services
 | https://schemas.isotc211.org/19115/-3/srv/2.0/srv.xsd[srv.xsd]
 | https://schemas.isotc211.org/19115/-3/srv/2.0/serviceInformation.xsd[serviceInformation.xsd]
 | gco.1.0, mcc.1.0, mri.1.0
