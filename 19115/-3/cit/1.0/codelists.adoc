@@ -2,7 +2,6 @@
 :edition: 1.1
 :revdate: 2017-09-10
 
-[[top]]
 == Codelist Catalog
 
 This report describes the ISO TC211 codelist catalogs, the codelists they contain, and the values and definitions of the codes.
