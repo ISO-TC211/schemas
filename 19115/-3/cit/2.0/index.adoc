@@ -20,7 +20,9 @@ link:cit_revised.xml[cit_revised.xml]
 
 === CodeLists for cit 2.0
 
-link:codelists.html[codelists.html] link:codelists.xml[codelists.xml]
+* link:codelists.html[codelists.html]
+* link:codelists.xml[codelists.xml]
+
 
 === XML Namespace for cit 2.0
 

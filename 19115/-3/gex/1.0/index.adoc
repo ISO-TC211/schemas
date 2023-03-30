@@ -16,7 +16,9 @@ reference systems. The XML schema was encoded using the rules described in ISO/T
 
 === Sample XML files for gex 1.0
 
-link:gex_invalid.xml[gex_invalid.xml] link:gex_valid.xml[gex_valid.xml]
+* link:gex_invalid.xml[gex_invalid.xml]
+* link:gex_valid.xml[gex_valid.xml]
+
 
 === XML Namespace for gex 1.0
 

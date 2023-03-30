@@ -16,11 +16,15 @@ ISO/TS19115-3, Clause 8.
 
 === Sample XML files for mmi 1.0
 
-link:mmi_invalid.xml[mmi_invalid.xml] link:mmi_valid.xml[mmi_valid.xml]
+* link:mmi_invalid.xml[mmi_invalid.xml]
+* link:mmi_valid.xml[mmi_valid.xml]
+
 
 === CodeLists for mmi 1.0
 
-link:codelists.html[codelists.html] link:codelists.xml[codelists.xml]
+* link:codelists.html[codelists.html]
+* link:codelists.xml[codelists.xml]
+
 
 === XML Namespace for mmi 1.0
 

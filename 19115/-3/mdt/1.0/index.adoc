@@ -23,7 +23,9 @@ link:mdt.xml[mdt.xml]
 
 === CodeLists for mdt 1.0
 
-link:codelists.html[codelists.html] link:codelists.xml[codelists.xml]
+* link:codelists.html[codelists.html]
+* link:codelists.xml[codelists.xml]
+
 
 === XML Namespace for mdt 1.0
 
