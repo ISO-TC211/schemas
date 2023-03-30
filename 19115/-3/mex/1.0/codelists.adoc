@@ -22,7 +22,6 @@ Number of items:: 18
 
 === Codelists
 
-link:MD_DatatypeCode[]
 
 === MD_DatatypeCode:
 
