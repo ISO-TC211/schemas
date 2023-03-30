@@ -5,11 +5,10 @@
 == metadata for SeRVices (SRV) Version: 1.3
 
 .Classes in the srv namespace
-====
 image::./ServiceClass.png[UML diagram of metadata for SeRVices classes in the srv namespace,750]
 
+.Codelists in the srv namespace
 image::./ServiceCodelist.png[UML diagram of Metadata for SeRVices codelists in the srv namespace,400]
-====
 
 === Description
 
