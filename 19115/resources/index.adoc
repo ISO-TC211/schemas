@@ -27,7 +27,7 @@ https://github.com/ISO-TC211/XML[ISO/TC 211 Git Repository].
 | Elements for codelist catalogues, and example catalogues.
 | ISO 19115-1, Geographic Information - Metadata - Part 1: Fundamentals, 7.4.4
 | catalogue
-| https://schemas.isotc211.org/19139/-/cat/1.2
+| `https://schemas.isotc211.org/19139/-/cat/1.2`
 | image::/19139/-/cat/1.2.0/cat.png[thumbnail of Catalogue UML and attributes,200]
 | Catalog, Code List Item, uom Item, CRS Item
 | https://schemas.isotc211.org/19139/-/cat/1.2.0/cat.xsd[cat.xsd]
@@ -45,7 +45,7 @@ https://schemas.isotc211.org/19139/-/cat/1.2.0/uomItem.xsd[uomItem.xsd]
 | Utility elements for citation, identification, and web linkage of resources.
 | ISO 19115-1, Geographic Information - Metadata - Part 1: Fundamentals, 6.6.2
 | citation-metadata
-| https://schemas.isotc211.org/19115/-1/cit/1.3
+| `https://schemas.isotc211.org/19115/-1/cit/1.3`
 | image::/19115/-1/cit/1.3.0/citationClass.png[thumbnail of CIT UML and attributes,200]
 | `<<Leaf>>` Citation
 | https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.xsd[cit.xsd]
@@ -151,7 +151,7 @@ are represented in digital form. Its principles can be extended to the catalogui
 other forms of geographic data.
 | ISO 19110, Geographic information -- Methodology for feature cataloguing
 | feature-catalog
-| https://schemas.isotc211.org/19110/-/gfc/2.2
+| `https://schemas.isotc211.org/19110/-/gfc/2.2`
 | image::/19110/-/gfc/2.2.0/CncptMdiFeatCatClass.png[Thumbnail of General Feature Classes UML and attributes,200]
 |
 | https://schemas.isotc211.org/19110/-/gfc/2.2.0/gfc.xsd[gfc.xsd]
@@ -163,8 +163,9 @@ other forms of geographic data.
 | Geographic Markup Language for COVerages
 | 1.1.0
 |
-| |
-| http://www.opengis.net/gmlcov/1.0[http://www.opengis.net/gmlcov/1.0]
+|
+|
+| `http://www.opengis.net/gmlcov/1.0`
 | image::/19123/-2/cis/1.1.0/AppSchmaCoverages.png[Thumbnail of Geographic Markup Language for COVerages,200]
 | None
 | https://schemas.isotc211.org/19123/-2/cis/1.1.0/gmlcovAll.xsd[gmlcovAll.xsd]
@@ -182,7 +183,7 @@ https://schemas.isotc211.org/19123/-/cis/1.1.0/gmlcovAll.xsd[gridPoint.xsd]
 | Wrappers for gml dependencies.
 | ISO 19136-1
 | geographic-wrappers
-| https://schemas.isotc211.org/19136/-1/gmw/1.1
+| `https://schemas.isotc211.org/19136/-1/gmw/1.1`
 | image::/19136/-1/gmw/1.1.0/gmwBasePackage.png[Thumbnail of Geographic Markup Wrappers,200]
 | None
 | https://schemas.isotc211.org/19136/-1/gmw/1.1.0/gmw.xsd[gmw.xsd]
@@ -196,7 +197,7 @@ https://schemas.isotc211.org/19123/-/cis/1.1.0/gmlcovAll.xsd[gridPoint.xsd]
 | Elements for managing Image and Gridded Data.
 | ISO 19163-1, Geographic Information - Content components and encoding rules for imagery and gridded data - Part 1: Content model
 |
-| https://schemas.isotc211.org/19163/-1/igd/1.1
+| `https://schemas.isotc211.org/19163/-1/igd/1.1`
 | image::/19163/-1/igd/1.1.0/igdStandardsPackageRelationships.png[Thumbnail of Image and Gridded Data UML and attributes,200]
 | `<<Leaf>>` Image and Gridded Data
 | https://schemas.isotc211.org/19163/-1/igd/1.1.0/igd.xsd[igd.xsd]
@@ -212,7 +213,7 @@ https://schemas.isotc211.org/19163/-1/igd/1.1.0/IE_ThematicGriddedData.xsd[IE_Th
 | Elements for cultural and linguistic adapatiblity.
 | ISO 19115-1, Geographic Information - Metadata - Part 1: Fundamentals, 7.3
 | language-localization
-| https://schemas.isotc211.org/19115/-1/lan/1.3
+| `https://schemas.isotc211.org/19115/-1/lan/1.3`
 | image::/19115/-1/lan/1.3.0/languageClass.png[Thumbnail of LNguage and localization UML and attributes,200]
 | `<<Leaf>>` Language
 | https://schemas.isotc211.org/19115/-1/lan/1.3.0/lan.xsd[lan.xsd]
@@ -226,7 +227,7 @@ https://schemas.isotc211.org/19163/-1/igd/1.1.0/IE_ThematicGriddedData.xsd[IE_Th
 | Information related to acquisition platforms, instruments, operations and other details.
 | ISO 19115-2, Geographic Information - Metadata - Part 2: Extensions for acquisition and processing, 6.3.2
 |
-| https://schemas.isotc211.org/19115/-2/mac/2.2
+| `https://schemas.isotc211.org/19115/-2/mac/2.2`
 | image::/19115/-2/mac/2.2.0/AcquisitionClass.png[Thumbnail of Metadata for ACquisition UML and attributes,200]
 | Acquisition Details
 | https://schemas.isotc211.org/19115/-2/mac/2.2.0/mac.xsd[mac.xsd]
@@ -315,7 +316,7 @@ https://schemas.isotc211.org/19115/-1/mcc/1.3.0/commonClasses.xsd[commonClasses.
 | Elements for describing the quality of resources.
 | ISO 19157, Geographic Information - Data Quality, 6.4
 | data-quality
-| https://schemas.isotc211.org/19157/-/mdq/1.2
+| `https://schemas.isotc211.org/19157/-/mdq/1.2`
 | image::/19157/-/mdq/1.2.0/mdqElementsClass.png[Thumbnail of Metadata for Data Quality UML and attributes,200]
 | Data Quality
 | https://schemas.isotc211.org/19157/-/mdq/1.2.0/mdq.xsd[mdq.xsd]
@@ -470,7 +471,7 @@ registration as the assignment of an unambiguous name to an object in a way that
 makes the assignment available to interested parties.
 | ISO 19135, Geographic information - Procedures for item registration - Part 1: Fundamentals
 | Procedures for Item Registration
-| https://schemas.isotc211.org/19135/-1/pir/1.1
+| `https://schemas.isotc211.org/19135/-1/pir/1.1`
 | image::/19135/-1/pir/1.1.0/19135-1ItemRegistrationClassesWeb.png[Thumbnail of Referencing By Coordinates UML and attributes,200]
 |
 | https://schemas.isotc211.org/19135/-1/pir/1.1.0/pir.xsd[pir.xsd]
@@ -492,7 +493,7 @@ information to be provided. It also describes the information required to change
 coordinates from one coordinate reference system to another.
 | ISO 19111, Geographic information -- Spatial referencing by coordinates
 | Reference by Coordinate
-| https://schemas.isotc211.org/19111/-/rbc/3.1
+| `https://schemas.isotc211.org/19111/-/rbc/3.1`
 | image::/19111/-/rbc/3.1.0/CoordRefSysClass.png[Thumbnail of Reference by Coordinate UML and attributes,200]
 |
 | https://schemas.isotc211.org/19111/-/rbc/3.1.0/rbc.xsd[rbc.xsd]
@@ -653,7 +654,7 @@ digital form. Its principles can be extended to the cataloguing of other forms o
 geographic data.
 | ISO 19110, Geographic information -- Methodology for feature cataloguing
 | feature-catalog
-| https://schemas.isotc211.org/19110/gfc/1.1
+| `https://schemas.isotc211.org/19110/gfc/1.1`
 | image::/19110/gfc/1.1/gfc.png[,200]
 |
 | https://schemas.isotc211.org/19110/gfc/1.1/gfc.xsd[gfc.xsd]
