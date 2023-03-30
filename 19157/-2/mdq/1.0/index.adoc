@@ -8,7 +8,7 @@ image::mdq.png[]
 
 === Description
 
-MDQ 1.0 is an XML Schema implementation derived from ISO ISO 19157, Geographic
+MDQ 1.0 is an XML Schema implementation derived from ISO 19157, Geographic
 Information - Data Quality, Clause 6.4. It includes elements for describing the
 quality of resources. The XML schema was encoded using the rules described in ISO/TS
 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8.
