@@ -16,7 +16,7 @@ https://github.com/ISO-TC211/XML[ISO/TC 211 Git Repository].
 == Newer set of namespaces (2021)
 
 [%unnumbered]
-[options=header,cols=13]
+[options=header,cols="a,a,a,a,a,a,a,a,a,a,a,a,a"]
 |===
 | Year | Standard Prefix | Title | Version | Scope | Standard, Paragraph | Requirements Name | Namespace URI | Thumbnail | UML Package | XML Schema | XML Schema Included | Imported Namespaces
 
@@ -518,7 +518,7 @@ coordinates from one coordinate reference system to another.
 == Previous sets of namespaces (pre-2020)
 
 [%unnumbered]
-[options=header,cols=13]
+[options=header,cols="a,a,a,a,a,a,a,a,a,a,a,a,a"]
 |===
 | Year | Standard Prefix | Title | Version | Scope | Standard, Paragraph | Requirements Name | Namespace URI | Thumbnail | UML Package | XML Schema | XML Schema Included | Imported Namespaces
 
