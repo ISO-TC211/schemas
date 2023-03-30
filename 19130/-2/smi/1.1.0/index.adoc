@@ -33,18 +33,18 @@ namespace, but it does not contain the declaration of any types.
 
 ==== Sensor Model
 
-*https://schemas.isotc211.org/19130/-2/smi/1.1.0/sensorModel.xsd[https://schemas.isotc211.org/19130/-2/smi/1.1.0/sensorModel.xsd]* implements the UML conceptual schema
+*https://schemas.isotc211.org/19130/-2/smi/1.1.0/sensorModel.xsd* implements the UML conceptual schema
 defined in ISO 19130-2, Geographic Information - Imagery Sensor Models for
 Geopositioning - Part 2: SAR, INSAR, lidar and sonar. It was created using the
 encoding rules defined in ISO 19118, ISO 19139.
 
-https://schemas.isotc211.org/19130/-2/smi/1.1.0/sensorModel.xsd[https://schemas.isotc211.org/19130/-2/smi/1.1.0/sensorModel.xsd] contains the following classes:
+https://schemas.isotc211.org/19130/-2/smi/1.1.0/sensorModel.xsd contains the following classes:
 
 * SE_SensorModel
 
 ==== Sensor Parameters
 
-*https://schemas.isotc211.org/19130/-2/smi/1.1.0/sensorParameters.xsd[https://schemas.isotc211.org/19130/-2/smi/1.1.0/sensorParameters.xsd]* implements the UML conceptual
+*https://schemas.isotc211.org/19130/-2/smi/1.1.0/sensorParameters.xsd* implements the UML conceptual
 schema defined in ISO 19130-2, Geographic Information - Imagery Sensor Models for
 Geopositioning - Part 2: SAR, INSAR, lidar and sonar. It was created using the
 encoding rules defined in ISO 19118, ISO 19139.
@@ -53,7 +53,7 @@ encoding rules defined in ISO 19118, ISO 19139.
 
 image::./SnsrDtaExtSnsrParamClass.png[UML diagram of SAR, INSAR, lidar and sonar classes in the smi namespace, sensor parameters.,750] +
 
-https://schemas.isotc211.org/19130/-2/smi/1.1.0/sensorParameters.xsd[https://schemas.isotc211.org/19130/-2/smi/1.1.0/sensorParameters.xsd] contains the following classes:
+https://schemas.isotc211.org/19130/-2/smi/1.1.0/sensorParameters.xsd contains the following classes:
 
 * SE_SAROperation
 * SE_InSARTime
@@ -76,7 +76,7 @@ https://schemas.isotc211.org/19130/-2/smi/1.1.0/sensorParameters.xsd[https://sch
 
 ==== Spatial Elements
 
-*https://schemas.isotc211.org/19130/-2/smi/1.1.0/spatialElements.xsd[https://schemas.isotc211.org/19130/-2/smi/1.1.0/spatialElements.xsd]*
+*https://schemas.isotc211.org/19130/-2/smi/1.1.0/spatialElements.xsd*
 implements the UML conceptual schema defined in ISO 19130-2, Geographic Information -
 Imagery Sensor Models for Geopositioning - Part 2: SAR, INSAR, lidar and sonar. It
 was created using the encoding rules defined in ISO 19118, ISO 19139.
@@ -85,7 +85,7 @@ was created using the encoding rules defined in ISO 19118, ISO 19139.
 
 image::./SnsrDtaExtSpatElemClass.png[UML diagram of SAR, INSAR, lidar and sonar classes in the smi namespace, spatial elements.,750] +
 
-https://schemas.isotc211.org/19130/-2/smi/1.1.0/spatialElements.xsd[https://schemas.isotc211.org/19130/-2/smi/1.1.0/spatialElements.xsd] contains the following classes:
+https://schemas.isotc211.org/19130/-2/smi/1.1.0/spatialElements.xsd contains the following classes:
 
 * SE_AerialTriangulation
 * SE_ATAdjustedGCP
@@ -110,7 +110,7 @@ https://schemas.isotc211.org/19130/-2/smi/1.1.0/spatialElements.xsd[https://sche
 
 ==== ISO 19130-2 Code lists
 
-*https://schemas.isotc211.org/19130/-2/smi/1.1.0/codeList.xsd[https://schemas.isotc211.org/19130/-2/smi/1.1.0/codeList.xsd]*
+*https://schemas.isotc211.org/19130/-2/smi/1.1.0/codeList.xsd*
 implements the codelists from the UML conceptual schema defined in ISO 19130-2,
 Geographic Information - Imagery Sensor Models for Geopositioning - Part 1: SAR,
 INSAR, lidar and sonar. It was created using the encoding rules defined in ISO 19118,
@@ -120,7 +120,7 @@ ISO 19139.
 
 image::./SnsrDtaExtCodelist.png[UML diagram of SAR, INSAR, lidar and sonar codelists in the smi namespace,500]
 
-https://schemas.isotc211.org/19130/-2/smi/1.1.0/codeList.xsd[https://schemas.isotc211.org/19130/-2/smi/1.1.0/codeList.xsd] contains the following classes:
+https://schemas.isotc211.org/19130/-2/smi/1.1.0/codeList.xsd contains the following classes:
 
 * SE_ATDimensionType
 * SE_ATMeasType
@@ -147,11 +147,11 @@ The 19130-2 smi 1.1 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geographic Common Objects | gco |
-https://schemas.isotc211.org/19103/-/gco/1.2.0[https://schemas.isotc211.org/19103/-/gco/1.2] | ../../../../19103/-/gco/1.2.0/gco.xsd
+https://schemas.isotc211.org/19103/-/gco/1.2.0 | ../../../../19103/-/gco/1.2.0/gco.xsd
 | Metadata for Data Quality | mdq |
-https://schemas.isotc211.org/19157/-/mdq/1.2.0[https://schemas.isotc211.org/19157/-/mdq/1.2] | ../../../../19157/-/mdq/1.2.0/mdq.xsd
+https://schemas.isotc211.org/19157/-/mdq/1.2.0 | ../../../../19157/-/mdq/1.2.0/mdq.xsd
 | Geospatial Meta-Language | gml |
-http://schemas.opengis.net/gml/3.2.1/gml.xsd[http://schemas.opengis.net/gml/3.2] |
+http://schemas.opengis.net/gml/3.2.1/gml.xsd |
 http://schemas.opengis.net/gml/3.2.1/gml.xsd
 | Sensor Web Enabled | swe |
 http://www.opengis.net/swe/2.0[http://www.opengis.net/swe/2.0] |

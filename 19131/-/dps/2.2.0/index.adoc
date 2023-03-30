@@ -26,7 +26,7 @@ to be referenced by XML documents containing XML elements in the dps namespace
 or by XML Schema documents importing the dps 2.2 namespace. This XML schema
 includes (indirectly) all the implemented concepts of the dps namespace.
 
-https://schemas.isotc211.org/19131/-/dps/2.2.0/dps.xsd[https://schemas.isotc211.org/19131/-/dps/2.2.0/dps.xsd]
+https://schemas.isotc211.org/19131/-/dps/2.2.0/dps.xsd
 contains the following classes:
 
 * PortrayalSection
@@ -75,27 +75,27 @@ The DPS 2.2.0 imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | CITation and Responsibility | cit |
-https://schemas.isotc211.org/19115/-1/cit/1.3[https://schemas.isotc211.org/19115/-1/cit/1.3] | ../../../../19115/-1/cit/1.3.0/cit.xsd
+https://schemas.isotc211.org/19115/-1/cit/1.3 | ../../../../19115/-1/cit/1.3.0/cit.xsd
 | LANguage and localization | lan |
-https://schemas.isotc211.org/19115/-1/lan/1.3[https://schemas.isotc211.org/19115/-1/lan/1.3] | ../../../../19115/-1/lan/1.3.0/lan.xsd
+https://schemas.isotc211.org/19115/-1/lan/1.3 | ../../../../19115/-1/lan/1.3.0/lan.xsd
 | Metadata for Resource Identification | mri |
-https://schemas.isotc211.org/19115/-1/mri/1.3[https://schemas.isotc211.org/19115/-1/mri/1.3] | ../../../../19115/-1/mri/1.3.0/mri.xsd
+https://schemas.isotc211.org/19115/-1/mri/1.3 | ../../../../19115/-1/mri/1.3.0/mri.xsd
 | Metadata for Reference System | mrs |
-https://schemas.isotc211.org/19115/-1/mrs/1.3[https://schemas.isotc211.org/19115/-1/mrs/1.3] | ../../../../19115/-1/mrs/1.3.0/mrs.xsd
+https://schemas.isotc211.org/19115/-1/mrs/1.3 | ../../../../19115/-1/mrs/1.3.0/mrs.xsd
 | Metadata for COnstraints | mco |
-https://schemas.isotc211.org/19115/-1/mco/1.3[https://schemas.isotc211.org/19115/-1/mco/1.3] | ../../../../19115/-1/mco/1.3.0/mco.xsd
+https://schemas.isotc211.org/19115/-1/mco/1.3 | ../../../../19115/-1/mco/1.3.0/mco.xsd
 | Metadata for Common Classes | mco |
-https://schemas.isotc211.org/19115/-1/mcc/1.3[https://schemas.isotc211.org/19115/-1/mcc/1.3] | ../../../../19115/-1/mco/1.3.0/mcc.xsd
+https://schemas.isotc211.org/19115/-1/mcc/1.3 | ../../../../19115/-1/mco/1.3.0/mcc.xsd
 | Metadata for Maintenance Information | mmi |
-https://schemas.isotc211.org/19115/-1/mcc/1.3[https://schemas.isotc211.org/19115/-1/mmi/1.3] | ../../../../19115/-1/mmi/1.3.0/mmi.xsd
+https://schemas.isotc211.org/19115/-1/mcc/1.3 | ../../../../19115/-1/mmi/1.3.0/mmi.xsd
 | Metadata for Application Systems | mas |
-https://schemas.isotc211.org/19115/-1/mas/1.3[https://schemas.isotc211.org/19115/-1/mas/1.3] | ../../../../19115/-1/mas/1.3.0/mas.xsd
+https://schemas.isotc211.org/19115/-1/mas/1.3 | ../../../../19115/-1/mas/1.3.0/mas.xsd
 | Metadata for Resource Content | mrc |
-https://schemas.isotc211.org/19115/-1/mrc/1.3[https://schemas.isotc211.org/19115/-1/mrc/1.3] | ../../../../19115/-1/mrc/1.3.0/mrc.xsd
+https://schemas.isotc211.org/19115/-1/mrc/1.3 | ../../../../19115/-1/mrc/1.3.0/mrc.xsd
 | Metadata for Resource Lineage | mrl |
-https://schemas.isotc211.org/19115/-1/mrl/1.3[https://schemas.isotc211.org/19115/-1/mrl/1.3] | ../../../../19115/-1/mrl/1.3.0/mrl.xsd
+https://schemas.isotc211.org/19115/-1/mrl/1.3 | ../../../../19115/-1/mrl/1.3.0/mrl.xsd
 | Metadata for Data Quality | mdq |
-https://schemas.isotc211.org/19157/-/mdq/1.2[https://schemas.isotc211.org/19115/-/mdq/1.2] | ../../../../19157/-/mdq/1.2.0/mrl.xsd
+https://schemas.isotc211.org/19157/-/mdq/1.2 | ../../../../19157/-/mdq/1.2.0/mrl.xsd
 
 |===
 

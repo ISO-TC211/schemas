@@ -8,7 +8,7 @@
 Procedures for Item registration Part 2 2012 has been withdrawn
 
 Please refer to Procedures for Item registration Part 1 2021
-https://schemas.isotc211.org/19135/-1/pir/1.0[https://schemas.isotc211.org/19135/-1/pir/1.0]
+https://schemas.isotc211.org/19135/-1/pir/1.0
 
 Procedures for Item registration Part 2 2012 consists of two namespaces pre and reg.
 
@@ -37,7 +37,7 @@ Contained classes:
 ==== REG 1.0 Namespace
 
 Namespace URI:
-https://schemas.isotc211.org/19135/-2/reg/1.0/[https://schemas.isotc211.org/19135/-2/reg/1.0/]
+https://schemas.isotc211.org/19135/-2/reg/1.0/
 
 This namespace contains the non-abstract classes.
 

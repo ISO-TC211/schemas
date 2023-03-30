@@ -37,7 +37,7 @@ Data Quality. It was created using the encoding rules defined in ISO 19118, ISO
 .Classes in the data quality elements schema of mdq namespace
 image::./mdqElementsClass.png[UML diagram of classes in the data quality elements schema from Metadata for Data Quality (MDQ) in the mdq namespace,750]
 
-https://schemas.isotc211.org/19157/-/mdq/1.2.0/dataQualityElement.xsd[https://schemas.isotc211.org/19157/-/mdq/1.2.0/dataQualityElement.xsd] contains the following classes:
+https://schemas.isotc211.org/19157/-/mdq/1.2.0/dataQualityElement.xsd contains the following classes:
 
 * DQ_AbsoluteExternalPositionalAccuracy
 * DQ_AccuracyOfATimeMeasurement
@@ -74,7 +74,7 @@ Data Quality. It was created using the encoding rules defined in ISO 19118, ISO
 .Classes in the data quality results schema of mdq namespace
 image::./mdqResultsClass.png[UML diagram of classes in the data quality results schema from Metadata for Data Quality (MDQ) in the mdq namespace,750]
 
-https://schemas.isotc211.org/19157/-/mdq/1.2.0/dataQualityResult.xsd[https://schemas.isotc211.org/19157/-/mdq/1.2.0/dataQualityResult.xsd] contains the following classes:
+https://schemas.isotc211.org/19157/-/mdq/1.2.0/dataQualityResult.xsd contains the following classes:
 
 * DQ_ConformanceResult
 * DQ_DescriptiveResult
@@ -89,7 +89,7 @@ Data Quality. It was created using the encoding rules defined in ISO 19118, ISO
 .Classes in the data quality evaluation schema of mdq namespace
 image::./mdqEvaluationClass.png[UML diagram of classes in the data quality evaluation schema from Metadata for Data Quality (MDQ) in the mdq namespace,750]
 
-https://schemas.isotc211.org/19157/-/mdq/1.2.0/dataQualityEvaluation.xsd[https://schemas.isotc211.org/19157/-/mdq/1.2.0/dataQualityEvaluation.xsd]
+https://schemas.isotc211.org/19157/-/mdq/1.2.0/dataQualityEvaluation.xsd
 contains the following classes:
 
 * DQ_AggregationDerivation
@@ -108,7 +108,7 @@ Data Quality. It was created using the encoding rules defined in ISO 19118, ISO
 .Classes in the data quality metaquality schema of mdq namespace
 image::./mdqMetaqualityClass.png[UML diagram of classes in the data quality metaquality schema from Metadata for Data Quality (MDQ) in the mdq namespace,750]
 
-https://schemas.isotc211.org/19157/-/mdq/1.2.0/metaquality.xsd[https://schemas.isotc211.org/19157/-/mdq/1.2.0/metaquality.xsd] contains the following classes:
+https://schemas.isotc211.org/19157/-/mdq/1.2.0/metaquality.xsd contains the following classes:
 
 * DQ_Confidence
 * DQ_Homogeneity
@@ -123,7 +123,7 @@ using the encoding rules defined in ISO 19118, ISO 19139.
 .Classes in the data quality information - imagery schema of mdq namespace
 image::./mdqInfoImageryClass.png[UML diagram of classes in the data quality information - imagery schema from Metadata for Data Quality (MDQ) in the mdq namespace,750]
 
-https://schemas.isotc211.org/19157/-/mdq/1.2.0/dataQualityImagery.xsd[https://schemas.isotc211.org/19157/-/mdq/1.2.0/dataQualityImagery.xsd] contains the following classes:
+https://schemas.isotc211.org/19157/-/mdq/1.2.0/dataQualityImagery.xsd contains the following classes:
 
 * QE_CoverageResult
 * QualityResultFile
@@ -138,26 +138,26 @@ The MDQ 1.2.0 imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Data Quality Common | dqc |
-https://schemas.isotc211.org/19157/-/dqc/1.2[https://schemas.isotc211.org/19157/-/dqc/1.2] | ../../../../19157/-/dqc/1.2.0/dqc.xsd
+https://schemas.isotc211.org/19157/-/dqc/1.2 | ../../../../19157/-/dqc/1.2.0/dqc.xsd
 | Geographic Common Objects | gco |
-https://schemas.isotc211.org/19103/-/gco/1.2.0[https://schemas.isotc211.org/19103/-/gco/1.2] | ../../../../19103/-/gco/1.2.0/gco.xsd
+https://schemas.isotc211.org/19103/-/gco/1.2.0 | ../../../../19103/-/gco/1.2.0/gco.xsd
 | Geographic Common objects eXtended | gcx |
-https://schemas.isotc211.org/19103/-/gcx/1.2.0[https://schemas.isotc211.org/19103/-/gcx/1.2] | ../../../../19103/-/gcx/1.2.0/gcx.xsd
+https://schemas.isotc211.org/19103/-/gcx/1.2.0 | ../../../../19103/-/gcx/1.2.0/gcx.xsd
 | CITataion and responsibility | cit |
-https://schemas.isotc211.org/19115/-1/cit/1.3[https://schemas.isotc211.org/19115/-1/cit/1.3] | ../../../../19115/-1/cit/1.3.0/cit.xsd
+https://schemas.isotc211.org/19115/-1/cit/1.3 | ../../../../19115/-1/cit/1.3.0/cit.xsd
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-1/mcc/1.3[https://schemas.isotc211.org/19115/-1/mcc/1.3] | ../../../../19115/-1/mcc/1.3.0/mcc.xsd
+https://schemas.isotc211.org/19115/-1/mcc/1.3 | ../../../../19115/-1/mcc/1.3.0/mcc.xsd
 | Metadata Resource Distribution | mrd |
-https://schemas.isotc211.org/19115/-1/mrd/1.3[https://schemas.isotc211.org/19115/-1/mrd/1.3] | ../../../../19115/-1/mrd/1.3.0/mrd.xsd
+https://schemas.isotc211.org/19115/-1/mrd/1.3 | ../../../../19115/-1/mrd/1.3.0/mrd.xsd
 | Metadata for Spatial Representation | msr |
-https://schemas.isotc211.org/19115/-1/msr/1.3[https://schemas.isotc211.org/19115/-1/msr/1.3] | ../../../../19115/-1/msr/1.3.0/msr.xsd
+https://schemas.isotc211.org/19115/-1/msr/1.3 | ../../../../19115/-1/msr/1.3.0/msr.xsd
 | Metadata Resource Content | mrc |
-https://schemas.isotc211.org/19115/-1/mrc/1.3[https://schemas.isotc211.org/19115/-1/mrc/1.3] | ../../../../19115/-1/mrc/1.3.0/mrc.xsd
+https://schemas.isotc211.org/19115/-1/mrc/1.3 | ../../../../19115/-1/mrc/1.3.0/mrc.xsd
 | Geographic Markup Language | gml |
-http://schemas.opengis.net/gml/3.2[http://schemas.opengis.net/gml/3.2] |
+http://schemas.opengis.net/gml/3.2 |
 http://schemas.opengis.net/gml/3.2.1/gml.xsd
 | Geographic Markup language Wrapper | gml |
-https://schemas.isotc211.org/19136/-/gmw/1.1[https://schemas.isotc211.org/19136/-/gmw/1.1] | https://schemas.isotc211.org/19136/-/gmw/1.1.0/gmw.xsd
+https://schemas.isotc211.org/19136/-/gmw/1.1 | https://schemas.isotc211.org/19136/-/gmw/1.1.0/gmw.xsd
 |===
 
 === Working Versions

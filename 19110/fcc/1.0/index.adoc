@@ -47,9 +47,9 @@ The fcc 1.0 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | CATalogue | cat |
-https://schemas.isotc211.org/19115/-3/cat/1.0[https://schemas.isotc211.org/19115/-3/cat/1.0] | ../../../19115/-3/cat/1.0/cat.xsd
+https://schemas.isotc211.org/19115/-3/cat/1.0 | ../../../19115/-3/cat/1.0/cat.xsd
 | Geographic COmmon | gco |
-https://schemas.isotc211.org/19115/-3/gco/1.0[https://schemas.isotc211.org/19115/-3/gco/1.0] | ../../../19115/-3/gco/1.0/gco.xsd
+https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../../19115/-3/gco/1.0/gco.xsd
 |===
 
 === Working Versions

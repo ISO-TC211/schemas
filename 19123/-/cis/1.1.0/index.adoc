@@ -34,7 +34,7 @@ limited of the UML conceptual schema defined in ISO 191123:2005, Geographic
 Information - Schemas for coverage geometry and functions, Clause 8.4. It was created
 using the encoding rules defined in ISO 19118, ISO 19139.
 
-https://schemas.isotc211.org/19123/-/cis/1.1.0/gridPoint.xsd[https://schemas.isotc211.org/19123/-/cis/1.1.0/gridPoint.xsd] contains the following classes:
+https://schemas.isotc211.org/19123/-/cis/1.1.0/gridPoint.xsd contains the following classes:
 
 * CV_GridPoint
 * CV_GridCoordinates
@@ -44,7 +44,7 @@ limited of the UML conceptual schema defined in ISO 191123:2005, Geographic
 Information - Schemas for coverage geometry and functions. It was created using the
 encoding rules defined in ISO 19118, ISO 19139.
 
-https://schemas.isotc211.org/19123/-/cis/1.1.0/codeLists.xsd[https://schemas.isotc211.org/19123/-/cis/1.1.0/codeLists.xsd] contains the following classes:
+https://schemas.isotc211.org/19123/-/cis/1.1.0/codeLists.xsd contains the following classes:
 
 * CV_CommonPointRule
 * CV_InterpolationMethod
@@ -59,7 +59,7 @@ The ISO 19123:2005 CIS 1.1 imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geographic Common Objects | gco |
-https://schemas.isotc211.org/19103/-/gco/1.2[https://schemas.isotc211.org/19103/-/gco/1.2] | ../../../../19103/-/gco/1.2.0/gco.xsd
+https://schemas.isotc211.org/19103/-/gco/1.2 | ../../../../19103/-/gco/1.2.0/gco.xsd
 | Geospatial Meta-Language | gml |
 http://www.opengis.net/gml/3.2[http://www.opengis.net/gml/3.2] |
 http://www.opengis.net/gml/3.2.1/gml.xsd
