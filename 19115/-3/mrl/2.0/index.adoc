@@ -20,7 +20,7 @@ link:mrl.xml[mrl.xml]
 
 === XML Namespace for mrl 2.0
 
-The namespace URI for mrl 2.0 is *http://standards.iso.org/iso/19115/-3/mrl/2.0*.
+The namespace URI for mrl 2.0 is `http://standards.iso.org/iso/19115/-3/mrl/2.0`.
 
 === XML Schema for mrl 2.0
 
@@ -61,13 +61,13 @@ The mrl 2.0 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geographic COmmon | gco |
-https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../../../19115/-3/gco/1.0/gco.xsd
+`https://schemas.isotc211.org/19115/-3/gco/1.0` | https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd[gco.xsd]
 | Geographic Markup Wrappers | gmw |
-https://schemas.isotc211.org/19115/-3/gmw/1.0 | ../../../../19115/-3/gmw/1.0/gmw.xsd
+`https://schemas.isotc211.org/19115/-3/gmw/1.0` | https://schemas.isotc211.org/19115/-3/gmw/1.0/gmw.xsd[gmw.xsd]
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-3/mcc/1.0 | ../../../../19115/-3/mcc/1.0/mcc.xsd
+`https://schemas.isotc211.org/19115/-3/mcc/1.0` | https://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd[mcc.xsd]
 | Metadata for Services | srv |
-https://schemas.isotc211.org/19115/-3/srv/2.0 | ../../../../19115/-3/srv/2.0/srv.xsd
+`https://schemas.isotc211.org/19115/-3/srv/2.0` | https://schemas.isotc211.org/19115/-3/srv/2.0/srv.xsd[srv.xsd]
 |===
 
 === Working Versions

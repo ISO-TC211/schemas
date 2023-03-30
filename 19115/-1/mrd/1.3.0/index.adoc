@@ -6,8 +6,9 @@
 
 .Classes in the mrd namespace
 ====
-image::./DistributionClass.png[UML diagram of Metadata for Resource Distribution classes in the mrd namespace,750]. Code list(s) in the mrd namespace
+image::./DistributionClass.png[UML diagram of Metadata for Resource Distribution classes in the mrd namespace,750].
 
+.Code list(s) in the mrd namespace
 image::./DistributionCodelist.png[UML diagram of Metadata for Resource Distribution codelists in the mrd namespace,300]
 ====
 
@@ -20,11 +21,11 @@ described in ISO/TS 19139:2007.
 
 === XML Namespace for mrd 1.3
 
-The namespace URI for mrd 1.3 is *https://schemas.isotc211.org/19115/-1/mrd/1.3*.
+The namespace URI for mrd 1.3 is `https://schemas.isotc211.org/19115/-1/mrd/1.3`.
 
 === XML Schema for mrd 1.3
 
-*link:../../../../19115/-1/mrd/1.3.0/mrd.xsd[mrd.xsd]* is the XML Schema document to
+https://schemas.isotc211.org/19115/-1/mrd/1.3.0/mrd.xsd[mrd.xsd] is the XML Schema document to
 be referenced by XML documents containing XML elements in the mrd 1.3 namespace or by
 XML Schema documents importing the mrd 1.3 namespace. This XML schema includes
 (indirectly) all the implemented concepts of the mrd namespace, but it does not
@@ -32,7 +33,7 @@ contain the declaration of any types.
 
 === Related XML Schema for mrd 1.3
 
-*link:../../../../19115/-1/mrd/1.3.0/distribution.xsd[distribution.xsd]* implements
+https://schemas.isotc211.org/19115/-1/mrd/1.3.0/distribution.xsd[distribution.xsd] implements
 the UML conceptual schema defined in ISO 19115-1, Geographic Information - Metadata -
 Part 1: Fundamentals, Clause 6.5.11. It was created using the encoding rules defined
 in ISO 19118, ISO 19139.
@@ -61,11 +62,11 @@ The mrd 1.3 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geographic Common Objects | gco |
-https://schemas.isotc211.org/19103/-/gco/1.2.0 | ../../../../19103/-/gco/1.2/gco.xsd
+`https://schemas.isotc211.org/19103/-/gco/1.2.0` | https://schemas.isotc211.org/19103/-/gco/1.2/gco.xsd[gco.xsd]
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-1/mcc/1.3.0 | ../../../../19115/-1/mcc/1.3.0/mcc.xsd
+`https://schemas.isotc211.org/19115/-1/mcc/1.3.0` | https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd[mcc.xsd]
 | CITation and Responsibility | cit |
-https://schemas.isotc211.org/19115/-1/cit/1.3.0 | ../../../../19115/-1/cit/1.3.0/cit.xsd
+`https://schemas.isotc211.org/19115/-1/cit/1.3.0` | https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.xsd[cit.xsd]
 |===
 
 === Schematron Validation Rules for mrd 1.3

@@ -16,7 +16,7 @@ ISO/TS19115-3, Clause 8.
 
 === XML Namespace for msr 1.0
 
-The namespace URI for msr 1.0 is *http://standards.iso.org/iso/19115/-3/msr/1.0*.
+The namespace URI for msr 1.0 is `http://standards.iso.org/iso/19115/-3/msr/1.0`.
 
 === XML Schema for msr 1.0
 
@@ -59,13 +59,13 @@ The msr 1.0 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Data Quality Common Classes | dqc |
-https://schemas.isotc211.org/19157/-2/dqc/1.0 | ../../../../19157/-2/dqc/1.0/dqc.xsd
+`https://schemas.isotc211.org/19157/-2/dqc/1.0` | https://schemas.isotc211.org/19157/-2/dqc/1.0/dqc.xsd[dqc.xsd]
 | Geographic COmmon | gco |
-https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../../../19115/-3/gco/1.0/gco.xsd
+`https://schemas.isotc211.org/19115/-3/gco/1.0` | https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd[gco.xsd]
 | Geographic Markup Wrappers | gmw |
-https://schemas.isotc211.org/19115/-3/gmw/1.0 | ../../../../19115/-3/gmw/1.0/gmw.xsd
+`https://schemas.isotc211.org/19115/-3/gmw/1.0` | https://schemas.isotc211.org/19115/-3/gmw/1.0/gmw.xsd[gmw.xsd]
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-3/mcc/1.0 | ../../../../19115/-3/mcc/1.0/mcc.xsd
+`https://schemas.isotc211.org/19115/-3/mcc/1.0` | https://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd[mcc.xsd]
 |===
 
 === Working Versions

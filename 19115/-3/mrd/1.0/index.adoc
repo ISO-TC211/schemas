@@ -24,7 +24,7 @@ link:codelists.html[codelists.html] link:codelists.xml[codelists.xml]
 
 === XML Namespace for mrd 1.0
 
-The namespace URI for mrd 1.0 is *http://standards.iso.org/iso/19115/-3/mrd/1.0*.
+The namespace URI for mrd 1.0 is `http://standards.iso.org/iso/19115/-3/mrd/1.0`.
 
 === XML Schema for mrd 1.0
 
@@ -58,9 +58,9 @@ The mrd 1.0 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geographic COmmon | gco |
-https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../../../19115/-3/gco/1.0/gco.xsd
+`https://schemas.isotc211.org/19115/-3/gco/1.0` | https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd[gco.xsd]
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-3/mcc/1.0 | ../../../../19115/-3/mcc/1.0/mcc.xsd
+`https://schemas.isotc211.org/19115/-3/mcc/1.0` | https://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd[mcc.xsd]
 |===
 
 === Schematron Validation Rules for mrd 1.0

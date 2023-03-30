@@ -16,7 +16,7 @@ ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clau
 
 === XML Namespace for fcc 1.0
 
-The namespace URI for fcc 1.0 is *http://standards.iso.org/iso/19110/fcc/1.0*.
+The namespace URI for fcc 1.0 is `http://standards.iso.org/iso/19110/fcc/1.0`.
 
 === XML Schema for fcc 1.0
 
@@ -47,9 +47,11 @@ The fcc 1.0 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | CATalogue | cat |
-https://schemas.isotc211.org/19115/-3/cat/1.0 | ../../../19115/-3/cat/1.0/cat.xsd
+`https://schemas.isotc211.org/19115/-3/cat/1.0` | https://schemas.isotc211.org/19115/-3/cat/1.0/cat.xsd[cat.xsd]
+
 | Geographic COmmon | gco |
-https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../../19115/-3/gco/1.0/gco.xsd
+`https://schemas.isotc211.org/19115/-3/gco/1.0` | https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd[gco.xsd]
+
 |===
 
 === Working Versions

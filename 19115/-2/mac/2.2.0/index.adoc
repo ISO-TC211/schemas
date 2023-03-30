@@ -6,8 +6,9 @@
 
 .Classes in the mac namespace
 ====
-image::./AcquisitionClass.png[UML diagram of Metadata for Acquisition classes in the mac namespace,750]. Codelists in the mac namespace
+image::./AcquisitionClass.png[UML diagram of Metadata for Acquisition classes in the mac namespace,750].
 
+.Codelists in the mac namespace
 image::./AcquisitionCodelist.png[UML diagram of Metadata for Acquisition codelists in the mac namespace,600]
 ====
 
@@ -21,7 +22,7 @@ ISO/TS 19139:2007, Clause 8.
 
 === XML Namespace for mac 2.2
 
-The namespace URI for mac 2.2 is *https://schemas.isotc211.org/19115/-2/mac/2.2*.
+The namespace URI for mac 2.2 is `https://schemas.isotc211.org/19115/-2/mac/2.2`.
 
 === XML Schema for mac 2.2
 
@@ -32,15 +33,15 @@ concepts of the mac namespace, but it does not contain the declaration of any ty
 
 === Related XML Schema for mac 2.2
 
-*link:../../../../19115/-2/mac/2.2.0/acquisitionInformationImagery.xsd[acquisitionInformationImagery.xsd]*
+https://schemas.isotc211.org/19115/-2/mac/2.2.0/acquisitionInformationImagery.xsd[acquisitionInformationImagery.xsd]
 implements the UML conceptual schema defined in ISO 19115-2, Geographic Information -
 Metadata - Part 2: Extensions for acquisition and processing, Clause 6.3.2. It was
 created using the encoding rules defined in ISO 19118, ISO 19139. Within
-link:../../../../19115/-2/mac/2.2.0/acquisitionInformationImagery.xsd[acquisitionInformationImagery.xsd]
-the MI_Metadata class inherits attribute from MD_Metadata (
-link:../../../../19115/-1/mdb/1.3.0/[../../../../19115/-1/mdb/1.3]).
+https://schemas.isotc211.org/19115/-2/mac/2.2.0/acquisitionInformationImagery.xsd[acquisitionInformationImagery.xsd]
+the MI_Metadata class inherits attribute from MD_Metadata
+(https://schemas.isotc211.org/19115/-1/mdb/1.3.0/[19115/-1/mdb/1.3]).
 
-https://schemas.isotc211.org/19115/-2/mac/2.2.0/acquisitionInformationImagery.xsd
+https://schemas.isotc211.org/19115/-2/mac/2.2.0/acquisitionInformationImagery.xsd[acquisitionInformationImagery.xsd]
 contains the following classes:
 
 * MI_Metadata
@@ -82,20 +83,20 @@ The mac 2.2 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geographic Common Objects | gco |
-https://schemas.isotc211.org/19103/-/gco/1.2 | ../../../../191103/-/gco/1.2.0/gco.xsd
+https://schemas.isotc211.org/19103/-/gco/1.2 | https://schemas.isotc211.org/191103/-/gco/1.2.0/gco.xsd[gco.xsd]
 | Geographic Markup Wrappers | gmw |
-https://schemas.isotc211.org/19163/-/gmw/1.1 | ../../../../19136/-/gmw/1.1.0/gmw.xsd
+https://schemas.isotc211.org/19163/-/gmw/1.1 | https://schemas.isotc211.org/19136/-/gmw/1.1.0/gmw.xsd[gmw.xsd]
 | Geospatial MetaLanguage | gml |
 http://schemas.opengis.net/gml/3.2.1/gml.xsd |
 http://schemas.opengis.net/gml/3.2.1/gml.xsd
 | Language localization | lan |
-https://schemas.isotc211.org/19115/-1/lan/1.3.0 | ../../../../19115/-1/lan/1.3.0/lan.xsd
+`https://schemas.isotc211.org/19115/-1/lan/1.3.0` | https://schemas.isotc211.org/19115/-1/lan/1.3.0/lan.xsd[lan.xsd]
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-1/mcc/1.3.0 | ../../../../19115/-1/mcc/1.3.0/mcc.xsd
+`https://schemas.isotc211.org/19115/-1/mcc/1.3.0` | https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd[mcc.xsd]
 | Geographic Extent | gex |
-https://schemas.isotc211.org/19115/-1/gex/1.3.0 | ../../../../19115/-1/gex/1.3.0/gex.xsd
+`https://schemas.isotc211.org/19115/-1/gex/1.3.0` | https://schemas.isotc211.org/19115/-1/gex/1.3.0/gex.xsd[gex.xsd]
 | CITation and Responsibility | cit |
-https://schemas.isotc211.org/19115/-1/cit/1.3.0 | ../../../../19115/-1/cit/1.3.0/cit.xsd
+`https://schemas.isotc211.org/19115/-1/cit/1.3.0` | https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.xsd[cit.xsd]
 |===
 
 === Schematron Validation Rules for mdb 1.3

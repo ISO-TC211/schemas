@@ -15,7 +15,7 @@ dependencies. The XML schema was encoded using the rules described in ISO/TS
 
 === XML Namespace for gmw 1.0
 
-The namespace URI for gmw 1.0 is *http://standards.iso.org/iso/19115/-3/gmw/1.0*.
+The namespace URI for gmw 1.0 is `http://standards.iso.org/iso/19115/-3/gmw/1.0`.
 
 === XML Schema for gmw 1.0
 
@@ -30,7 +30,7 @@ standards is also https://schemas.isotc211.org/19115/19115AllNamespaces.zip[avai
 
 === Related XML Schema for gmw 1.0
 
-*link:gmlWrapperTypes2014.xsd[gmlWrapperTypes2014.xsd]* implements the UML conceptual
+link:./gmlWrapperTypes2014.xsd[gmlWrapperTypes2014.xsd] implements the UML conceptual
 schema defined in ISO 19115-1, Geographic Information - Metadata - Part 1:
 Fundamentals, Clause . It was created using the encoding rules defined in ISO 19118,
 ISO 19139, and the implementation approach described in ISO 19115-3 and contains the
@@ -45,14 +45,21 @@ The gmw 1.0 namespace imports these other namespaces:
 |===
 | Name | Standard Prefix | Namespace Location | Schema Location
 
-| | baseTypes2014 |
-https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../gco/1.0/baseTypes2014.xsd
-| Geography Markup Language | gml |
-http://www.opengis.net/gml/3.2[http://www.opengis.net/gml/3.2] |
-http://schemas.opengis.net/gml/3.2.1/gml.xsd
-| XML Linking Language (XLink) Version 1.0. W3C Recommendation | xlink |
-http://www.w3.org/1999/xlink[http://www.w3.org/1999/xlink] |
-http://www.w3.org/1999/xlink.xsd
+|
+| baseTypes2014
+| `https://schemas.isotc211.org/19115/-3/gco/1.0`
+| https://schemas.isotc211.org/19115/-3/gco/1.0/baseTypes2014.xsd[baseTypes2014.xsd]
+
+| Geography Markup Language
+| gml
+| `http://www.opengis.net/gml/3.2`
+| http://schemas.opengis.net/gml/3.2.1/gml.xsd[gml.xsd]
+
+| XML Linking Language (XLink) Version 1.0. W3C Recommendation
+| xlink
+| `http://www.w3.org/1999/xlink`
+| http://www.w3.org/1999/xlink.xsd[xlink.xsd]
+
 |===
 
 === Working Versions

@@ -17,7 +17,7 @@ implementation approach from ISO/TS19115-3, Clause 8.
 
 === XML Namespace for gco 1.0
 
-The namespace URI for gco 1.0 is *http://standards.iso.org/iso/19115/-3/gco/1.0*.
+The namespace URI for gco 1.0 is `http://standards.iso.org/iso/19115/-3/gco/1.0`.
 
 === XML Schema for gco 1.0
 

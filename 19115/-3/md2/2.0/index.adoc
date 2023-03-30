@@ -21,7 +21,7 @@ link:md2.xml[md2.xml]
 
 === XML Namespace for md2 2.0
 
-The namespace URI for md2 2.0 is *http://standards.iso.org/iso/19115/-3/md2/2.0*.
+The namespace URI for md2 2.0 is `http://standards.iso.org/iso/19115/-3/md2/2.0`.
 
 === XML Schema for md2 2.0
 
@@ -54,22 +54,22 @@ The md2 2.0 namespace imports these other namespaces:
 
 | Citation and responsible party information Citation and responsible party
 information | cit |
-https://schemas.isotc211.org/19115/-3/cit/2.0 | ../../../../19115/-3/cit/2.0/cit.xsd
+`https://schemas.isotc211.org/19115/-3/cit/2.0` | https://schemas.isotc211.org/19115/-3/cit/2.0/cit.xsd[cit.xsd]
 | Geospatial Common eXtension | gcx |
-https://schemas.isotc211.org/19115/-3/gcx/1.0 | ../../../../19115/-3/gcx/1.0/gcx.xsd
+`https://schemas.isotc211.org/19115/-3/gcx/1.0` | https://schemas.isotc211.org/19115/-3/gcx/1.0/gcx.xsd[gcx.xsd]
 | Language localization | lan |
-https://schemas.isotc211.org/19115/-3/lan/1.0 | ../../../../19115/-3/lan/1.0/lan.xsd
+`https://schemas.isotc211.org/19115/-3/lan/1.0` | https://schemas.isotc211.org/19115/-3/lan/1.0/lan.xsd[lan.xsd]
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-3/mcc/1.0 | ../../../../19115/-3/mcc/1.0/mcc.xsd
+`https://schemas.isotc211.org/19115/-3/mcc/1.0` | https://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd[mcc.xsd]
 | Metadata for Data and Services with Geospatial Common Extensions Metadata for Data
 and Services with Geospatial Common Extensions | md1 |
-https://schemas.isotc211.org/19115/-3/md1/2.0 | ../../../../19115/-3/md1/2.0/md1.xsd
+`https://schemas.isotc211.org/19115/-3/md1/2.0` | https://schemas.isotc211.org/19115/-3/md1/2.0/md1.xsd[md1.xsd]
 | Metadata with Schema Extensions | mex |
-https://schemas.isotc211.org/19115/-3/mex/1.0 | ../../../../19115/-3/mex/1.0/mex.xsd
+`https://schemas.isotc211.org/19115/-3/mex/1.0` | https://schemas.isotc211.org/19115/-3/mex/1.0/mex.xsd[mex.xsd]
 | Metadata for Portrayal Catalog | mpc |
-https://schemas.isotc211.org/19115/-3/mpc/1.0 | ../../../../19115/-3/mpc/1.0/mpc.xsd
+`https://schemas.isotc211.org/19115/-3/mpc/1.0` | https://schemas.isotc211.org/19115/-3/mpc/1.0/mpc.xsd[mpc.xsd]
 | Metadata for Resource Identification | mri |
-https://schemas.isotc211.org/19115/-3/mri/1.0 | ../../../../19115/-3/mri/1.0/mri.xsd
+`https://schemas.isotc211.org/19115/-3/mri/1.0` | https://schemas.isotc211.org/19115/-3/mri/1.0/mri.xsd[mri.xsd]
 |===
 
 === Working Versions
