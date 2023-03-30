@@ -5,12 +5,10 @@
 == Metadata for Resource Content (MRC) Version: 1.3
 
 .Classes in the mmi namespace
-====
-image::./ContentClass.png[UML diagram of Metadata Maintenance Information classes in the mmi namespace,750].
+image::./ContentClass.png[UML diagram of Metadata Maintenance Information classes in the mmi namespace,750]
 
 .Code list(s) in the mmi namespace
 image::./ContentCodelist.png[UML diagram of Metadata Maintenance Information codelists in the mmi namespace,500]
-====
 
 === Description
 
