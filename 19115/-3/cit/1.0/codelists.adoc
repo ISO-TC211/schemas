@@ -20,7 +20,6 @@ Number of items:: 71
 
 === Codelists
 
-link:CI_DateTypeCode[]
 
 === CI_DateTypeCode
 
@@ -52,7 +51,6 @@ Number of items:: 16
 
 
 
-link:CI_OnLineFunctionCode[]
 
 === CI_OnLineFunctionCode
 
@@ -77,7 +75,6 @@ Number of items:: 11
 
 |===
 
-link:CI_PresentationFormCode[]
 
 === CI_PresentationFormCode
 
@@ -112,7 +109,6 @@ Number of items:: 21
 
 |===
 
-link:CI_RoleCode[]
 
 === CI_RoleCode
 
@@ -146,7 +142,6 @@ Number of items:: 20
 
 |===
 
-link:CI_TelephoneTypeCode[]
 
 === CI_TelephoneTypeCode
 

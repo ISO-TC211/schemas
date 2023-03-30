@@ -23,7 +23,6 @@ Number of items:: 9
 
 === Codelists
 
-link:DQM_ValueStructure[]
 
 === DQM_ValueStructure:
 
@@ -49,7 +48,6 @@ arguments or keys (ISO/IEC 2382-4:1999)
 direct position within its spatial, temporal or spatiotemporal domain (ISO 19123:2005)
 |===
 
-link:DQ_EvaluationMethodTypeCode[]
 
 === DQ_EvaluationMethodTypeCode:
 

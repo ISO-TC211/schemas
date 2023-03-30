@@ -22,7 +22,6 @@ Number of items:: 7
 
 === Codelists
 
-link:MD_MediumFormatCode[]
 
 === MD_MediumFormatCode:
 
