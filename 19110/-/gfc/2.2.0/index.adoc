@@ -5,7 +5,7 @@
 == General Feature Cataloguing (GFC) Version: 2.2.0
 
 .Classes in the gfc namespace
-image::./CncptMdiFeatCatClass.png[UML diagram of General Feature Cataloguing classes in the gfc namespace,750]
+image::CncptMdiFeatCatClass.png[UML diagram of General Feature Cataloguing classes in the gfc namespace,750]
 
 === Description
 

@@ -5,13 +5,13 @@
 == Metadata Common Classes (MCC) Version: 1.3
 
 .Non-abstract classes in the mcc namespace
-image::./CommonClass.png[UML diagram of Metadata Common Classes non-abstract classes in the mcc namespace,750]
+image::CommonClass.png[UML diagram of Metadata Common Classes non-abstract classes in the mcc namespace,750]
 
 .Code list(s) in the mcc namespace
-image::./CommonCodelist.png[UML diagram of Metadata Common Classes codelists in the mcc namespace,300]
+image::CommonCodelist.png[UML diagram of Metadata Common Classes codelists in the mcc namespace,300]
 
 .Abstract classes in the mcc namespace
-image::./CommonAbstractClass.png[UML diagram of Metadata Common Classes abstract classes in the mcc namespace,750]
+image::CommonAbstractClass.png[UML diagram of Metadata Common Classes abstract classes in the mcc namespace,750]
 
 === Description
 

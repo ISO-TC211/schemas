@@ -5,7 +5,7 @@
 == Data Product Specification (DPS) Version: 2.2
 
 .Classes in the dps namespace
-image::./DtaProdSpecClass.png[UML diagram of classes from Data Product Specification (DPS) in the dps namespace,750]
+image::DtaProdSpecClass.png[UML diagram of classes from Data Product Specification (DPS) in the dps namespace,750]
 
 === Description
 

@@ -5,7 +5,7 @@
 == Metadata for Spatial Representation (MSR) [ISO 19115-2] Version: 2.2
 
 .Classes in the msr namespace
-image::./SpatialRepImageryClass.png[UML diagram of Metadata for Resource Spatial Representation classes in the mrc namespace focusing on ISO 19115-2,750]
+image::SpatialRepImageryClass.png[UML diagram of Metadata for Resource Spatial Representation classes in the mrc namespace focusing on ISO 19115-2,750]
 
 === Description
 

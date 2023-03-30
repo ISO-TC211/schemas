@@ -5,7 +5,7 @@
 == Metadata for Portrayal Catalog (MPC) Version: 1.3
 
 .Classes in the mpc namespace
-image::./PortrayalCatClass.png[UML diagram of Metadata for Portrayal Catalogue classes in the mpc namespace,750]
+image::PortrayalCatClass.png[UML diagram of Metadata for Portrayal Catalogue classes in the mpc namespace,750]
 
 === Description
 

@@ -5,7 +5,7 @@
 == Geographic Markup Wrapper (GMW) Version 1.1.0
 
 .Classes in the gmw namespace
-image::./gmwBasePackage.png[UML diagram of packages from Geographic Markup Wrapper (GMW) in the gmw namespace,750]
+image::gmwBasePackage.png[UML diagram of packages from Geographic Markup Wrapper (GMW) in the gmw namespace,750]
 
 === Description
 

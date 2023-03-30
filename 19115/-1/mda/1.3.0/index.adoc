@@ -5,7 +5,7 @@
 == MetaData Application (MDA) Version: 1.3
 
 .Classes in the mda namespace
-image::./MetadataApplicationClass.png[UML diagram of MetaData Application classes in the mda namespace,750]
+image::MetadataApplicationClass.png[UML diagram of MetaData Application classes in the mda namespace,750]
 
 === Description
 

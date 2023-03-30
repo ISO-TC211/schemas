@@ -5,7 +5,7 @@
 == Data Product Specification (DPS) Version: 2.2
 
 .Classes in the dps namespace
-image::./DtaProdSpecClass.png[UML diagram of classes from Data Product Specification (DPS) in the dps namespace,750]
+image::DtaProdSpecClass.png[UML diagram of classes from Data Product Specification (DPS) in the dps namespace,750]
 
 === Description
 
@@ -103,3 +103,4 @@ https://schemas.isotc211.org/19157/-/mdq/1.2 | https://schemas.isotc211.org/1915
 
 When revisions to these schema become necessary, they will be managed in the
 https://github.com/ISO-TC211/XML[ISO TC211 Git Repository].
+
