@@ -95,17 +95,17 @@ The mdq 1.0 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Data Quality Common Classes | dqc |
-https://schemas.isotc211.org/19157/-2/dqc/1.0[https://schemas.isotc211.org/19157/-2/dqc/1.0] | ../../../../19157/-2/dqc/1.0/dqc.xsd
+https://schemas.isotc211.org/19157/-2/dqc/1.0 | ../../../../19157/-2/dqc/1.0/dqc.xsd
 | Geographic COmmon | gco |
-https://schemas.isotc211.org/19115/-3/gco/1.0[https://schemas.isotc211.org/19115/-3/gco/1.0] | ../../../../19115/-3/gco/1.0/gco.xsd
+https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../../../19115/-3/gco/1.0/gco.xsd
 | Geospatial Common eXtension | gcx |
-https://schemas.isotc211.org/19115/-3/gcx/1.0[https://schemas.isotc211.org/19115/-3/gcx/1.0] | ../../../../19115/-3/gcx/1.0/gcx.xsd
+https://schemas.isotc211.org/19115/-3/gcx/1.0 | ../../../../19115/-3/gcx/1.0/gcx.xsd
 | Geographic Markup Wrappers | gmw |
-https://schemas.isotc211.org/19115/-3/gmw/1.0[https://schemas.isotc211.org/19115/-3/gmw/1.0] | ../../../../19115/-3/gmw/1.0/gmw.xsd
+https://schemas.isotc211.org/19115/-3/gmw/1.0 | ../../../../19115/-3/gmw/1.0/gmw.xsd
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-3/mcc/1.0[https://schemas.isotc211.org/19115/-3/mcc/1.0] | ../../../../19115/-3/mcc/1.0/mcc.xsd
+https://schemas.isotc211.org/19115/-3/mcc/1.0 | ../../../../19115/-3/mcc/1.0/mcc.xsd
 | Metadata for Resource Distribution | mrd |
-https://schemas.isotc211.org/19115/-3/mrd/1.0[https://schemas.isotc211.org/19115/-3/mrd/1.0] | ../../../../19115/-3/mrd/1.0/mrd.xsd
+https://schemas.isotc211.org/19115/-3/mrd/1.0 | ../../../../19115/-3/mrd/1.0/mrd.xsd
 |===
 
 === Schematron Validation Rules for mdq 1.0

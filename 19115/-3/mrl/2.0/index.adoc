@@ -61,13 +61,13 @@ The mrl 2.0 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geographic COmmon | gco |
-https://schemas.isotc211.org/19115/-3/gco/1.0[https://schemas.isotc211.org/19115/-3/gco/1.0] | ../../../../19115/-3/gco/1.0/gco.xsd
+https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../../../19115/-3/gco/1.0/gco.xsd
 | Geographic Markup Wrappers | gmw |
-https://schemas.isotc211.org/19115/-3/gmw/1.0[https://schemas.isotc211.org/19115/-3/gmw/1.0] | ../../../../19115/-3/gmw/1.0/gmw.xsd
+https://schemas.isotc211.org/19115/-3/gmw/1.0 | ../../../../19115/-3/gmw/1.0/gmw.xsd
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-3/mcc/1.0[https://schemas.isotc211.org/19115/-3/mcc/1.0] | ../../../../19115/-3/mcc/1.0/mcc.xsd
+https://schemas.isotc211.org/19115/-3/mcc/1.0 | ../../../../19115/-3/mcc/1.0/mcc.xsd
 | Metadata for Services | srv |
-https://schemas.isotc211.org/19115/-3/srv/2.0[https://schemas.isotc211.org/19115/-3/srv/2.0] | ../../../../19115/-3/srv/2.0/srv.xsd
+https://schemas.isotc211.org/19115/-3/srv/2.0 | ../../../../19115/-3/srv/2.0/srv.xsd
 |===
 
 === Working Versions

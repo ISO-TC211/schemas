@@ -54,19 +54,19 @@ The mdb 2.0 namespace imports these other namespaces:
 
 | Citation and responsible party information Citation and responsible party
 information | cit |
-https://schemas.isotc211.org/19115/-3/cit/2.0[https://schemas.isotc211.org/19115/-3/cit/2.0] | ../../../../19115/-3/cit/2.0/cit.xsd
+https://schemas.isotc211.org/19115/-3/cit/2.0 | ../../../../19115/-3/cit/2.0/cit.xsd
 | Data Quality Common Classes | dqc |
-https://schemas.isotc211.org/19157/-2/dqc/1.0[https://schemas.isotc211.org/19157/-2/dqc/1.0] | ../../../../19157/-2/dqc/1.0/dqc.xsd
+https://schemas.isotc211.org/19157/-2/dqc/1.0 | ../../../../19157/-2/dqc/1.0/dqc.xsd
 | Geographic COmmon | gco |
-https://schemas.isotc211.org/19115/-3/gco/1.0[https://schemas.isotc211.org/19115/-3/gco/1.0] | ../../../../19115/-3/gco/1.0/gco.xsd
+https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../../../19115/-3/gco/1.0/gco.xsd
 | Geospatial EXtent | gex |
-https://schemas.isotc211.org/19115/-3/gex/1.0[https://schemas.isotc211.org/19115/-3/gex/1.0] | ../../../../19115/-3/gex/1.0/gex.xsd
+https://schemas.isotc211.org/19115/-3/gex/1.0 | ../../../../19115/-3/gex/1.0/gex.xsd
 | Language localization | lan |
-https://schemas.isotc211.org/19115/-3/lan/1.0[https://schemas.isotc211.org/19115/-3/lan/1.0] | ../../../../19115/-3/lan/1.0/lan.xsd
+https://schemas.isotc211.org/19115/-3/lan/1.0 | ../../../../19115/-3/lan/1.0/lan.xsd
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-3/mcc/1.0[https://schemas.isotc211.org/19115/-3/mcc/1.0] | ../../../../19115/-3/mcc/1.0/mcc.xsd
+https://schemas.isotc211.org/19115/-3/mcc/1.0 | ../../../../19115/-3/mcc/1.0/mcc.xsd
 | Metadata for Resource Identification | mri |
-https://schemas.isotc211.org/19115/-3/mri/1.0[https://schemas.isotc211.org/19115/-3/mri/1.0] | ../../../../19115/-3/mri/1.0/mri.xsd
+https://schemas.isotc211.org/19115/-3/mri/1.0 | ../../../../19115/-3/mri/1.0/mri.xsd
 |===
 
 === Working Versions

@@ -37,12 +37,12 @@ implements the UML conceptual schema defined in ISO 19115-1, Geographic Informat
 Metadata - Part 1: Fundamentals, Clause 6.5.8. It was created using the encoding
 rules defined in ISO 19118, ISO 19139.
 
-https://schemas.isotc211.org/19115/-1/mrs/1.3.0/referenceSystem.xsd[https://schemas.isotc211.org/19115/-1/mrs/1.3.0/referenceSystem.xsd] contains the following class:
+https://schemas.isotc211.org/19115/-1/mrs/1.3.0/referenceSystem.xsd contains the following class:
 
 * MD_ReferenceSystem
 * MD_ReferenceSystemTypeCode
 
-https://schemas.isotc211.org/19115/-1/mrs/1.3.0/referenceSystem.xsd[https://schemas.isotc211.org/19115/-1/mrs/1.3.0/referenceSystem.xsd] contains reference to the following codelist:
+https://schemas.isotc211.org/19115/-1/mrs/1.3.0/referenceSystem.xsd contains reference to the following codelist:
 
 * MD_ReferenceSystemTypeCode
 
@@ -56,11 +56,11 @@ The mrs 1.3 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geographic Common Objects | gco |
-https://schemas.isotc211.org/19103/-/gco/1.2.0[https://schemas.isotc211.org/19103/-/gco/1.2] | ../../../../19103/-/gco/1.2/gco.xsd
+https://schemas.isotc211.org/19103/-/gco/1.2.0 | ../../../../19103/-/gco/1.2/gco.xsd
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-1/mcc/1.3.0[https://schemas.isotc211.org/19115/-1/mcc/1.3] | ../../../../19115/-1/mcc/1.3.0/mcc.xsd
+https://schemas.isotc211.org/19115/-1/mcc/1.3.0 | ../../../../19115/-1/mcc/1.3.0/mcc.xsd
 | Referencing By Coordinates | mcc |
-https://schemas.isotc211.org/19111/-/rbc/3.1.0/rbc.xsd[https://schemas.isotc211.org/19111/-/rbc/3.1.0/rbc.xsd] | ../../../../19111/-/rbc/3.1.0/rbc.xsd
+https://schemas.isotc211.org/19111/-/rbc/3.1.0/rbc.xsd | ../../../../19111/-/rbc/3.1.0/rbc.xsd
 |===
 
 === Schematron Validation Rules for mrs 1.3

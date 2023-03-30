@@ -57,11 +57,11 @@ The srv 2.0 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geographic COmmon | gco |
-https://schemas.isotc211.org/19115/-3/gco/1.0[https://schemas.isotc211.org/19115/-3/gco/1.0] | ../../../../19115/-3/gco/1.0/gco.xsd
+https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../../../19115/-3/gco/1.0/gco.xsd
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-3/mcc/1.0[https://schemas.isotc211.org/19115/-3/mcc/1.0] | ../../../../19115/-3/mcc/1.0/mcc.xsd
+https://schemas.isotc211.org/19115/-3/mcc/1.0 | ../../../../19115/-3/mcc/1.0/mcc.xsd
 | Metadata for Resource Identification | mri |
-https://schemas.isotc211.org/19115/-3/mri/1.0[https://schemas.isotc211.org/19115/-3/mri/1.0] | ../../../../19115/-3/mri/1.0/mri.xsd
+https://schemas.isotc211.org/19115/-3/mri/1.0 | ../../../../19115/-3/mri/1.0/mri.xsd
 |===
 
 === Schematron Validation Rules for srv 2.0

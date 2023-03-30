@@ -33,7 +33,7 @@ conceptual schema defined in ISO 191110:2016, Geographic Information - Methodolo
 for feature cataloging, Clause 6.3. It was created using the encoding rules defined
 in ISO 19118, ISO 19139.
 
-https://schemas.isotc211.org/19110/-/fcc/2.2.0/abstract.xsd[https://schemas.isotc211.org/19110/-/fcc/2.2.0/abstract.xsd] contains the following classes:
+https://schemas.isotc211.org/19110/-/fcc/2.2.0/abstract.xsd contains the following classes:
 
 * Abstract_FeatureCatalogue
 * Abstract_FeatureType
@@ -48,11 +48,11 @@ The fcc 2.2 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geographic Common Objects | gco |
-https://schemas.isotc211.org/19103/-/gco/1.2[https://schemas.isotc211.org/19103/-/gco/1.2] | ../../../../19103/-/gco/1.2.0/gco.xsd
+https://schemas.isotc211.org/19103/-/gco/1.2 | ../../../../19103/-/gco/1.2.0/gco.xsd
 | General Feature Catalogue | gco |
-https://schemas.isotc211.org/19110/-/gfc/2.2[https://schemas.isotc211.org/19110/-/gfc/2.2] | ../../../../19110/-/gfc/2.2.0/gfc.xsd
+https://schemas.isotc211.org/19110/-/gfc/2.2 | ../../../../19110/-/gfc/2.2.0/gfc.xsd
 | Cataloguing | cat |
-https://schemas.isotc211.org/19139/-/cat/1.2[https://schemas.isotc211.org/19139/-/cat/1.2] | ../../../../19139/-/cat/1.2.0/cat.xsd
+https://schemas.isotc211.org/19139/-/cat/1.2 | ../../../../19139/-/cat/1.2.0/cat.xsd
 |===
 
 === Working Versions

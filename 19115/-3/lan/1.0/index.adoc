@@ -50,9 +50,9 @@ The lan 1.0 namespace imports these other namespaces:
 
 | Citation and responsible party information Citation and responsible party
 information | cit |
-https://schemas.isotc211.org/19115/-3/cit/1.0[https://schemas.isotc211.org/19115/-3/cit/1.0] | ../../../../19115/-3/cit/1.0/cit.xsd
+https://schemas.isotc211.org/19115/-3/cit/1.0 | ../../../../19115/-3/cit/1.0/cit.xsd
 | Geographic COmmon | gco |
-https://schemas.isotc211.org/19115/-3/gco/1.0[https://schemas.isotc211.org/19115/-3/gco/1.0] | ../../../../19115/-3/gco/1.0/gco.xsd
+https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../../../19115/-3/gco/1.0/gco.xsd
 |===
 
 === Working Versions
