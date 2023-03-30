@@ -33,7 +33,7 @@ implements the UML conceptual schema defined in ISO 19115-1, Geographic Informat
 Metadata - Part 1: Fundamentals, Clause 6.5.13. It was created using the encoding
 rules defined in ISO 19118, ISO 19139.
 
-https://schemas.isotc211.org/19115/-1/mas/1.3.0/applicationSchema.xsd[https://schemas.isotc211.org/19115/-1/mas/1.3.0/applicationSchema.xsd] contains the following classes:
+https://schemas.isotc211.org/19115/-1/mas/1.3.0/applicationSchema.xsd contains the following classes:
 
 * MD_ApplicationSchemaInformation
 
@@ -48,11 +48,11 @@ The mas 1.3 namespace imports these other namespaces:
 
 | Citation and responsible party information Citation and responsible party
 information | cit |
-https://schemas.isotc211.org/19115/-1/cit/1.3.0[https://schemas.isotc211.org/19115/-1/cit/1.3] | ../../../../19115/-1/cit/1.3.0/cit.xsd
+https://schemas.isotc211.org/19115/-1/cit/1.3.0 | ../../../../19115/-1/cit/1.3.0/cit.xsd
 | Geographic COmmon | gco |
-https://schemas.isotc211.org/19103/-/gco/1.2.0[https://schemas.isotc211.org/19103/-/gco/1.2] | ../../../../19103/-/gco/1.2/gco.xsd
+https://schemas.isotc211.org/19103/-/gco/1.2.0 | ../../../../19103/-/gco/1.2/gco.xsd
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-1/mcc/1.3.0[https://schemas.isotc211.org/19115/-1/mcc/1.3] | ../../../../19115/-1/mcc/1.3.0/mcc.xsd
+https://schemas.isotc211.org/19115/-1/mcc/1.3.0 | ../../../../19115/-1/mcc/1.3.0/mcc.xsd
 |===
 
 === Working Versions

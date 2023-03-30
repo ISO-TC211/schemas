@@ -54,35 +54,35 @@ The mds 1.0 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Feature Catalog Common | fcc |
-https://schemas.isotc211.org/19110/fcc/1.0[https://schemas.isotc211.org/19110/fcc/1.0] | ../../../../19110/fcc/1.0/fcc.xsd
+https://schemas.isotc211.org/19110/fcc/1.0 | ../../../../19110/fcc/1.0/fcc.xsd
 | Geospatial EXtent | gex |
-https://schemas.isotc211.org/19115/-3/gex/1.0[https://schemas.isotc211.org/19115/-3/gex/1.0] | ../../../../19115/-3/gex/1.0/gex.xsd
+https://schemas.isotc211.org/19115/-3/gex/1.0 | ../../../../19115/-3/gex/1.0/gex.xsd
 | Metadata for Acquisition Metadata for Acquisition | mac |
-https://schemas.isotc211.org/19115/-3/mac/1.0[https://schemas.isotc211.org/19115/-3/mac/1.0] | ../../../../19115/-3/mac/1.0/mac.xsd
+https://schemas.isotc211.org/19115/-3/mac/1.0 | ../../../../19115/-3/mac/1.0/mac.xsd
 | Metadata for Application Schema | mas |
-https://schemas.isotc211.org/19115/-3/mas/1.0[https://schemas.isotc211.org/19115/-3/mas/1.0] | ../../../../19115/-3/mas/1.0/mas.xsd
+https://schemas.isotc211.org/19115/-3/mas/1.0 | ../../../../19115/-3/mas/1.0/mas.xsd
 | Metadata for Constraints | mco |
-https://schemas.isotc211.org/19115/-3/mco/1.0[https://schemas.isotc211.org/19115/-3/mco/1.0] | ../../../../19115/-3/mco/1.0/mco.xsd
+https://schemas.isotc211.org/19115/-3/mco/1.0 | ../../../../19115/-3/mco/1.0/mco.xsd
 | Metadata Base Metadata Base | mdb |
-https://schemas.isotc211.org/19115/-3/mdb/1.0[https://schemas.isotc211.org/19115/-3/mdb/1.0] | ../../../../19115/-3/mdb/1.0/mdb.xsd
+https://schemas.isotc211.org/19115/-3/mdb/1.0 | ../../../../19115/-3/mdb/1.0/mdb.xsd
 | Metadata for Data Quality | mdq |
-https://schemas.isotc211.org/19157/-2/mdq/1.0[https://schemas.isotc211.org/19157/-2/mdq/1.0] | ../../../../19157/-2/mdq/1.0/mdq.xsd
+https://schemas.isotc211.org/19157/-2/mdq/1.0 | ../../../../19157/-2/mdq/1.0/mdq.xsd
 | Metadata for Maintenance Information | mmi |
-https://schemas.isotc211.org/19115/-3/mmi/1.0[https://schemas.isotc211.org/19115/-3/mmi/1.0] | ../../../../19115/-3/mmi/1.0/mmi.xsd
+https://schemas.isotc211.org/19115/-3/mmi/1.0 | ../../../../19115/-3/mmi/1.0/mmi.xsd
 | Metadata for Portrayal Catalog | mpc |
-https://schemas.isotc211.org/19115/-3/mpc/1.0[https://schemas.isotc211.org/19115/-3/mpc/1.0] | ../../../../19115/-3/mpc/1.0/mpc.xsd
+https://schemas.isotc211.org/19115/-3/mpc/1.0 | ../../../../19115/-3/mpc/1.0/mpc.xsd
 | Metadata for Resource Content Metadata for Resource Content | mrc |
-https://schemas.isotc211.org/19115/-3/mrc/1.0[https://schemas.isotc211.org/19115/-3/mrc/1.0] | ../../../../19115/-3/mrc/1.0/mrc.xsd
+https://schemas.isotc211.org/19115/-3/mrc/1.0 | ../../../../19115/-3/mrc/1.0/mrc.xsd
 | Metadata for Resource Distribution | mrd |
-https://schemas.isotc211.org/19115/-3/mrd/1.0[https://schemas.isotc211.org/19115/-3/mrd/1.0] | ../../../../19115/-3/mrd/1.0/mrd.xsd
+https://schemas.isotc211.org/19115/-3/mrd/1.0 | ../../../../19115/-3/mrd/1.0/mrd.xsd
 | Metadata for Resource Lineage Metadata for Resource Lineage | mrl |
-https://schemas.isotc211.org/19115/-3/mrl/1.0[https://schemas.isotc211.org/19115/-3/mrl/1.0] | ../../../../19115/-3/mrl/1.0/mrl.xsd
+https://schemas.isotc211.org/19115/-3/mrl/1.0 | ../../../../19115/-3/mrl/1.0/mrl.xsd
 | Metadata for Reference System | mrs |
-https://schemas.isotc211.org/19115/-3/mrs/1.0[https://schemas.isotc211.org/19115/-3/mrs/1.0] | ../../../../19115/-3/mrs/1.0/mrs.xsd
+https://schemas.isotc211.org/19115/-3/mrs/1.0 | ../../../../19115/-3/mrs/1.0/mrs.xsd
 | Metadata for Spatial Representation Metadata for Spatial Representation | msr |
-https://schemas.isotc211.org/19115/-3/msr/1.0[https://schemas.isotc211.org/19115/-3/msr/1.0] | ../../../../19115/-3/msr/1.0/msr.xsd
+https://schemas.isotc211.org/19115/-3/msr/1.0 | ../../../../19115/-3/msr/1.0/msr.xsd
 | Metadata for Services | srv |
-https://schemas.isotc211.org/19115/-3/srv/2.0[https://schemas.isotc211.org/19115/-3/srv/2.0] | ../../../../19115/-3/srv/2.0/srv.xsd
+https://schemas.isotc211.org/19115/-3/srv/2.0 | ../../../../19115/-3/srv/2.0/srv.xsd
 |===
 
 === Working Versions

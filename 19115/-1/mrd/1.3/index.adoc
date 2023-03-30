@@ -37,7 +37,7 @@ the UML conceptual schema defined in ISO 19115-1, Geographic Information - Metad
 Part 1: Fundamentals, Clause 6.5.11. It was created using the encoding rules defined
 in ISO 19118, ISO 19139.
 
-https://schemas.isotc211.org/19115/-1/mrd/1.3.0/distribution.xsd[https://schemas.isotc211.org/19115/-1/mrd/1.3.0/distribution.xsd] contains the following classes:
+https://schemas.isotc211.org/19115/-1/mrd/1.3.0/distribution.xsd contains the following classes:
 
 * MD_Distribution
 * MD_DigitalTransferOptions
@@ -46,7 +46,7 @@ https://schemas.isotc211.org/19115/-1/mrd/1.3.0/distribution.xsd[https://schemas
 * MD_Medium
 * MD_StandardOrderProcess
 
-https://schemas.isotc211.org/19115/-1/mrd/1.3.0/distribution.xsd[https://schemas.isotc211.org/19115/-1/mrd/1.3.0/distribution.xsd] contains reference(s) to the following codelist:
+https://schemas.isotc211.org/19115/-1/mrd/1.3.0/distribution.xsd contains reference(s) to the following codelist:
 
 * MD_MediumFormatCode
 
@@ -60,11 +60,11 @@ The mrd 1.3 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geographic Common Objects | gco |
-https://schemas.isotc211.org/19103/-/gco/1.2.0[https://schemas.isotc211.org/19103/-/gco/1.2] | ../../../../19103/-/gco/1.2/gco.xsd
+https://schemas.isotc211.org/19103/-/gco/1.2.0 | ../../../../19103/-/gco/1.2/gco.xsd
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-1/mcc/1.3.0[https://schemas.isotc211.org/19115/-1/mcc/1.3] | ../../../../19115/-1/mcc/1.3.0/mcc.xsd
+https://schemas.isotc211.org/19115/-1/mcc/1.3.0 | ../../../../19115/-1/mcc/1.3.0/mcc.xsd
 | CITataion and Responsibility | cit |
-https://schemas.isotc211.org/19115/-1/cit/1.3.0[https://schemas.isotc211.org/19115/-1/cit/1.3] | ../../../../19115/-1/cit/1.3.0/cit.xsd
+https://schemas.isotc211.org/19115/-1/cit/1.3.0 | ../../../../19115/-1/cit/1.3.0/cit.xsd
 |===
 
 === Schematron Validation Rules for mrd 1.3

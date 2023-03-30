@@ -35,7 +35,7 @@ the UML conceptual schema defined in ISO 191123 Geographic Information - Schemas
 coverage geometry and functions Part 2: Coverage implementation schema. It was
 created using the encoding rules defined in ISO 19118, ISO 19139.
 
-https://schemas.isotc211.org/19123/-2/cis/1.1.0/grids.xsd[https://schemas.isotc211.org/19123/-2/cis/1.1.0/grids.xsd] contains the following classes:
+https://schemas.isotc211.org/19123/-2/cis/1.1.0/grids.xsd contains the following classes:
 
 * AbstractReferenceableGrid
 * ParameterValue
@@ -46,7 +46,7 @@ limited of the UML conceptual schema defined in ISO 191123 Geographic Informatio
 Schemas for coverage geometry and functions Part 2: Coverage implementation schema,
 Clause 8.4. It was created using the encoding rules defined in ISO 19118, ISO 19139.
 
-https://schemas.isotc211.org/19123/-2/cis/1.1.0/coverage.xsd[https://schemas.isotc211.org/19123/-2/cis/1.1.0/coverage.xsd] contains the following classes:
+https://schemas.isotc211.org/19123/-2/cis/1.1.0/coverage.xsd contains the following classes:
 
 * AbstractCoverage
 * Extension

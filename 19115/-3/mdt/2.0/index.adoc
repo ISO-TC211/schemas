@@ -60,13 +60,13 @@ The mdt 2.0 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | CATalogue | cat |
-https://schemas.isotc211.org/19115/-3/cat/1.0[https://schemas.isotc211.org/19115/-3/cat/1.0] | ../../../../19115/-3/cat/1.0/cat.xsd
+https://schemas.isotc211.org/19115/-3/cat/1.0 | ../../../../19115/-3/cat/1.0/cat.xsd
 | Geographic COmmon | gco |
-https://schemas.isotc211.org/19115/-3/gco/1.0[https://schemas.isotc211.org/19115/-3/gco/1.0] | ../../../../19115/-3/gco/1.0/gco.xsd
+https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../../../19115/-3/gco/1.0/gco.xsd
 | Geospatial Common eXtension | gcx |
-https://schemas.isotc211.org/19115/-3/gcx/1.0[https://schemas.isotc211.org/19115/-3/gcx/1.0] | ../../../../19115/-3/gcx/1.0/gcx.xsd
+https://schemas.isotc211.org/19115/-3/gcx/1.0 | ../../../../19115/-3/gcx/1.0/gcx.xsd
 | MetaData Application MetaData Application | mda |
-https://schemas.isotc211.org/19115/-3/mda/2.0[https://schemas.isotc211.org/19115/-3/mda/2.0] | ../../../../19115/-3/mda/2.0/mda.xsd
+https://schemas.isotc211.org/19115/-3/mda/2.0 | ../../../../19115/-3/mda/2.0/mda.xsd
 |===
 
 === Working Versions

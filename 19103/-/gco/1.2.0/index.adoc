@@ -30,7 +30,7 @@ UML conceptual schema defined in ISO 19103:2015, Geographic Information - Concep
 schema language. It was created using the encoding rules defined in ISO 19118, ISO
 19139.
 
-https://schemas.isotc211.org/19103/-/gco/1.2.0/baseTypes.xsd[https://schemas.isotc211.org/19103/-/gco/1.2.0/baseTypes.xsd]
+https://schemas.isotc211.org/19103/-/gco/1.2.0/baseTypes.xsd
 contains the following classes:
 
 * AbstractObject

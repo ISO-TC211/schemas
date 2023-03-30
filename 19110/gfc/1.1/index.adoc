@@ -63,16 +63,16 @@ The gfc 1.1 namespace imports these other namespaces:
 
 | Citation and responsible party information Citation and responsible party
 information | cit |
-https://schemas.isotc211.org/19115/-3/cit/1.0[https://schemas.isotc211.org/19115/-3/cit/1.0] | ../../../19115/-3/cit/1.0/cit.xsd
+https://schemas.isotc211.org/19115/-3/cit/1.0 | ../../../19115/-3/cit/1.0/cit.xsd
 | Feature Catalog Common | fcc |
-https://schemas.isotc211.org/19110/fcc/1.0[https://schemas.isotc211.org/19110/fcc/1.0]
+https://schemas.isotc211.org/19110/fcc/1.0
 | ../../../19110/fcc/1.0/fcc.xsd
 | Geographic COmmon | gco |
-https://schemas.isotc211.org/19115/-3/gco/1.0[https://schemas.isotc211.org/19115/-3/gco/1.0] | ../../../19115/-3/gco/1.0/gco.xsd
+https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../../19115/-3/gco/1.0/gco.xsd
 | Language localization | lan |
-https://schemas.isotc211.org/19115/-3/lan/1.0[https://schemas.isotc211.org/19115/-3/lan/1.0] | ../../../19115/-3/lan/1.0/lan.xsd
+https://schemas.isotc211.org/19115/-3/lan/1.0 | ../../../19115/-3/lan/1.0/lan.xsd
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-3/mcc/1.0[https://schemas.isotc211.org/19115/-3/mcc/1.0] | ../../../19115/-3/mcc/1.0/mcc.xsd
+https://schemas.isotc211.org/19115/-3/mcc/1.0 | ../../../19115/-3/mcc/1.0/mcc.xsd
 |===
 
 === Working Versions

@@ -33,7 +33,7 @@ conceptual schema defined in ISO 19115-1, Geographic Information - Metadata - Pa
 Extensions for acquisition and processing, Clause 6.3.3. It was created using the
 encoding rules defined in ISO 19118, ISO 19139.
 
-https://schemas.isotc211.org/19115/-1/mrl/1.3.0/lineage.xsd[https://schemas.isotc211.org/19115/-1/mrl/1.3.0/lineage.xsd] contains the following classes:
+https://schemas.isotc211.org/19115/-1/mrl/1.3.0/lineage.xsd contains the following classes:
 
 * LI_Lineage
 * LI_ProcessStep
@@ -57,17 +57,17 @@ The mrl 1.3 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geographic Common Objects | gco |
-https://schemas.isotc211.org/19103/-/gco/1.2.0[https://schemas.isotc211.org/19103/-/gco/1.2] | ../../../../19103/-/gco/1.2/gco.xsd
+https://schemas.isotc211.org/19103/-/gco/1.2.0 | ../../../../19103/-/gco/1.2/gco.xsd
 | Geographic Markup Wrappers | gmw |
-https://schemas.isotc211.org/19163/-/gmw/1.1.0[https://schemas.isotc211.org/19163/-/gmw/1.1.0] | ../../../../19163/-/gmw/1.1/gmw.xsd
+https://schemas.isotc211.org/19163/-/gmw/1.1.0 | ../../../../19163/-/gmw/1.1/gmw.xsd
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-1/mcc/1.3.0[https://schemas.isotc211.org/19115/-1/mcc/1.3.0] | ../../../../19115/-1/mcc/1.3.0/mcc.xsd
+https://schemas.isotc211.org/19115/-1/mcc/1.3.0 | ../../../../19115/-1/mcc/1.3.0/mcc.xsd
 | Metadata for Services | srv |
-https://schemas.isotc211.org/19115/-1/srv/1.3.0[https://schemas.isotc211.org/19115/-1/srv/1.3.0] | ../../../../19115/-1/srv/1.3.0/srv.xsd
+https://schemas.isotc211.org/19115/-1/srv/1.3.0 | ../../../../19115/-1/srv/1.3.0/srv.xsd
 | CITataion and Responsibility | cit |
-https://schemas.isotc211.org/19115/-1/cit/1.3.0[https://schemas.isotc211.org/19115/-1/cit/1.3] | ../../../../19115/-1/cit/1.3.0/cit.xsd
+https://schemas.isotc211.org/19115/-1/cit/1.3.0 | ../../../../19115/-1/cit/1.3.0/cit.xsd
 | Geospatial MetaLanguage | gml |
-http://schemas.opengis.net/gml/3.2.1/gml.xsd[http://schemas.opengis.net/gml/3.2] |
+http://schemas.opengis.net/gml/3.2.1/gml.xsd |
 http://schemas.opengis.net/gml/3.2.1/gml.xsd
 |===
 
@@ -82,14 +82,14 @@ are:
 | Package name | File name | Location | Constraint tested
 
 | Metadata for Resource Lineage | mrl.sch |
-https://schemas.isotc211.org/19115/-1/mrl/1.3.0/mrl.sch[https://schemas.isotc211.org/19115/-1/mrl/1.3.0/ mrl.sch] a|
+https://schemas.isotc211.org/19115/-1/mrl/1.3.0/mrl.sch a|
 * LI_Source - count(description + scope) \> 0
 | CITation and responsibility | cit.sch |
-https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.sch[https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.sch] a|
+https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.sch a|
 * CI_Individual - count(name + positionName) \> 0
 * CI_organisation - count(name + logo) \> 0
 | Metadata Resource Identification | mri.sch |
-https://schemas.isotc211.org/19115/-1/mri/1.3.0/mri.sch[https://schemas.isotc211.org/19115/-1/mri/1.3.0/mri.sch] a|
+https://schemas.isotc211.org/19115/-1/mri/1.3.0/mri.sch a|
 * MD_MetadataScope/MD_Identification -
 MD_Metadata.metadataScope.MD_MetadataScope.resourceScope)='dataset' implies
 count(extent.geographicElement.EX_GeographicBoundingBox + extent.geographicElement.EX_GeographicDescription) \>= 1

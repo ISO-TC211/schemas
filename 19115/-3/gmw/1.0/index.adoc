@@ -46,7 +46,7 @@ The gmw 1.0 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | | baseTypes2014 |
-https://schemas.isotc211.org/19115/-3/gco/1.0[https://schemas.isotc211.org/19115/-3/gco/1.0] | ../../gco/1.0/baseTypes2014.xsd
+https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../gco/1.0/baseTypes2014.xsd
 | Geography Markup Language | gml |
 http://www.opengis.net/gml/3.2[http://www.opengis.net/gml/3.2] |
 http://schemas.opengis.net/gml/3.2.1/gml.xsd

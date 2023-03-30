@@ -60,13 +60,13 @@ The dqm 1.0 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | CATalogue | cat |
-https://schemas.isotc211.org/19115/-3/cat/1.0[https://schemas.isotc211.org/19115/-3/cat/1.0] | ../../../../19115/-3/cat/1.0/cat.xsd
+https://schemas.isotc211.org/19115/-3/cat/1.0 | ../../../../19115/-3/cat/1.0/cat.xsd
 | Geographic COmmon | gco |
-https://schemas.isotc211.org/19115/-3/gco/1.0[https://schemas.isotc211.org/19115/-3/gco/1.0] | ../../../../19115/-3/gco/1.0/gco.xsd
+https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../../../19115/-3/gco/1.0/gco.xsd
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-3/mcc/1.0[https://schemas.isotc211.org/19115/-3/mcc/1.0] | ../../../../19115/-3/mcc/1.0/mcc.xsd
+https://schemas.isotc211.org/19115/-3/mcc/1.0 | ../../../../19115/-3/mcc/1.0/mcc.xsd
 | Procedures for Registration | pre |
-https://schemas.isotc211.org/19135/-2/pre/1.0[https://schemas.isotc211.org/19135/-2/pre/1.0] | ../../../../19135/-2/pre/1.0/pre.xsd
+https://schemas.isotc211.org/19135/-2/pre/1.0 | ../../../../19135/-2/pre/1.0/pre.xsd
 |===
 
 === Schematron Validation Rules for dqm 1.0

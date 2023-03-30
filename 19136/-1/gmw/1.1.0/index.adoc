@@ -34,7 +34,7 @@ implements the UML conceptual schema defined in ISO 19136, Geographic Informatio
 Geographic Markup Language Part 2: Extended schemas and encoding rules.. It was
 created using the encoding rules defined in ISO 19118, ISO 19139.
 
-https://schemas.isotc211.org/19136/-1/gmw/1.1.0/gmlWrapperTypes.xsd[https://schemas.isotc211.org/19136/-1/gmw/1.1.0/gmlWrapperTypes.xsd] contains the following classes:
+https://schemas.isotc211.org/19136/-1/gmw/1.1.0/gmlWrapperTypes.xsd contains the following classes:
 
 * MimeFileType
 * Anchor
@@ -53,9 +53,9 @@ The GMW 1.1.0 imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geographic Common Objects | gco |
-https://schemas.isotc211.org/19103/-/gco/1.2.0[https://schemas.isotc211.org/19103/-/gco/1.2] | ../../../../19103/-/gco/1.2.0/gco.xsd
+https://schemas.isotc211.org/19103/-/gco/1.2.0 | ../../../../19103/-/gco/1.2.0/gco.xsd
 | Geographic Common objects Extended | gcx |
-https://schemas.isotc211.org/19103/-/gcx/1.2.0[https://schemas.isotc211.org/19103/-/gcx/1.2] | ../../../../19103/-/gcx/1.2.0/gcx.xsd
+https://schemas.isotc211.org/19103/-/gcx/1.2.0 | ../../../../19103/-/gcx/1.2.0/gcx.xsd
 |===
 
 === Working Versions

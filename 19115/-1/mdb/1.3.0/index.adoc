@@ -35,7 +35,7 @@ the UML conceptual schema defined in ISO 19115-1, Geographic Information - Metad
 Part 1: Fundamentals, Clause 6.5.2. It was created using the encoding rules defined
 in ISO 19118, ISO 19139.
 
-https://schemas.isotc211.org/19115/-1/mdb/1.3.0/metadataBase.xsd[https://schemas.isotc211.org/19115/-1/mdb/1.3.0/metadataBase.xsd] contains the folowing classes:
+https://schemas.isotc211.org/19115/-1/mdb/1.3.0/metadataBase.xsd contains the folowing classes:
 
 * MD_Metadata
 * MD_MetadataScope
@@ -51,39 +51,39 @@ The mdb 1.3 namespace imports these other namespaces:
 
 | Citation and responsible party information Citation and responsible party
 information | cit |
-https://schemas.isotc211.org/19115/-1/cit/1.3.0[https://schemas.isotc211.org/19115/-1/cit/1.3] | ../../../../19115/-1/cit/1.3.0/cit.xsd
+https://schemas.isotc211.org/19115/-1/cit/1.3.0 | ../../../../19115/-1/cit/1.3.0/cit.xsd
 | Data Quality Common Classes | dqc |
-https://schemas.isotc211.org/19157/-2/dqc/1.3.0[https://schemas.isotc211.org/19157/-2/dqc/1.3] | ../../../../19157/-2/dqc/1.3.0/dqc.xsd
+https://schemas.isotc211.org/19157/-2/dqc/1.3.0 | ../../../../19157/-2/dqc/1.3.0/dqc.xsd
 | Geographic Common Objects | gco |
-https://schemas.isotc211.org/19103/-/gco/1.2.0[https://schemas.isotc211.org/19103/-/gco/1.2] | ../../../../19103/-/gco/1.2/gco.xsd
+https://schemas.isotc211.org/19103/-/gco/1.2.0 | ../../../../19103/-/gco/1.2/gco.xsd
 | Geospatial EXtent | gex |
-https://schemas.isotc211.org/19115/-1/gex/1.3.0[https://schemas.isotc211.org/19115/-1/gex/1.3] | ../../../../19115/-1/gex/1.3.0/gex.xsd
+https://schemas.isotc211.org/19115/-1/gex/1.3.0 | ../../../../19115/-1/gex/1.3.0/gex.xsd
 | Language localization | lan |
-https://schemas.isotc211.org/19115/-1/lan/1.3.0[https://schemas.isotc211.org/19115/-1/lan/1.3] | ../../../../19115/-1/lan/1.3.0/lan.xsd
+https://schemas.isotc211.org/19115/-1/lan/1.3.0 | ../../../../19115/-1/lan/1.3.0/lan.xsd
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-1/mcc/1.3.0[https://schemas.isotc211.org/19115/-1/mcc/1.3] | ../../../../19115/-1/mcc/1.3.0/mcc.xsd
+https://schemas.isotc211.org/19115/-1/mcc/1.3.0 | ../../../../19115/-1/mcc/1.3.0/mcc.xsd
 | Metadata COnstraints | mco |
-https://schemas.isotc211.org/19115/-1/mco/1.3.0[https://schemas.isotc211.org/19115/-1/mco/1.3] | ../../../../19115/-1/mco/1.3.0/mco.xsd
+https://schemas.isotc211.org/19115/-1/mco/1.3.0 | ../../../../19115/-1/mco/1.3.0/mco.xsd
 | Metadata for Resource Identification | mri |
-https://schemas.isotc211.org/19115/-1/mri/1.3.0[https://schemas.isotc211.org/19115/-1/mri/1.3] | ../../../../19115/-1/mri/1.3.0/mri.xsd
+https://schemas.isotc211.org/19115/-1/mri/1.3.0 | ../../../../19115/-1/mri/1.3.0/mri.xsd
 | Metadata Spatial Representation | msr |
-https://schemas.isotc211.org/19115/-1/msr/1.3.0[https://schemas.isotc211.org/19115/-1/msr/1.3] | ../../../../19115/-1/msr/1.3.0/msr.xsd
+https://schemas.isotc211.org/19115/-1/msr/1.3.0 | ../../../../19115/-1/msr/1.3.0/msr.xsd
 | Metadata Reference System | mrs |
-https://schemas.isotc211.org/19115/-1/mrs/1.3.0[https://schemas.isotc211.org/19115/-1/mrs/1.3] | ../../../../19115/-1/mrs/1.3.0/mrs.xsd
+https://schemas.isotc211.org/19115/-1/mrs/1.3.0 | ../../../../19115/-1/mrs/1.3.0/mrs.xsd
 | Metadata EXtension information | mex |
-https://schemas.isotc211.org/19115/-1/mex/1.3.0[https://schemas.isotc211.org/19115/-1/mex/1.3] | ../../../../19115/-1/mex/1.3.0/mex.xsd
+https://schemas.isotc211.org/19115/-1/mex/1.3.0 | ../../../../19115/-1/mex/1.3.0/mex.xsd
 | Metadata Resource Content | mrc |
-https://schemas.isotc211.org/19115/-1/mrc/1.3.0[https://schemas.isotc211.org/19115/-1/mrc/1.3] | ../../../../19115/-1/mrc/1.3.0/mrc.xsd
+https://schemas.isotc211.org/19115/-1/mrc/1.3.0 | ../../../../19115/-1/mrc/1.3.0/mrc.xsd
 | Metadata Resource Distribution | mrc |
-https://schemas.isotc211.org/19115/-1/mrd/1.3.0[https://schemas.isotc211.org/19115/-1/mrd/1.3] | ../../../../19115/-1/mrd/1.3.0/mrd.xsd
+https://schemas.isotc211.org/19115/-1/mrd/1.3.0 | ../../../../19115/-1/mrd/1.3.0/mrd.xsd
 | Metadata Application Schemas | mas |
-https://schemas.isotc211.org/19115/-1/mas/1.3.0[https://schemas.isotc211.org/19115/-1/mas/1.3] | ../../../../19115/-1/mas/1.3.0/mas.xsd
+https://schemas.isotc211.org/19115/-1/mas/1.3.0 | ../../../../19115/-1/mas/1.3.0/mas.xsd
 | Metadata Maintenance Information | mmi |
-https://schemas.isotc211.org/19115/-1/mmi/1.3.0[https://schemas.isotc211.org/19115/-1/mmi/1.3] | ../../../../19115/-1/mmi/1.3.0/mmi.xsd
+https://schemas.isotc211.org/19115/-1/mmi/1.3.0 | ../../../../19115/-1/mmi/1.3.0/mmi.xsd
 | Metadata Resource Lineage | mrl |
-https://schemas.isotc211.org/19115/-1/mrl/1.3.0[https://schemas.isotc211.org/19115/-1/mrl/1.3] | ../../../../19115/-1/mrl/1.3.0/mrl.xsd
+https://schemas.isotc211.org/19115/-1/mrl/1.3.0 | ../../../../19115/-1/mrl/1.3.0/mrl.xsd
 | Metadata ACquisition | mac |
-https://schemas.isotc211.org/19115/-2/mpc/2.2.0[https://schemas.isotc211.org/19115/-2/mac/2.2] | ../../../../19115/-2/mac/2.2.0/mac.xsd
+https://schemas.isotc211.org/19115/-2/mpc/2.2.0 | ../../../../19115/-2/mac/2.2.0/mac.xsd
 |===
 
 === Schematron Validation Rules for mdb 1.3
@@ -96,7 +96,7 @@ Schematron rules for validating instance documents required for a complete valid
 | Package name | File name | Location | Constraint tested
 
 | MetaData Base | mdb.sch |
-https://schemas.isotc211.org/19115/-1/mdb/1.3.0/mdb.sch[https://schemas.isotc211.org/19115/-1/mdb/1.3.0/mdb.sch] a|
+https://schemas.isotc211.org/19115/-1/mdb/1.3.0/mdb.sch a|
 * MD_Metadata - defaultLocale documented if not defined by the encoding
 * MD_Metadata - defaultLocale.PT_Locale.characterEncoding default value is UTF-8
 * MD_Metadata - count(MD_Metadata.parentMetadata) \> 0 when there is an higher level
@@ -107,11 +107,11 @@ MD_Metadata.metadataScope.MD_MetadataScope.resourceScope not equal to "dataset"
 count(MD_Metadata.dateInfo.CI_Date.dateType.CI_DateTypeCode="creation") \> 0
 * MD_MetadataScope - name is mandatory if resourceScope not equal to "dataset"
 | CITation and responsibility | cit.sch |
-https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.sch[https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.sch] a|
+https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.sch a|
 * CI_Individual - count(name + positionName) \> 0
 * CI_organisation - count(name + logo) \> 0
 | Metadata Resource Identification | mri.sch |
-https://schemas.isotc211.org/19115/-1/mri/1.3.0/mri.sch[https://schemas.isotc211.org/19115/-1/mri/1.3.0/mri.sch] a|
+https://schemas.isotc211.org/19115/-1/mri/1.3.0/mri.sch a|
 * MD_MetadataScope/MD_Identification -
 MD_Metadata.metadataScope.MD_MetadataScope.resourceScope)='dataset' implies
 count(extent.geographicElement.EX_GeographicBoundingBox + extent.geographicElement.EX_GeographicDescription) \>= 1
@@ -126,10 +126,10 @@ UTF-8
 * MD_Keywords/[SV_ServiceIdentification] - When the resource described is a service,
 one instance of MD_Keyword shall refer to the service taxonomy defined in ISO 19119
 | Geographic EXtent | gex.sch |
-https://schemas.isotc211.org/19115/-1/gex/1.3.0/gex.sch[https://schemas.isotc211.org/19115/-1/gex/1.3.0/gex.sch] a|
+https://schemas.isotc211.org/19115/-1/gex/1.3.0/gex.sch a|
 * EX_Extent - count (description + geographicElement + temporalElement + verticalElement) \>0
 | Metadata for ACquisition | mac.sch |
-https://schemas.isotc211.org/19115/-1/mac/2.2.0/mac.sch[https://schemas.isotc211.org/19115/-1/mac/2.2.0/acb.sch] a|
+https://schemas.isotc211.org/19115/-1/mac/2.2.0/mac.sch a|
 * MI_Operation - count(otherProperty) = count(otherPropertyType)
 * MI_Platform - count(otherProperty) = count(otherPropertyType)
 * MI_Instrument - count(otherProperty) = count(otherPropertyType)

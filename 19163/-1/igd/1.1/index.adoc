@@ -35,7 +35,7 @@ implements the UML conceptual schema defined in ISO 19163, Geographic Informatio
 Content components and encoding rules for imagery and gridded Data. It was created
 using the encoding rules defined in ISO 19118, ISO 19139.
 
-https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_ImageryAndGriddedData.xsd[https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_ImageryAndGriddedData.xsd]
+https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_ImageryAndGriddedData.xsd
 contains the following classes:
 
 * CV_AbstractCoverage
@@ -52,7 +52,7 @@ contains the following classes:
 * SD_GCPLocation
 * CV_GridCoordinates
 
-https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_ImageryAndGriddedData.xsd[https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_ImageryAndGriddedData.xsd]
+https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_ImageryAndGriddedData.xsd
 contains the following codelist/enumerations:
 
 * IE_GeolocationSourceCode
@@ -62,7 +62,7 @@ contains the following codelist/enumerations:
 implements the UML conceptual schema defined in ISO 19163, Geographic Information -
 Content components and encoding rules for imagery and gridded Data. It was created using the encoding rules defined in ISO 19118, ISO 19139.
 
-https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_ThematicGriddedData.xsd[https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_ThematicGriddedData.xsd]
+https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_ThematicGriddedData.xsd
 contains the following classes:
 
 * IE_ThematicGriddedData
@@ -76,7 +76,7 @@ implements the UML conceptual schema defined in ISO 19163, Geographic Informatio
 Content components and encoding rules for imagery and gridded Data. It was created
 using the encoding rules defined in ISO 19118, ISO 19139.
 
-https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_Imagery.xsd[https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_Imagery.xsd] contains the following classes:
+https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_Imagery.xsd contains the following classes:
 
 * IE_MosaicElement
 * IE_Imagery
@@ -96,7 +96,7 @@ https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_Imagery.xsd[https://schemas.i
 * IE_FusedImage
 * IE_SARSensor
 
-https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_Imagery.xsd[https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_Imagery.xsd]
+https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_Imagery.xsd
 contains the following codelist/enumerations:
 
 * IE_ProcessingActionCode
@@ -118,7 +118,7 @@ Data Quality. It was created using the encoding rules defined in ISO 19118, ISO
 .Classes in the data quality elements schema of igd namespace
 image::./igdElementsClass.png[UML diagram of classes in the data quality elements schema from Metadata for Data Quality (IGD) in the igd namespace,750]
 
-https://schemas.isotc211.org/19163/-2/igd/1.2.0/dataQualityElement.xsd[https://schemas.isotc211.org/19163/-2/igd/1.2.0/dataQualityElement.xsd]
+https://schemas.isotc211.org/19163/-2/igd/1.2.0/dataQualityElement.xsd
 contains the following classes:
 
 * DQ_AbsoluteExternalPositionalAccuracy
@@ -158,26 +158,26 @@ The IGD 1.2.0 imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geographic Common Objects | gco |
-https://schemas.isotc211.org/19103/-/gco/1.2.0[https://schemas.isotc211.org/19103/-/gco/1.2] | ../../../../19103/-/gco/1.2.0/gco.xsd
+https://schemas.isotc211.org/19103/-/gco/1.2.0 | ../../../../19103/-/gco/1.2.0/gco.xsd
 | CITataion and responsibility | cit |
-https://schemas.isotc211.org/19115/-1/cit/1.3[https://schemas.isotc211.org/19115/-1/cit/1.3] | ../../../../19115/-1/cit/1.3.0/cit.xsd
+https://schemas.isotc211.org/19115/-1/cit/1.3 | ../../../../19115/-1/cit/1.3.0/cit.xsd
 | Geographic EXtent | gex |
-https://schemas.isotc211.org/19115/-1/gex/1.3[https://schemas.isotc211.org/19115/-1/gex/1.3] | ../../../../19115/-1/gex/1.3.0/gex.xsd
+https://schemas.isotc211.org/19115/-1/gex/1.3 | ../../../../19115/-1/gex/1.3.0/gex.xsd
 | Metadata for Resource Identification | mri |
-https://schemas.isotc211.org/19115/-1/mri/1.3[https://schemas.isotc211.org/19115/-1/mri/1.3] | ../../../../19115/-1/mri/1.3.0/mri.xsd
+https://schemas.isotc211.org/19115/-1/mri/1.3 | ../../../../19115/-1/mri/1.3.0/mri.xsd
 | Metadata for Spatial Representation | msr |
-https://schemas.isotc211.org/19115/-1/msr/1.3[https://schemas.isotc211.org/19115/-1/msr/1.3] | ../../../../19115/-1/msr/1.3.0/msr.xsd
+https://schemas.isotc211.org/19115/-1/msr/1.3 | ../../../../19115/-1/msr/1.3.0/msr.xsd
 | Metadata Resource Content | mrc |
-https://schemas.isotc211.org/19115/-1/mrc/1.3[https://schemas.isotc211.org/19115/-1/mrc/1.3] | ../../../../19115/-1/mrc/1.3.0/mrc.xsd
+https://schemas.isotc211.org/19115/-1/mrc/1.3 | ../../../../19115/-1/mrc/1.3.0/mrc.xsd
 | Metadata fgor ACquisuition | mac |
-https://schemas.isotc211.org/19115/-2/mac/2.2[https://schemas.isotc211.org/19115/-2/mac/2.2] | ../../../../19115/-2/mac/2.2.0/mac.xsd
+https://schemas.isotc211.org/19115/-2/mac/2.2 | ../../../../19115/-2/mac/2.2.0/mac.xsd
 | Geographic Markup Language | gml |
-http://schemas.opengis.net/gml/3.2[http://schemas.opengis.net/gml/3.2] |
+http://schemas.opengis.net/gml/3.2 |
 http://schemas.opengis.net/gml/3.2.1/gml.xsd
 | Geographic Markup language Wrapper | gml |
-https://schemas.isotc211.org/19136/-/gmw/1.1[https://schemas.isotc211.org/19136/-/gmw/1.1] | https://schemas.isotc211.org/19136/-/gmw/1.1.0/gmw.xsd
+https://schemas.isotc211.org/19136/-/gmw/1.1 | https://schemas.isotc211.org/19136/-/gmw/1.1.0/gmw.xsd
 | Application Schema for Coverages | gmlcov |
-http://schemas.opengis.net/gmlcov/1.0[http://schemas.opengis.net/gmlcov/1.0] |
+http://schemas.opengis.net/gmlcov/1.0 |
 http://schemas.opengis.net/gmlcov/1.0/coverage.xsd
 |===
 

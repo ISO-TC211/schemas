@@ -53,9 +53,9 @@ The md1 2.0 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geospatial Common eXtension | gcx |
-https://schemas.isotc211.org/19115/-3/gcx/1.0[https://schemas.isotc211.org/19115/-3/gcx/1.0] | ../../../../19115/-3/gcx/1.0/gcx.xsd
+https://schemas.isotc211.org/19115/-3/gcx/1.0 | ../../../../19115/-3/gcx/1.0/gcx.xsd
 | Metadata for Data and Services Metadata for Data and Services | mds |
-https://schemas.isotc211.org/19115/-3/mds/2.0[https://schemas.isotc211.org/19115/-3/mds/2.0] | ../../../../19115/-3/mds/2.0/mds.xsd
+https://schemas.isotc211.org/19115/-3/mds/2.0 | ../../../../19115/-3/mds/2.0/mds.xsd
 |===
 
 === Working Versions
