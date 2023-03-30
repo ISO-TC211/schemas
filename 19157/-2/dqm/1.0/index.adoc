@@ -1,7 +1,6 @@
 ﻿= Data Quality Measures (DQM)
 :edition: 1.0
 :revdate: 2019-01-04
-:stem:
 
 == Data Quality Measures (DQM) Version: 1.0
 

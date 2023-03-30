@@ -1,6 +1,5 @@
 ﻿= Codelists from the Metadata for Data Quality (mdq) Namespace
 :revdate: 2015-04-17
-:stem:
 
 == ISO 19115-3 Codelist Report
 

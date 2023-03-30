@@ -1,7 +1,6 @@
 ﻿= Metadata Common Classes (MCC)
 :edition: 1.0
 :revdate: 2019-01-04
-:stem:
 
 == Metadata Common Classes (MCC) Version: 1.0
 

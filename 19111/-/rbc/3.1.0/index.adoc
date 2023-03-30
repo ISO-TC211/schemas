@@ -1,7 +1,6 @@
 ﻿= Simplified stub for Referencing By Coordinates (RBC)
 :edition: 3.1.0
 :revdate: 2010-02-25
-:stem:
 
 == Simplified stub for Referencing By Coordinates (RBC) Version: 3.1.0
 

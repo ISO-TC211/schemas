@@ -1,7 +1,6 @@
 ﻿= Data Product Specification (DPS)
 :edition: 2.2
 :revdate: 2010-02-26
-:stem:
 
 == Data Product Specification (DPS) Version: 2.2
 

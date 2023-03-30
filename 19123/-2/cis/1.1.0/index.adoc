@@ -1,7 +1,6 @@
 ﻿= Schemas for coverage geometry and functions - Coverage Implementation Schema (CIS)
 :edition: 1.1.0
 :revdate: 2010-02-25
-:stem:
 
 == Schemas for coverage geometry and functions - Coverage Implementation Schema (CIS) Version: 1.1.0
 

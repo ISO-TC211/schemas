@@ -1,7 +1,6 @@
 ﻿= Metadata for Resource Lineage (MRL)
 :edition: 1.0
 :revdate: 2019-01-04
-:stem:
 
 == Metadata for Resource Lineage (MRL) Version: 1.0
 

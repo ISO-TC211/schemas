@@ -1,7 +1,6 @@
 ﻿= Metadata for Services (SRV)
 :edition: 2.0
 :revdate: 2019-01-04
-:stem:
 
 == Metadata for Services (SRV) Version: 2.0
 

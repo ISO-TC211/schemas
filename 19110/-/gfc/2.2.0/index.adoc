@@ -1,7 +1,6 @@
 ﻿= General Feature Cataloguing (GFC)
 :edition: 2.2.0
 :revdate: 2010-02-25
-:stem:
 
 == General Feature Cataloguing (GFC) Version: 2.2.0
 

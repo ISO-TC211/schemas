@@ -1,7 +1,6 @@
 ﻿= Language localization (LAN)
 :edition: 1.0
 :revdate: 2019-01-04
-:stem:
 
 == Language localization (LAN) Version: 1.0
 

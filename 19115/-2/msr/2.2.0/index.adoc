@@ -1,7 +1,6 @@
 ﻿= Metadata for Spatial Representation (MSR) [Imagery]
 :edition: 2.2
 :revdate: 2021-02-17
-:stem:
 
 == Metadata for Spatial Representation (MSR) [ISO 19115-2] Version: 2.2
 

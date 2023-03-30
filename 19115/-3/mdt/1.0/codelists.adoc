@@ -1,7 +1,6 @@
 ﻿= Codelist Catalog
 :edition: 1.0
 :revdate: 2015-04-17
-:stem:
 
 == ISO 19115-3 Codelist Report
 

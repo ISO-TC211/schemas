@@ -1,7 +1,6 @@
 ﻿= Metadata for Data Transfer (MDT)
 :edition: 1.0
 :revdate: 2019-01-04
-:stem:
 
 == Metadata for Data Transfer (MDT) Version: 1.0
 

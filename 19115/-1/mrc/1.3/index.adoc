@@ -1,6 +1,5 @@
 ﻿= Metadata for Resource Content (MRC)
 :edition: 1.3
-:stem:
 
 == Metadata for Resource Content (MRC) Version: 1.3
 

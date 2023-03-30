@@ -1,7 +1,6 @@
 ﻿= Metadata with Extended Schema (MD2)
 :edition: 1.0
 :revdate: 2019-01-04
-:stem:
 
 == Metadata with Extended Schema (MD2) Version: 1.0
 

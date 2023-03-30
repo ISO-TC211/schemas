@@ -1,6 +1,5 @@
 ﻿= Base for ISO 19115 schemas
 :revdate: 2021-03-23
-:stem:
 
 == Base for ISO 19115 schemas
 

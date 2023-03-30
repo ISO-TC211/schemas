@@ -1,6 +1,5 @@
 ﻿= ISO Namespaces
 :revdate: 2021-03-24
-:stem:
 
 == ISO TC211 Namespace Summary
 

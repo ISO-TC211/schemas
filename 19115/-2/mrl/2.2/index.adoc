@@ -1,7 +1,6 @@
 ﻿= Metadata for Resource Lineage (MRL) [Imagery]
 :edition: 2.2
 :revdate: 2021-02-17
-:stem:
 
 == Metadata for Resource Lineage (MRL) [ISO 19115-2] Version: 2.2
 

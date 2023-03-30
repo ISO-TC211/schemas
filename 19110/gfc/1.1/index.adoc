@@ -1,7 +1,6 @@
 ﻿= General Feature Catalog (GFC)
 :edition: 2.2.0
 :revdate: 2019-01-04
-:stem:
 
 == General Feature Catalog (GFC) Version: 1.1
 
