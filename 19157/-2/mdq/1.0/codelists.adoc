@@ -14,7 +14,7 @@
 | *Version (Date)* | 1.0 ()
 |===
 
-=== DQ_EvaluationMethodTypeCode ( DQ_EvaluationMethodTypeCode ):
+=== DQ_EvaluationMethodTypeCode ( DQ_EvaluationMethodTypeCode )
 
 Description:: description of the evaluation method and procedure applied
 

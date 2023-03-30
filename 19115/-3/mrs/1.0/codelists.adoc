@@ -23,7 +23,7 @@ Number of items:: 28
 === Codelists
 
 
-=== MD_ReferenceSystemTypeCode:
+=== MD_ReferenceSystemTypeCode
 
 Description:: defines type of reference system used
 CodeSpace:: http://standards.iso.org/iso/19115/-3/mrs/1.0

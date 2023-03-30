@@ -23,7 +23,7 @@ Number of items:: 18
 === Codelists
 
 
-=== MD_DatatypeCode:
+=== MD_DatatypeCode
 
 Description:: datatype of element or entity
 CodeSpace:: http://standards.iso.org/iso/19115/-3/mex/1.0
@@ -61,7 +61,7 @@ and associations
 among their instances
 |===
 
-=== MD_ObligationCode:
+=== MD_ObligationCode
 
 Description:: obligation of the element or entity
 CodeSpace:: http://standards.iso.org/iso/19115/-3/mex/1.0
