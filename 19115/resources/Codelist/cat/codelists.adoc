@@ -12,14 +12,14 @@ suggestions.
 
 === Catalog
 
-*Name*:: ISO 19115-1 Codelists
-*Scope*:: Codelists for description of metadata datasets compliant with ISO/TC 211
+Name:: ISO 19115-1 Codelists
+Scope:: Codelists for description of metadata datasets compliant with ISO/TC 211
 19115-1.
-*Field of application*:: Codelists used in ISO 19115-3 metadata records
-*Version*:: 1.1
-*Date*:: 2017-09-10
-*Number of CodeLists*:: 29
-*Number of items*:: 342
+Field of application:: Codelists used in ISO 19115-3 metadata records
+Version:: 1.1
+Date:: 2017-09-10
+Number of CodeLists:: 29
+Number of items:: 342
 
 === Codelists
 
@@ -27,9 +27,9 @@ link:CI_DateTypeCode[]
 
 === CI_DateTypeCode:
 
-*Description*:: identification of when a given event occurred
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/cit/1.0
-*Number of items*:: 16
+Description:: identification of when a given event occurred
+CodeSpace:: http://standards.iso.org/iso/19115/-3/cit/1.0
+Number of items:: 16
 
 [%unnumbered]
 [options=header,cols=2]
@@ -61,9 +61,9 @@ link:CI_OnLineFunctionCode[]
 
 === CI_OnLineFunctionCode:
 
-*Description*:: function performed by the resource
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/cit/1.0
-*Number of items*:: 11
+Description:: function performed by the resource
+CodeSpace:: http://standards.iso.org/iso/19115/-3/cit/1.0
+Number of items:: 11
 
 [%unnumbered]
 [options=header,cols=2]
@@ -88,9 +88,9 @@ link:CI_PresentationFormCode[]
 
 === CI_PresentationFormCode:
 
-*Description*:: mode in which the data are represented
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/cit/1.0
-*Number of items*:: 21
+Description:: mode in which the data are represented
+CodeSpace:: http://standards.iso.org/iso/19115/-3/cit/1.0
+Number of items:: 21
 
 [%unnumbered]
 [options=header,cols=2]
@@ -141,9 +141,9 @@ link:CI_RoleCode[]
 
 === CI_RoleCode:
 
-*Description*:: function performed by the responsible party
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/cit/1.0
-*Number of items*:: 20
+Description:: function performed by the responsible party
+CodeSpace:: http://standards.iso.org/iso/19115/-3/cit/1.0
+Number of items:: 20
 
 [%unnumbered]
 [options=header,cols=2]
@@ -182,9 +182,9 @@ link:CI_TelephoneTypeCode[]
 
 === CI_TelephoneTypeCode:
 
-*Description*:: type of telephone
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/cit/1.0
-*Number of items*:: 3
+Description:: type of telephone
+CodeSpace:: http://standards.iso.org/iso/19115/-3/cit/1.0
+Number of items:: 3
 
 [%unnumbered]
 [options=header,cols=2]
@@ -200,9 +200,9 @@ link:DS_AssociationTypeCode[]
 
 === DS_AssociationTypeCode:
 
-*Description*:: justification for the correlation of two resources
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mri/1.0
-*Number of items*:: 9
+Description:: justification for the correlation of two resources
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mri/1.0
+Number of items:: 9
 
 [%unnumbered]
 [options=header,cols=2]
@@ -228,9 +228,9 @@ link:DCPList[]
 
 === DCPList:
 
-*Description*:: class of information to which the referencing entity applies
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/srv/2.0
-*Number of items*:: 10
+Description:: class of information to which the referencing entity applies
+CodeSpace:: http://standards.iso.org/iso/19115/-3/srv/2.0
+Number of items:: 10
 
 [%unnumbered]
 [options=header,cols=2]
@@ -253,9 +253,9 @@ link:DS_InitiativeTypeCode[]
 
 === DS_InitiativeTypeCode:
 
-*Description*:: type of aggregation activity in which resources are related
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mri/1.0
-*Number of items*:: 15
+Description:: type of aggregation activity in which resources are related
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mri/1.0
+Number of items:: 15
 
 [%unnumbered]
 [options=header,cols=2]
@@ -283,9 +283,9 @@ link:MD_CellGeometryCode[]
 
 === MD_CellGeometryCode:
 
-*Description*:: code indicating the geometry represented by the grid cell value
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/msr/1.0
-*Number of items*:: 4
+Description:: code indicating the geometry represented by the grid cell value
+CodeSpace:: http://standards.iso.org/iso/19115/-3/msr/1.0
+Number of items:: 4
 
 [%unnumbered]
 [options=header,cols=2]
@@ -303,9 +303,9 @@ link:MD_ClassificationCode[]
 
 === MD_ClassificationCode:
 
-*Description*:: name of the handling restrictions on the resource
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mco/1.0
-*Number of items*:: 9
+Description:: name of the handling restrictions on the resource
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mco/1.0
+Number of items:: 9
 
 [%unnumbered]
 [options=header,cols=2]
@@ -329,9 +329,9 @@ link:MD_CoverageContentTypeCode[]
 
 === MD_CoverageContentTypeCode:
 
-*Description*:: specific type of information represented in the cell
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mrc/1.0
-*Number of items*:: 8
+Description:: specific type of information represented in the cell
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mrc/1.0
+Number of items:: 8
 
 [%unnumbered]
 [options=header,cols=2]
@@ -362,9 +362,9 @@ link:MD_DatatypeCode[]
 
 === MD_DatatypeCode:
 
-*Description*:: datatype of element or entity
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mex/1.0
-*Number of items*:: 15
+Description:: datatype of element or entity
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mex/1.0
+Number of items:: 15
 
 [%unnumbered]
 [options=header,cols=2]
@@ -402,9 +402,9 @@ link:MD_DimensionNameTypeCode[]
 
 === MD_DimensionNameTypeCode:
 
-*Description*:: name of the dimension
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/msr/1.0
-*Number of items*:: 8
+Description:: name of the dimension
+CodeSpace:: http://standards.iso.org/iso/19115/-3/msr/1.0
+Number of items:: 8
 
 [%unnumbered]
 [options=header,cols=2]
@@ -425,10 +425,10 @@ link:MD_GeometricObjectTypeCode[]
 
 === MD_GeometricObjectTypeCode:
 
-*Description*:: name of point or vector objects used to locate zero-, one-, two-, or
+Description:: name of point or vector objects used to locate zero-, one-, two-, or
 three-dimensional spatial locations in the dataset
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/msr/1.0
-*Number of items*:: 6
+CodeSpace:: http://standards.iso.org/iso/19115/-3/msr/1.0
+Number of items:: 6
 
 [%unnumbered]
 [options=header,cols=2]
@@ -452,9 +452,9 @@ link:MD_ImagingConditionCode[]
 
 === MD_ImagingConditionCode:
 
-*Description*:: code which indicates conditions which may affect the image
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mrc/1.0
-*Number of items*:: 11
+Description:: code which indicates conditions which may affect the image
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mrc/1.0
+Number of items:: 11
 
 [%unnumbered]
 [options=header,cols=2]
@@ -481,9 +481,9 @@ link:MD_KeywordTypeCode[]
 
 === MD_KeywordTypeCode:
 
-*Description*:: methods used to group similar keywords
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mri/1.0
-*Number of items*:: 15
+Description:: methods used to group similar keywords
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mri/1.0
+Number of items:: 15
 
 [%unnumbered]
 [options=header,cols=2]
@@ -518,9 +518,9 @@ link:MD_MaintenanceFrequencyCode[]
 
 === MD_MaintenanceFrequencyCode:
 
-*Description*:: frequency with which modifications and deletions are made to the data after it is first produced
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mmi/1.0
-*Number of items*:: 15
+Description:: frequency with which modifications and deletions are made to the data after it is first produced
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mmi/1.0
+Number of items:: 15
 
 [%unnumbered]
 [options=header,cols=2]
@@ -548,9 +548,9 @@ link:MD_MediumFormatCode[]
 
 === MD_MediumFormatCode:
 
-*Description*:: method used to write to the medium
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mrd/1.0
-*Number of items*:: 7
+Description:: method used to write to the medium
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mrd/1.0
+Number of items:: 7
 
 [%unnumbered]
 [options=header,cols=2]
@@ -570,9 +570,9 @@ link:MD_ObligationCode[]
 
 === MD_ObligationCode:
 
-*Description*:: obligation of the element or entity
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mex/1.0
-*Number of items*:: 3
+Description:: obligation of the element or entity
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mex/1.0
+Number of items:: 3
 
 [%unnumbered]
 [options=header,cols=2]
@@ -588,9 +588,9 @@ link:MD_PixelOrientationCode[]
 
 === MD_PixelOrientationCode:
 
-*Description*:: point in a pixel corresponding to the Earth location of the pixel
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/msr/1.0
-*Number of items*:: 5
+Description:: point in a pixel corresponding to the Earth location of the pixel
+CodeSpace:: http://standards.iso.org/iso/19115/-3/msr/1.0
+Number of items:: 5
 
 [%unnumbered]
 [options=header,cols=2]
@@ -609,9 +609,9 @@ link:MD_ProgressCode[]
 
 === MD_ProgressCode:
 
-*Description*:: status of the resource
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mcc/1.0
-*Number of items*:: 18
+Description:: status of the resource
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mcc/1.0
+Number of items:: 18
 
 [%unnumbered]
 [options=header,cols=2]
@@ -645,9 +645,9 @@ link:MD_ReferenceSystemTypeCode[]
 
 === MD_ReferenceSystemTypeCode:
 
-*Description*:: defines type of reference system used
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mrs/1.0
-*Number of items*:: 28
+Description:: defines type of reference system used
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mrs/1.0
+Number of items:: 28
 
 [%unnumbered]
 [options=header,cols=2]
@@ -738,9 +738,9 @@ link:MD_RestrictionCode[]
 
 === MD_RestrictionCode:
 
-*Description*:: limitation(s) placed upon the access or use of the data
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mco/1.0
-*Number of items*:: 17
+Description:: limitation(s) placed upon the access or use of the data
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mco/1.0
+Number of items:: 17
 
 [%unnumbered]
 [options=header,cols=2]
@@ -780,9 +780,9 @@ link:MD_ScopeCode[]
 
 === MD_ScopeCode:
 
-*Description*:: class of information to which the referencing entity applies
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mcc/1.0
-*Number of items*:: 26
+Description:: class of information to which the referencing entity applies
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mcc/1.0
+Number of items:: 26
 
 [%unnumbered]
 [options=header,cols=2]
@@ -825,9 +825,9 @@ link:MD_SpatialRepresentationTypeCode[]
 
 === MD_SpatialRepresentationTypeCode:
 
-*Description*:: method used to represent geographic information in the resource
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mcc/1.0
-*Number of items*:: 6
+Description:: method used to represent geographic information in the resource
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mcc/1.0
+Number of items:: 6
 
 [%unnumbered]
 [options=header,cols=2]
@@ -847,14 +847,14 @@ link:MD_TopicCategoryCode[]
 
 === MD_TopicCategoryCode:
 
-*Description*:: high-level geographic data thematic classification to assist in the
+Description:: high-level geographic data thematic classification to assist in the
 grouping and search of available geographic data sets. Can be used to group keywords
 as well. Listed examples are not exhaustive. +
 NOTE: It is understood there are
 overlaps between general categories and the user is encouraged to select the one most
 appropriate.
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mri/1.0
-*Number of items*:: 21
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mri/1.0
+Number of items:: 21
 
 [%unnumbered]
 [options=header,cols=2]
@@ -924,9 +924,9 @@ link:MD_TopologyLevelCode[]
 
 === MD_TopologyLevelCode:
 
-*Description*:: degree of complexity of the spatial relationships
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/msr/1.0
-*Number of items*:: 9
+Description:: degree of complexity of the spatial relationships
+CodeSpace:: http://standards.iso.org/iso/19115/-3/msr/1.0
+Number of items:: 9
 
 [%unnumbered]
 [options=header,cols=2]
@@ -958,9 +958,9 @@ link:SV_CouplingType[]
 
 === SV_CouplingType:
 
-*Description*:: type of coupling between service and associated data (if exists)
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/srv/2.0
-*Number of items*:: 3
+Description:: type of coupling between service and associated data (if exists)
+CodeSpace:: http://standards.iso.org/iso/19115/-3/srv/2.0
+Number of items:: 3
 
 [%unnumbered]
 [options=header,cols=2]
@@ -980,9 +980,9 @@ link:SV_ParameterDirection[]
 
 === SV_ParameterDirection:
 
-*Description*:: class of information to which the referencing entity applies
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/srv/2.0
-*Number of items*:: 3
+Description:: class of information to which the referencing entity applies
+CodeSpace:: http://standards.iso.org/iso/19115/-3/srv/2.0
+Number of items:: 3
 
 [%unnumbered]
 [options=header,cols=2]

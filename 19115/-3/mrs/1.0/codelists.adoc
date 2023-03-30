@@ -12,13 +12,13 @@ suggestions.
 
 === Catalog
 
-*Name*:: Codelists from the Metadata for Reference System (mrs) Namespace
-*Scope*:: Codelists from the Metadata for Reference System (mrs) Namespace
-*Field of application*:: ISO TC211 Metadata Standards
-*Version*:: 0.1
-*Date*:: 2017-09-10
-*Number of CodeLists*:: 1
-*Number of items*:: 28
+Name:: Codelists from the Metadata for Reference System (mrs) Namespace
+Scope:: Codelists from the Metadata for Reference System (mrs) Namespace
+Field of application:: ISO TC211 Metadata Standards
+Version:: 0.1
+Date:: 2017-09-10
+Number of CodeLists:: 1
+Number of items:: 28
 
 === Codelists
 
@@ -26,9 +26,9 @@ link:MD_ReferenceSystemTypeCode[]
 
 === MD_ReferenceSystemTypeCode:
 
-*Description*:: defines type of reference system used
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mrs/1.0
-*Number of items*:: 28
+Description:: defines type of reference system used
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mrs/1.0
+Number of items:: 28
 
 [%unnumbered]
 [options=header,cols=2]

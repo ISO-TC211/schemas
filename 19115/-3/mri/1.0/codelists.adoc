@@ -12,13 +12,13 @@ suggestions.
 
 === Catalog
 
-*Name*:: Codelists from the Metadata for Resource Identification (mri) Namespace
-*Scope*:: Codelists from the Metadata for Resource Identification (mri) Namespace
-*Field of application*:: ISO TC211 Metadata Standards
-*Version*:: 0.1
-*Date*:: 2017-09-10
-*Number of CodeLists*:: 4
-*Number of items*:: 60
+Name:: Codelists from the Metadata for Resource Identification (mri) Namespace
+Scope:: Codelists from the Metadata for Resource Identification (mri) Namespace
+Field of application:: ISO TC211 Metadata Standards
+Version:: 0.1
+Date:: 2017-09-10
+Number of CodeLists:: 4
+Number of items:: 60
 
 === Codelists
 
@@ -26,9 +26,9 @@ link:DS_AssociationTypeCode[]
 
 === DS_AssociationTypeCode:
 
-*Description*:: justification for the correlation of two resources
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mri/1.0
-*Number of items*:: 9
+Description:: justification for the correlation of two resources
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mri/1.0
+Number of items:: 9
 
 [%unnumbered]
 [options=header,cols=2]
@@ -54,9 +54,9 @@ link:DS_InitiativeTypeCode[]
 
 === DS_InitiativeTypeCode:
 
-*Description*:: type of aggregation activity in which resources are related
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mri/1.0
-*Number of items*:: 15
+Description:: type of aggregation activity in which resources are related
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mri/1.0
+Number of items:: 15
 
 [%unnumbered]
 [options=header,cols=2]
@@ -84,9 +84,9 @@ link:MD_KeywordTypeCode[]
 
 === MD_KeywordTypeCode:
 
-*Description*:: methods used to group similar keywords
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mri/1.0
-*Number of items*:: 15
+Description:: methods used to group similar keywords
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mri/1.0
+Number of items:: 15
 
 [%unnumbered]
 [options=header,cols=2]
@@ -121,14 +121,14 @@ link:MD_TopicCategoryCode[]
 
 === MD_TopicCategoryCode:
 
-*Description*:: high-level geographic data thematic classification to assist in the
+Description:: high-level geographic data thematic classification to assist in the
 grouping and search of available geographic data sets. Can be used to group keywords
 as well. Listed examples are not exhaustive. +
 NOTE: It is understood there are
 overlaps between general categories and the user is encouraged to select the one most
 appropriate.
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mri/1.0
-*Number of items*:: 21
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mri/1.0
+Number of items:: 21
 
 [%unnumbered]
 [options=header,cols=2]

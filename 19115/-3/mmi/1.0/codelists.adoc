@@ -12,13 +12,13 @@ suggestions.
 
 === Catalog
 
-*Name*:: Codelists from the Metadata for Maintenance Information (mex) Namespace
-*Scope*:: Codelists from the Metadata for Maintenance Information (mex) Namespace
-*Field of application*:: ISO TC211 Metadata Standards
-*Version*:: 1.1
-*Date*:: 2017-09-10
-*Number of CodeLists*:: 1
-*Number of items*:: 15
+Name:: Codelists from the Metadata for Maintenance Information (mex) Namespace
+Scope:: Codelists from the Metadata for Maintenance Information (mex) Namespace
+Field of application:: ISO TC211 Metadata Standards
+Version:: 1.1
+Date:: 2017-09-10
+Number of CodeLists:: 1
+Number of items:: 15
 
 === Codelists
 
@@ -26,10 +26,10 @@ link:MD_MaintenanceFrequencyCode[]
 
 === MD_MaintenanceFrequencyCode:
 
-*Description*:: frequency with which modifications and deletions are made to the data
+Description:: frequency with which modifications and deletions are made to the data
 after it is first produced
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mmi/1.0
-*Number of items*:: 15
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mmi/1.0
+Number of items:: 15
 
 [%unnumbered]
 [options=header,cols=2]

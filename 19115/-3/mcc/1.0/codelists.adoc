@@ -10,13 +10,13 @@ Please contact mailto:rehabermann@me.com[Ted Habermann] if you have questions or
 
 === Catalog
 
-*Name*:: Codelists from the Metadata Common Classes (mcc) Namespace
-*Scope*:: Codelists from the Metadata Common Classes (mcc) Namespace
-*Field of application*:: ISO TC211 Metadata Standards
-*Version*:: 1.1
-*Date*:: 2017-09-10
-*Number of CodeLists*:: 3
-*Number of items*:: 50
+Name:: Codelists from the Metadata Common Classes (mcc) Namespace
+Scope:: Codelists from the Metadata Common Classes (mcc) Namespace
+Field of application:: ISO TC211 Metadata Standards
+Version:: 1.1
+Date:: 2017-09-10
+Number of CodeLists:: 3
+Number of items:: 50
 
 === Codelists
 
@@ -24,9 +24,9 @@ link:MD_ProgressCode[]
 
 === MD_ProgressCode:
 
-*Description*:: status of the resource
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mcc/1.0
-*Number of items*:: 18
+Description:: status of the resource
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mcc/1.0
+Number of items:: 18
 
 [%unnumbered]
 [options=header,cols=2]
@@ -60,9 +60,9 @@ link:MD_ScopeCode[]
 
 === MD_ScopeCode:
 
-*Description*:: class of information to which the referencing entity applies
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mcc/1.0
-*Number of items*:: 26
+Description:: class of information to which the referencing entity applies
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mcc/1.0
+Number of items:: 26
 
 [%unnumbered]
 [options=header,cols=2]
@@ -105,9 +105,9 @@ link:MD_SpatialRepresentationTypeCode[]
 
 === MD_SpatialRepresentationTypeCode:
 
-*Description*:: method used to represent geographic information in the resource
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mcc/1.0
-*Number of items*:: 6
+Description:: method used to represent geographic information in the resource
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mcc/1.0
+Number of items:: 6
 
 [%unnumbered]
 [options=header,cols=2]

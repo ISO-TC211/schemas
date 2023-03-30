@@ -12,14 +12,14 @@ suggestions.
 
 === Catalog
 
-*Name*:: 19157-2 Codelists
-*Scope*:: Codelists for description of data quality metadata datasets compliant with
+Name:: 19157-2 Codelists
+Scope:: Codelists for description of data quality metadata datasets compliant with
 ISO/TC 211 19115-1.
-*Field of application*:: ISO 19157-2 data quality metadata
-*Version*:: 1.0
-*Date*:: 2017-09-10
-*Number of CodeLists*:: 2
-*Number of items*:: 9
+Field of application:: ISO 19157-2 data quality metadata
+Version:: 1.0
+Date:: 2017-09-10
+Number of CodeLists:: 2
+Number of items:: 9
 
 === Codelists
 
@@ -27,9 +27,9 @@ link:DQM_ValueStructure[]
 
 === DQM_ValueStructure:
 
-*Description*:: structure for reporting a complex data quality result
-*CodeSpace*:: http://standards.iso.org/iso/19157/-2/dqm/1.0
-*Number of items*:: 6
+Description:: structure for reporting a complex data quality result
+CodeSpace:: http://standards.iso.org/iso/19157/-2/dqm/1.0
+Number of items:: 6
 
 [%unnumbered]
 [options=header,cols=2]
@@ -53,9 +53,9 @@ link:DQ_EvaluationMethodTypeCode[]
 
 === DQ_EvaluationMethodTypeCode:
 
-*Description*:: description of the evaluation method and procedure applied
-*CodeSpace*:: http://standards.iso.org/iso/19157/-2/mdq/1.0
-*Number of items*:: 3
+Description:: description of the evaluation method and procedure applied
+CodeSpace:: http://standards.iso.org/iso/19157/-2/mdq/1.0
+Number of items:: 3
 
 [%unnumbered]
 [options=header,cols=2]
