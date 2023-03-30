@@ -24,7 +24,7 @@ Number of items:: 9
 === Codelists
 
 
-=== DQM_ValueStructure:
+=== DQM_ValueStructure
 
 Description:: structure for reporting a complex data quality result
 CodeSpace:: http://standards.iso.org/iso/19157/-2/dqm/1.0
@@ -49,7 +49,7 @@ direct position within its spatial, temporal or spatiotemporal domain (ISO 19123
 |===
 
 
-=== DQ_EvaluationMethodTypeCode:
+=== DQ_EvaluationMethodTypeCode
 
 Description:: description of the evaluation method and procedure applied
 CodeSpace:: http://standards.iso.org/iso/19157/-2/mdq/1.0

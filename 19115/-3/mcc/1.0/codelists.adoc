@@ -21,7 +21,7 @@ Number of items:: 50
 === Codelists
 
 
-=== MD_ProgressCode:
+=== MD_ProgressCode
 
 Description:: status of the resource
 CodeSpace:: http://standards.iso.org/iso/19115/-3/mcc/1.0
@@ -56,7 +56,7 @@ purposes
 |===
 
 
-=== MD_ScopeCode:
+=== MD_ScopeCode
 
 Description:: class of information to which the referencing entity applies
 CodeSpace:: http://standards.iso.org/iso/19115/-3/mcc/1.0
@@ -100,7 +100,7 @@ accessible over a network
 |===
 
 
-=== MD_SpatialRepresentationTypeCode:
+=== MD_SpatialRepresentationTypeCode
 
 Description:: method used to represent geographic information in the resource
 CodeSpace:: http://standards.iso.org/iso/19115/-3/mcc/1.0

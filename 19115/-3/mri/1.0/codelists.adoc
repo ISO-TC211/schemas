@@ -23,7 +23,7 @@ Number of items:: 60
 === Codelists
 
 
-=== DS_AssociationTypeCode:
+=== DS_AssociationTypeCode
 
 Description:: justification for the correlation of two resources
 CodeSpace:: http://standards.iso.org/iso/19115/-3/mri/1.0
@@ -50,7 +50,7 @@ specification
 |===
 
 
-=== DS_InitiativeTypeCode:
+=== DS_InitiativeTypeCode
 
 Description:: type of aggregation activity in which resources are related
 CodeSpace:: http://standards.iso.org/iso/19115/-3/mri/1.0
@@ -79,7 +79,7 @@ Number of items:: 15
 |===
 
 
-=== MD_KeywordTypeCode:
+=== MD_KeywordTypeCode
 
 Description:: methods used to group similar keywords
 CodeSpace:: http://standards.iso.org/iso/19115/-3/mri/1.0
@@ -115,7 +115,7 @@ data classification
 |===
 
 
-=== MD_TopicCategoryCode:
+=== MD_TopicCategoryCode
 
 Description:: high-level geographic data thematic classification to assist in the
 grouping and search of available geographic data sets. Can be used to group keywords

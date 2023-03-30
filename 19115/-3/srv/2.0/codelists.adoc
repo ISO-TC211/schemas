@@ -23,7 +23,7 @@ Number of items:: 6
 === Codelists
 
 
-=== SV_CouplingType:
+=== SV_CouplingType
 
 Description:: type of coupling between service and associated data (if exists)
 CodeSpace:: http://standards.iso.org/iso/19115/-3/srv/2.0
@@ -44,7 +44,7 @@ MD_DataIdentification class MUST be described
 |===
 
 
-=== SV_ParameterDirection:
+=== SV_ParameterDirection
 
 Description:: class of information to which the referencing entity applies
 CodeSpace:: http://standards.iso.org/iso/19115/-3/srv/2.0
