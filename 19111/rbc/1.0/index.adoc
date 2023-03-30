@@ -30,7 +30,9 @@ containing XML elements in the rbc 1.0 namespace or by XML Schema documents impo
 the rbc 1.0 namespace. This XML schema includes (indirectly) all the implemented
 concepts of the rbc namespace, but it does not contain the declaration of any types.
 
-NOTE: The XML Schema for rbc 1.0 are available link:rbc.zip[here]. A zip archive including all the XML Schema Implementations defined in ISO/TS 19115-3 and related standards is also http://standards.iso.org/iso/19115/19115.zip[available].
+NOTE: A zip archive including all the XML Schema Implementations defined in
+ISO/TS 19115-3 and related standards is also
+http://standards.iso.org/iso/19115/19115.zip[available].
 
 === No Related XML Namespaces for rbc 1.0
 
