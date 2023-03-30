@@ -16,11 +16,15 @@ ISO/TS19115-3, Clause 8.
 
 === Sample XML files for mrc 1.0
 
-link:mrc_invalid.xml[mrc_invalid.xml] link:mrc_valid.xml[mrc_valid.xml]
+* link:mrc_invalid.xml[mrc_invalid.xml]
+* link:mrc_valid.xml[mrc_valid.xml]
+
 
 === CodeLists for mrc 1.0
 
-link:codelists.html[codelists.html] link:codelists.xml[codelists.xml]
+* link:codelists.html[codelists.html]
+* link:codelists.xml[codelists.xml]
+
 
 === XML Namespace for mrc 1.0
 

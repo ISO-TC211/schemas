@@ -15,11 +15,15 @@ ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clau
 
 === Sample XML files for srv 2.0
 
-link:srv_invalid.xml[srv_invalid.xml] link:srv_valid.xml[srv_valid.xml]
+* link:srv_invalid.xml[srv_invalid.xml]
+* link:srv_valid.xml[srv_valid.xml]
+
 
 === CodeLists for srv 2.0
 
-link:codelists.html[codelists.html] link:codelists.xml[codelists.xml]
+* link:codelists.html[codelists.html]
+* link:codelists.xml[codelists.xml]
+
 
 === XML Namespace for srv 2.0
 

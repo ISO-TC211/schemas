@@ -20,7 +20,9 @@ link:mrc.xml[mrc.xml]
 
 === CodeLists for mrc 2.0
 
-link:codelists.html[codelists.html] link:codelists.xml[codelists.xml]
+* link:codelists.html[codelists.html]
+* link:codelists.xml[codelists.xml]
+
 
 === XML Namespace for mrc 2.0
 

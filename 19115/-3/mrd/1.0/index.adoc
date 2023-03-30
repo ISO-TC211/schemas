@@ -16,11 +16,15 @@ ISO/TS19115-3, Clause 8.
 
 === Sample XML files for mrd 1.0
 
-link:mrd_invalid.xml[mrd_invalid.xml] link:mrd_valid.xml[mrd_valid.xml]
+* link:mrd_invalid.xml[mrd_invalid.xml]
+* link:mrd_valid.xml[mrd_valid.xml]
+
 
 === CodeLists for mrd 1.0
 
-link:codelists.html[codelists.html] link:codelists.xml[codelists.xml]
+* link:codelists.html[codelists.html]
+* link:codelists.xml[codelists.xml]
+
 
 === XML Namespace for mrd 1.0
 

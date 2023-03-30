@@ -17,7 +17,9 @@ ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clau
 
 === CodeLists for mrs 1.0
 
-link:codelists.html[codelists.html] link:codelists.xml[codelists.xml]
+* link:codelists.html[codelists.html]
+* link:codelists.xml[codelists.xml]
+
 
 === XML Namespace for mrs 1.0
 

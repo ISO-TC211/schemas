@@ -16,11 +16,15 @@ implementation approach from ISO/TS19115-3, Clause 8.
 
 === Sample XML files for cit 1.0
 
-link:cit_invalid.xml[cit_invalid.xml] link:cit_valid.xml[cit_valid.xml]
+* link:cit_invalid.xml[cit_invalid.xml]
+* link:cit_valid.xml[cit_valid.xml]
+
 
 === CodeLists for cit 1.0
 
-link:codelists.html[codelists.html] link:codelists.xml[codelists.xml]
+* link:codelists.html[codelists.html]
+* link:codelists.xml[codelists.xml]
+
 
 === XML Namespace for cit 1.0
 

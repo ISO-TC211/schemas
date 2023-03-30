@@ -16,11 +16,15 @@ ISO/TS19115-3, Clause 8.
 
 === Sample XML files for mex 1.0
 
-link:mex_invalid.xml[mex_invalid.xml] link:mex_valid.xml[mex_valid.xml]
+* link:mex_invalid.xml[mex_invalid.xml]
+* link:mex_valid.xml[mex_valid.xml]
+
 
 === CodeLists for mex 1.0
 
-link:codelists.html[codelists.html] link:codelists.xml[codelists.xml]
+* link:codelists.html[codelists.html]
+* link:codelists.xml[codelists.xml]
+
 
 === XML Namespace for mex 1.0
 
