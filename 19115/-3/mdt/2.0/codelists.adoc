@@ -25,8 +25,8 @@ Number of items:: 8
 
 === MX_ScopeCode
 
-Description:: class of information to which the referencing entity applies +
-CodeSpace:: http://standards.iso.org/iso/19115 +
+Description:: class of information to which the referencing entity applies
+CodeSpace:: http://standards.iso.org/iso/19115
 Number of items:: 8
 
 [%unnumbered]
