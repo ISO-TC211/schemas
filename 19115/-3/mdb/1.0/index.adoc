@@ -17,9 +17,10 @@ from ISO/TS19115-3, Clause 8.
 
 === Sample XML files for mdb 1.0
 
-link:AppendixD.1MinimalExample.xml[AppendixD.1MinimalExample.xml]
-link:mdb.xml[mdb.xml] link:mdb_invalid.xml[mdb_invalid.xml]
-link:mdb_valid.xml[mdb_valid.xml]
+* link:AppendixD.1MinimalExample.xml[AppendixD.1MinimalExample.xml]
+* link:mdb.xml[mdb.xml]
+* link:mdb_invalid.xml[mdb_invalid.xml]
+* link:mdb_valid.xml[mdb_valid.xml]
 
 === XML Namespace for mdb 1.0
 
