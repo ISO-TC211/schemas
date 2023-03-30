@@ -27,7 +27,7 @@ The namespace URI for mcc 1.0 is `http://standards.iso.org/iso/19115/-3/mcc/1.0`
 
 === XML Schema for mcc 1.0
 
-*link:mcc.xsd[mcc.xsd]* is the XML Schema document to be referenced by XML documents
+link:mcc.xsd[mcc.xsd] is the XML Schema document to be referenced by XML documents
 containing XML elements in the mcc 1.0 namespace or by XML Schema documents importing
 the mcc 1.0 namespace. This XML schema includes (indirectly) all the implemented
 concepts of the mcc namespace, but it does not contain the declaration of any types.
@@ -39,7 +39,7 @@ https://schemas.isotc211.org/19115/19115AllNamespaces.zip[available].
 
 === Related XML Schema for mcc 1.0
 
-*link:AbstractCommonClasses.xsd[AbstractCommonClasses.xsd]* implements the UML
+link:AbstractCommonClasses.xsd[AbstractCommonClasses.xsd] implements the UML
 conceptual schema defined in ISO 19115-1, Geographic Information - Metadata - Part 1:
 Fundamentals, Clause 6.6.4. It was created using the encoding rules defined in ISO
 19118, ISO 19139, and the implementation approach described in ISO 19115-3 and
@@ -52,7 +52,7 @@ Abstract_ResourceDescription, Abstract_Responsibility,
 Abstract_SpatialRepresentation, Abstract_SpatialResolution,
 Abstract_StandardOrderProcess, Abstract_TypedDate, and Abstract_Parameter
 
-*link:commonClasses.xsd[commonClasses.xsd]* implements the UML conceptual schema
+link:commonClasses.xsd[commonClasses.xsd] implements the UML conceptual schema
 defined in ISO 19115-1, Geographic Information - Metadata - Part 1: Fundamentals,
 Clause 6.6.4. It was created using the encoding rules defined in ISO 19118, ISO
 19139, and the implementation approach described in ISO 19115-3 and contains the

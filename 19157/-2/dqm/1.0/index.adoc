@@ -29,7 +29,7 @@ The namespace URI for dqm 1.0 is `http://standards.iso.org/iso/19157/-2/dqm/1.0`
 
 === XML Schema for dqm 1.0
 
-*link:dqm.xsd[dqm.xsd]* is the XML Schema document to be referenced by XML documents
+link:dqm.xsd[dqm.xsd] is the XML Schema document to be referenced by XML documents
 containing XML elements in the dqm 1.0 namespace or by XML Schema documents importing
 the dqm 1.0 namespace. This XML schema includes (indirectly) all the implemented
 concepts of the dqm namespace, but it does not contain the declaration of any types.
@@ -41,7 +41,7 @@ https://schemas.isotc211.org/19115/19115AllNamespaces.zip[available].
 
 === Related XML Schema for dqm 1.0
 
-*link:qualityMeasures.xsd[qualityMeasures.xsd]* implements the UML conceptual schema
+link:qualityMeasures.xsd[qualityMeasures.xsd] implements the UML conceptual schema
 defined in ISO 19157, Geographic Information - Data Quality, Clause 6.5. It was
 created using the encoding rules defined in ISO 19118, ISO 19139, and the
 implementation approach described in ISO 19115-3 and contains the following classes

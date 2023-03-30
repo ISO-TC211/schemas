@@ -20,7 +20,7 @@ The namespace URI for mpc 1.0 is `http://standards.iso.org/iso/19115/-3/mpc/1.0`
 
 === XML Schema for mpc 1.0
 
-*link:mpc.xsd[mpc.xsd]* is the XML Schema document to be referenced by XML documents
+link:mpc.xsd[mpc.xsd] is the XML Schema document to be referenced by XML documents
 containing XML elements in the mpc 1.0 namespace or by XML Schema documents importing
 the mpc 1.0 namespace. This XML schema includes (indirectly) all the implemented
 concepts of the mpc namespace, but it does not contain the declaration of any types.
@@ -31,7 +31,7 @@ standards is also https://schemas.isotc211.org/19115/19115AllNamespaces.zip[avai
 
 === Related XML Schema for mpc 1.0
 
-*link:portrayalCatalogue.xsd[portrayalCatalogue.xsd]* implements the UML conceptual
+link:portrayalCatalogue.xsd[portrayalCatalogue.xsd] implements the UML conceptual
 schema defined in ISO 19115-1, Geographic Information - Metadata - Part 1:
 Fundamentals, Clause 6.5.10. It was created using the encoding rules defined in ISO
 19118, ISO 19139, and the implementation approach described in ISO 19115-3 and

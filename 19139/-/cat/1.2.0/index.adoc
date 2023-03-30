@@ -66,7 +66,7 @@ https://schemas.isotc211.org/19139/-/cat/1.2.0/crsItem.xsd contains the followin
 * CT_OperationMethod
 * CT_OperationParameters
 
-*link:uomItem.xsd[uomItem.xsd]* implements the UML conceptual schema defined in ISO
+link:uomItem.xsd[uomItem.xsd] implements the UML conceptual schema defined in ISO
 19139:2007, Geographic Information - Metadata - XML Schema Implementation, Clause
 9.8.8. It was created using the encoding rules defined in ISO 19118, ISO 19139.
 
