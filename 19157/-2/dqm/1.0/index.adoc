@@ -15,9 +15,9 @@ quality measures. The XML schema was encoded using the rules described in ISO/TS
 
 === Sample XML files for dqm 1.0
 
-link:dqm.xml[dqm.xml]
-link:dqm_invalid.xml[dqm_invalid.xml]
-link:dqm_valid.xml[dqm_valid.xml]
+* link:dqm.xml[dqm.xml]
+* link:dqm_invalid.xml[dqm_invalid.xml]
+* link:dqm_valid.xml[dqm_valid.xml]
 
 === CodeLists for dqm 1.0
 

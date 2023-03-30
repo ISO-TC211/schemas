@@ -19,8 +19,8 @@ ISO/TS19115-3, Clause 8.
 
 === Sample XML files for mds 1.0
 
-link:AppendixD.2VectorSmartMapExample.xml[AppendixD.2VectorSmartMapExample.xml]
-link:mds.xml[mds.xml]
+* link:AppendixD.2VectorSmartMapExample.xml[AppendixD.2VectorSmartMapExample.xml]
+* link:mds.xml[mds.xml]
 
 === XML Namespace for mds 1.0
 
