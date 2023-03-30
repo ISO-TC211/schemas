@@ -17,17 +17,17 @@ described in ISO 19135-2 Amendment 1 2021
 === XML Namespace for PIR
 
 The namespace URI for PIR 1.1 is derived from ISO 19135-2 Amendment 1
-*https://schemas.isotc211.org/19135/-1/pir/1.1.0*.
+`https://schemas.isotc211.org/19135/-1/pir/1.1.0`.
 
 === XML Schema for PIR 1.1
 
-*https://schemas.isotc211.org/19135/-1/pir/1.1.0/pir.xsd[pir.xsd in ISO 19135-1]* is
+`https://schemas.isotc211.org/19135/-1/pir/1.1.0/pir.xsd[pir.xsd in ISO 19135-1]` is
 the XML Schema document to be referenced by XML documents containing XML elements in
 the PIR 1.1 namespace or by XML Schema documents importing the PIR 1.1 namespace.
 
 === Related XML Schema for PIR 1.1
 
-*https://schemas.isotc211.org/19135/-1/pir/1.1.0/core.xsd[core.xsd]* implements the
+`https://schemas.isotc211.org/19135/-1/pir/1.1.0/core.xsd[core.xsd]` implements the
 UML conceptual schema defined in ISO 19135-1. It was created using the encoding rules
 defined in ISO 19118, ISO 19139, and the implementation approach described in ISO
 19115-2. core.xsd contains the following classes (enumerations are bold italic):
@@ -39,7 +39,7 @@ defined in ISO 19118, ISO 19139, and the implementation approach described in IS
 * RE_version
 * *_RE_ItemStatus_*
 
-*https://schemas.isotc211.org/19135/-1/pir/1.1.0/extended.xsd[extended.xsd]*
+`https://schemas.isotc211.org/19135/-1/pir/1.1.0/extended.xsd[extended.xsd]`
 implements the UML conceptual schema defined in ISO 19135-1. It was created using the
 encoding rules defined in ISO 19118, ISO 19139, and the implementation approach
 described in ISO 19115-2. core.xsd contains the following classes (enumerations are
@@ -64,7 +64,7 @@ bold italic, codeLists are bold):
 * *_RE_Disposition_*
 * *RE_SimilarityToSource*
 
-*https://schemas.isotc211.org/19135/-1/pir/1.1.0/hierarchy.xsd[hierarchy.xsd]*
+`https://schemas.isotc211.org/19135/-1/pir/1.1.0/hierarchy.xsd[hierarchy.xsd]`
 implements the UML conceptual schema defined in ISO 19135-1. It was created using the
 encoding rules defined in ISO 19118, ISO 19139, and the implementation approach
 described in ISO 19115-2. core.xsd contains the following classes:

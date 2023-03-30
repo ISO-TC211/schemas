@@ -17,11 +17,11 @@ rules defined in ISO 19118, ISO 19139.
 === XML Namespace for Data Quality Measures (DQM) Version: 1.2
 
 The namespace URI for Data Quality [abstract classes] (DQM) Version 1.2.0 is
-*https://schemas.isotc211.org/19157/-/dqm/1.2*.
+`https://schemas.isotc211.org/19157/-/dqm/1.2`.
 
 === XML Schema for Data Quality Measures (DQM) Version 1.2.0
 
-*link:../../../../19157/-/dqm/1.2.0/dqm.xsd[dqm.xsd]* is the XML Schema document to
+https://schemas.isotc211.org/19157/-/dqm/1.2.0/dqm.xsd[dqm.xsd] is the XML Schema document to
 be referenced by XML documents containing XML elements in the dqm namespace or by XML
 Schema documents importing the dqm 1.2 namespace. This XML schema includes
 (indirectly) all the implemented concepts of the dqm namespace, but it does not
@@ -29,7 +29,7 @@ contain the declaration of any types.
 
 === Related XML Schema for dqm 1.2
 
-*link:../../../../19157/-/dqm/1.2.0/qualityMeasures.xsd[https://schemas.isotc211.org/19157/-/dqm/1.2.0/qualityMeasures.xsd]*
+https://schemas.isotc211.org/19157/-/dqm/1.2.0/qualityMeasures.xsd
 implements the UML conceptual schema defined in ISO 19157, Geographic Information -
 Data Quality. It was created using the encoding rules defined in ISO 19118, ISO 19139.
 
@@ -56,15 +56,15 @@ The DQM 1.2.0 imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geographic Common Objects | gco |
-https://schemas.isotc211.org/19103/-/gco/1.2.0 | ../../../../19103/-/gco/1.2.0/gco.xsd
+`https://schemas.isotc211.org/19103/-/gco/1.2.0` | https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd[gco.xsd]
 | Feature Catalogue Common | fcc |
-https://schemas.isotc211.org/19110/-/fcc/2.2 | ../../../../19110/-/fcc/2.2.0/fcc.xsd
+https://schemas.isotc211.org/19110/-/fcc/2.2 | https://schemas.isotc211.org/19110/-/fcc/2.2.0/fcc.xsd[fcc.xsd]
 | General Feature Catalogue | gfc |
-https://schemas.isotc211.org/19110/-/gfc/2.2 | ../../../../19110/-/gfc/2.2.0/gfc.xsd
+https://schemas.isotc211.org/19110/-/gfc/2.2 | https://schemas.isotc211.org/19110/-/gfc/2.2.0/gfc.xsd[gfc.xsd]
 | CITation and responsibility | cit |
-https://schemas.isotc211.org/19115/-1/cit/1.3 | ../../../../19115/-1/cit/1.3.0/cit.xsd
+https://schemas.isotc211.org/19115/-1/cit/1.3 | https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.xsd[cit.xsd]
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-1/mcc/1.3 | ../../../../19115/-1/mcc/1.3.0/mcc.xsd
+https://schemas.isotc211.org/19115/-1/mcc/1.3 | https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd[mcc.xsd]
 |===
 
 === Working Versions

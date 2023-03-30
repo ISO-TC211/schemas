@@ -20,7 +20,7 @@ link:mda.xml[mda.xml]
 
 === XML Namespace for mda 2.0
 
-The namespace URI for mda 2.0 is *http://standards.iso.org/iso/19115/-3/mda/2.0*.
+The namespace URI for mda 2.0 is `http://standards.iso.org/iso/19115/-3/mda/2.0`.
 
 === XML Schema for mda 2.0
 
@@ -54,11 +54,11 @@ The mda 2.0 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geographic COmmon | gco |
-https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../../../19115/-3/gco/1.0/gco.xsd
+`https://schemas.isotc211.org/19115/-3/gco/1.0` | https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd[gco.xsd]
 | Metadata with Extended Schema Metadata with Extended Schema | md2 |
-https://schemas.isotc211.org/19115/-3/md2/2.0 | ../../../../19115/-3/md2/2.0/md2.xsd
+`https://schemas.isotc211.org/19115/-3/md2/2.0` | https://schemas.isotc211.org/19115/-3/md2/2.0/md2.xsd[md2.xsd]
 | Metadata Base Metadata Base | mdb |
-https://schemas.isotc211.org/19115/-3/mdb/2.0 | ../../../../19115/-3/mdb/2.0/mdb.xsd
+`https://schemas.isotc211.org/19115/-3/mdb/2.0` | https://schemas.isotc211.org/19115/-3/mdb/2.0/mdb.xsd[mdb.xsd]
 |===
 
 === Working Versions
