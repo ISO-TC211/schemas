@@ -12,13 +12,13 @@ suggestions.
 
 === Catalog
 
-*Name*:: Codelists from the Metadata for Data Transfer (mdt) Namespace
-*Scope*:: Codelists from the Metadata for Data Transfer (mdt) Namespace
-*Field of application*:: ISO TC211 Metadata Standards
-*Version*:: 1.0
-*Date*:: 2015-04-18
-*Number of CodeLists*:: 1
-*Number of items*:: 8
+Name:: Codelists from the Metadata for Data Transfer (mdt) Namespace
+Scope:: Codelists from the Metadata for Data Transfer (mdt) Namespace
+Field of application:: ISO TC211 Metadata Standards
+Version:: 1.0
+Date:: 2015-04-18
+Number of CodeLists:: 1
+Number of items:: 8
 
 === Codelists
 
@@ -26,9 +26,9 @@ link:MX_ScopeCode[]
 
 === MX_ScopeCode:
 
-*Description*:: class of information to which the referencing entity applies +
-*CodeSpace*:: http://standards.iso.org/iso/19115 +
-*Number of items*:: 8
+Description:: class of information to which the referencing entity applies +
+CodeSpace:: http://standards.iso.org/iso/19115 +
+Number of items:: 8
 
 [%unnumbered]
 [options=header,cols=2]

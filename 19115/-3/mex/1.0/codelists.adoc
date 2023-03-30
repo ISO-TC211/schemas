@@ -12,13 +12,13 @@ suggestions.
 
 === Catalog
 
-*Name*:: Codelists from the Metadata with Schema Extensions (mex) Namespace +
-*Scope*:: Codelists from the Metadata with Schema Extensions (mex) Namespace +
-*Field of application*:: ISO TC211 Metadata Standards +
-*Version*:: 1.1 +
-*Date*:: 2017-09-10 +
-*Number of CodeLists*:: 2 +
-*Number of items*:: 18
+Name:: Codelists from the Metadata with Schema Extensions (mex) Namespace +
+Scope:: Codelists from the Metadata with Schema Extensions (mex) Namespace +
+Field of application:: ISO TC211 Metadata Standards +
+Version:: 1.1 +
+Date:: 2017-09-10 +
+Number of CodeLists:: 2 +
+Number of items:: 18
 
 === Codelists
 
@@ -26,9 +26,9 @@ link:MD_DatatypeCode[]
 
 === MD_DatatypeCode:
 
-*Description*:: datatype of element or entity
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mex/1.0
-*Number of items*:: 15
+Description:: datatype of element or entity
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mex/1.0
+Number of items:: 15
 
 [%unnumbered]
 [options=header,cols=2]
@@ -64,9 +64,9 @@ among their instances
 
 === MD_ObligationCode:
 
-*Description*:: obligation of the element or entity
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mex/1.0
-*Number of items*:: 3
+Description:: obligation of the element or entity
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mex/1.0
+Number of items:: 3
 
 [%unnumbered]
 [options=header,cols=2]

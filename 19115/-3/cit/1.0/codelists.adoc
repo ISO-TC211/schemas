@@ -10,13 +10,13 @@ This report describes the ISO TC211 codelist catalogs, the codelists they contai
 Please contact mailto:rehabermann@me.com[Ted Habermann] if you have questions or suggestions.
 
 === Catalog
-*Name*:: Codelists from the Citation (cit) Namespace
-*Scope*:: Codelists related to Citation (cit) Namespace
-*Field of application*:: ISO TC211 Metadata Standards
-*Version*:: 1.1
-*Date*:: 2017-09-10
-*Number of CodeLists*:: 5
-*Number of items*:: 71
+Name:: Codelists from the Citation (cit) Namespace
+Scope:: Codelists related to Citation (cit) Namespace
+Field of application:: ISO TC211 Metadata Standards
+Version:: 1.1
+Date:: 2017-09-10
+Number of CodeLists:: 5
+Number of items:: 71
 
 === Codelists
 
@@ -24,9 +24,9 @@ link:CI_DateTypeCode[]
 
 === CI_DateTypeCode
 
-*Description*:: identification of when a given event occurred
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/cit/1.0
-*Number of items*:: 16
+Description:: identification of when a given event occurred
+CodeSpace:: http://standards.iso.org/iso/19115/-3/cit/1.0
+Number of items:: 16
 
 |===
 | Entry | Definition
@@ -56,9 +56,9 @@ link:CI_OnLineFunctionCode[]
 
 === CI_OnLineFunctionCode
 
-*Description*:: function performed by the resource
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/cit/1.0
-*Number of items*:: 11
+Description:: function performed by the resource
+CodeSpace:: http://standards.iso.org/iso/19115/-3/cit/1.0
+Number of items:: 11
 
 |===
 | Entry | Definition
@@ -81,9 +81,9 @@ link:CI_PresentationFormCode[]
 
 === CI_PresentationFormCode
 
-*Description*:: mode in which the data are represented
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/cit/1.0
-*Number of items*:: 21
+Description:: mode in which the data are represented
+CodeSpace:: http://standards.iso.org/iso/19115/-3/cit/1.0
+Number of items:: 21
 
 |===
 | Entry | Definition
@@ -116,9 +116,9 @@ link:CI_RoleCode[]
 
 === CI_RoleCode
 
-*Description*:: function performed by the responsible party
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/cit/1.0
-*Number of items*:: 20
+Description:: function performed by the responsible party
+CodeSpace:: http://standards.iso.org/iso/19115/-3/cit/1.0
+Number of items:: 20
 
 |===
 | Entry | Definition
@@ -150,9 +150,9 @@ link:CI_TelephoneTypeCode[]
 
 === CI_TelephoneTypeCode
 
-*Description*:: type of telephone
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/cit/1.0
-*Number of items*:: 3
+Description:: type of telephone
+CodeSpace:: http://standards.iso.org/iso/19115/-3/cit/1.0
+Number of items:: 3
 
 |===
 | Entry | Definition
