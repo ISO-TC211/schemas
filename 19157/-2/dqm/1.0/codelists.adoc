@@ -14,7 +14,7 @@
 | *Version (Date)* | 1.0 ()
 |===
 
-=== DQM_ValueStructure ( DQM_ValueStructure ):
+=== DQM_ValueStructure ( DQM_ValueStructure )
 
 Description:: structure for reporting a complex data quality result
 

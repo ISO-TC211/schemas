@@ -23,7 +23,7 @@ Number of items:: 15
 === Codelists
 
 
-=== MD_MaintenanceFrequencyCode:
+=== MD_MaintenanceFrequencyCode
 
 Description:: frequency with which modifications and deletions are made to the data
 after it is first produced

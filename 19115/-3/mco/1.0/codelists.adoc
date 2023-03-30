@@ -23,7 +23,7 @@ Number of items:: 26
 === Codelists
 
 
-=== MD_ClassificationCode:
+=== MD_ClassificationCode
 
 Description:: name of the handling restrictions on the resource
 CodeSpace:: http://standards.iso.org/iso/19115/-3/mco/1.0
@@ -48,7 +48,7 @@ purposes determined by the designating body
 |===
 
 
-=== MD_RestrictionCode:
+=== MD_RestrictionCode
 
 Description:: limitation(s) placed upon the access or use of the data
 CodeSpace:: http://standards.iso.org/iso/19115/-3/mco/1.0

@@ -23,7 +23,7 @@ Number of items:: 8
 === Codelists
 
 
-=== MX_ScopeCode:
+=== MX_ScopeCode
 
 Description:: class of information to which the referencing entity applies +
 CodeSpace:: http://standards.iso.org/iso/19115 +

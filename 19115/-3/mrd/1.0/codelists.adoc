@@ -23,7 +23,7 @@ Number of items:: 7
 === Codelists
 
 
-=== MD_MediumFormatCode:
+=== MD_MediumFormatCode
 
 Description:: method used to write to the medium
 CodeSpace:: http://standards.iso.org/iso/19115/-3/mrd/1.0

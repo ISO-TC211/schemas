@@ -15,7 +15,7 @@
 | *Version (Date)* | 1.0 ()
 |===
 
-=== MX_ScopeCode ( MX_ScopeCode ):
+=== MX_ScopeCode ( MX_ScopeCode )
 
 Description:: class of information to which the referencing entity applies
 
