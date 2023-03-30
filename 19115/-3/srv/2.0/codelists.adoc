@@ -12,13 +12,13 @@ suggestions.
 
 === Catalog
 
-*Name*:: Codelists from the Metadata for Services (srv) Namespace
-*Scope*:: Codelists from the Metadata for Services (srv) Namespace
-*Field of application*:: ISO TC211 Metadata Standards
-*Version*:: 0.1
-*Date*:: 2017-09-10
-*Number of CodeLists*:: 2
-*Number of items*:: 6
+Name:: Codelists from the Metadata for Services (srv) Namespace
+Scope:: Codelists from the Metadata for Services (srv) Namespace
+Field of application:: ISO TC211 Metadata Standards
+Version:: 0.1
+Date:: 2017-09-10
+Number of CodeLists:: 2
+Number of items:: 6
 
 === Codelists
 
@@ -26,9 +26,9 @@ link:SV_CouplingType[]
 
 === SV_CouplingType:
 
-*Description*:: type of coupling between service and associated data (if exists)
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/srv/2.0
-*Number of items*:: 3
+Description:: type of coupling between service and associated data (if exists)
+CodeSpace:: http://standards.iso.org/iso/19115/-3/srv/2.0
+Number of items:: 3
 
 [%unnumbered]
 [options=header,cols=2]
@@ -48,9 +48,9 @@ link:SV_ParameterDirection[]
 
 === SV_ParameterDirection:
 
-*Description*:: class of information to which the referencing entity applies
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/srv/2.0
-*Number of items*:: 3
+Description:: class of information to which the referencing entity applies
+CodeSpace:: http://standards.iso.org/iso/19115/-3/srv/2.0
+Number of items:: 3
 
 [%unnumbered]
 [options=header,cols=2]

@@ -12,13 +12,13 @@ suggestions.
 
 === Catalog
 
-*Name*:: Codelists from the Metadata for Constraints (mco) Namespace
-*Scope*:: Codelists related to Metadata for Constraints (mco) Namespace
-*Field of application*:: ISO TC211 Metadata Standards
-*Version*:: 1.1
-*Date*:: 2017-09-10
-*Number of CodeLists*:: 2
-*Number of items*:: 26
+Name:: Codelists from the Metadata for Constraints (mco) Namespace
+Scope:: Codelists related to Metadata for Constraints (mco) Namespace
+Field of application:: ISO TC211 Metadata Standards
+Version:: 1.1
+Date:: 2017-09-10
+Number of CodeLists:: 2
+Number of items:: 26
 
 === Codelists
 
@@ -26,9 +26,9 @@ link:MD_ClassificationCode[]
 
 === MD_ClassificationCode:
 
-*Description*:: name of the handling restrictions on the resource
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mco/1.0
-*Number of items*:: 9
+Description:: name of the handling restrictions on the resource
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mco/1.0
+Number of items:: 9
 
 [%unnumbered]
 [options=header,cols=2]
@@ -52,9 +52,9 @@ link:MD_RestrictionCode[]
 
 === MD_RestrictionCode:
 
-*Description*:: limitation(s) placed upon the access or use of the data
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mco/1.0
-*Number of items*:: 17
+Description:: limitation(s) placed upon the access or use of the data
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mco/1.0
+Number of items:: 17
 
 [%unnumbered]
 [options=header,cols=2]

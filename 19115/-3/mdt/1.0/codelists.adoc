@@ -17,7 +17,7 @@
 
 === MX_ScopeCode ( MX_ScopeCode ):
 
-*Description*:: class of information to which the referencing entity applies
+Description:: class of information to which the referencing entity applies
 
 [%unnumbered]
 [options=header,cols=2]

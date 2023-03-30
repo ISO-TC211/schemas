@@ -16,7 +16,7 @@
 
 === DQM_ValueStructure ( DQM_ValueStructure ):
 
-*Description*:: structure for reporting a complex data quality result
+Description:: structure for reporting a complex data quality result
 
 [%unnumbered]
 [options=header,cols=2]

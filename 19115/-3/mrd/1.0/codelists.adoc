@@ -12,13 +12,13 @@ suggestions.
 
 === Catalog
 
-*Name*:: Codelists from the Metadata for Resource Distribution (mrd) Namespace
-*Scope*:: Codelists from the Metadata for Resource Distribution (mrd) Namespace
-*Field of application*:: ISO TC211 Metadata Standards
-*Version*:: 0.1
-*Date*:: 2017-09-10
-*Number of CodeLists*:: 1
-*Number of items*:: 7
+Name:: Codelists from the Metadata for Resource Distribution (mrd) Namespace
+Scope:: Codelists from the Metadata for Resource Distribution (mrd) Namespace
+Field of application:: ISO TC211 Metadata Standards
+Version:: 0.1
+Date:: 2017-09-10
+Number of CodeLists:: 1
+Number of items:: 7
 
 === Codelists
 
@@ -26,9 +26,9 @@ link:MD_MediumFormatCode[]
 
 === MD_MediumFormatCode:
 
-*Description*:: method used to write to the medium
-*CodeSpace*:: http://standards.iso.org/iso/19115/-3/mrd/1.0
-*Number of items*:: 7
+Description:: method used to write to the medium
+CodeSpace:: http://standards.iso.org/iso/19115/-3/mrd/1.0
+Number of items:: 7
 
 [%unnumbered]
 [options=header,cols=2]

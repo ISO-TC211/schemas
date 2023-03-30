@@ -16,7 +16,7 @@
 
 === DQ_EvaluationMethodTypeCode ( DQ_EvaluationMethodTypeCode ):
 
-*Description*:: description of the evaluation method and procedure applied
+Description:: description of the evaluation method and procedure applied
 
 [%unnumered]
 [options=header,cols=2]
