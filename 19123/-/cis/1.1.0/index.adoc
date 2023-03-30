@@ -6,7 +6,7 @@
 
 .Classes in the 19123:2005 gmlCov namespace
 
-image::./Coverage.png[UML diagram of Schemas for coverage geometry and function classes in the gmlCov namespace,750]
+image::Coverage.png[UML diagram of Schemas for coverage geometry and function classes in the gmlCov namespace,750]
 
 === Description
 

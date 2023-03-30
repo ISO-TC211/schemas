@@ -5,10 +5,10 @@
 == Metadata for Reference System (MRS) Version: 1.3
 
 .Classes in the mrs namespace
-image::./ReferenceSysClass.png[UML diagram of Metadata for Reference System classes in the mrs namespace,750]
+image::ReferenceSysClass.png[UML diagram of Metadata for Reference System classes in the mrs namespace,750]
 
 .Code list(s) in the mrs namespace
-image::./ReferenceSysCodelist.png[UML diagram of Metadata for Reference System codelists in the mrs namespace,300]
+image::ReferenceSysCodelist.png[UML diagram of Metadata for Reference System codelists in the mrs namespace,300]
 
 === Description
 

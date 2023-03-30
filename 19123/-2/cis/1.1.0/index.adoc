@@ -6,7 +6,7 @@
 
 .Classes in the 19123-2:2018 gmlCov namespace
 
-image::./AppSchmaCoverages.png[UML diagram of Schemas for coverage geometry and function classes in the ISO 19123-2 gmlCov namespace,750]
+image::AppSchmaCoverages.png[UML diagram of Schemas for coverage geometry and function classes in the ISO 19123-2 gmlCov namespace,750]
 
 === Description
 

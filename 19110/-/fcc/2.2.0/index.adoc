@@ -5,7 +5,7 @@
 == Feature Cataloguing Common (FCC) Version: 2.2.0
 
 .Classes in the fcc namespace
-image::./FeatCatComClass.png[UML diagram of Feature Cataloguing Common classes in the fcc namespace,750]
+image::FeatCatComClass.png[UML diagram of Feature Cataloguing Common classes in the fcc namespace,750]
 
 === Description
 

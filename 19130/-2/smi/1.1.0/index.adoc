@@ -50,7 +50,7 @@ Geopositioning - Part 2: SAR, INSAR, lidar and sonar. It was created using the
 encoding rules defined in ISO 19118, ISO 19139.
 
 .Classes in the ISO 19130-2 smi namespace, sensor parameters.
-image::./SnsrDtaExtSnsrParamClass.png[UML diagram of SAR, INSAR, lidar and sonar classes in the smi namespace, sensor parameters.,750]
+image::SnsrDtaExtSnsrParamClass.png[UML diagram of SAR, INSAR, lidar and sonar classes in the smi namespace, sensor parameters.,750]
 
 https://schemas.isotc211.org/19130/-2/smi/1.1.0/sensorParameters.xsd contains the following classes:
 
@@ -81,7 +81,7 @@ Imagery Sensor Models for Geopositioning - Part 2: SAR, INSAR, lidar and sonar. 
 was created using the encoding rules defined in ISO 19118, ISO 19139.
 
 .Classes in the ISO 19130-2 smi namespace, spatial elements.
-image::./SnsrDtaExtSpatElemClass.png[UML diagram of SAR, INSAR, lidar and sonar classes in the smi namespace, spatial elements.,750]
+image::SnsrDtaExtSpatElemClass.png[UML diagram of SAR, INSAR, lidar and sonar classes in the smi namespace, spatial elements.,750]
 
 https://schemas.isotc211.org/19130/-2/smi/1.1.0/spatialElements.xsd contains the following classes:
 
@@ -116,7 +116,7 @@ ISO 19139.
 
 .Codelist(s) in the 19130-2 smi namespace
 
-image::./SnsrDtaExtCodelist.png[UML diagram of SAR, INSAR, lidar and sonar codelists in the smi namespace,500]
+image::SnsrDtaExtCodelist.png[UML diagram of SAR, INSAR, lidar and sonar codelists in the smi namespace,500]
 
 https://schemas.isotc211.org/19130/-2/smi/1.1.0/codeList.xsd contains the following classes:
 

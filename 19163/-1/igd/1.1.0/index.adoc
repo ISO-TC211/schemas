@@ -5,7 +5,7 @@
 == Image and Gridded Data (IGD) Version 1.1.0
 
 .Overview of classes in the igd namespace
-image::./igdStandardsPackageRelationships.png[Overview UML diagram of classes from Metadata for Data Quality (IGD) in the igd namespace,750]
+image::igdStandardsPackageRelationships.png[Overview UML diagram of classes from Metadata for Data Quality (IGD) in the igd namespace,750]
 
 === Description
 
@@ -118,7 +118,7 @@ Data Quality. It was created using the encoding rules defined in ISO 19118, ISO
 19139.
 
 .Classes in the data quality elements schema of igd namespace
-image::./igdElementsClass.png[UML diagram of classes in the data quality elements schema from Metadata for Data Quality (IGD) in the igd namespace,750]
+image::igdElementsClass.png[UML diagram of classes in the data quality elements schema from Metadata for Data Quality (IGD) in the igd namespace,750]
 
 https://schemas.isotc211.org/19163/-1/igd/1.1.0/dataQualityElement.xsd
 contains the following classes:
