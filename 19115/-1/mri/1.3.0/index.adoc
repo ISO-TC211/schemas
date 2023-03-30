@@ -5,12 +5,10 @@
 == Metadata for Resource Identification (MRI) Version: 1.3
 
 .Classes in the mri namespace
-====
-image::./IdentificationClass.png[UML diagram of Metadata for Resource Identification classes in the mri namespace,750].
+image::IdentificationClass.png[UML diagram of Metadata for Resource Identification classes in the mri namespace,750]
 
 .Codelists in the mri namespace
-image::./19115/-1/mri/1.3/IdentificationCodelist.png[UML diagram of Metadata for Resource Identification codelists in the mri namespace,750]
-====
+image::IdentificationCodelist.png[UML diagram of Metadata for Resource Identification codelists in the mri namespace,750]
 
 === Description
 
