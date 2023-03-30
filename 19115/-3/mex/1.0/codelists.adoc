@@ -12,12 +12,12 @@ suggestions.
 
 === Catalog
 
-Name:: Codelists from the Metadata with Schema Extensions (mex) Namespace +
-Scope:: Codelists from the Metadata with Schema Extensions (mex) Namespace +
-Field of application:: ISO TC211 Metadata Standards +
-Version:: 1.1 +
-Date:: 2017-09-10 +
-Number of CodeLists:: 2 +
+Name:: Codelists from the Metadata with Schema Extensions (mex) Namespace
+Scope:: Codelists from the Metadata with Schema Extensions (mex) Namespace
+Field of application:: ISO TC211 Metadata Standards
+Version:: 1.1
+Date:: 2017-09-10
+Number of CodeLists:: 2
 Number of items:: 18
 
 === Codelists

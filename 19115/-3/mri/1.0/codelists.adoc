@@ -119,10 +119,12 @@ data classification
 
 Description:: high-level geographic data thematic classification to assist in the
 grouping and search of available geographic data sets. Can be used to group keywords
-as well. Listed examples are not exhaustive. +
+as well. Listed examples are not exhaustive.
++
 NOTE: It is understood there are
 overlaps between general categories and the user is encouraged to select the one most
 appropriate.
+
 CodeSpace:: http://standards.iso.org/iso/19115/-3/mri/1.0
 Number of items:: 21
 
