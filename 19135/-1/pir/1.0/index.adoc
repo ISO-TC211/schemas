@@ -82,7 +82,7 @@ The PIR namespace imports these other namespaces:
 
 | Geographic COmmon | gco |
 https://schemas.isotc211.org/19115/-3/gco/1.0 | https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd
-| CITataion | cit |
+| CITation | cit |
 https://schemas.isotc211.org/19115/-3/cit/2.0 | https://schemas.isotc211.org/19115/-3/cit/2.0/cit.xsd
 |===
 
