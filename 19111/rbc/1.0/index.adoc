@@ -25,7 +25,7 @@ The namespace URI for rbc 1.0 is `http://standards.iso.org/iso/19111/rbc/1.0`.
 
 === XML Schema for rbc 1.0
 
-*link:rbc.xsd[rbc.xsd]* is the XML Schema document to be referenced by XML documents
+link:rbc.xsd[rbc.xsd] is the XML Schema document to be referenced by XML documents
 containing XML elements in the rbc 1.0 namespace or by XML Schema documents importing
 the rbc 1.0 namespace. This XML schema includes (indirectly) all the implemented
 concepts of the rbc namespace, but it does not contain the declaration of any types.

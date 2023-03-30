@@ -30,7 +30,7 @@ The namespace URI for mdq 1.0 is `http://standards.iso.org/iso/19157/-2/mdq/1.0`
 
 === XML Schema for mdq 1.0
 
-*link:mdq.xsd[mdq.xsd]* is the XML Schema document to be referenced by XML documents
+link:mdq.xsd[mdq.xsd] is the XML Schema document to be referenced by XML documents
 containing XML elements in the mdq 1.0 namespace or by XML Schema documents importing
 the mdq 1.0 namespace. This XML schema includes (indirectly) all the implemented
 concepts of the mdq namespace, but it does not contain the declaration of any types.
@@ -42,7 +42,7 @@ https://schemas.isotc211.org/19115/19115AllNamespaces.zip[available].
 
 === Related XML Schema for mdq 1.0
 
-*link:dataQualityElement.xsd[dataQualityElement.xsd]* implements the UML conceptual
+link:dataQualityElement.xsd[dataQualityElement.xsd] implements the UML conceptual
 schema defined in ISO 19157, Geographic Information - Data Quality, Clause 6.4. It
 was created using the encoding rules defined in ISO 19118, ISO 19139, and the
 implementation approach described in ISO 19115-3 and contains the following classes
@@ -58,7 +58,7 @@ AbstractDQ_TemporalQuality, DQ_TemporalValidity, AbstractDQ_ThematicAccuracy,
 DQ_ThematicClassificationCorrectness, DQ_TopologicalConsistency, and
 DQ_UsabilityElement
 
-*link:dataQualityEvaluation.xsd[dataQualityEvaluation.xsd]* implements the UML
+link:dataQualityEvaluation.xsd[dataQualityEvaluation.xsd] implements the UML
 conceptual schema defined in ISO 19157, Geographic Information - Data Quality, Clause
 6.4. It was created using the encoding rules defined in ISO 19118, ISO 19139, and the
 implementation approach described in ISO 19115-3 and contains the following classes
@@ -66,20 +66,20 @@ implementation approach described in ISO 19115-3 and contains the following clas
 DQ_EvaluationMethod, *DQ_EvaluationMethodTypeCode*, DQ_FullInspection,
 DQ_IndirectEvaluation, and DQ_SampleBasedInspection
 
-*link:dataQualityImagery.xsd[dataQualityImagery.xsd]* implements the UML conceptual
+link:dataQualityImagery.xsd[dataQualityImagery.xsd] implements the UML conceptual
 schema defined in ISO 19157, Geographic Information - Data Quality, Clause 6.4. It
 was created using the encoding rules defined in ISO 19118, ISO 19139, and the
 implementation approach described in ISO 19115-3 and contains the following classes
 (codeLists are bold): QE_CoverageResult, and QualityResultFile
 
-*link:dataQualityResult.xsd[dataQualityResult.xsd]* implements the UML conceptual
+link:dataQualityResult.xsd[dataQualityResult.xsd] implements the UML conceptual
 schema defined in ISO 19157, Geographic Information - Data Quality, Clause 6.4. It
 was created using the encoding rules defined in ISO 19118, ISO 19139, and the
 implementation approach described in ISO 19115-3 and contains the following classes
 (codeLists are bold): DQ_ConformanceResult, DQ_DescriptiveResult,
 DQ_QuantitativeResult, and AbstractDQ_Result
 
-*link:metaquality.xsd[metaquality.xsd]* implements the UML conceptual schema defined
+link:metaquality.xsd[metaquality.xsd] implements the UML conceptual schema defined
 in ISO 19157, Geographic Information - Data Quality, Clause 6.4. It was created using
 the encoding rules defined in ISO 19118, ISO 19139, and the implementation approach
 described in ISO 19115-3 and contains the following classes (codeLists are bold):

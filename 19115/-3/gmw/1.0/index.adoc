@@ -19,7 +19,7 @@ The namespace URI for gmw 1.0 is `http://standards.iso.org/iso/19115/-3/gmw/1.0`
 
 === XML Schema for gmw 1.0
 
-*link:gmw.xsd[gmw.xsd]* is the XML Schema document to be referenced by XML documents
+link:gmw.xsd[gmw.xsd] is the XML Schema document to be referenced by XML documents
 containing XML elements in the gmw 1.0 namespace or by XML Schema documents importing
 the gmw 1.0 namespace. This XML schema includes (indirectly) all the implemented
 concepts of the gmw namespace, but it does not contain the declaration of any types.

@@ -25,7 +25,7 @@ The namespace URI for mac 2.2 is `https://schemas.isotc211.org/19115/-2/mac/2.2`
 
 === XML Schema for mac 2.2
 
-*link:mac.xsd[mac.xsd]* is the XML Schema document to be referenced by XML documents
+link:mac.xsd[mac.xsd] is the XML Schema document to be referenced by XML documents
 containing XML elements in the mac 2.2 namespace or by XML Schema documents importing
 the mac 2.2 namespace. This XML schema includes (indirectly) all the implemented
 concepts of the mac namespace, but it does not contain the declaration of any types.
