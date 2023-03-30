@@ -1,7 +1,6 @@
 ﻿= Feature Cataloguing Concepts (FCC)
 :edition: 2.2
 :revdate: 2010-02-25
-:stem:
 
 == Feature Cataloguing Common (FCC) Version: 2.2.0
 

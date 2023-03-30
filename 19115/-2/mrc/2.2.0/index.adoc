@@ -1,7 +1,6 @@
 ﻿= Metadata for Resource Content (MRC) [Imagery]
 :edition: 2.2
 :revdate: 2021-02-17
-:stem:
 
 == Metadata for Resource Content (MRC) [Imagery] Version: 2.2
 

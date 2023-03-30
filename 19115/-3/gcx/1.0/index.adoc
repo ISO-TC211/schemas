@@ -1,7 +1,6 @@
 ﻿= Geospatial Common eXtension (GCX)
 :edition: 1.0
 :revdate: 2019-01-04
-:stem:
 
 == Geospatial Common eXtension (GCX) Version: 1.0
 

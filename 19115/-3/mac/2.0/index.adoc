@@ -1,7 +1,6 @@
 ﻿= Metadata for Acquisition (MAC)
 :edition: 2.0
 :revdate: 2019-01-04
-:stem:
 
 == Metadata for Acquisition (MAC) Version: 2.0
 

@@ -1,7 +1,6 @@
 ﻿= Metadata Base (MDB)
 :edition: 2.0
 :revdate: 2019-01-04
-:stem:
 
 == Metadata Base (MDB) Version: 2.0
 

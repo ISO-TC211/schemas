@@ -1,7 +1,6 @@
 ﻿= Geographic Markup Wrappers (GMW)
 :edition: 1.0
 :revdate: 2019-01-04
-:stem:
 
 == Geographic Markup Wrappers (GMW) Version: 1.0
 

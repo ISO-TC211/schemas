@@ -1,7 +1,6 @@
 ﻿= Citation and responsible party information (CIT)
 :edition: 1.0
 :revdate: 2019-01-04
-:stem:
 
 == Citation and responsible party information (CIT) Version: 1.0
 

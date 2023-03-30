@@ -1,7 +1,6 @@
 ﻿= CATalogue (CAT)
 :edition: 1.2.0
 :revdate: 2010-02-19
-:stem:
 
 == CATalogue (CAT) Version: 1.2.0
 
