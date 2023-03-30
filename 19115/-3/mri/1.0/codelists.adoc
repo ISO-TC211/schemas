@@ -22,7 +22,6 @@ Number of items:: 60
 
 === Codelists
 
-link:DS_AssociationTypeCode[]
 
 === DS_AssociationTypeCode:
 
@@ -50,7 +49,6 @@ specification
 | revisionOf | resource is a revision of associated resource
 |===
 
-link:DS_InitiativeTypeCode[]
 
 === DS_InitiativeTypeCode:
 
@@ -80,7 +78,6 @@ Number of items:: 15
 | trial | process of testing to discover or demonstrate something
 |===
 
-link:MD_KeywordTypeCode[]
 
 === MD_KeywordTypeCode:
 
@@ -117,7 +114,6 @@ data classification
 | taxon | keyword identifies a taxonomy of the resource
 |===
 
-link:MD_TopicCategoryCode[]
 
 === MD_TopicCategoryCode:
 

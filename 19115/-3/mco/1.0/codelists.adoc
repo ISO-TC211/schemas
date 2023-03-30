@@ -22,7 +22,6 @@ Number of items:: 26
 
 === Codelists
 
-link:MD_ClassificationCode[]
 
 === MD_ClassificationCode:
 
@@ -48,7 +47,6 @@ purposes determined by the designating body
 | limitedDistribution | desimination limited by designating body
 |===
 
-link:MD_RestrictionCode[]
 
 === MD_RestrictionCode:
 

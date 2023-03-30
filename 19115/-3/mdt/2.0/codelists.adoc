@@ -22,7 +22,6 @@ Number of items:: 8
 
 === Codelists
 
-link:MX_ScopeCode[]
 
 === MX_ScopeCode:
 

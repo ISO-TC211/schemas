@@ -22,7 +22,6 @@ Number of items:: 19
 
 === Codelists
 
-link:MD_CoverageContentTypeCode[]
 
 === MD_CoverageContentTypeCode:
 

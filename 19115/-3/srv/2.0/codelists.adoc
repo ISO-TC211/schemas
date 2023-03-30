@@ -22,7 +22,6 @@ Number of items:: 6
 
 === Codelists
 
-link:SV_CouplingType[]
 
 === SV_CouplingType:
 
@@ -44,7 +43,6 @@ service instance might work with other external data instances
 MD_DataIdentification class MUST be described
 |===
 
-link:SV_ParameterDirection[]
 
 === SV_ParameterDirection:
 

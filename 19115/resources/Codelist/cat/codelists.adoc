@@ -23,7 +23,6 @@ Number of items:: 342
 
 === Codelists
 
-link:CI_DateTypeCode[]
 
 === CI_DateTypeCode:
 
@@ -57,7 +56,6 @@ could be quite a delay between creation and validity begins
 | distribution | date identifies when an instance of the resource was distributed
 |===
 
-link:CI_OnLineFunctionCode[]
 
 === CI_OnLineFunctionCode:
 
@@ -84,7 +82,6 @@ system to another
 | fileAccess | online file access provided
 |===
 
-link:CI_PresentationFormCode[]
 
 === CI_PresentationFormCode:
 
@@ -137,7 +134,6 @@ bar chart, and other type of diagrams and printed on paper, phototographic mater
 or other media
 |===
 
-link:CI_RoleCode[]
 
 === CI_RoleCode:
 
@@ -178,7 +174,6 @@ resource is intended or useful
 | stakeholder | party who has an interest in the resource or the use of the resource
 |===
 
-link:CI_TelephoneTypeCode[]
 
 === CI_TelephoneTypeCode:
 
@@ -196,7 +191,6 @@ Number of items:: 3
 | sms | telephone provides sms service
 |===
 
-link:DS_AssociationTypeCode[]
 
 === DS_AssociationTypeCode:
 
@@ -224,7 +218,6 @@ specification
 | revisionOf | resource is a revision of associated resource
 |===
 
-link:DCPList[]
 
 === DCPList:
 
@@ -249,7 +242,6 @@ Number of items:: 10
 | WebServices | Web service
 |===
 
-link:DS_InitiativeTypeCode[]
 
 === DS_InitiativeTypeCode:
 
@@ -279,7 +271,6 @@ Number of items:: 15
 | trial | process of testing to discover or demonstrate something
 |===
 
-link:MD_CellGeometryCode[]
 
 === MD_CellGeometryCode:
 
@@ -299,7 +290,6 @@ dimensional space
 | stratum | height range for a single point vertical profile
 |===
 
-link:MD_ClassificationCode[]
 
 === MD_ClassificationCode:
 
@@ -325,7 +315,6 @@ purposes determined by the designating body
 | limitedDistribution | desimination limited by designating body
 |===
 
-link:MD_CoverageContentTypeCode[]
 
 === MD_CoverageContentTypeCode:
 
@@ -358,7 +347,6 @@ being observed or calculated from observations.
 | coordinate | data used to provide coordinate axis values
 |===
 
-link:MD_DatatypeCode[]
 
 === MD_DatatypeCode:
 
@@ -398,7 +386,6 @@ and associations
 among their instances
 |===
 
-link:MD_DimensionNameTypeCode[]
 
 === MD_DimensionNameTypeCode:
 
@@ -421,7 +408,6 @@ Number of items:: 8
 | time | duration
 |===
 
-link:MD_GeometricObjectTypeCode[]
 
 === MD_GeometricObjectTypeCode:
 
@@ -448,7 +434,6 @@ continuous image of a region of space
 continuous image of a region of a plane
 |===
 
-link:MD_ImagingConditionCode[]
 
 === MD_ImagingConditionCode:
 
@@ -477,7 +462,6 @@ the relative location of topographic features which obstruct the collection path
 between the collector(s) and the subject(s) of interest
 |===
 
-link:MD_KeywordTypeCode[]
 
 === MD_KeywordTypeCode:
 
@@ -514,7 +498,6 @@ data classification
 | taxon | keyword identifies a taxonomy of the resource
 |===
 
-link:MD_MaintenanceFrequencyCode[]
 
 === MD_MaintenanceFrequencyCode:
 
@@ -544,7 +527,6 @@ Number of items:: 15
 | biennially | resource is updated every 2 years
 |===
 
-link:MD_MediumFormatCode[]
 
 === MD_MediumFormatCode:
 
@@ -566,7 +548,6 @@ Number of items:: 7
 | udf | universal disk format
 |===
 
-link:MD_ObligationCode[]
 
 === MD_ObligationCode:
 
@@ -584,7 +565,6 @@ Number of items:: 3
 | conditional | element is required when a specific condition is met
 |===
 
-link:MD_PixelOrientationCode[]
 
 === MD_PixelOrientationCode:
 
@@ -605,7 +585,6 @@ the same distance from the origin, the one with the smallest x-value
 | upperLeft | next corner counterclockwise from the upper right
 |===
 
-link:MD_ProgressCode[]
 
 === MD_ProgressCode:
 
@@ -641,7 +620,6 @@ another item
 purposes
 |===
 
-link:MD_ReferenceSystemTypeCode[]
 
 === MD_ReferenceSystemTypeCode:
 
@@ -734,7 +712,6 @@ coordinate reference system by applying a map projection. e.g. easting, northing
 e.g. [gravity-related] height or depth
 |===
 
-link:MD_RestrictionCode[]
 
 === MD_RestrictionCode:
 
@@ -776,7 +753,6 @@ prejudicial to a commercial, industrial, or national interest
 | in-confidence | with trust
 |===
 
-link:MD_ScopeCode[]
 
 === MD_ScopeCode:
 
@@ -821,7 +797,6 @@ object
 accessible over a network
 |===
 
-link:MD_SpatialRepresentationTypeCode[]
 
 === MD_SpatialRepresentationTypeCode:
 
@@ -843,7 +818,6 @@ an overlapping pair of images
 | video | scene from a video recording
 |===
 
-link:MD_TopicCategoryCode[]
 
 === MD_TopicCategoryCode:
 
@@ -920,7 +894,6 @@ radio, communication networks
 evacuation zone, disaster-prevention facility, disaster relief activities
 |===
 
-link:MD_TopologyLevelCode[]
 
 === MD_TopologyLevelCode:
 
@@ -954,7 +927,6 @@ collection of topological primitives that are closed under the boundary operatio
 | abstract | topological complex without any specified geometric realisation
 |===
 
-link:SV_CouplingType[]
 
 === SV_CouplingType:
 
@@ -976,7 +948,6 @@ service instance might work with other external data instances
 MD_DataIdentification class MUST be described
 |===
 
-link:SV_ParameterDirection[]
 
 === SV_ParameterDirection:
 

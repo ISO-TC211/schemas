@@ -22,7 +22,6 @@ Number of items:: 28
 
 === Codelists
 
-link:MD_ReferenceSystemTypeCode[]
 
 === MD_ReferenceSystemTypeCode:
 
