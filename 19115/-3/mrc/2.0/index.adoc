@@ -24,7 +24,7 @@ link:codelists.html[codelists.html] link:codelists.xml[codelists.xml]
 
 === XML Namespace for mrc 2.0
 
-The namespace URI for mrc 2.0 is *http://standards.iso.org/iso/19115/-3/mrc/2.0*.
+The namespace URI for mrc 2.0 is `http://standards.iso.org/iso/19115/-3/mrc/2.0`.
 
 === XML Schema for mrc 2.0
 
@@ -69,17 +69,17 @@ The mrc 2.0 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Feature Catalog Common | fcc |
-https://schemas.isotc211.org/19110/fcc/1.0 | ../../../../19110/fcc/1.0/fcc.xsd
+`https://schemas.isotc211.org/19110/fcc/1.0` | https://schemas.isotc211.org/19110/fcc/1.0/fcc.xsd[fcc.xsd]
 | Geographic COmmon | gco |
-https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../../../19115/-3/gco/1.0/gco.xsd
+`https://schemas.isotc211.org/19115/-3/gco/1.0` | https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd[gco.xsd]
 | Geographic Markup Wrappers | gmw |
-https://schemas.isotc211.org/19115/-3/gmw/1.0 | ../../../../19115/-3/gmw/1.0/gmw.xsd
+`https://schemas.isotc211.org/19115/-3/gmw/1.0` | https://schemas.isotc211.org/19115/-3/gmw/1.0/gmw.xsd[gmw.xsd]
 | Language localization | lan |
-https://schemas.isotc211.org/19115/-3/lan/1.0 | ../../../../19115/-3/lan/1.0/lan.xsd
+`https://schemas.isotc211.org/19115/-3/lan/1.0` | https://schemas.isotc211.org/19115/-3/lan/1.0/lan.xsd[lan.xsd]
 | Metadata for Acquisition Metadata for Acquisition | mac |
-https://schemas.isotc211.org/19115/-3/mac/2.0 | ../../../../19115/-3/mac/2.0/mac.xsd
+`https://schemas.isotc211.org/19115/-3/mac/2.0` | https://schemas.isotc211.org/19115/-3/mac/2.0/mac.xsd[mac.xsd]
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-3/mcc/1.0 | ../../../../19115/-3/mcc/1.0/mcc.xsd
+`https://schemas.isotc211.org/19115/-3/mcc/1.0` | https://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd[mcc.xsd]
 |===
 
 === Working Versions

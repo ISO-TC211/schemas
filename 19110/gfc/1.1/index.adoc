@@ -26,7 +26,7 @@ link:exampleInstance.xml[exampleInstance.xml]
 
 === XML Namespace for gfc 1.1
 
-The namespace URI for gfc 1.1 is *http://standards.iso.org/iso/19110/gfc/1.1*.
+The namespace URI for gfc 1.1 is `http://standards.iso.org/iso/19110/gfc/1.1`.
 
 === XML Schema for gfc 1.1
 
@@ -62,17 +62,31 @@ The gfc 1.1 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Citation and responsible party information Citation and responsible party
-information | cit |
-https://schemas.isotc211.org/19115/-3/cit/1.0 | ../../../19115/-3/cit/1.0/cit.xsd
-| Feature Catalog Common | fcc |
-https://schemas.isotc211.org/19110/fcc/1.0
-| ../../../19110/fcc/1.0/fcc.xsd
-| Geographic COmmon | gco |
-https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../../19115/-3/gco/1.0/gco.xsd
-| Language localization | lan |
-https://schemas.isotc211.org/19115/-3/lan/1.0 | ../../../19115/-3/lan/1.0/lan.xsd
-| Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-3/mcc/1.0 | ../../../19115/-3/mcc/1.0/mcc.xsd
+information
+| cit
+| `https://schemas.isotc211.org/19115/-3/cit/1.0`
+| https://schemas.isotc211.org/19115/-3/cit/1.0/cit.xsd[cit.xsd]
+
+| Feature Catalog Common
+| fcc
+| https://schemas.isotc211.org/19110/fcc/1.0
+| https://schemas.isotc211.org/19110/fcc/1.0/fcc.xsd[fcc.xsd]
+
+| Geographic COmmon
+| gco
+| `https://schemas.isotc211.org/19115/-3/gco/1.0`
+| https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd[gco.xsd]
+
+| Language localization
+| lan
+| `https://schemas.isotc211.org/19115/-3/lan/1.0`
+| https://schemas.isotc211.org/19115/-3/lan/1.0/lan.xsd[lan.xsd]
+
+| Metadata Common Classes
+| mcc
+| `https://schemas.isotc211.org/19115/-3/mcc/1.0`
+| https://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd[mcc.xsd]
+
 |===
 
 === Working Versions

@@ -21,7 +21,7 @@ link:md1.xml[md1.xml]
 
 === XML Namespace for md1 2.0
 
-The namespace URI for md1 2.0 is *http://standards.iso.org/iso/19115/-3/md1/2.0*.
+The namespace URI for md1 2.0 is `http://standards.iso.org/iso/19115/-3/md1/2.0`.
 
 === XML Schema for md1 2.0
 
@@ -53,9 +53,9 @@ The md1 2.0 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geospatial Common eXtension | gcx |
-https://schemas.isotc211.org/19115/-3/gcx/1.0 | ../../../../19115/-3/gcx/1.0/gcx.xsd
+`https://schemas.isotc211.org/19115/-3/gcx/1.0` | https://schemas.isotc211.org/19115/-3/gcx/1.0/gcx.xsd[gcx.xsd]
 | Metadata for Data and Services Metadata for Data and Services | mds |
-https://schemas.isotc211.org/19115/-3/mds/2.0 | ../../../../19115/-3/mds/2.0/mds.xsd
+`https://schemas.isotc211.org/19115/-3/mds/2.0` | https://schemas.isotc211.org/19115/-3/mds/2.0/mds.xsd[mds.xsd]
 |===
 
 === Working Versions

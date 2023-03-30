@@ -15,7 +15,7 @@ ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clau
 
 === XML Namespace for mrl 1.0
 
-The namespace URI for mrl 1.0 is *http://standards.iso.org/iso/19115/-3/mrl/1.0*.
+The namespace URI for mrl 1.0 is `http://standards.iso.org/iso/19115/-3/mrl/1.0`.
 
 === XML Schema for mrl 1.0
 
@@ -54,11 +54,11 @@ The mrl 1.0 namespace imports these other namespaces:
 | Name | Standard Prefix | Namespace Location | Schema Location
 
 | Geographic COmmon | gco |
-https://schemas.isotc211.org/19115/-3/gco/1.0 | ../../../../19115/-3/gco/1.0/gco.xsd
+`https://schemas.isotc211.org/19115/-3/gco/1.0` | https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd[gco.xsd]
 | Geographic Markup Wrappers | gmw |
-https://schemas.isotc211.org/19115/-3/gmw/1.0 | ../../../../19115/-3/gmw/1.0/gmw.xsd
+`https://schemas.isotc211.org/19115/-3/gmw/1.0` | https://schemas.isotc211.org/19115/-3/gmw/1.0/gmw.xsd[gmw.xsd]
 | Metadata Common Classes | mcc |
-https://schemas.isotc211.org/19115/-3/mcc/1.0 | ../../../../19115/-3/mcc/1.0/mcc.xsd
+`https://schemas.isotc211.org/19115/-3/mcc/1.0` | https://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd[mcc.xsd]
 |===
 
 === Working Versions

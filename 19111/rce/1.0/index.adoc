@@ -16,7 +16,7 @@ implementation. The XML schema was encoded using the rules described in ISO/TS
 
 === XML Namespace for rce 1.0
 
-The namespace URI for rce 1.0 is *http://standards.iso.org/iso/19111/rce/1.0*.
+The namespace URI for rce 1.0 is `http://standards.iso.org/iso/19111/rce/1.0`.
 
 === XML Schema for rce 1.0
 
