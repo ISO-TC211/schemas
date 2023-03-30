@@ -7,7 +7,7 @@
 
 Base for:
 
-* ISO ISO 19115-1, Geographic Information - Metadata - Part 1: Fundamentals and ISO
+* ISO 19115-1, Geographic Information - Metadata - Part 1: Fundamentals and ISO
 ISO 19115-2, Geographic Information - Metadata - Part 2: Extensions for acquisition
 and processing. +
 Implemented to align with the original ISO 19115-1:2014 + Amd1:2018 + Amd 2:2021, ISO
@@ -76,7 +76,7 @@ https://schemas.isotc211.org/19157/-/mdq/1.2
 ** Geospatial Meta-Language
 http://www.opengis.net/gml/3.2[http://schemas.opengis.net/gml/3.2.1/gml.xsd]
 
-* ISO ISO 19115-1, Geographic Information - Metadata - Part 1: Fundamentals and ISO
+* ISO 19115-1, Geographic Information - Metadata - Part 1: Fundamentals and ISO
 ISO 19115-2, Geographic Information - Metadata - Part 2: Extensions for acquisition
 and processing. +
 As implemented by ISO 19115-3:2016:
