@@ -605,7 +605,7 @@ Geographic Information - Data Quality, 6.5
 | ISO 19115-1, ISO/TS 19139 Geographic information - Metadata - XML schema implementation
 | geographic-common
 | `https://schemas.isotc211.org/19115/-3/gco/1.0`
-| image::/19115/-3/gco/1.0/gco.png[,200]
+| No image available
 | None
 | https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd[gco.xsd]
 | https://schemas.isotc211.org/19115/-3/gco/1.0/baseTypes2014.xsd[baseTypes2014.xsd]
@@ -668,7 +668,7 @@ geographic data.
 | ISO 19115-1, Geographic Information - Metadata - Part 1: Fundamentals
 | geographic-wrappers
 | `https://schemas.isotc211.org/19115/-3/gmw/1.0`
-| image::/19115/-3/gmw/1.0/gmw.png[,200]
+| No image available
 | None
 | https://schemas.isotc211.org/19115/-3/gmw/1.0/gmw.xsd[gmw.xsd]
 | https://schemas.isotc211.org/19115/-3/gmw/1.0/gmlWrapperTypes2014.xsd[gmlWrapperTypes2014.xsd]
@@ -1160,7 +1160,7 @@ one coordinate reference system to another.
 | ISO 19111, Geographic information -- Spatial referencing by coordinates
 | reference-coordinate
 | `https://schemas.isotc211.org/19111/rbc/1.0`
-| image::/19111/rbc/1.0/rbc.png[,200]
+| No image available
 |
 | https://schemas.isotc211.org/19111/rbc/1.0/rbc.xsd[rbc.xsd]
 | https://schemas.isotc211.org/19111/rbc/1.0/No_Other_Schema[No Other Schema]
@@ -1174,7 +1174,7 @@ one coordinate reference system to another.
 | ISO 19111, Geographic information -- Spatial referencing by coordinates
 | coordinate-system-common
 | `https://schemas.isotc211.org/19111/rce/1.0`
-| image::/19111/rce/1.0/rce.png[,200]
+| No image available
 |
 | https://schemas.isotc211.org/19111/rce/1.0/rce.xsd[rce.xsd]
 | https://schemas.isotc211.org/19111/rce/1.0/No_Other_Schema[No Other Schema]
