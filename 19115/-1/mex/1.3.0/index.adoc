@@ -5,7 +5,7 @@
 == Metadata with Schema Extensions (MEX) Version: 1.3
 
 .Classes in the mex namespace
-image::./MdExtensionClass.png[UML diagram of Metadata EXtension classes in the mex namespace,750].
+image::./MdExtensionClass.png[UML diagram of Metadata EXtension classes in the mex namespace,750]
 
 .Code list(s) in the mex namespace
 image::./MdExtensionCodelist.png[UML diagram of Metadata Extension codelists in the mex namespace,400]

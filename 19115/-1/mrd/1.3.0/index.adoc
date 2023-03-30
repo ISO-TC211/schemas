@@ -5,12 +5,10 @@
 == Metadata for Resource Distribution (MRD) Version: 1.3
 
 .Classes in the mrd namespace
-====
-image::./DistributionClass.png[UML diagram of Metadata for Resource Distribution classes in the mrd namespace,750].
+image::./DistributionClass.png[UML diagram of Metadata for Resource Distribution classes in the mrd namespace,750]
 
 .Code list(s) in the mrd namespace
 image::./DistributionCodelist.png[UML diagram of Metadata for Resource Distribution codelists in the mrd namespace,300]
-====
 
 === Description
 

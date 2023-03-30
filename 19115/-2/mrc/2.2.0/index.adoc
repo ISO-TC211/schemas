@@ -5,12 +5,10 @@
 == Metadata for Resource Content (MRC) [Imagery] Version: 2.2
 
 .Classes in the mrc namespace
-====
-image::./ContentImageryClass.png[UML diagram of Metadata for Resource Content classes in the mrc namespace focusing on ISO 19115-2,750].
+image::./ContentImageryClass.png[UML diagram of Metadata for Resource Content classes in the mrc namespace focusing on ISO 19115-2,750]
 
 .Codelists in the mrc namespace
 image::./ContentImegeryCodelist.png[UML diagram of Metadata for Resource Content codelists in the mrc namespace from ISO 19115-2,600]
-====
 
 === Description
 

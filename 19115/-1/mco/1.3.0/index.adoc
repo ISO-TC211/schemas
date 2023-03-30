@@ -5,7 +5,7 @@
 == Metadata for COnstraints (MCO) Version: 1.3
 
 .Classes in the mco namespace
-image::ConstraintClass.png[UML diagram of Metadata for COnstraints classes in the mco namespace,750].
+image::ConstraintClass.png[UML diagram of Metadata for COnstraints classes in the mco namespace,750]
 
 .Code list(s) in the mco namespace
 image::ConstraintCodelist.png[UML diagram of Metadata for COnstraints codelists in the mco namespace,400]

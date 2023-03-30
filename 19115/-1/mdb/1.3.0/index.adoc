@@ -5,8 +5,9 @@
 == Metadata Base (MDB) Version: 1.3
 
 .Overview of the MD_Metadata class and linked classes
-image::./MdBaseClassGeneral.png[UML overview diagram of MetaData Base class in the mda namespace and classes references by its roles,750]. Specifics of the MD_Metadata class and its associated classes
+image::./MdBaseClassGeneral.png[UML overview diagram of MetaData Base class in the mda namespace and classes references by its roles,750]
 
+.Specifics of the MD_Metadata class and its associated classes
 image::./MdBaseClass.png[UML diagram of MetaData Base class MD_Metadata in the mda namespace and associated classes,750]
 
 === Description
