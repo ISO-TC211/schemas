@@ -60,7 +60,7 @@ https://schemas.isotc211.org/19139/-/cat/1.2.0/uomItem.xsd[uomItem.xsd]
 | ISO 19157, Geographic Information - Data Quality, 6.4
 | data-quality-common
 | `https://schemas.isotc211.org/19157/-/dqc/1.2.0`
-| image::/19157/-/dqc/1.0/dqc.png[Thumbnail of data quality common UML and attributes,200]
+| image::/19157/-/dqc/1.2.0/dqc.png[Thumbnail of data quality common UML and attributes,200]
 | Data Quality
 | https://schemas.isotc211.org/19157/-2/dqc/1.2.0/dqc.xsd[dqc.xsd]
 | https://schemas.isotc211.org/19157/-2/dqc/1.2.0/abstract.xsd[abstract.xsd]
