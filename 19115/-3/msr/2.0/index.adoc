@@ -24,7 +24,7 @@ The namespace URI for msr 2.0 is `http://standards.iso.org/iso/19115/-3/msr/2.0`
 
 === XML Schema for msr 2.0
 
-*link:msr.xsd[msr.xsd]* is the XML Schema document to be referenced by XML documents
+link:msr.xsd[msr.xsd] is the XML Schema document to be referenced by XML documents
 containing XML elements in the msr 2.0 namespace or by XML Schema documents importing
 the msr 2.0 namespace. This XML schema includes (indirectly) all the implemented
 concepts of the msr namespace, but it does not contain the declaration of any types.
@@ -36,7 +36,7 @@ https://schemas.isotc211.org/19115/19115AllNamespaces.zip[available].
 
 === Related XML Schema for msr 2.0
 
-*link:spatialRepresentation.xsd[spatialRepresentation.xsd]* implements the UML
+link:spatialRepresentation.xsd[spatialRepresentation.xsd] implements the UML
 conceptual schema defined in ISO 19115-1, Geographic Information - Metadata - Part 1:
 Fundamentals AMENDMENT 1, Clause 6.5.7. It was created using the encoding rules
 defined in ISO 19118, ISO 19139, and the implementation approach described in ISO
@@ -46,7 +46,7 @@ AbstractMD_SpatialRepresentation, *MD_CellGeometryCode*, MD_Dimension,
 MD_Georectified, MD_Georeferenceable, MD_GridSpatialRepresentation,
 *MD_PixelOrientationCode*, *MD_TopologyLevelCode*, and MD_VectorSpatialRepresentation
 
-*link:spatialRepresentationImagery.xsd[spatialRepresentationImagery.xsd]* implements
+link:spatialRepresentationImagery.xsd[spatialRepresentationImagery.xsd] implements
 the UML conceptual schema defined in ISO 19115-1, Geographic Information - Metadata -
 Part 1: Fundamentals AMENDMENT 1, Clause 6.5.7. It was created using the encoding
 rules defined in ISO 19118, ISO 19139, and the implementation approach described in
