@@ -15,14 +15,14 @@ quality of resources. The XML schema was encoded using the rules described in IS
 
 === Sample XML files for mdq 1.0
 
-link:mdq.xml[mdq.xml]
-link:mdq_invalid.xml[mdq_invalid.xml]
-link:mdq_valid.xml[mdq_valid.xml]
+* link:mdq.xml[mdq.xml]
+* link:mdq_invalid.xml[mdq_invalid.xml]
+* link:mdq_valid.xml[mdq_valid.xml]
 
 === CodeLists for mdq 1.0
 
-link:codelists.html[codelists.html]
-link:codelists.xml[codelists.xml]
+* link:codelists.html[codelists.html]
+* link:codelists.xml[codelists.xml]
 
 === XML Namespace for mdq 1.0
 
