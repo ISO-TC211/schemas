@@ -16,11 +16,15 @@ ISO/TS19115-3, Clause 8.
 
 === Sample XML files for mco 1.0
 
-link:mco_invalid.xml[mco_invalid.xml] link:mco_valid.xml[mco_valid.xml]
+* link:mco_invalid.xml[mco_invalid.xml]
+* link:mco_valid.xml[mco_valid.xml]
+
 
 === CodeLists for mco 1.0
 
-link:codelists.html[codelists.html] link:codelists.xml[codelists.xml]
+* link:codelists.html[codelists.html]
+* link:codelists.xml[codelists.xml]
+
 
 === XML Namespace for mco 1.0
 

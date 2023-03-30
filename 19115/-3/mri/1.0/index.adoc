@@ -15,11 +15,15 @@ identifying resources. The XML schema was encoded using the rules described in I
 
 === Sample XML files for mri 1.0
 
-link:mri_invalid.xml[mri_invalid.xml] link:mri_valid.xml[mri_valid.xml]
+* link:mri_invalid.xml[mri_invalid.xml]
+* link:mri_valid.xml[mri_valid.xml]
+
 
 === CodeLists for mri 1.0
 
-link:codelists.html[codelists.html] link:codelists.xml[codelists.xml]
+* link:codelists.html[codelists.html]
+* link:codelists.xml[codelists.xml]
+
 
 === XML Namespace for mri 1.0
 

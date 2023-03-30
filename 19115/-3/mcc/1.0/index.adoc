@@ -19,7 +19,9 @@ ISO/TS19115-3, Clause 8.
 
 === CodeLists for mcc 1.0
 
-link:codelists.html[codelists.html] link:codelists.xml[codelists.xml]
+* link:codelists.html[codelists.html]
+* link:codelists.xml[codelists.xml]
+
 
 === XML Namespace for mcc 1.0
 

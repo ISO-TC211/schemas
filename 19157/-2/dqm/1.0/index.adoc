@@ -21,7 +21,9 @@ quality measures. The XML schema was encoded using the rules described in ISO/TS
 
 === CodeLists for dqm 1.0
 
-link:codelists.html[codelists.html] link:codelists.xml[codelists.xml]
+* link:codelists.html[codelists.html]
+* link:codelists.xml[codelists.xml]
+
 
 === XML Namespace for dqm 1.0
 
