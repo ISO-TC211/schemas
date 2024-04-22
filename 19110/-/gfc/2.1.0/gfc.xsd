@@ -8,7 +8,7 @@
   xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
   elementFormDefault="qualified" 
   targetNamespace="https://schemas.isotc211.org/19110/-/gfc/2.1" 
-  version="2.2.0"
+  version="2.1.0"
   >
   <include schemaLocation="../../../../19110/-/gfc/2.1.0/featureCatalogue.xsd"/>
   <import namespace="https://schemas.isotc211.org/19110/-/fcc/2.1" schemaLocation="../../../../19110/-/fcc/2.1.0/fcc.xsd"/>
