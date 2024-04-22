@@ -1,0 +1,42 @@
+﻿= Referencing By Coordinates (RBC)
+:edition: 1.0
+:revdate: 2015-06-06
+
+== Referencing By Coordinates (RBC) Version: 1.0
+
+image::rbc.png[]
+
+=== Description
+
+RBC 1.0 is an XML Schema implementation derived from ISO 19111, Geographic
+information -- Spatial referencing by coordinates. It includes iSO 19111:2007 defines
+the conceptual schema for the description of spatial referencing by coordinates,
+optionally extended to spatio-temporal referencing. It describes the minimum data
+required to define one-, two- and three-dimensional spatial coordinate reference
+systems with an extension to merged spatial-temporal reference systems. It allows
+additional descriptive information to be provided. It also describes the information
+required to change coordinates from one coordinate reference system to another. The XML
+schema was encoded using the rules described in ISO/TS 19139:2007, Clause 8 and
+implementation approach from ISO/TS 19115-3, Clause 8.
+
+=== XML Namespace for rbc 1.0
+
+The namespace URI for rbc 1.0 is `http://standards.iso.org/iso/19111/rbc/1.0`.
+
+=== XML Schema for rbc 1.0
+
+link:rbc.xsd[rbc.xsd] is the XML Schema document to be referenced by XML documents
+containing XML elements in the rbc 1.0 namespace or by XML Schema documents importing
+the rbc 1.0 namespace. This XML schema includes (indirectly) all the implemented
+concepts of the rbc namespace, but it does not contain the declaration of any types.
+
+NOTE: A zip archive including all the XML Schema Implementations defined in
+ISO/TS 19115-3 and related standards is also
+http://standards.iso.org/iso/19115/19115.zip[available].
+
+=== No Related XML Namespaces for rbc 1.0
+
+=== Working Versions
+
+When revisions to these schema become necessary, they will be managed in the
+https://github.com/ISO-TC211/XML[ISO TC211 Git Repository].
