@@ -83,7 +83,7 @@
           <element name="contentInfo" maxOccurs="unbounded" minOccurs="0" type="mcc:Abstract_ContentInformation_PropertyType" id="ISO19115-1.030_ISO19115-1.182"/>
           <element name="distributionInfo" maxOccurs="unbounded" minOccurs="0" type="mcc:Abstract_Distribution_PropertyType" id="ISO19115-1.031_ISO19115-1.237"/>
           <element name="dataQualityInfo" maxOccurs="unbounded" minOccurs="0" type="dqc:Abstract_DataQuality_PropertyType" id="ISO19115-1.032_ISO19157.001"/>
-          <!-- Moved to 37 -->
+         <!-- Moved to 37 -->
           <!-- <element name="resourceLineage" maxOccurs="unbounded" minOccurs="0" type="mcc:Abstract_LineageInformation_PropertyType" id="ISO19115-1.037_ISO19115-1.118"/> -->
           <element name="portrayalCatalogueInfo" maxOccurs="unbounded" minOccurs="0" type="mcc:Abstract_PortrayalCatalogueInformation_PropertyType" id="ISO19115-1.033_ISO19115-1.235"/>
           <element name="metadataConstraints" maxOccurs="unbounded" minOccurs="0" type="mcc:Abstract_Constraints_PropertyType" id="ISO19115-1.034_ISO19115-1.098"/>
