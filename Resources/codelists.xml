@@ -52,9 +52,7 @@
                         <lan:language><lan:LanguageCode
                             codeList="https://standards.iso.org/19115/-1/1/clause#LanguageCode"
                             codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                        <lan:characterEncoding><lan:MD_CharacterSetCode
-                            codeList="https://standards.iso.org/19115/-1/1/clause#MD_CharacterSetCode"
-                            codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                        <lan:characterEncoding><lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#MD_CharacterSetCode" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                     </lan:PT_Locale></cat:locale>
                     <!--   ............................................................................. -->
                     <cat:codelistItem xlink:title="Code list items for SolidInterpolation from the Spatial Schemas (sps)  Namespace">
