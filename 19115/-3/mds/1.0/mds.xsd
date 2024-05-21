@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema"
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
   xmlns:fcc="http://standards.iso.org/iso/19110/fcc/1.0"
   xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
   xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/1.0"
@@ -17,13 +18,12 @@
   xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/1.0"
   xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.0" 
   elementFormDefault="qualified"
-  targetNamespace="http://standards.iso.org/iso/19115/-3/mds/1.0" version="1.0">
-  <annotation>
-    <documentation>Namespace &lt;font color="#1f497d"&gt;that imports all necessary namespaces to
+  targetNamespace="http://standards.iso.org/iso/19115/-3/mds/1.0"
+  version="1.0">
+  <annotation><documentation>Namespace &lt;font color="#1f497d"&gt;that imports all necessary namespaces to
       implement a complete metadata record for a dataset or service, not including extended data
       types or user-defined extensions. &lt;/font&gt;Wrapper namespace to support Catalog Service
-      implementations.</documentation>
-  </annotation>
+      implementations.</documentation></annotation>
   <include schemaLocation="metadataDataServices.xsd"/>
   <import namespace="http://standards.iso.org/iso/19110/fcc/1.0"
     schemaLocation="https://schemas.isotc211.org/19110/fcc/1.0/fcc.xsd"/>

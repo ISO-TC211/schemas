@@ -7,9 +7,7 @@
   elementFormDefault="qualified" 
   targetNamespace="http://standards.iso.org/iso/19115/-3/msr/1.0" 
   version="1.0">
-  <annotation>
-    <documentation>Namespace for XML elements &lt;font color="#1f497d"&gt;used to document the encoding scheme used to represent geolocation in the content of a resource&lt;/font&gt;.</documentation>
-  </annotation>
+  <annotation><documentation>Namespace for XML elements &lt;font color="#1f497d"&gt;used to document the encoding scheme used to represent geolocation in the content of a resource&lt;/font&gt;.</documentation></annotation>
   <include schemaLocation="spatialRepresentation.xsd"/>
   <include schemaLocation="spatialRepresentationImagery.xsd"/>
   <import namespace="http://standards.iso.org/iso/19157/-2/dqc/1.0" schemaLocation="https://schemas.isotc211.org/19157/-2/dqc/1.0/dqc.xsd"/>
