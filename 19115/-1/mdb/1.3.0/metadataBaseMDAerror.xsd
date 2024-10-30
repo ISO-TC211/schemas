@@ -74,9 +74,8 @@
           <element name="metadataScope" maxOccurs="unbounded" minOccurs="0" type="mdb:MD_MetadataScope_PropertyType" id="ISO19115-1.038_ISO19115-1.039"/>
           <!-- Inconsistency between ISO 19115-1 Conceptual model/UML diagram Figure 1 and ISO 19115-3 Implementation model for ISO 19115-1 and ISO 19115-2.
           This inconsistency remove the concept of MI_Metadata -->
-          <!-- corrected from <element maxOccurs="unbounded" minOccurs="0" name="describes" type="mdb:MD_Metadata_PropertyType" id="ISO19115-1.038.x_ISO19115-1.001"/>
-          original now ./metadataBaseMDAerror.xsd -->
-          <element maxOccurs="unbounded" minOccurs="0" name="describes" type="mda:AbstractDS_Resource_PropertyType" id="ISO19115-1.038.x_ISO19115-1.001"/>
+          <!-- should have been <element maxOccurs="unbounded" minOccurs="0" name="describes" type="mda:AbstractDS_Resource_PropertyType" id="ISO19115-1.038.x_ISO19115-1.001"/> -->
+          <element maxOccurs="unbounded" minOccurs="0" name="describes" type="mdb:MD_Metadata_PropertyType" id="ISO19115-1.038.x_ISO19115-1.001"/>
           <!-- Inconsistency between ISO 19115-1 Conceptual model and ISO 19115-3 Implementation model for ISO 19115-1 and ISO 19115-2.
           This inconsistency remove the concept of MI_Metadata -->
           <element maxOccurs="unbounded" minOccurs="0" name="acquisitionInformation" type="mcc:Abstract_AcquisitionInformation_PropertyType" id="ISO19115-2.031_ISO19115-2.002"/>
