@@ -43,11 +43,8 @@
 	</mdb:metadataIdentifier>
 	<mdb:defaultLocale>
 		<lan:PT_Locale>
-			<lan:language>
-				<lan:LanguageCode codeList="codeListLocation#LanguageCode" codeListValue="ca">ca</lan:LanguageCode>
-			</lan:language>
-			<lan:characterEncoding>
-				<lan:MD_CharacterSetCode codeList="codeListLocation#MD_CharacterSetCode" codeListValue=""/>
+			<lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="ca">ca</lan:LanguageCode></lan:language>
+			<lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue=""/>
 			</lan:characterEncoding>
 		</lan:PT_Locale>
 	</mdb:defaultLocale>
@@ -684,9 +681,7 @@
 			</mri:resourceConstraints>
 			<mri:defaultLocale>
 				<lan:PT_Locale>
-					<lan:language>
-						<lan:LanguageCode codeList="codeListLocation#LanguageCode" codeListValue="ca">ca</lan:LanguageCode>
-					</lan:language>
+					<lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="ca">ca</lan:LanguageCode></lan:language>
 					<lan:characterEncoding gco:nilReason="unknown"/>
 				</lan:PT_Locale>
 			</mri:defaultLocale>

@@ -121,12 +121,15 @@
 <!-- mandatory if resource contains textual content (has to be enforced by inspection) -->
             <mri:defaultLocale>
                 <lan:PT_Locale>
-                    <lan:language>
+                    <!-- Replace invalid URL 
                         <lan:LanguageCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115.lan.LanguageCode" codeListValue="eng">English</lan:LanguageCode>
-                    </lan:language>
+                    -->
+                    <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">English</lan:LanguageCode></lan:language>
                     <lan:characterEncoding>
+                        <!-- Replace invalid URL 
                         <lan:MD_CharacterSetCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115.lan.CharacterSetCode" codeListValue="utf8">UTF-8</lan:MD_CharacterSetCode>
-                    </lan:characterEncoding>
+                    -->
+                        <lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="utf8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                 </lan:PT_Locale>
             </mri:defaultLocale>
         </mri:MD_DataIdentification>

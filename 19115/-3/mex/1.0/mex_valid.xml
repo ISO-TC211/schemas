@@ -18,9 +18,7 @@
                </mex:name>
                <mex:definition></mex:definition>
                <mex:dataType>
-                  <mex:MD_DatatypeCode 
-                     codeList="" 
-                     codeListValue="datatypeClass"/>
+                  <mex:MD_DatatypeCode codeList="" codeListValue="datatypeClass"/>
                </mex:dataType>
                <mex:maximumOccurrence>
                   <gco:CharacterString>3</gco:CharacterString>
@@ -68,9 +66,7 @@
                </mex:name>
                <mex:definition></mex:definition>
                <mex:dataType>
-                  <mex:MD_DatatypeCode 
-                     codeList="" 
-                     codeListValue="codelist"/>
+                  <mex:MD_DatatypeCode codeList="" codeListValue="codelist"/>
                </mex:dataType>
                <mex:parentEntity></mex:parentEntity>
                <mex:rule></mex:rule>
@@ -90,9 +86,7 @@
                </mex:name>
                <mex:definition></mex:definition>
                <mex:dataType>
-                  <mex:MD_DatatypeCode 
-                     codeList="" 
-                     codeListValue="codelistElement"/>
+                  <mex:MD_DatatypeCode codeList="" codeListValue="codelistElement"/>
                </mex:dataType>
                <mex:parentEntity></mex:parentEntity>
                <mex:rule></mex:rule>
@@ -112,9 +106,7 @@
                </mex:name>
                <mex:definition></mex:definition>
                <mex:dataType>
-                  <mex:MD_DatatypeCode 
-                     codeList="" 
-                     codeListValue="enumeration"/>
+                  <mex:MD_DatatypeCode codeList="" codeListValue="enumeration"/>
                </mex:dataType>
                <mex:parentEntity></mex:parentEntity>
                <mex:rule></mex:rule>

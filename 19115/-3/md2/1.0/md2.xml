@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mdb:MD_Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdb/1.0 https://schemas.isotc211.org/19115/-3/md2/1.0/md2.xsd"    xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0"
- xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"    xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"    xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
- xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"    xmlns:xlink="http://www.w3.org/1999/xlink"    xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
+ xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdb/1.0 https://schemas.isotc211.org/19115/-3/md2/1.0/md2.xsd"
+    xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0"
+ xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+    xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+    xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+ xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
  xmlns:mex="http://standards.iso.org/iso/19115/-3/mex/1.0">
    <!-- 
    This is a sample metadata record for the md1 conformance class which adds the Extended Schema elements to the metadata.
@@ -43,9 +48,7 @@
                </mex:name>
                <mex:definition></mex:definition>
                <mex:dataType>
-                  <mex:MD_DatatypeCode 
-                     codeList="" 
-                     codeListValue="datatypeClass"/>
+                  <mex:MD_DatatypeCode codeList="" codeListValue="datatypeClass"/>
                </mex:dataType>
                <mex:maximumOccurrence>
                   <gco:CharacterString>3</gco:CharacterString>
@@ -87,9 +90,7 @@
                </mex:name>
                <mex:definition></mex:definition>
                <mex:dataType>
-                  <mex:MD_DatatypeCode 
-                     codeList="" 
-                     codeListValue="codelist"/>
+                  <mex:MD_DatatypeCode codeList="" codeListValue="codelist"/>
                </mex:dataType>
                <mex:parentEntity></mex:parentEntity>
                <mex:rule></mex:rule>
@@ -109,9 +110,7 @@
                </mex:name>
                <mex:definition></mex:definition>
                <mex:dataType>
-                  <mex:MD_DatatypeCode 
-                     codeList="" 
-                     codeListValue="codelistElement"/>
+                  <mex:MD_DatatypeCode codeList="" codeListValue="codelistElement"/>
                </mex:dataType>
                <mex:parentEntity></mex:parentEntity>
                <mex:rule></mex:rule>
@@ -131,9 +130,7 @@
                </mex:name>
                <mex:definition></mex:definition>
                <mex:dataType>
-                  <mex:MD_DatatypeCode 
-                     codeList="" 
-                     codeListValue="enumeration"/>
+                  <mex:MD_DatatypeCode codeList="" codeListValue="enumeration"/>
                </mex:dataType>
                <mex:parentEntity></mex:parentEntity>
                <mex:rule></mex:rule>

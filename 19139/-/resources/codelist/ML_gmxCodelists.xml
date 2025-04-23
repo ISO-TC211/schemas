@@ -46,24 +46,29 @@ DESCRIPTION:
 	</versionDate>
 	<!--=== for Cultural and Linguistic Adaptability ===-->
 	<!--Default language-->
-	<language>
-		<gmd:LanguageCode codeList="#LanguageCode" codeListValue="eng">English</gmd:LanguageCode>
-	</language>
-	<characterSet>
-		<gmd:MD_CharacterSetCode codeList="#MD_CharacterSetCode" codeListValue="utf8">UTF 8</gmd:MD_CharacterSetCode>
-	</characterSet>
+    <!-- Replace invalid URL 
+            <lan:LanguageCode codeList="#LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
+         -->
+    <language><gmd:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">English</gmd:LanguageCode></language>
+    <!-- Replace invalid URL 
+            <gmd:MD_CharacterSetCode codeList="#MD_CharacterSetCode" codeListValue="utf8">UTF 8</gmd:MD_CharacterSetCode>
+         -->
+    <characterSet><gmd:MD_CharacterSetCode codeList="https://www.iana.org/assignments/character-sets" codeListValue="utf8">UTF 8</gmd:MD_CharacterSetCode></characterSet>
 	<!-- List of the 'locales' into which free text values can be translated-->
 	<locale>
 		<gmd:PT_Locale id="fra">
-			<gmd:languageCode>
-				<gmd:LanguageCode codeList="#LanguageCode" codeListValue="fra">French</gmd:LanguageCode>
-			</gmd:languageCode>
-			<gmd:country>
-				<gmd:Country codeList="#Country" codeListValue="FR">France</gmd:Country>
-			</gmd:country>
-			<gmd:characterEncoding>
-				<gmd:MD_CharacterSetCode codeList="#MD_CharacterSetCode" codeListValue="utf8">UTF 8</gmd:MD_CharacterSetCode>
-			</gmd:characterEncoding>
+		    <!-- Replace invalid URL 
+            <lan:LanguageCode codeList="#LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
+         -->
+		    <language><gmd:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">English</gmd:LanguageCode></language>
+		    <!-- Replace invalid URL 
+            <gmd:Country codeList="#Country" codeListValue="FR">France</gmd:Country>
+         -->
+		    <gmd:country><gmd:Country codeList="https://countrycode.org" codeListValue="FR">France</gmd:Country></gmd:country>
+		    <!-- Replace invalid URL 
+            <gmd:MD_CharacterSetCode codeList="#MD_CharacterSetCode" codeListValue="utf8">UTF 8</gmd:MD_CharacterSetCode>
+         -->
+		    <characterSet><gmd:MD_CharacterSetCode codeList="https://www.iana.org/assignments/character-sets" codeListValue="utf8">UTF 8</gmd:MD_CharacterSetCode></characterSet>
 		</gmd:PT_Locale>
 	</locale>
 	<!--============================================================================-->

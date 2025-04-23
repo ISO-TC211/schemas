@@ -14,7 +14,7 @@
     <mdb:contact>
         <cit:CI_Responsibility>
             <cit:role>
-                <cit:CI_RoleCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codeList.xml#CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode>
+                <cit:CI_RoleCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode>
             </cit:role>
             <cit:party>
                 <cit:CI_Organisation>
@@ -32,7 +32,7 @@
                 <gco:DateTime>2004-03-12T12:00:00</gco:DateTime>
             </cit:date>
             <cit:dateType>
-                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codeList.xml#creation" codeListValue="Creation"/>
+                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#creation" codeListValue="Creation"/>
             </cit:dateType>
         </cit:CI_Date>
     </mdb:dateInfo>
@@ -51,7 +51,7 @@
                                 <gco:DateTime>1993-01-01T12:00:00</gco:DateTime>
                             </cit:date>
                             <cit:dateType>
-                                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codeList.xml#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+                                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
                             </cit:dateType>
                         </cit:CI_Date>
                     </cit:date>    
@@ -96,12 +96,14 @@
 <!-- mandatory if resource contains textual content (has to be enforced by inspection) -->
             <mri:defaultLocale>
                 <lan:PT_Locale>
-                    <lan:language>
-                        <lan:LanguageCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/lan/LanguageCode.xml" codeListValue="eng">English</lan:LanguageCode>
-                    </lan:language>
-                    <lan:characterEncoding>
-                        <lan:MD_CharacterSetCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/lan/CharacterSetCode.xml" codeListValue="utf8">UTF-8</lan:MD_CharacterSetCode>
-                    </lan:characterEncoding>
+                    <!-- Replace invalid URL 
+            <lan:LanguageCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/lan/LanguageCode.xml" codeListValue="eng">eng</lan:LanguageCode>
+         -->
+                    <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                    <!-- Replace invalid URL 
+            <lan:MD_CharacterSetCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/lan/CharacterSetCode.xml" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+         -->
+                    <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                 </lan:PT_Locale>
             </mri:defaultLocale>
         </mri:MD_DataIdentification>
