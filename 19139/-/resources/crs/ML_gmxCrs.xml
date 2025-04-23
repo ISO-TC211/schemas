@@ -46,23 +46,33 @@ DESCRIPTION:
 	</versionDate>
 	<!--=== for Cultural and Linguistic Adaptability ===-->
 	<!--Default language-->
+	<!-- LanguageCode@codeList updated in line with ISO 19139-1:2019 Clause 7.3.5.2 
+                "The codeList attribute is intended to contain a URL that references a codeList's details, within a registry or a codelist catalogue" 
+                Library of congress used as it provides a logical URL as directed by ISO (https://www.iso.org/iso-639-language-code) -->
 	<language>
-		<gmd:LanguageCode codeList="../codelist/ML_gmxCodelists.xml#LanguageCode" codeListValue="eng">English</gmd:LanguageCode>
+		<gmd:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">English</gmd:LanguageCode>
 	</language>
+	<!-- MD_CharacterSetCode@codeList updated in line with ISO 19139-1:2019 Clause 7.3.5.2 
+                "The codeList attribute is intended to contain a URL that references a codeList's details, within a registry or a codelist catalogue" -->
 	<characterSet>
-		<gmd:MD_CharacterSetCode codeList="../codelist/ML_gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8">UTF 8</gmd:MD_CharacterSetCode>
+		<gmd:MD_CharacterSetCode codeList="https://www.iana.org/assignments/character-sets" codeListValue="utf8">UTF 8</gmd:MD_CharacterSetCode>
 	</characterSet>
 	<!--List of the 'locales' into which free text values can be translated-->
 	<locale>
 		<gmd:PT_Locale id="fra">
+			<!-- LanguageCode@codeList updated in line with ISO 19139-1:2019 Clause 7.3.5.2 
+                "The codeList attribute is intended to contain a URL that references a codeList's details, within a registry or a codelist catalogue" 
+                Library of congress used as it provides a logical URL as directed by ISO (https://www.iso.org/iso-639-language-code) -->
 			<gmd:languageCode>
-				<gmd:LanguageCode codeList="../codelist/ML_gmxCodelists.xml#LanguageCode" codeListValue="french">French</gmd:LanguageCode>
+				<gmd:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="fra">French</gmd:LanguageCode>
 			</gmd:languageCode>
 			<gmd:country>
 				<gmd:Country codeList="../Codelist/ML_gmxCodelists.xm#Country" codeListValue="FR">France</gmd:Country>
 			</gmd:country>
+			<!-- MD_CharacterSetCode@codeList updated in line with ISO 19139-1:2019 Clause 7.3.5.2 
+                "The codeList attribute is intended to contain a URL that references a codeList's details, within a registry or a codelist catalogue" -->
 			<gmd:characterEncoding>
-				<gmd:MD_CharacterSetCode codeList="../Codelist/ML_gmxCodelists.xm#MD_CharacterSetCode" codeListValue="utf8">UTF 8</gmd:MD_CharacterSetCode>
+				<gmd:MD_CharacterSetCode codeList="https://www.iana.org/assignments/character-sets" codeListValue="utf8">UTF 8</gmd:MD_CharacterSetCode>
 			</gmd:characterEncoding>
 		</gmd:PT_Locale>
 	</locale>

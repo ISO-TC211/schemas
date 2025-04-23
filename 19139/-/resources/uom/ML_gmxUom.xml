@@ -46,23 +46,25 @@ DESCRIPTION:
 	</versionDate>
 	<!--=== for Cultural and Linguistic Adaptability ===-->
 	<!--Default language-->
-	<language>
+    <!-- Replace invalid URL 
 		<gmd:LanguageCode codeList="../Codelist/ML_gmxCodelists.xml#LanguageCode" codeListValue="eng">English</gmd:LanguageCode>
-	</language>
-	<characterSet>
+	-->
+	<language><gmd:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">English</gmd:LanguageCode></language>
+    <!-- Replace invalid URL 
 		<gmd:MD_CharacterSetCode codeList="../Codelist/ML_gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8">UTF 8</gmd:MD_CharacterSetCode>
-	</characterSet>
+	-->
+    <characterSet><gmd:MD_CharacterSetCode codeList="https://www.iana.org/assignments/character-sets" codeListValue="utf8">UTF 8</gmd:MD_CharacterSetCode></characterSet>
 	<!--List of the 'locales' into which free text values can be translated-->
 	<locale>
 		<gmd:PT_Locale id="fra">
 			<gmd:languageCode>
-				<gmd:LanguageCode codeList="../Codelist/ML_gmxCodelists.xml#LanguageCode" codeListValue="fra">French</gmd:LanguageCode>
+				<gmd:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="fra">French</gmd:LanguageCode>
 			</gmd:languageCode>
 			<gmd:country>
 				<gmd:Country codeList="../Codelist/ML_gmxCodelists.xm#Country" codeListValue="FR">France</gmd:Country>
 			</gmd:country>
 			<gmd:characterEncoding>
-				<gmd:MD_CharacterSetCode codeList="../Codelist/ML_gmxCodelists.xm#MD_CharacterSetCode" codeListValue="utf8">UTF 8</gmd:MD_CharacterSetCode>
+				<gmd:MD_CharacterSetCode codeList="https://www.iana.org/assignments/character-sets" codeListValue="utf8">UTF 8</gmd:MD_CharacterSetCode>
 			</gmd:characterEncoding>
 		</gmd:PT_Locale>
 	</locale>

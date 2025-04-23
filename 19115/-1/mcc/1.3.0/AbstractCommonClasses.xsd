@@ -7,8 +7,7 @@
   elementFormDefault="qualified"
    version="1.3.0"
   >
-  <include schemaLocation="mcc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element abstract="true" name="Abstract_AcquisitionInformation" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_AcquisitionInformation_Type"/>
   <complexType abstract="true" name="Abstract_AcquisitionInformation_Type">
@@ -40,7 +39,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="Abstract_Citation" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_Citation_Type"/>
+  <element abstract="true" name="Abstract_Citation" substitutionGroup="gco:AbstractObject"
+ type="mcc:Abstract_Citation_Type"/>
   <complexType abstract="true" name="Abstract_Citation_Type">
     <complexContent>
       <extension base="gco:AbstractObject_Type">
@@ -55,7 +55,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="Abstract_Constraints" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_Constraints_Type"/>
+  <element abstract="true" name="Abstract_Constraints" substitutionGroup="gco:AbstractObject"
+ type="mcc:Abstract_Constraints_Type"/>
   <complexType abstract="true" name="Abstract_Constraints_Type">
     <complexContent>
       <extension base="gco:AbstractObject_Type">
@@ -70,7 +71,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="Abstract_ContentInformation" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_ContentInformation_Type"/>
+  <element abstract="true" name="Abstract_ContentInformation" substitutionGroup="gco:AbstractObject"
+ type="mcc:Abstract_ContentInformation_Type"/>
   <complexType abstract="true" name="Abstract_ContentInformation_Type">
     <complexContent>
       <extension base="gco:AbstractObject_Type">
@@ -85,7 +87,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="Abstract_Distribution" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_Distribution_Type"/>
+  <element abstract="true" name="Abstract_Distribution" substitutionGroup="gco:AbstractObject"
+ type="mcc:Abstract_Distribution_Type"/>
   <complexType abstract="true" name="Abstract_Distribution_Type">
     <complexContent>
       <extension base="gco:AbstractObject_Type">
@@ -100,7 +103,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="Abstract_Extent" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_Extent_Type"/>
+  <element abstract="true" name="Abstract_Extent" substitutionGroup="gco:AbstractObject"
+ type="mcc:Abstract_Extent_Type"/>
   <complexType abstract="true" name="Abstract_Extent_Type">
     <complexContent>
       <extension base="gco:AbstractObject_Type">
@@ -115,7 +119,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="Abstract_Format" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_Format_Type">
+  <element abstract="true" name="Abstract_Format" substitutionGroup="gco:AbstractObject"
+ type="mcc:Abstract_Format_Type">
     <annotation><documentation>&lt;ul&gt; &lt;li&gt;&lt;/li&gt; &lt;/ul&gt;</documentation></annotation>
   </element>
   <complexType abstract="true" name="Abstract_Format_Type">
@@ -132,7 +137,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="Abstract_LineageInformation" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_LineageInformation_Type"/>
+  <element abstract="true" name="Abstract_LineageInformation" substitutionGroup="gco:AbstractObject"
+ type="mcc:Abstract_LineageInformation_Type"/>
   <complexType abstract="true" name="Abstract_LineageInformation_Type">
     <complexContent>
       <extension base="gco:AbstractObject_Type">
@@ -162,7 +168,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="Abstract_Metadata" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_Metadata_Type"/>
+  <element abstract="true" name="Abstract_Metadata" substitutionGroup="gco:AbstractObject"
+ type="mcc:Abstract_Metadata_Type"/>
   <complexType abstract="true" name="Abstract_Metadata_Type">
     <complexContent>
       <extension base="gco:AbstractObject_Type">
@@ -177,7 +184,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="Abstract_MetadataExtension" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_MetadataExtension_Type"/>
+  <element abstract="true" name="Abstract_MetadataExtension" substitutionGroup="gco:AbstractObject"
+ type="mcc:Abstract_MetadataExtension_Type"/>
   <complexType abstract="true" name="Abstract_MetadataExtension_Type">
     <complexContent>
       <extension base="gco:AbstractObject_Type">
@@ -192,7 +200,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="Abstract_OnlineResource" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_OnlineResource_Type"/>
+  <element abstract="true" name="Abstract_OnlineResource" substitutionGroup="gco:AbstractObject"
+ type="mcc:Abstract_OnlineResource_Type"/>
   <complexType abstract="true" name="Abstract_OnlineResource_Type">
     <complexContent>
       <extension base="gco:AbstractObject_Type">
@@ -207,7 +216,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="Abstract_Platform" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_Platform_Type"/>
+  <element abstract="true" name="Abstract_Platform" substitutionGroup="gco:AbstractObject"
+ type="mcc:Abstract_Platform_Type"/>
   <complexType abstract="true" name="Abstract_Platform_Type">
     <complexContent>
       <extension base="gco:AbstractObject_Type">
@@ -237,7 +247,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="Abstract_ReferenceSystem" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_ReferenceSystem_Type"/>
+  <element abstract="true" name="Abstract_ReferenceSystem" substitutionGroup="gco:AbstractObject"
+ type="mcc:Abstract_ReferenceSystem_Type"/>
   <complexType abstract="true" name="Abstract_ReferenceSystem_Type">
     <complexContent>
       <extension base="gco:AbstractObject_Type">
@@ -267,7 +278,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="Abstract_Responsibility" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_Responsibility_Type"/>
+  <element abstract="true" name="Abstract_Responsibility" substitutionGroup="gco:AbstractObject"
+ type="mcc:Abstract_Responsibility_Type"/>
   <complexType abstract="true" name="Abstract_Responsibility_Type">
     <complexContent>
       <extension base="gco:AbstractObject_Type">
@@ -297,7 +309,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="Abstract_SpatialResolution" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_SpatialResolution_Type"/>
+  <element abstract="true" name="Abstract_SpatialResolution" substitutionGroup="gco:AbstractObject"
+ type="mcc:Abstract_SpatialResolution_Type"/>
   <complexType abstract="true" name="Abstract_SpatialResolution_Type">
     <complexContent>
       <extension base="gco:AbstractObject_Type">
@@ -327,7 +340,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="Abstract_TypedDate" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_TypedDate_Type"/>
+  <element abstract="true" name="Abstract_TypedDate" substitutionGroup="gco:AbstractObject"
+ type="mcc:Abstract_TypedDate_Type"/>
   <complexType abstract="true" name="Abstract_TypedDate_Type">
     <complexContent>
       <extension base="gco:AbstractObject_Type">
@@ -345,7 +359,8 @@
   <!--
     Abstract SV_ServiceParameter added as part of ISO 19115-2 Revision 2017-01 
   -->
-  <element abstract="true" name="Abstract_Parameter" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_Parameter_Type"/>
+  <element abstract="true" name="Abstract_Parameter" substitutionGroup="gco:AbstractObject"
+ type="mcc:Abstract_Parameter_Type"/>
   <complexType abstract="true" name="Abstract_Parameter_Type">
     <complexContent>
       <extension base="gco:AbstractObject_Type">

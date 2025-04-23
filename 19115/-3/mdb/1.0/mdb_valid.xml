@@ -10,8 +10,10 @@
    <mdb:defaultLocale>
       <lan:PT_Locale>
          <lan:language></lan:language>
-         <lan:characterEncoding>
+         <!-- Replace invalid URL 
             <lan:MD_CharacterSetCode codeList="" codeListValue="UTF-16"/>
+         -->
+         <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-16"/>
          </lan:characterEncoding>
       </lan:PT_Locale>
    </mdb:defaultLocale>

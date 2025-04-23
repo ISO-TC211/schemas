@@ -133,13 +133,12 @@
   
   <xsl:template match="mdb:defaultLocale" priority="5">
     <gmd:language>
-      <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/"
+      <gmd:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html"
         codeListValue="{lan:PT_Locale/lan:language/lan:LanguageCode}"/>
     </gmd:language>
     <gmd:characterSet>
-      <gmd:MD_CharacterSetCode 
-        codeListValue="{lan:PT_Locale/lan:characterEncoding/lan:MD_CharacterSetCode}"
-        codeList="http://www.isotc211.org/namespace/resources/codeList.xml#MD_CharacterSetCode"/>
+      <gmd:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="{lan:PT_Locale/lan:characterEncoding/lan:MD_CharacterSetCode}"
+        />
     </gmd:characterSet>
   </xsl:template>
   
@@ -157,8 +156,7 @@
     <!-- ISO19139 allows only one -->
     <xsl:if test="name(preceding-sibling::node()[1]) != name()">
       <gmd:hierarchyLevel>
-        <gmd:MD_ScopeCode
-            codeList="https://schemas.isotc211.org/19139/-/resources/codelist/ML_gmxCodelists.xml#MD_ScopeCode"
+        <gmd:MD_ScopeCode codeList="https://schemas.isotc211.org/19139/-/resources/codelist/ML_gmxCodelists.xml#MD_ScopeCode"
             codeListValue="{mdb:MD_MetadataScope/mdb:resourceScope/mcc:MD_ScopeCode}"/>
       </gmd:hierarchyLevel>
       <xsl:if test="mdb:MD_MetadataScope/mdb:name">

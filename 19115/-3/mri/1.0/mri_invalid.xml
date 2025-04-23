@@ -62,8 +62,7 @@
          <mri:defaultLocale>
             <lan:PT_Locale>
                <lan:language></lan:language>
-               <lan:characterEncoding>
-                  <lan:MD_CharacterSetCode codeList="" codeListValue=""/>
+               <lan:characterEncoding><lan:MD_CharacterSetCode codeList="" codeListValue=""/>
                </lan:characterEncoding>
             </lan:PT_Locale>
          </mri:defaultLocale>

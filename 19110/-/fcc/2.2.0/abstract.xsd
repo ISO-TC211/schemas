@@ -9,8 +9,8 @@
   version="2.2.0"
   >
   <include schemaLocation="../../../../19110/-/fcc/2.2.0/fcc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19139/-/cat/1.2" schemaLocation="../../../../19139/-/cat/1.2.0/cat.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19139/-/cat/1.2" schemaLocation="https://schemas.isotc211.org/19139/-/cat/1.2.0/cat.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element abstract="true" name="Abstract_FeatureCatalogue" substitutionGroup="cat:AbstractCT_Catalogue" type="fcc:Abstract_FeatureCatalogue_Type"/>
   <complexType abstract="true" name="Abstract_FeatureCatalogue_Type">

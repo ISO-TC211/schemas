@@ -8,6 +8,8 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3"
    xmlns:gml="http://www.opengis.net/gml/3.2">
+   <!-- File superceeded to correct @codeList in line with ISO 19139-1:2019 Clause 7.3.5.2 
+                "The codeList attribute is intended to contain a URL that references a codeList's details, within a registry or a codelist catalogue" -->
    <!--=====Catalogue description=====-->
    <!-- 2024-07-31 - Addition of codes for ISO 19157-1:2023 -->
    <cat:name><gco:CharacterString>Codelists from the ISO / TC211 Standards</gco:CharacterString></cat:name>
@@ -16,12 +18,14 @@
    <cat:versionNumber><gco:CharacterString>1.1.1</gco:CharacterString></cat:versionNumber>
    <cat:versionDate><gco:Date>2024-07-31</gco:Date></cat:versionDate>
    <cat:locale><lan:PT_Locale>
-         <lan:language><lan:LanguageCode
-               codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11"
-               codeListValue="eng">eng</lan:LanguageCode></lan:language>
-         <lan:characterEncoding><lan:MD_CharacterSetCode
-               codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-               codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+      <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+         <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+      <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+      <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
    </lan:PT_Locale></cat:locale>
    <!--===== Sub-Catalogue description ISO 19107 group of ISO / TC211 metadata Standards=====-->
    <cat:subCatalogue xlink:title="Codelists for ISO 19107">
@@ -33,12 +37,14 @@
             <cat:versionNumber><gco:CharacterString>1.1</gco:CharacterString></cat:versionNumber>
             <cat:versionDate><gco:Date>2021-04-14</gco:Date></cat:versionDate>
             <cat:locale><lan:PT_Locale>
-                <lan:language><lan:LanguageCode
-                    codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11"
-                    codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                <lan:characterEncoding><lan:MD_CharacterSetCode
-                    codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                    codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+               <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+               <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+               <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+               <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
             </lan:PT_Locale></cat:locale>
             <!--   ============================================================================== -->
              <!-- _________________________________________________________________________ -->
@@ -50,12 +56,14 @@
                     <cat:versionNumber><gco:CharacterString>1.1</gco:CharacterString></cat:versionNumber>
                     <cat:versionDate><gco:Date>2021-04-14</gco:Date></cat:versionDate>
                     <cat:locale><lan:PT_Locale>
-                        <lan:language><lan:LanguageCode
-                            codeList="https://standards.iso.org/19115/-1/1/clause#LanguageCode"
-                            codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                        <lan:characterEncoding><lan:MD_CharacterSetCode
-                            codeList="https://standards.iso.org/19115/-1/1/clause#MD_CharacterSetCode"
-                            codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                       <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+                       <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                       <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+                       <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                     </lan:PT_Locale></cat:locale>
                     <!--   ............................................................................. -->
                     <cat:codelistItem xlink:title="Code list items for SolidInterpolation from the Spatial Schemas (sps)  Namespace">
@@ -578,12 +586,14 @@
          <cat:versionNumber><gco:CharacterString>1.1</gco:CharacterString></cat:versionNumber>
          <cat:versionDate><gco:Date>2021-03-05</gco:Date></cat:versionDate>
          <cat:locale><lan:PT_Locale>
-               <lan:language><lan:LanguageCode
-                     codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11"
-                     codeListValue="eng">eng</lan:LanguageCode></lan:language>
-               <lan:characterEncoding><lan:MD_CharacterSetCode
-                     codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                     codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+            <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+            <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+            <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+            <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
          </lan:PT_Locale></cat:locale>
          <!--=====Sub-Sub-Catalogue description CITation and responsibility namespace=====-->
          <cat:subCatalogue xlink:title="Codelists from the Citation (cit) Namespace">
@@ -594,12 +604,14 @@
                <cat:versionNumber><gco:CharacterString>1.1</gco:CharacterString></cat:versionNumber>
                <cat:versionDate><gco:Date>2021-03-05</gco:Date></cat:versionDate>
                <cat:locale><lan:PT_Locale>
-                     <lan:language><lan:LanguageCode
-                           codeList="https://standards.iso.org/19115/-1/1/clause#LanguageCode"
-                           codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                     <lan:characterEncoding><lan:MD_CharacterSetCode
-                           codeList="https://standards.iso.org/19115/-1/1/clause#MD_CharacterSetCode"
-                           codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                  <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+                  <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                  <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+                  <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                </lan:PT_Locale></cat:locale>
                <cat:codelistItem xlink:title="Code list items for Date Type from the Citation (cit) Namespace">
                      <cat:CT_Codelist id="ISO19115-1.1.cit.CI_DateTypeCode">
@@ -1365,9 +1377,14 @@
       <gco:Date>2021-03-05</gco:Date>
    </cat:versionDate>
    <cat:locale><lan:PT_Locale>
-         <lan:language><lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode></lan:language>
-         <lan:characterEncoding><lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-               codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+      <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+      <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+      <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+      <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
       </lan:PT_Locale></cat:locale>
                <!--============================= Codelist values for Metadata for Reource Identification namespace =======================================-->
    <cat:codelistItem>
@@ -1899,9 +1916,14 @@
                   <gco:Date>2021-03-05</gco:Date>
                </cat:versionDate>
                <cat:locale><lan:PT_Locale>
-                     <lan:language><lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                     <lan:characterEncoding><lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                           codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                  <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+                  <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                  <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+                  <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                   </lan:PT_Locale></cat:locale>
                <!--============================= Codelists  for Service Identification =======================================-->
    <cat:codelistItem>
@@ -2073,9 +2095,14 @@
                   <gco:Date>2021-03-05</gco:Date>
                </cat:versionDate>
                <cat:locale><lan:PT_Locale>
-                     <lan:language><lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                     <lan:characterEncoding><lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                           codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                  <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+                  <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                  <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+                  <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                   </lan:PT_Locale></cat:locale>
                <!--============================= Codelists  for Metadata for Spatial Representation =======================================-->
                <cat:codelistItem xlink:title="Code list items for Date Type from the Metadata for Spatial Representation (msr) Namespace">
@@ -2343,10 +2370,15 @@
                   <gco:Date>2021-03-05</gco:Date>
                </cat:versionDate>
                <cat:locale><lan:PT_Locale>
-                     <lan:language><lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                     <lan:characterEncoding><lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                           codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
-                  </lan:PT_Locale></cat:locale>
+                  <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+                  <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                  <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+                  <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                 </lan:PT_Locale></cat:locale>
                <!--============================= Codelists  for Metadata for Constraints =======================================-->
                <cat:codelistItem>
                   <cat:CT_Codelist id="ISO19115-1.1.mco.MD_ClassificationCode">
@@ -2590,9 +2622,14 @@
                   <gco:Date>2021-03-05</gco:Date>
                </cat:versionDate>
                <cat:locale><lan:PT_Locale>
-                     <lan:language><lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                     <lan:characterEncoding><lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                           codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                  <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+                  <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                  <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+                  <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                   </lan:PT_Locale></cat:locale>
                <!--============================= Codelists  for Metadata for Resource Content =======================================-->
                <cat:codelistItem>
@@ -2780,9 +2817,14 @@
                   <gco:Date>2021-03-05</gco:Date>
                </cat:versionDate>
                <cat:locale><lan:PT_Locale>
-                     <lan:language><lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                     <lan:characterEncoding><lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                           codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                  <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+                  <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                  <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+                  <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                   </lan:PT_Locale></cat:locale>
                <!--============================= Codelists  for Metadata Extension =======================================-->
                <cat:codelistItem>
@@ -2962,9 +3004,14 @@
                   <gco:Date>2021-03-05</gco:Date>
                </cat:versionDate>
                <cat:locale><lan:PT_Locale>
-                     <lan:language><lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                     <lan:characterEncoding><lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                           codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                  <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+                  <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                  <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+                  <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                   </lan:PT_Locale></cat:locale>
                <!--============================= Codelists  for Metadata for Maintenance Information =======================================-->
                <cat:codelistItem>
@@ -3112,9 +3159,14 @@
                   <gco:Date>2021-03-05</gco:Date>
                </cat:versionDate>
                <cat:locale><lan:PT_Locale>
-                     <lan:language><lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                     <lan:characterEncoding><lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                           codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                  <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+                  <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                  <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+                  <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                   </lan:PT_Locale></cat:locale>
                <!--============================= Codelists  for Metadata for Resource Distribution =======================================-->
                <cat:codelistItem>
@@ -3198,9 +3250,15 @@
                   <gco:Date>2021-03-05</gco:Date>
                </cat:versionDate>
                <cat:locale><lan:PT_Locale>
-                     <lan:language><lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                     <lan:characterEncoding><lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                           codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                  <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+                  <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                  <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+                  <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                  codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                   </lan:PT_Locale></cat:locale>
                <!--============================= Codelists  for Metadata for Common Classes =======================================-->
    <cat:codelistItem>
@@ -3644,9 +3702,15 @@
                   <gco:Date>2021-03-05</gco:Date>
                </cat:versionDate>
                <cat:locale><lan:PT_Locale>
-                     <lan:language><lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                     <lan:characterEncoding><lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                           codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                  <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+                  <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                  <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+                  <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                  codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                   </lan:PT_Locale></cat:locale>
                <!--============================= Codelists  for Metadata for Common Classes =======================================-->
                <cat:codelistItem>
@@ -3890,9 +3954,15 @@
                   <gco:Date>2021-03-05</gco:Date>
                </cat:versionDate>
                <cat:locale><lan:PT_Locale>
-                     <lan:language><lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                     <lan:characterEncoding><lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                           codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                  <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+                  <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                  <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+                  <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                  codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                   </lan:PT_Locale></cat:locale>
                <!--============================= Codelists  for  Metadata for ACquisition =======================================-->
                <cat:codelistItem xlink:title="Code list items for Context from the Metadata for ACquisition (mac) Namespace">
@@ -4266,9 +4336,14 @@
       <gco:Date>2021-03-05</gco:Date>
    </cat:versionDate>
    <cat:locale><lan:PT_Locale>
-         <lan:language><lan:LanguageCode codeList="https://standards.iso.org/19115/-2/2/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode></lan:language>
-         <lan:characterEncoding><lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-               codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+      <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+      <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+      <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+      <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
       </lan:PT_Locale></cat:locale>
                <!--============================= Codelist values for Metadata for Resource Lineage (Extended ISO 19115-2) namespace =======================================-->
    <cat:codelistItem>
@@ -4320,10 +4395,15 @@
                   <gco:Date>2021-03-05</gco:Date>
                </cat:versionDate>
                <cat:locale><lan:PT_Locale>
-                     <lan:language><lan:LanguageCode codeList="https://standards.iso.org/19115/-2/2/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                     <lan:characterEncoding><lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                           codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
-                  </lan:PT_Locale></cat:locale>
+                  <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+                  <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                  <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+                  <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+               </lan:PT_Locale></cat:locale>
                <!--============================= Codelist values for Metadata for Resource Content namespace (Imagery from ISO19115-2)=======================================-->
                <cat:codelistItem>
                   <cat:CT_Codelist id="ISO19115-2.2.mrc.MI_BandDefinition">
@@ -4478,12 +4558,14 @@
             <cat:versionNumber><gco:CharacterString>1.1</gco:CharacterString></cat:versionNumber>
             <cat:versionDate><gco:Date>2021-03-05</gco:Date></cat:versionDate>
             <cat:locale><lan:PT_Locale>
-                <lan:language><lan:LanguageCode
-                    codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11"
-                    codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                <lan:characterEncoding><lan:MD_CharacterSetCode
-                    codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                    codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+               <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+               <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+               <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+               <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
             </lan:PT_Locale></cat:locale>
             <!--   ============================================================================== -->
             <cat:subCatalogue xlink:title="Codelists from the Imagery sensor models for geopositioning - Fundamentals (smi) Namespace">
@@ -4494,12 +4576,14 @@
                     <cat:versionNumber><gco:CharacterString>1.1</gco:CharacterString></cat:versionNumber>
                     <cat:versionDate><gco:Date>2021-03-05</gco:Date></cat:versionDate>
                     <cat:locale><lan:PT_Locale>
-                        <lan:language><lan:LanguageCode
-                           codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11"
-                            codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                        <lan:characterEncoding><lan:MD_CharacterSetCode
-                           codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                            codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                       <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+                       <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                       <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+                       <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                     </lan:PT_Locale></cat:locale>
                     <!--   ............................................................................. -->
                     <cat:codelistItem xlink:title="Code list items for SD_ShapeCode from the  Imagery sensor models for geopositioning - Fundamentals (smi) Namespace">
@@ -4677,12 +4761,14 @@
                     <cat:versionNumber><gco:CharacterString>1.1</gco:CharacterString></cat:versionNumber>
                     <cat:versionDate><gco:Date>2021-03-05</gco:Date></cat:versionDate>
                     <cat:locale><lan:PT_Locale>
-                        <lan:language><lan:LanguageCode
-                           codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11"
-                            codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                        <lan:characterEncoding><lan:MD_CharacterSetCode
-                           codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                            codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                       <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+                       <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                       <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+                       <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                     </lan:PT_Locale></cat:locale>
                     <!--   ............................................................................. -->
                     <cat:codelistItem xlink:title="Code list items for SE_ATDimensionType from the  Imagery sensor models for geopositioning - SAR, InSAR, lidar and sonar (smi) Namespace">
@@ -5202,12 +5288,14 @@
             <gco:Date>2024-07-31</gco:Date>
          </cat:versionDate>
          <cat:locale><lan:PT_Locale>
-            <lan:language><lan:LanguageCode
-               codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11"
-               codeListValue="eng">eng</lan:LanguageCode></lan:language>
-            <lan:characterEncoding><lan:MD_CharacterSetCode
-               codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-               codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+            <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+            <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+            <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+            <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
          </lan:PT_Locale></cat:locale>
          <!--=====Sub-Sub-Catalogue description Data Quality Measure namespace=====-->
          <cat:subCatalogue xlink:title="Codelists from the Data Quality Measure (dqm) Namespace">
@@ -5223,12 +5311,15 @@
                   <gco:Date>2024-07-31</gco:Date>
                </cat:versionDate>
                <cat:locale><lan:PT_Locale>
-                  <lan:language><lan:LanguageCode
-                     codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11"
-                     codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                  <lan:characterEncoding><lan:MD_CharacterSetCode
-                     codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                     codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                  <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+                  <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                  <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+                  <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                  codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                </lan:PT_Locale></cat:locale>
                <!--   ............................................................................. -->
                <!--   ............................................................................. -->
@@ -5393,12 +5484,15 @@
             <gco:Date>2021-03-05</gco:Date>
          </cat:versionDate>
          <cat:locale><lan:PT_Locale>
-            <lan:language><lan:LanguageCode
-               codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11"
-               codeListValue="eng">eng</lan:LanguageCode></lan:language>
-            <lan:characterEncoding><lan:MD_CharacterSetCode
-               codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-               codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+            <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+            <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+            <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+            <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+            codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
          </lan:PT_Locale></cat:locale>
          <!--=====Sub-Sub-Catalogue description Imagery and Gidded Data namespace=====-->
          <cat:subCatalogue xlink:title="Codelists from the Imagery and Gidded Data (igd) Namespace">
@@ -5414,12 +5508,14 @@
                   <gco:Date>2021-03-05</gco:Date>
                </cat:versionDate>
                <cat:locale><lan:PT_Locale>
-                  <lan:language><lan:LanguageCode
-                     codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11"
-                     codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                  <lan:characterEncoding><lan:MD_CharacterSetCode
-                     codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                     codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                  <!-- Replace invalid URL 
+      <lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode>
+      -->
+                  <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                  <!-- Replace invalid URL 
+      <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+      -->
+                  <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                </lan:PT_Locale></cat:locale>
                <cat:codelistItem xlink:title="Code list items for Geolocation source from the Imagery and Gidded Data (igd) Namespace">
                   <cat:CT_Codelist id="ISO19163-1.1.igd.IE_GeolocationSourceCode">

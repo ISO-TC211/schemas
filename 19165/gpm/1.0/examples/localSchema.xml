@@ -43,13 +43,15 @@
 	</mdb:metadataIdentifier>
 	<mdb:defaultLocale>
 		<lan:PT_Locale>
-			<lan:language>
-				<lan:LanguageCode codeList="codeListLocation#LanguageCode" codeListValue="ca">ca</lan:LanguageCode>
-			</lan:language>
-			<lan:characterEncoding>
-				<lan:MD_CharacterSetCode codeList="codeListLocation#MD_CharacterSetCode" codeListValue=""/>
-			</lan:characterEncoding>
-		</lan:PT_Locale>
+		    <!-- Replace invalis URL 
+            <lan:LanguageCode codeList="codeListLocation#LanguageCode" codeListValue="ca">ca</lan:LanguageCode>
+            -->
+		    <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="ca">ca</lan:LanguageCode></lan:language>
+		    <!-- Replace invalis URL 
+            <lan:MD_CharacterSetCode codeList="codeListLocation#MD_CharacterSetCode" codeListValue=""/>
+            -->
+		    <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+				</lan:PT_Locale>
 	</mdb:defaultLocale>
 	<mdb:metadataScope>
 		<mdb:MD_MetadataScope>
@@ -681,9 +683,7 @@
 			</mri:resourceConstraints>
 			<mri:defaultLocale>
 				<lan:PT_Locale>
-					<lan:language>
-						<lan:LanguageCode codeList="codeListLocation#LanguageCode" codeListValue="ca">ca</lan:LanguageCode>
-					</lan:language>
+					<lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="ca">ca</lan:LanguageCode></lan:language>
 					<lan:characterEncoding gco:nilReason="unknown"/>
 				</lan:PT_Locale>
 			</mri:defaultLocale>

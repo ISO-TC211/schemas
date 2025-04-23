@@ -9,8 +9,8 @@
   version="1.3.0"
     >
   <include schemaLocation="mda.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mdb/1.3" schemaLocation="../../../../19115/-1/mdb/1.3.0/mdb.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mdb/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mdb/1.3.0/mdb.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element abstract="true" name="AbstractDS_Resource" substitutionGroup="gco:AbstractObject" type="mda:AbstractDS_Resource_Type" id="ISO19115-1.001">
     <annotation><documentation>an identifiable asset or means that fulfils a requirement</documentation></annotation>
