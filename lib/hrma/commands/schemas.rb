@@ -7,48 +7,56 @@ require "fileutils"
 
 module Hrma
   module Commands
+    # Thor command for managing schemas
     class Schemas < Thor
+      # Thor subcommand for managing the schema manifest file
       class Manifest < Thor
         desc "update", "Update schemas.yml with all 3-character XSD and JSON files"
+        # Update schemas.yml with all 3-character XSD and JSON files
+        #
+        # @return [void]
         def update
           yaml_path = File.join(Dir.pwd, "schemas.yml")
           schema_data = find_schema_files
-          
+
           # Load existing file if present
           manifest = if File.exist?(yaml_path)
             YAML.load_file(yaml_path) || {}
           else
             {}
           end
-          
+
           # Update with new structure
           manifest["source"] ||= {}
           manifest["source"]["schemas"] = {
             "xsd" => schema_data[:xsd].sort,
             "json" => schema_data[:json].sort
           }
-          
+
           # Write updated manifest
           File.open(yaml_path, "w") do |file|
             file.write(manifest.to_yaml)
           end
-          
+
           puts "Updated schemas.yml with #{schema_data[:xsd].size} XSD and #{schema_data[:json].size} JSON schemas"
         end
 
         desc "list", "List all schemas in the manifest file"
         method_option :type, type: :string, desc: "Filter by schema type (xsd or json)"
         method_option :doc, type: :string, desc: "Filter by document number"
+        # List all schemas in the manifest file
+        #
+        # @return [void]
         def list
           yaml_path = File.join(Dir.pwd, "schemas.yml")
           unless File.exist?(yaml_path)
             puts "Error: schemas.yml not found"
             return
           end
-          
+
           manifest = YAML.load_file(yaml_path)
           schemas = []
-          
+
           # Add XSD schemas if not filtering or filtering for XSD
           if !options[:type] || options[:type].downcase == "xsd"
             if manifest.dig("source", "schemas", "xsd")
@@ -62,7 +70,7 @@ module Hrma
               end
             end
           end
-          
+
           # Add JSON schemas if not filtering or filtering for JSON
           if !options[:type] || options[:type].downcase == "json"
             if manifest.dig("source", "schemas", "json")
@@ -71,14 +79,14 @@ module Hrma
               end
             end
           end
-          
+
           # Filter by document number if specified
           if options[:doc]
             schemas.select! do |schema|
               schema[:path].start_with?(options[:doc])
             end
           end
-          
+
           # Display results
           if schemas.empty?
             puts "No matching schemas found"
@@ -91,17 +99,20 @@ module Hrma
         end
 
         desc "validate", "Verify all schemas in the manifest exist"
+        # Verify all schemas in the manifest exist
+        #
+        # @return [void]
         def validate
           yaml_path = File.join(Dir.pwd, "schemas.yml")
           unless File.exist?(yaml_path)
             puts "Error: schemas.yml not found"
             return
           end
-          
+
           manifest = YAML.load_file(yaml_path)
           all_valid = true
           missing_files = []
-          
+
           # Check XSD schemas
           if manifest.dig("source", "schemas", "xsd")
             manifest["source"]["schemas"]["xsd"].each do |path|
@@ -119,7 +130,7 @@ module Hrma
               end
             end
           end
-          
+
           # Check JSON schemas
           if manifest.dig("source", "schemas", "json")
             manifest["source"]["schemas"]["json"].each do |path|
@@ -129,7 +140,7 @@ module Hrma
               end
             end
           end
-          
+
           # Report results
           if all_valid
             puts "All schemas exist"
@@ -141,38 +152,41 @@ module Hrma
             exit 1
           end
         end
-        
+
         private
-        
+
+        # Find all 3-character XSD and JSON files in the current directory
+        #
+        # @return [Hash] Hash containing arrays of XSD and JSON file paths
         def find_schema_files
           result = { xsd: [], json: [] }
-          
+
           # Find all XSD files
           Dir.glob("**/*.xsd").each do |path|
             filename = File.basename(path)
             name_without_ext = File.basename(filename, ".xsd")
-            
+
             # Check if basename (without extension) is exactly 3 characters
             if name_without_ext.length == 3
               result[:xsd] << path
             end
           end
-          
+
           # Find all JSON files
           Dir.glob("**/*.json").each do |path|
             filename = File.basename(path)
             name_without_ext = File.basename(filename, ".json")
-            
+
             # Check if basename (without extension) is exactly 3 characters
             if name_without_ext.length == 3
               result[:json] << path
             end
           end
-          
+
           result
         end
       end
-      
+
       desc "manifest SUBCOMMAND", "Manage the schema manifest file"
       subcommand "manifest", Manifest
     end

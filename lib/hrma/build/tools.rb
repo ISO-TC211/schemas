@@ -24,7 +24,9 @@ module Hrma
       class << self
         include FileUtils
 
-        # Setup all required tools
+        # Setup all required tools by downloading and extracting them
+        #
+        # @return [void]
         def setup
           download_tool(XERCES_URL, xerces_cache)
           download_tool(XSDVI_URL, xsdvi_cache)
@@ -35,7 +37,10 @@ module Hrma
           setup_xs3p
         end
 
-        # Verify required system dependencies
+        # Verify required system dependencies (xsltproc and Java)
+        #
+        # @return [void]
+        # @raise [SystemExit] If required dependencies are not installed
         def verify_dependencies
           # Check for xsltproc
           unless command_exists?("xsltproc")
@@ -77,23 +82,40 @@ module Hrma
         private
 
         # Helper method to get cache file path
+        #
+        # @param filename [String] Name of the file to cache
+        # @return [String] Full path to the cached file
         def cache_file(filename)
           File.join(Hrma::Config.cache_dir, filename)
         end
 
-        # Cached file paths
+        # Get the path to the cached Xerces JAR file
+        #
+        # @return [String] Path to the cached Xerces JAR file
         def xerces_cache
           cache_file("Xerces-J-bin.2.12.1.tar.gz")
         end
 
+        # Get the path to the cached XSDVI JAR file
+        #
+        # @return [String] Path to the cached XSDVI JAR file
         def xsdvi_cache
           cache_file("xsdvi-1.0.jar")
         end
 
+        # Get the path to the cached XS3P archive
+        #
+        # @return [String] Path to the cached XS3P archive
         def xs3p_cache
           cache_file("xs3p.tar.gz")
         end
 
+        # Download a tool from a URL to a target path
+        #
+        # @param url [String] URL to download from
+        # @param target_path [String] Path to save the downloaded file
+        # @return [void]
+        # @raise [SystemExit] If download fails
         def download_tool(url, target_path)
           return if File.exist?(target_path)
 
@@ -116,6 +138,9 @@ module Hrma
           end
         end
 
+        # Setup XSDVI tool
+        #
+        # @return [void]
         def setup_xsdvi
           return if File.exist?(XSDVI_PATH)
 
@@ -124,6 +149,10 @@ module Hrma
           cp(xsdvi_cache, XSDVI_PATH)
         end
 
+        # Setup Xerces tool
+        #
+        # @return [void]
+        # @raise [SystemExit] If extraction fails
         def setup_xerces
           return if File.exist?(XERCES_PATH)
 
@@ -136,6 +165,10 @@ module Hrma
           touch(XERCES_PATH)
         end
 
+        # Setup XS3P tool
+        #
+        # @return [void]
+        # @raise [SystemExit] If extraction fails
         def setup_xs3p
           return if File.exist?(XS3P_PATH)
 
@@ -148,6 +181,10 @@ module Hrma
           touch(XS3P_PATH)
         end
 
+        # Check if a command exists in the system
+        #
+        # @param command [String] Command to check
+        # @return [Boolean] True if the command exists
         def command_exists?(command)
           system("which #{command} > /dev/null 2>&1")
         end

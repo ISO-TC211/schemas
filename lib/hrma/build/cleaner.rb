@@ -9,11 +9,19 @@ module Hrma
     class Cleaner
       include FileUtils
 
+      # Initialize a new Cleaner
+      #
+      # @param options [Hash] Options for cleaning
+      # @option options [Boolean] :global_cache Whether to clean the global cache directory
       def initialize(options = {})
         @options = options
       end
 
       # Clean generated documentation
+      #
+      # Removes the _site, xsl, and xsdvi directories
+      #
+      # @return [void]
       def clean
         rm_rf("_site")
         rm_rf("xsl")
@@ -22,6 +30,10 @@ module Hrma
       end
 
       # Clean generated documentation and downloaded tools
+      #
+      # Calls clean and then removes the cache directories
+      #
+      # @return [void]
       def distclean
         clean
 
