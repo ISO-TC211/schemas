@@ -1,4 +1,4 @@
-require 'hrma/version'
+require_relative 'lib/hrma/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "hrma"

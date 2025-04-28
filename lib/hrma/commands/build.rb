@@ -9,14 +9,18 @@ require_relative "../build/cleaner"
 
 module Hrma
   module Commands
+    # Thor command for building documentation
     class Build < Thor
       class_option :cache_dir, type: :string, desc: "Directory for caching downloaded tools"
       class_option :log_dir, type: :string, desc: "Directory for storing log files"
       class_option :parallel, type: :boolean, default: true, desc: "Enable parallel processing with Ractors"
-      class_option :threads, type: :numeric, desc: "Number of parallel threads to use (default: CPU count)"
+      class_option :ractors, type: :numeric, desc: "Number of parallel ractors to use (default: CPU count)"
       class_option :manifest_path, type: :string, desc: "Path to schemas.yml manifest file"
 
       # Initialize with options
+      #
+      # @param args [Array] Arguments passed to Thor
+      # @return [void]
       def initialize(*args)
         super
         Hrma::Config.cache_dir = options[:cache_dir] if options[:cache_dir]
@@ -31,6 +35,9 @@ module Hrma
 
       desc "documentation", "Generate documentation for schemas"
       method_option :manifest_path, type: :string, desc: "Path to schemas.yml manifest file"
+      # Generate documentation for schemas
+      #
+      # @return [void]
       def documentation
         # Verify dependencies and setup tools
         Hrma::Build::Tools.verify_dependencies
@@ -42,6 +49,9 @@ module Hrma
       end
 
       desc "clean", "Remove generated documentation"
+      # Remove generated documentation
+      #
+      # @return [void]
       def clean
         cleaner = Hrma::Build::Cleaner.new
         cleaner.clean
@@ -49,6 +59,9 @@ module Hrma
 
       desc "distclean", "Remove generated documentation and downloaded tools"
       method_option :global_cache, type: :boolean, default: false, desc: "Also clean the global cache directory"
+      # Remove generated documentation and downloaded tools
+      #
+      # @return [void]
       def distclean
         cleaner = Hrma::Build::Cleaner.new(options)
         cleaner.distclean
