@@ -26,15 +26,18 @@ The resulting documentation per schema will be generated in the path:
 
 == Schema manifest management
 
-The repository includes a command-line tool called `hrma` (Harmonized Resources Maintenance Agency) to manage the schemas manifest file (`schemas.yml`). This tool allows for automatic discovery and registration of schema files.
+The repository includes a command-line tool called `hrma` (Harmonized Resources Maintenance Agency) to manage the schemas manifest file (`schemas.yml`) and build documentation. This tool allows for automatic discovery and registration of schema files and generation of documentation.
 
 === Requirements
 
 * Ruby (2.5 or later)
 * Dependencies installation (choose one):
-  - Individual: `gem install thor`
+  - Individual: `gem install thor rake`
   - Using Bundler: `bundle install`
   - Build and install gem: `gem build hrma.gemspec && gem install hrma-*.gem`
+* External dependencies:
+  - Java (for generating diagrams)
+  - xsltproc (for generating documentation)
 
 === Usage
 
@@ -60,9 +63,43 @@ The tool supports both XSD and JSON schemas and organizes them in the schemas.ym
 
 [source,sh]
 ----
-# removes generated artifacts
-make clean
+# Generate documentation for schemas
+./bin/hrma build documentation
 
-# makes _site
-make all
+# Generate documentation with custom cache directory
+./bin/hrma build documentation --cache-dir=/path/to/cache
+
+# Remove generated documentation
+./bin/hrma build clean
+
+# Remove generated documentation and downloaded tools
+./bin/hrma build distclean
+
+# Remove generated documentation and global cache
+./bin/hrma build distclean --global-cache
+----
+
+== Configuration
+
+The `hrma` tool can be configured in several ways:
+
+=== Cache Directory
+
+The cache directory is where downloaded tools are stored. By default, it's `~/.hrma/cache`.
+
+You can set it in three ways (in order of precedence):
+
+1. Command-line option: `--cache-dir=/path/to/cache`
+2. Environment variable: `HRMA_CACHE_DIR=/path/to/cache ./bin/hrma ...`
+3. Configuration file: `~/.hrma/config.yml`
+
+To manage configuration:
+
+[source,sh]
+----
+# Get current cache directory
+./bin/hrma config get cache_dir
+
+# Set cache directory
+./bin/hrma config set cache_dir /path/to/cache
 ----

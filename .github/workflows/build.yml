@@ -25,9 +25,13 @@ jobs:
       - name: Install dependencies
         run: |
           bundle install
-      - name: Update schemas.yml
+      - name: Update schemas.yml and build documentation
         run: |
+          # Set cache directory to a location in the runner's workspace
+          export HRMA_CACHE_DIR=$GITHUB_WORKSPACE/.hrma-cache
+          
+          # Update schemas manifest
           ./bin/hrma schemas manifest update
-      - name: Build XSD documentation
-        run: |
-          make _xsddoc
+          
+          # Build documentation
+          ./bin/hrma build documentation
