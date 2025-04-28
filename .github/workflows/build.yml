@@ -7,31 +7,25 @@ on:
 
 jobs:
   build:
-    name: Generate XSD documentation
+    name: Generate documentation
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup prerequisites
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y curl make libxml2-dev libxslt-dev libnode-dev node-gyp libssl-dev npm openssl xsltproc
-      - name: Setup snaps
-        run: |
-          sudo snap install yq
+      # - name: Setup prerequisites
+      #   run: |
+      #     sudo apt-get update
+      #     sudo apt-get install -y curl make libxml2-dev libxslt-dev libnode-dev node-gyp libssl-dev npm openssl xsltproc
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
           bundler-cache: true
-      - name: Install dependencies
-        run: |
-          bundle install
       - name: Update schemas.yml and build documentation
         run: |
           # Set cache directory to a location in the runner's workspace
           export HRMA_CACHE_DIR=$GITHUB_WORKSPACE/.hrma-cache
-          
+
           # Update schemas manifest
           ./bin/hrma schemas manifest update
-          
+
           # Build documentation
           ./bin/hrma build documentation
