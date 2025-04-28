@@ -23,7 +23,7 @@ module Hrma
       # @param options [Hash] Options for document generation
       # @option options [String] :manifest_path Path to schemas.yml manifest file
       # @option options [Boolean] :parallel Enable parallel processing with Ractors
-      # @option options [Integer] :threads Number of parallel threads to use
+      # @option options [Integer] :ractors Number of parallel ractors to use
       # @option options [String] :cache_dir Directory for caching downloaded tools
       # @option options [String] :log_dir Directory for storing log files
       def initialize(options = {})
@@ -90,13 +90,50 @@ module Hrma
         end
       end
 
+      # Calculate the optimal number of ractors to use
+      #
+      # @param file_count [Integer] Number of files to process
+      # @return [Integer] Optimal number of ractors to use
+      def calculate_auto_ractors(file_count)
+        # Get total number of cores
+        cores = Etc.nprocessors
+        puts "System has #{cores} CPU cores"
+
+        # Calculate optimal ractor count
+        # Use the maximum between 1 and half the number of cores
+        optimal_ractors = [1, cores / 2].max
+        puts "Optimal ractors (max of 1 and half cores): #{optimal_ractors}"
+
+        # Ensure at least 2 cores are left free
+        if optimal_ractors > cores - 2
+          adjusted_ractors = [cores - 2, 1].max
+          puts "Adjusted to leave 2 cores free: #{adjusted_ractors}"
+          optimal_ractors = adjusted_ractors
+        else
+          puts "No adjustment needed, already leaves at least 2 cores free"
+        end
+
+        # Use file_count as ractor count if we have enough cores
+        # This means we'll process each file in its own ractor if possible
+        result = [optimal_ractors, file_count].min
+        puts "Final ractor count (min of optimal ractors and file count): #{result}"
+
+        result
+      end
+
       # Generate documentation in parallel using Ractors
       #
       # @param xsd_files [Array<String>] List of XSD files to process
       # @return [void]
       def generate_parallel(xsd_files)
-        thread_count = options[:threads] || [Etc.nprocessors, xsd_files.size].min
-        puts "Generating documentation in parallel using #{thread_count} threads..."
+        # Use provided ractors count or calculate automatically
+        ractor_count = if options[:ractors]
+                         options[:ractors].to_i
+                       else
+                         calculate_auto_ractors(xsd_files.size)
+                       end
+
+        puts "Generating documentation in parallel using #{ractor_count} ractors..."
 
         # Pre-load all necessary libraries that might be used by Ractors
         # These must be loaded in the main thread before any Ractor is created
@@ -107,7 +144,7 @@ module Hrma
         mutex = Mutex.new
 
         # Split files into chunks for each Ractor
-        file_chunks = xsd_files.each_slice((xsd_files.size.to_f / thread_count).ceil).to_a
+        file_chunks = xsd_files.each_slice((xsd_files.size.to_f / ractor_count).ceil).to_a
         puts "Split #{xsd_files.size} files into #{file_chunks.size} chunks..."
 
         # Pass necessary tool paths to Ractors
@@ -129,7 +166,7 @@ module Hrma
       #
       # @param file_chunks [Array<Array<String>>] Chunks of files to process
       # @param tools_constants [Hash] Paths to required tools
-      # @param mutex [Mutex] Mutex for thread safety
+      # @param mutex [Mutex] Mutex for ractor safety
       # @param failed_files [Array] List to store failed files
       # @return [void]
       def process_with_ractors(file_chunks, tools_constants, mutex, failed_files)
@@ -164,7 +201,7 @@ module Hrma
       # Process results from Ractors
       #
       # @param ractors [Array<Ractor>] List of Ractors
-      # @param mutex [Mutex] Mutex for thread safety
+      # @param mutex [Mutex] Mutex for ractor safety
       # @param failed_files [Array] List to store failed files
       # @return [void]
       def process_ractor_results(ractors, mutex, failed_files)
