@@ -10,7 +10,7 @@ jobs:
     name: Generate XSD documentation
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Setup prerequisites
         run: |
           sudo apt-get update
@@ -18,10 +18,16 @@ jobs:
       - name: Setup snaps
         run: |
           sudo snap install yq
-      - name: Use Ruby
-        uses: actions/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: '3.3'
+          bundler-cache: true
+      - name: Install dependencies
+        run: |
+          bundle install
+      - name: Update schemas.yml
+        run: |
+          ./bin/hrma schemas manifest update
       - name: Build XSD documentation
         run: |
           make _xsddoc
