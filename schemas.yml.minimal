@@ -1,0 +1,6 @@
+---
+source:
+  schemas:
+    xsd:
+    - 19115/-1/cit/1.3.0/cit.xsd
+    json: []
