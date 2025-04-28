@@ -29,6 +29,7 @@ module Hrma
         xsd_files = load_xsd_files(options[:manifest_path])
         return if xsd_files.empty?
 
+        puts "Found #{xsd_files.size} XSD files to process"
         progressbar = create_progressbar(xsd_files.size)
 
         if options[:parallel] && ractor_supported? && !ENV["HRMA_DISABLE_RACTORS"]
@@ -77,6 +78,7 @@ module Hrma
 
         # Process each XSD file
         xsd_files.each do |xsd_file|
+          puts "Processing: #{xsd_file}"
           process_xsd_file(xsd_file)
           progressbar.increment
         end
@@ -189,10 +191,6 @@ module Hrma
         failed_files = []
         mutex = Mutex.new
 
-        # Split files into chunks for each Ractor
-        file_chunks = xsd_files.each_slice((xsd_files.size.to_f / ractor_count).ceil).to_a
-        puts "Split #{xsd_files.size} files into #{file_chunks.size} chunks..."
-
         # Pass necessary tool paths to Ractors
         tools_constants = {
           xsdvi_path: Tools::XSDVI_PATH,
@@ -200,78 +198,73 @@ module Hrma
           xs3p_path: Tools::XS3P_PATH
         }
 
-        # Create and process Ractors
-        process_with_ractors(file_chunks, tools_constants, mutex, progressbar, failed_files)
+        # Create a pool Ractor that will distribute work
+        pool = Ractor.new do
+          # This Ractor acts as a work distributor
+          loop do
+            # Receive a file to process and yield it to any worker that asks
+            file = Ractor.receive
+            puts "Queue: Received file #{file} for processing"
+            Ractor.yield(file)
+          end
+        end
+
+        # Create worker Ractors
+        workers = ractor_count.times.map do |i|
+          Ractor.new(pool, Hrma::Config.log_dir, Dir.pwd, tools_constants, i) do |pool, log_dir, pwd, tool_paths, id|
+            # Worker Ractor
+            loop do
+              begin
+                # Take a file from the pool
+                file = pool.take
+                puts "Worker #{id}: Processing file #{file}"
+
+                # Process the file
+                result = Hrma::Build::RactorDocumentProcessor.process_single_file(file, log_dir, pwd, tool_paths)
+
+                # Yield the result
+                Ractor.yield([file, *result])
+              rescue Ractor::ClosedError
+                # Pool is closed, exit the loop
+                puts "Worker #{id}: Pool closed, exiting"
+                break
+              end
+            end
+          end
+        end
+
+        # Send all files to the pool
+        xsd_files.each do |file|
+          puts "Main: Sending file #{file} to queue"
+          pool.send(file)
+        end
+
+        # Process results as they come in
+        xsd_files.size.times do
+          # Wait for any worker to produce a result
+          worker, result = Ractor.select(*workers)
+
+          # Process the result
+          file, success, error_message = result
+
+          mutex.synchronize do
+            progressbar.increment
+
+            if success
+              puts "Main: Successfully processed #{file}"
+            else
+              failed_files << "#{file}: #{error_message}"
+              puts "\nError processing #{file}: #{error_message}"
+            end
+          end
+        end
+
+        # Close the pool to signal workers to exit
+        puts "Main: All files processed, closing pool"
+        pool.close_outgoing
 
         if !failed_files.empty?
           puts "\nFailed to process #{failed_files.size} files. See logs for details."
-        end
-      end
-
-      # Process files using Ractors
-      #
-      # @param file_chunks [Array<Array<String>>] Chunks of files to process
-      # @param tools_constants [Hash] Paths to required tools
-      # @param mutex [Mutex] Mutex for ractor safety
-      # @param progressbar [ProgressBar] Progress bar for tracking document generation
-      # @param failed_files [Array] List to store failed files
-      # @return [void]
-      def process_with_ractors(file_chunks, tools_constants, mutex, progressbar, failed_files)
-        # Create a Ractor for each chunk
-        ractors = create_ractors(file_chunks, tools_constants)
-
-        # Process results as they come in
-        process_ractor_results(ractors, mutex, progressbar, failed_files)
-      end
-
-      # Create Ractors for processing file chunks
-      #
-      # @param file_chunks [Array<Array<String>>] Chunks of files to process
-      # @param tools_constants [Hash] Paths to required tools
-      # @return [Array<Ractor>] List of created Ractors
-      def create_ractors(file_chunks, tools_constants)
-        ractors = []
-        file_chunks.each_with_index do |chunk, index|
-          puts "Creating Ractor #{index} for #{chunk.size} files..."
-
-          # Create Ractor with minimal context
-          ractor = Ractor.new(chunk, Hrma::Config.log_dir, Dir.pwd, tools_constants) do |files, log_dir, pwd, tool_paths|
-            # Use our dedicated processor class inside the Ractor
-            Hrma::Build::RactorDocumentProcessor.process(files, log_dir, pwd, tool_paths)
-          end
-
-          ractors << ractor
-        end
-        ractors
-      end
-
-      # Process results from Ractors
-      #
-      # @param ractors [Array<Ractor>] List of Ractors
-      # @param mutex [Mutex] Mutex for ractor safety
-      # @param progressbar [ProgressBar] Progress bar for tracking document generation
-      # @param failed_files [Array] List to store failed files
-      # @return [void]
-      def process_ractor_results(ractors, mutex, progressbar, failed_files)
-        ractors.each_with_index do |ractor, index|
-          begin
-            puts "Waiting for results from Ractor #{index}..."
-            results = ractor.take
-
-            # Process the results
-            results.each do |file, success, error_message|
-              mutex.synchronize do
-                progressbar.increment
-
-                if !success && error_message
-                  failed_files << "#{file}: #{error_message}"
-                  puts "\nError processing #{file}: #{error_message}"
-                end
-              end
-            end
-          rescue => e
-            puts "\nError getting results from Ractor #{index}: #{e.message}"
-          end
         end
       end
 
