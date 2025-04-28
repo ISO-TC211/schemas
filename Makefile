@@ -1,5 +1,6 @@
 SHELL := /bin/bash
-XSDSRC := $(shell yq e .source.schemas schemas.yml | cut -c 3-)
+XSDSRC := $(shell yq e '.source.schemas.xsd[]' schemas.yml 2>/dev/null || yq e '.source.schemas[]' schemas.yml 2>/dev/null || echo "")
+JSONSRC := $(shell yq e '.source.schemas.json[]' schemas.yml 2>/dev/null || echo "")
 XSDDOC := $(patsubst %.xsd,_site/%/index.html,$(XSDSRC))
 
 XERCESURL := https://downloads.apache.org/xerces/j/binaries/Xerces-J-bin.2.12.1.tar.gz
