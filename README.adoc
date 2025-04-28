@@ -16,13 +16,45 @@ Jointly managed by ISO/TC 211/XMG and Ribose.
 XSD documentation pages are generated using the `build` workflow.
 
 The `schemas.yml` file controls which schemas (identified by path)
-should generate XSD documentation.
+should generate XSD documentation. It can be maintained manually or using the `hrma` command-line tool (see <<Schema manifest management>>).
 
 The resulting documentation per schema will be generated in the path:
 
 * HTML page: `_site/{schema-path}/{xsd-name}/index.html`
 * Diagrams: `_site/{schema-path}/{xsd-name}/diagrams/*.svg`
 
+
+== Schema manifest management
+
+The repository includes a command-line tool called `hrma` (Harmonized Resources Maintenance Agency) to manage the schemas manifest file (`schemas.yml`). This tool allows for automatic discovery and registration of schema files.
+
+=== Requirements
+
+* Ruby (2.5 or later)
+* Dependencies installation (choose one):
+  - Individual: `gem install thor`
+  - Using Bundler: `bundle install`
+  - Build and install gem: `gem build hrma.gemspec && gem install hrma-*.gem`
+
+=== Usage
+
+[source,sh]
+----
+# Update schemas.yml with all 3-character XSD and JSON files
+./bin/hrma schemas manifest update
+
+# List all schemas in the manifest file
+./bin/hrma schemas manifest list
+
+# List schemas with filtering options
+./bin/hrma schemas manifest list --type xsd
+./bin/hrma schemas manifest list --doc 19115
+
+# Verify all schemas in the manifest exist
+./bin/hrma schemas manifest validate
+----
+
+The tool supports both XSD and JSON schemas and organizes them in the schemas.yml file according to their type.
 
 == Building documentation
 
