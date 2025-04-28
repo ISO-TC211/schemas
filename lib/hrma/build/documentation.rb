@@ -6,6 +6,7 @@ require "ruby-progressbar"
 require "etc"
 require_relative "../config"
 require_relative "tools"
+require_relative "ractor_document_processor"
 
 module Hrma
   module Build
@@ -16,20 +17,33 @@ module Hrma
       module_function
 
       # Generate documentation for all XSD files in schemas.yml
+      #
+      # @param options [Hash] Options for document generation
+      # @option options [String] :manifest_path Path to schemas.yml manifest file
+      # @option options [Boolean] :parallel Enable parallel processing with Ractors
+      # @option options [Integer] :ractors Number of parallel ractors to use
+      # @option options [String] :cache_dir Directory for caching downloaded tools
+      # @option options [String] :log_dir Directory for storing log files
+      # @return [void]
       def generate(options = {})
         xsd_files = load_xsd_files(options[:manifest_path])
         return if xsd_files.empty?
 
+        progressbar = create_progressbar(xsd_files.size)
+
         if options[:parallel] && ractor_supported? && !ENV["HRMA_DISABLE_RACTORS"]
-          generate_parallel(xsd_files, options)
+          generate_parallel(xsd_files, options, progressbar)
         else
-          generate_sequential(xsd_files, options)
+          generate_sequential(xsd_files, progressbar)
         end
 
         puts "\nDocumentation generation complete. See _site/ directory."
       end
 
       # Load XSD files from schemas.yml
+      #
+      # @param manifest_path [String, nil] Path to schemas.yml manifest file
+      # @return [Array<String>] List of XSD files to process
       def load_xsd_files(manifest_path = nil)
         yaml_path = manifest_path || File.join(Dir.pwd, "schemas.yml")
         manifest = YAML.load_file(yaml_path)
@@ -45,233 +59,189 @@ module Hrma
       end
 
       # Check if Ractor is supported
+      #
+      # @return [Boolean] True if Ractor is supported
       def ractor_supported?
         defined?(Ractor) && Ractor.respond_to?(:new)
-      rescue
+      rescue StandardError
         false
       end
 
       # Generate documentation sequentially
-      def generate_sequential(xsd_files, options = {})
+      #
+      # @param xsd_files [Array<String>] List of XSD files to process
+      # @param progressbar [ProgressBar] Progress bar for tracking document generation
+      # @return [void]
+      def generate_sequential(xsd_files, progressbar)
         puts "Generating documentation sequentially..."
-
-        # Setup progress bar
-        progressbar = create_progressbar(xsd_files.size)
 
         # Process each XSD file
         xsd_files.each do |xsd_file|
-          # Redirect output to log file if log_dir is configured
-          if Hrma::Config.log_dir
-            log_file = File.join(Hrma::Config.log_dir, "#{File.basename(xsd_file, '.xsd')}.log")
-            puts "Generating documentation for #{xsd_file}... (Logging to #{log_file})"
-
-            # Capture original stdout
-            original_stdout = $stdout.dup
-            begin
-              # Redirect stdout to log file
-              $stdout.reopen(log_file, 'w')
-              generate_doc_for_xsd(xsd_file)
-            ensure
-              # Restore stdout
-              $stdout.reopen(original_stdout)
-            end
-          else
-            puts "Generating documentation for #{xsd_file}..."
-            generate_doc_for_xsd(xsd_file)
-          end
-
+          process_xsd_file(xsd_file)
           progressbar.increment
         end
       end
 
-      # Generate documentation in parallel using Ractors
-      def generate_parallel(xsd_files, options = {})
-        # Determine number of threads to use (default to CPU count)
-        thread_count = options[:threads] || [Etc.nprocessors, xsd_files.size].min
-        puts "Generating documentation in parallel using #{thread_count} threads..."
+      # Process a single XSD file
+      #
+      # @param xsd_file [String] Path to the XSD file
+      # @return [void]
+      def process_xsd_file(xsd_file)
+        log_dir = Hrma::Config.log_dir
 
-        # Setup progress bar
-        progressbar = create_progressbar(xsd_files.size)
+        if log_dir
+          process_with_logging(xsd_file, log_dir)
+        else
+          puts "Generating documentation for #{xsd_file}..."
+          result = process_single_file(xsd_file)
+          puts "Error: #{result}" if result.is_a?(String)
+        end
+      end
+
+      # Process a file with logging
+      #
+      # @param xsd_file [String] Path to the XSD file
+      # @param log_dir [String] Directory for log files
+      # @return [void]
+      def process_with_logging(xsd_file, log_dir)
+        log_file = File.join(log_dir, "#{File.basename(xsd_file, '.xsd')}.log")
+        puts "Generating documentation for #{xsd_file}... (Logging to #{log_file})"
+
+        FileUtils.mkdir_p(File.dirname(log_file))
+
+        # Capture original stdout
+        original_stdout = $stdout.dup
+        begin
+          # Redirect stdout to log file
+          $stdout.reopen(log_file, 'w')
+          result = process_single_file(xsd_file)
+          puts "Error: #{result}" if result.is_a?(String)
+        ensure
+          # Restore stdout
+          $stdout.reopen(original_stdout)
+        end
+      end
+
+      # Process a single file
+      #
+      # @param xsd_file [String] Path to the XSD file
+      # @return [true, String] True if successful, error message string if failed
+      def process_single_file(xsd_file)
+        # Use the RactorDocumentProcessor to process the file
+        # This avoids code duplication
+        tool_paths = {
+          xsdvi_path: Tools::XSDVI_PATH,
+          xsdmerge_path: Tools::XSDMERGE_PATH,
+          xs3p_path: Tools::XS3P_PATH
+        }
+
+        RactorDocumentProcessor.process_file_without_logging(xsd_file, Dir.pwd, tool_paths)
+      end
+
+      # Generate documentation in parallel using Ractors
+      #
+      # @param xsd_files [Array<String>] List of XSD files to process
+      # @param options [Hash] Options for document generation
+      # @param progressbar [ProgressBar] Progress bar for tracking document generation
+      # @return [void]
+      def generate_parallel(xsd_files, options, progressbar)
+        ractor_count = options[:ractors] || [Etc.nprocessors, xsd_files.size].min
+        puts "Generating documentation in parallel using #{ractor_count} ractors..."
+
+        # Process files in parallel
+        failed_files = []
         mutex = Mutex.new
 
-        # Create Ractors to process XSD files
-        ractors = []
+        # Split files into chunks for each Ractor
+        file_chunks = xsd_files.each_slice((xsd_files.size.to_f / ractor_count).ceil).to_a
+        puts "Split #{xsd_files.size} files into #{file_chunks.size} chunks..."
 
-        # Split files among ractors
-        file_chunks = xsd_files.each_slice((xsd_files.size.to_f / thread_count).ceil).to_a
+        # Pass necessary tool paths to Ractors
+        tools_constants = {
+          xsdvi_path: Tools::XSDVI_PATH,
+          xsdmerge_path: Tools::XSDMERGE_PATH,
+          xs3p_path: Tools::XS3P_PATH
+        }
 
-        file_chunks.each_with_index do |chunk, index|
-          ractors << Ractor.new(chunk, index, Hrma::Config.log_dir) do |files, ractor_id, log_dir|
-            require 'fileutils'
-
-            files.map do |xsd_file|
-              begin
-                if log_dir
-                  log_file = File.join(log_dir, "#{File.basename(xsd_file, '.xsd')}_ractor#{ractor_id}.log")
-                  File.open(log_file, 'w') do |f|
-                    f.puts "Processing #{xsd_file} in Ractor #{ractor_id}"
-
-                    # Logic from generate_doc_for_xsd but with output to log file
-                    target_html = xsd_file.sub(/\.xsd$/, "")
-                    output_dir = "_site/#{target_html}"
-                    output_file = "#{output_dir}/index.html"
-
-                    # Skip if the output file is newer than the source file
-                    if File.exist?(output_file) && File.mtime(output_file) > File.mtime(xsd_file)
-                      f.puts "Skipping #{xsd_file} (up to date)"
-                      next true
-                    end
-
-                    f.puts "Generating documentation for #{xsd_file}..."
-
-                    # Create output directory
-                    FileUtils.mkdir_p("#{output_dir}/diagrams")
-
-                    # Generate diagrams
-                    diagrams_cmd = "java -jar xsdvi/xsdvi.jar #{Dir.pwd}/#{xsd_file} -rootNodeName all -oneNodeOnly -outputPath #{output_dir}/diagrams"
-                    f.puts "Running: #{diagrams_cmd}"
-                    unless system(diagrams_cmd, out: f, err: f)
-                      f.puts "Error generating diagrams for #{xsd_file}"
-                      next false
-                    end
-
-                    # Generate documentation
-                    temp_file = "#{output_file}.tmp"
-                    xsdmerge_cmd = "xsltproc --nonet --stringparam rootxsd #{xsd_file} --output #{temp_file} xsl/xsdmerge.xsl #{xsd_file}"
-                    f.puts "Running: #{xsdmerge_cmd}"
-                    unless system(xsdmerge_cmd, out: f, err: f)
-                      f.puts "Error generating merged XSD for #{xsd_file}"
-                      next false
-                    end
-
-                    file_basename = File.basename(target_html)
-                    xs3p_cmd = "xsltproc --nonet --param title \"'Schema Documentation for #{file_basename}'\" --output #{output_file} xsl/xs3p.xsl #{temp_file}"
-                    f.puts "Running: #{xs3p_cmd}"
-                    unless system(xs3p_cmd, out: f, err: f)
-                      f.puts "Error generating documentation for #{xsd_file}"
-                      next false
-                    end
-
-                    FileUtils.rm(temp_file)
-                    next true
-                  end
-                else
-                  # Call original method with system output
-                  # This branch won't normally be used when parallelizing with log_dir
-                  target_html = xsd_file.sub(/\.xsd$/, "")
-                  output_dir = "_site/#{target_html}"
-                  output_file = "#{output_dir}/index.html"
-
-                  # Skip if the output file is newer than the source file
-                  if File.exist?(output_file) && File.mtime(output_file) > File.mtime(xsd_file)
-                    next true
-                  end
-
-                  # Create output directory
-                  FileUtils.mkdir_p("#{output_dir}/diagrams")
-
-                  # Generate diagrams
-                  unless system("java -jar xsdvi/xsdvi.jar #{Dir.pwd}/#{xsd_file} -rootNodeName all -oneNodeOnly -outputPath #{output_dir}/diagrams")
-                    next false
-                  end
-
-                  # Generate documentation
-                  temp_file = "#{output_file}.tmp"
-                  unless system("xsltproc --nonet --stringparam rootxsd #{xsd_file} --output #{temp_file} xsl/xsdmerge.xsl #{xsd_file}")
-                    next false
-                  end
-
-                  file_basename = File.basename(target_html)
-                  unless system("xsltproc --nonet --param title \"'Schema Documentation for #{file_basename}'\" --output #{output_file} xsl/xs3p.xsl #{temp_file}")
-                    next false
-                  end
-
-                  FileUtils.rm(temp_file)
-                  next true
-                end
-              rescue => e
-                # Return the error as part of the result
-                next [false, "Error processing #{xsd_file}: #{e.message}"]
-              end
-            end
-          end
-        end
-
-        # Process results as they come in
-        completed_files = []
-        failed_files = []
-
-        loop do
-          break if ractors.empty?
-
-          # Wait for any ractor to complete
-          ready_ractor, value = Ractor.select(*ractors)
-          ractor_index = ractors.index(ready_ractor)
-          ractors.delete_at(ractor_index)
-
-          # Process results
-          value.each do |result|
-            mutex.synchronize do
-              progressbar.increment
-
-              if result == true
-                completed_files << result
-              elsif result.is_a?(Array) && !result[0]
-                # This is an error with a message
-                failed_files << result[1]
-                puts "\nError: #{result[1]}"
-              else
-                failed_files << result
-              end
-            end
-          end
-        end
+        # Create and process Ractors
+        process_with_ractors(file_chunks, tools_constants, mutex, progressbar, failed_files)
 
         if !failed_files.empty?
           puts "\nFailed to process #{failed_files.size} files. See logs for details."
         end
       end
 
-      # Generate documentation for a single XSD file
-      def generate_doc_for_xsd(xsd_file)
-        target_html = xsd_file.sub(/\.xsd$/, "")
-        output_dir = "_site/#{target_html}"
-        output_file = "#{output_dir}/index.html"
+      # Process files using Ractors
+      #
+      # @param file_chunks [Array<Array<String>>] Chunks of files to process
+      # @param tools_constants [Hash] Paths to required tools
+      # @param mutex [Mutex] Mutex for ractor safety
+      # @param progressbar [ProgressBar] Progress bar for tracking document generation
+      # @param failed_files [Array] List to store failed files
+      # @return [void]
+      def process_with_ractors(file_chunks, tools_constants, mutex, progressbar, failed_files)
+        # Create a Ractor for each chunk
+        ractors = create_ractors(file_chunks, tools_constants)
 
-        # Skip if the output file is newer than the source file
-        if File.exist?(output_file) && File.mtime(output_file) > File.mtime(xsd_file)
-          puts "Skipping #{xsd_file} (up to date)"
-          return
+        # Process results as they come in
+        process_ractor_results(ractors, mutex, progressbar, failed_files)
+      end
+
+      # Create Ractors for processing file chunks
+      #
+      # @param file_chunks [Array<Array<String>>] Chunks of files to process
+      # @param tools_constants [Hash] Paths to required tools
+      # @return [Array<Ractor>] List of created Ractors
+      def create_ractors(file_chunks, tools_constants)
+        ractors = []
+        file_chunks.each_with_index do |chunk, index|
+          puts "Creating Ractor #{index} for #{chunk.size} files..."
+
+          # Create Ractor with minimal context
+          ractor = Ractor.new(chunk, Hrma::Config.log_dir, Dir.pwd, tools_constants) do |files, log_dir, pwd, tool_paths|
+            # Use our dedicated processor class inside the Ractor
+            Hrma::Build::RactorDocumentProcessor.process(files, log_dir, pwd, tool_paths)
+          end
+
+          ractors << ractor
         end
+        ractors
+      end
 
-        puts "Generating documentation for #{xsd_file}..."
+      # Process results from Ractors
+      #
+      # @param ractors [Array<Ractor>] List of Ractors
+      # @param mutex [Mutex] Mutex for ractor safety
+      # @param progressbar [ProgressBar] Progress bar for tracking document generation
+      # @param failed_files [Array] List to store failed files
+      # @return [void]
+      def process_ractor_results(ractors, mutex, progressbar, failed_files)
+        ractors.each_with_index do |ractor, index|
+          begin
+            puts "Waiting for results from Ractor #{index}..."
+            results = ractor.take
 
-        # Create output directory
-        mkdir_p("#{output_dir}/diagrams")
+            # Process the results
+            results.each do |file, success, error_message|
+              mutex.synchronize do
+                progressbar.increment
 
-        # Generate diagrams
-        unless system("java -jar #{Tools::XSDVI_PATH} #{Dir.pwd}/#{xsd_file} -rootNodeName all -oneNodeOnly -outputPath #{output_dir}/diagrams")
-          puts "Error generating diagrams for #{xsd_file}"
-          return
+                if !success && error_message
+                  failed_files << "#{file}: #{error_message}"
+                  puts "\nError processing #{file}: #{error_message}"
+                end
+              end
+            end
+          rescue => e
+            puts "\nError getting results from Ractor #{index}: #{e.message}"
+          end
         end
-
-        # Generate documentation
-        temp_file = "#{output_file}.tmp"
-        unless system("xsltproc --nonet --stringparam rootxsd #{xsd_file} --output #{temp_file} #{Tools::XSDMERGE_PATH} #{xsd_file}")
-          puts "Error generating merged XSD for #{xsd_file}"
-          return
-        end
-
-        file_basename = File.basename(target_html)
-        unless system("xsltproc --nonet --param title \"'Schema Documentation for #{file_basename}'\" --output #{output_file} #{Tools::XS3P_PATH} #{temp_file}")
-          puts "Error generating documentation for #{xsd_file}"
-          return
-        end
-
-        rm(temp_file)
       end
 
       # Create a progress bar
+      #
+      # @param total [Integer] Total number of items
+      # @return [ProgressBar] Progress bar object
       def create_progressbar(total)
         ProgressBar.create(
           title: "Progress",

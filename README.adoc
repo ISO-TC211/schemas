@@ -89,9 +89,9 @@ The cache directory is where downloaded tools are stored. By default, it's `~/.h
 
 You can set it in three ways (in order of precedence):
 
-1. Command-line option: `--cache-dir=/path/to/cache`
-2. Environment variable: `HRMA_CACHE_DIR=/path/to/cache ./bin/hrma ...`
-3. Configuration file: `~/.hrma/config.yml`
+. Command-line option: `--cache-dir=/path/to/cache`
+. Environment variable: `HRMA_CACHE_DIR=/path/to/cache ./bin/hrma ...`
+. Configuration file: `~/.hrma/config.yml`
 
 To manage configuration:
 
@@ -102,4 +102,41 @@ To manage configuration:
 
 # Set cache directory
 ./bin/hrma config set cache_dir /path/to/cache
+----
+
+== Code organization
+
+The `hrma` tool is organized into several components:
+
+=== Command-line interface
+
+* `bin/hrma` - Main executable script
+* `lib/hrma/cli.rb` - Thor-based CLI implementation
+* `lib/hrma/commands/*.rb` - Individual command implementations
+
+=== Build system
+
+* `lib/hrma/build/document_generator.rb` - Main class for generating documentation
+* `lib/hrma/build/ractor_document_processor.rb` - Processor for XSD files that can run within a Ractor
+* `lib/hrma/build/documentation.rb` - Module with documentation generation utilities
+* `lib/hrma/build/tools.rb` - Handles downloading and setting up external tools
+* `lib/hrma/build/cleaner.rb` - Handles cleaning generated files
+
+=== Configuration
+
+* `lib/hrma/config.rb` - Configuration management
+* `lib/hrma/version.rb` - Version information
+
+=== Parallel processing
+
+The tool supports parallel processing using Ruby's Ractor feature (available in
+Ruby 3.0+). This significantly speeds up documentation generation for large
+numbers of schema files.
+
+To disable parallel processing:
+
+[source,sh]
+----
+# Disable parallel processing
+HRMA_DISABLE_RACTORS=1 ./bin/hrma build documentation
 ----
