@@ -138,6 +138,37 @@ module Hrma
         RactorDocumentProcessor.process_file_without_logging(xsd_file, Dir.pwd, tool_paths)
       end
 
+      # Calculate the optimal number of ractors to use
+      #
+      # @param file_count [Integer] Number of files to process
+      # @return [Integer] Optimal number of ractors to use
+      def calculate_auto_ractors(file_count)
+        # Get total number of cores
+        cores = Etc.nprocessors
+        puts "System has #{cores} CPU cores"
+
+        # Calculate optimal ractor count
+        # Use the maximum between 1 and half the number of cores
+        optimal_ractors = [1, cores / 2].max
+        puts "Optimal ractors (max of 1 and half cores): #{optimal_ractors}"
+
+        # Ensure at least 2 cores are left free
+        if optimal_ractors > cores - 2
+          adjusted_ractors = [cores - 2, 1].max
+          puts "Adjusted to leave 2 cores free: #{adjusted_ractors}"
+          optimal_ractors = adjusted_ractors
+        else
+          puts "No adjustment needed, already leaves at least 2 cores free"
+        end
+
+        # Use file_count as ractor count if we have enough cores
+        # This means we'll process each file in its own ractor if possible
+        result = [optimal_ractors, file_count].min
+        puts "Final ractor count (min of optimal ractors and file count): #{result}"
+
+        result
+      end
+
       # Generate documentation in parallel using Ractors
       #
       # @param xsd_files [Array<String>] List of XSD files to process
@@ -145,7 +176,13 @@ module Hrma
       # @param progressbar [ProgressBar] Progress bar for tracking document generation
       # @return [void]
       def generate_parallel(xsd_files, options, progressbar)
-        ractor_count = options[:ractors] || [Etc.nprocessors, xsd_files.size].min
+        # Use provided ractors count or calculate automatically
+        ractor_count = if options[:ractors]
+                         options[:ractors].to_i
+                       else
+                         calculate_auto_ractors(xsd_files.size)
+                       end
+
         puts "Generating documentation in parallel using #{ractor_count} ractors..."
 
         # Process files in parallel
