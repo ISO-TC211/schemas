@@ -25,7 +25,7 @@ jobs:
           export HRMA_CACHE_DIR=$GITHUB_WORKSPACE/.hrma-cache
 
           # Update schemas manifest
-          ./bin/hrma schemas manifest update
+          bundle exec hrma schemas manifest update
 
           # Build documentation
-          ./bin/hrma build documentation
+          bundle exec hrma build documentation
