@@ -1,9 +1,14 @@
 # frozen_string_literal: true
 
+require 'open3'
+require 'fileutils'
+
 module Hrma
   module Build
     # A self-contained class for processing XSD documents that can run within a Ractor
     class RactorDocumentProcessor
+      # Keep these methods pure and Ractor-friendly
+      # They should not use unshareable objects like Procs, Thread-locals, etc.
       # Process a batch of XSD files
       #
       # @param files [Array<String>] List of XSD files to process
@@ -45,7 +50,8 @@ module Hrma
       # @return [Array] Result of processing [file_path, success_flag, error_message]
       def self.process_with_logging(file, log_dir, pwd, tool_paths)
         log_file = File.join(log_dir, "#{File.basename(file, '.xsd')}.log")
-        FileUtils.mkdir_p(File.dirname(log_file))
+        # Use Dir.mkdir instead of FileUtils to avoid unshareable Procs
+        safe_mkdir_p(File.dirname(log_file))
 
         File.open(log_file, 'w') do |log|
           log.puts "Processing #{file}..."
@@ -84,8 +90,9 @@ module Hrma
 
         log.puts "Generating documentation for #{file}..."
 
-        # Create output directory
-        create_output_directory(paths[:output_dir])
+        # Create output directory using ractor-safe approach
+        safe_mkdir_p(paths[:output_dir])
+        safe_mkdir_p(File.join(paths[:output_dir], "diagrams"))
 
         # Generate diagrams
         return "Error generating diagrams" unless generate_diagrams(file, pwd, paths[:output_dir], tool_paths[:xsdvi_path], log)
@@ -98,7 +105,7 @@ module Hrma
         return "Error generating documentation" unless generate_final_doc(paths[:temp_file], paths[:output_file], file_basename, tool_paths[:xs3p_path], log)
 
         # Clean up and return success
-        FileUtils.rm_f(paths[:temp_file])
+        safe_rm(paths[:temp_file])
         true
       end
 
@@ -115,8 +122,9 @@ module Hrma
         # Skip if up to date
         return true if skip_if_up_to_date?(paths[:output_file], file)
 
-        # Create output directory
-        create_output_directory(paths[:output_dir])
+        # Create output directory using ractor-safe approach
+        safe_mkdir_p(paths[:output_dir])
+        safe_mkdir_p(File.join(paths[:output_dir], "diagrams"))
 
         # Generate diagrams
         diagrams_cmd = "java -jar #{tool_paths[:xsdvi_path]} #{pwd}/#{file} -rootNodeName all -oneNodeOnly -outputPath #{paths[:output_dir]}/diagrams"
@@ -132,7 +140,7 @@ module Hrma
         return "Error generating documentation" unless system(xs3p_cmd)
 
         # Clean up and return success
-        FileUtils.rm_f(paths[:temp_file])
+        safe_rm(paths[:temp_file])
         true
       end
 
@@ -165,12 +173,36 @@ module Hrma
         File.exist?(output_file) && File.mtime(output_file) > File.mtime(source_file)
       end
 
-      # Create output directory
+      # Safe mkdir_p implementation that doesn't rely on FileUtils
+      # This avoids the un-shareable Proc issue in Ractors
       #
-      # @param output_dir [String] Path to the output directory
+      # @param dir [String] Directory path to create
       # @return [void]
-      def self.create_output_directory(output_dir)
-        FileUtils.mkdir_p("#{output_dir}/diagrams")
+      def self.safe_mkdir_p(dir)
+        return if Dir.exist?(dir)
+
+        # Create parent directories first
+        parent = File.dirname(dir)
+        unless Dir.exist?(parent)
+          safe_mkdir_p(parent)
+        end
+
+        # Create the directory
+        begin
+          Dir.mkdir(dir)
+        rescue Errno::EEXIST
+          # Directory already exists (possible race condition)
+        end
+      end
+
+      # Safe file removal that doesn't rely on FileUtils
+      #
+      # @param file [String] File to remove
+      # @return [void]
+      def self.safe_rm(file)
+        File.unlink(file) if File.exist?(file)
+      rescue Errno::ENOENT
+        # File doesn't exist, which is what we wanted anyway
       end
 
       # Generate diagrams
@@ -183,8 +215,6 @@ module Hrma
       # @return [Boolean] True if successful
       def self.generate_diagrams(file, pwd, output_dir, xsdvi_path, log = nil)
         diagrams_cmd = "java -jar #{xsdvi_path} #{pwd}/#{file} -rootNodeName all -oneNodeOnly -outputPath #{output_dir}/diagrams"
-
-        require 'open3'
 
         if log
           log.puts "Running: #{diagrams_cmd}"
@@ -209,8 +239,6 @@ module Hrma
       def self.generate_merged_xsd(file, temp_file, xsdmerge_path, log = nil)
         xsdmerge_cmd = "xsltproc --nonet --stringparam rootxsd #{file} --output #{temp_file} #{xsdmerge_path} #{file}"
 
-        require 'open3'
-
         if log
           log.puts "Running: #{xsdmerge_cmd}"
           stdout_and_stderr_str, status = Open3.capture2e(xsdmerge_cmd)
@@ -234,8 +262,6 @@ module Hrma
       # @return [Boolean] True if successful
       def self.generate_final_doc(temp_file, output_file, file_basename, xs3p_path, log = nil)
         xs3p_cmd = "xsltproc --nonet --param title \"'Schema Documentation for #{file_basename}'\" --output #{output_file} #{xs3p_path} #{temp_file}"
-
-        require 'open3'
 
         if log
           log.puts "Running: #{xs3p_cmd}"
