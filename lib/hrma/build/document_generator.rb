@@ -4,6 +4,8 @@ require "yaml"
 require "fileutils"
 require "ruby-progressbar"
 require "etc"
+require "timeout"
+require "open3"
 require_relative "../config"
 require_relative "tools"
 require_relative "ractor_document_processor"
@@ -146,11 +148,15 @@ module Hrma
         mutex = Mutex.new
 
         # Pass necessary tool paths to Ractors
+        # Make sure paths are simple strings that can be safely shared across Ractors
         tools_constants = {
-          xsdvi_path: Tools::XSDVI_PATH,
-          xsdmerge_path: Tools::XSDMERGE_PATH,
-          xs3p_path: Tools::XS3P_PATH
+          xsdvi_path: Tools::XSDVI_PATH.to_s,
+          xsdmerge_path: Tools::XSDMERGE_PATH.to_s,
+          xs3p_path: Tools::XS3P_PATH.to_s
         }
+
+        # Make the hash shareable across Ractors
+        tools_constants = Ractor.make_shareable(tools_constants)
 
         # Create a pool Ractor that will distribute work
         pool = Ractor.new do
@@ -167,7 +173,13 @@ module Hrma
 
         # Create worker Ractors with improved error handling
         workers = ractor_count.times.map do |i|
-          Ractor.new(pool, @log_dir, Dir.pwd, tools_constants, i) do |pool, log_dir, pwd, tool_paths, id|
+          # Ensure all values passed to Ractor are shareable
+          log_dir_copy = @log_dir.nil? ? nil : @log_dir.to_s
+          pwd_copy = Dir.pwd.to_s
+          worker_id = i
+
+          # Create worker Ractor with explicitly shareable values
+          Ractor.new(pool, log_dir_copy, pwd_copy, tools_constants, worker_id) do |pool, log_dir, pwd, tool_paths, id|
             # Worker Ractor
             loop do
               begin
@@ -216,10 +228,17 @@ module Hrma
           end
         end
 
+        # Ensure xsd_files is shareable - convert all entries to simple strings
+        shareable_files = xsd_files.map(&:to_s)
+
+        # Make the array shareable across Ractors
+        shareable_files = Ractor.make_shareable(shareable_files)
+
         # Send all files to the pool with better error handling
-        xsd_files.each do |file|
+        shareable_files.each do |file|
           begin
             puts "Main: Sending file #{file} to queue"
+            # File names are passed as plain strings, which are always shareable
             pool.send(file)
           rescue => e
             puts "Main: Error sending file #{file} to queue: #{e.message}"
@@ -240,8 +259,19 @@ module Hrma
                 # Wait for any worker to produce a result with a timeout
                 worker, result = Ractor.select(*workers)
 
-                # Process the result
-                file, success, error_message = result
+                # Process the result - make sure we're handling the result safely
+                # Each result should be an array [file, success, error_message]
+                if result.is_a?(Array) && result.size >= 3
+                  file = result[0].to_s
+                  success = !!result[1]  # Convert to boolean explicitly
+                  error_message = result[2] ? result[2].to_s : nil
+                else
+                  # Handle unexpected result format gracefully
+                  file = "unknown_file"
+                  success = false
+                  error_message = "Invalid result format from worker"
+                  puts "Main: Received unexpected result format: #{result.inspect}"
+                end
 
                 mutex.synchronize do
                   processed_count += 1
