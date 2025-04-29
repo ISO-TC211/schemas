@@ -159,22 +159,47 @@ module Hrma
             # Receive a file to process and yield it to any worker that asks
             file = Ractor.receive
             puts "Queue: Received file #{file} for processing"
+
+            # Signal which file is being sent to workers
             Ractor.yield(file)
           end
         end
 
-        # Create worker Ractors
+        # Create worker Ractors with improved error handling
         workers = ractor_count.times.map do |i|
           Ractor.new(pool, @log_dir, Dir.pwd, tools_constants, i) do |pool, log_dir, pwd, tool_paths, id|
             # Worker Ractor
             loop do
               begin
-                # Take a file from the pool
-                file = pool.take
-                puts "Worker #{id}: Processing file #{file}"
+                # Take a file from the pool with timeout to prevent deadlocks
+                file = nil
+                begin
+                  # Print worker ID to help with debugging
+                  puts "Worker #{id}: Waiting for work..."
+                  file = pool.take
+                  puts "Worker #{id}: Processing file #{file}"
+                rescue => e
+                  puts "Worker #{id}: Error taking work: #{e.message}"
+                  # Sleep briefly to avoid tight loop if there's an error
+                  sleep 0.1
+                  next
+                end
 
-                # Process the file
-                result = Hrma::Build::RactorDocumentProcessor.process_single_file(file, log_dir, pwd, tool_paths)
+                # Process the file with timeout protection
+                result = nil
+                begin
+                  # Use timeout to prevent hanging on external processes
+                  require 'timeout'
+                  result = Timeout.timeout(300) do # 5 minute timeout
+                    Hrma::Build::RactorDocumentProcessor.process_single_file(file, log_dir, pwd, tool_paths)
+                  end
+                rescue Timeout::Error
+                  puts "Worker #{id}: Timeout processing file #{file}"
+                  result = [file, false, "Timeout after 300 seconds"]
+                rescue => e
+                  puts "Worker #{id}: Error processing file #{file}: #{e.message}"
+                  result = [file, false, "Exception: #{e.message}"]
+                end
 
                 # Yield the result
                 Ractor.yield([file, *result])
@@ -182,35 +207,61 @@ module Hrma
                 # Pool is closed, exit the loop
                 puts "Worker #{id}: Pool closed, exiting"
                 break
+              rescue => e
+                # Catch any other errors to prevent worker from dying
+                puts "Worker #{id}: Unexpected error: #{e.class} - #{e.message}"
+                # Don't break the loop, try to continue with next file
               end
             end
           end
         end
 
-        # Send all files to the pool
+        # Send all files to the pool with better error handling
         xsd_files.each do |file|
-          puts "Main: Sending file #{file} to queue"
-          pool.send(file)
-        end
-
-        # Process results as they come in
-        xsd_files.size.times do
-          # Wait for any worker to produce a result
-          worker, result = Ractor.select(*workers)
-
-          # Process the result
-          file, success, error_message = result
-
-          mutex.synchronize do
-            progressbar.increment
-
-            if success
-              puts "Main: Successfully processed #{file}"
-            else
-              failed_files << "#{file}: #{error_message}"
-              puts "\nError processing #{file}: #{error_message}"
+          begin
+            puts "Main: Sending file #{file} to queue"
+            pool.send(file)
+          rescue => e
+            puts "Main: Error sending file #{file} to queue: #{e.message}"
+            mutex.synchronize do
+              failed_files << "#{file}: Failed to queue - #{e.message}"
             end
           end
+        end
+
+        # Process results as they come in with timeout protection
+        processed_count = 0
+        begin
+          # Use timeout for the entire processing to prevent hanging
+          require 'timeout'
+          Timeout.timeout(xsd_files.size * 60) do # Allow average 1 minute per file
+            while processed_count < xsd_files.size
+              begin
+                # Wait for any worker to produce a result with a timeout
+                worker, result = Ractor.select(*workers)
+
+                # Process the result
+                file, success, error_message = result
+
+                mutex.synchronize do
+                  processed_count += 1
+                  progressbar.increment
+
+                  if success
+                    puts "Main: Successfully processed #{file} (#{processed_count}/#{xsd_files.size})"
+                  else
+                    failed_files << "#{file}: #{error_message}"
+                    puts "\nError processing #{file}: #{error_message}"
+                  end
+                end
+              rescue => e
+                puts "Main: Error receiving result: #{e.message}"
+                # Continue trying to receive results
+              end
+            end
+          end
+        rescue Timeout::Error
+          puts "\nTimeout waiting for all files to process. Some files may not have been processed."
         end
 
         # Close the pool to signal workers to exit

@@ -184,13 +184,18 @@ module Hrma
       def self.generate_diagrams(file, pwd, output_dir, xsdvi_path, log = nil)
         diagrams_cmd = "java -jar #{xsdvi_path} #{pwd}/#{file} -rootNodeName all -oneNodeOnly -outputPath #{output_dir}/diagrams"
 
+        require 'open3'
+
         if log
           log.puts "Running: #{diagrams_cmd}"
-          result = system(diagrams_cmd, out: log, err: log)
+          stdout_and_stderr_str, status = Open3.capture2e(diagrams_cmd)
+          log.puts stdout_and_stderr_str
+          result = status.success?
           log.puts "Error generating diagrams for #{file}" unless result
           result
         else
-          system(diagrams_cmd)
+          stdout_and_stderr_str, status = Open3.capture2e(diagrams_cmd)
+          status.success?
         end
       end
 
@@ -204,13 +209,18 @@ module Hrma
       def self.generate_merged_xsd(file, temp_file, xsdmerge_path, log = nil)
         xsdmerge_cmd = "xsltproc --nonet --stringparam rootxsd #{file} --output #{temp_file} #{xsdmerge_path} #{file}"
 
+        require 'open3'
+
         if log
           log.puts "Running: #{xsdmerge_cmd}"
-          result = system(xsdmerge_cmd, out: log, err: log)
+          stdout_and_stderr_str, status = Open3.capture2e(xsdmerge_cmd)
+          log.puts stdout_and_stderr_str
+          result = status.success?
           log.puts "Error generating merged XSD for #{file}" unless result
           result
         else
-          system(xsdmerge_cmd)
+          stdout_and_stderr_str, status = Open3.capture2e(xsdmerge_cmd)
+          status.success?
         end
       end
 
@@ -225,13 +235,18 @@ module Hrma
       def self.generate_final_doc(temp_file, output_file, file_basename, xs3p_path, log = nil)
         xs3p_cmd = "xsltproc --nonet --param title \"'Schema Documentation for #{file_basename}'\" --output #{output_file} #{xs3p_path} #{temp_file}"
 
+        require 'open3'
+
         if log
           log.puts "Running: #{xs3p_cmd}"
-          result = system(xs3p_cmd, out: log, err: log)
+          stdout_and_stderr_str, status = Open3.capture2e(xs3p_cmd)
+          log.puts stdout_and_stderr_str
+          result = status.success?
           log.puts "Error generating documentation" unless result
           result
         else
-          system(xs3p_cmd)
+          stdout_and_stderr_str, status = Open3.capture2e(xs3p_cmd)
+          status.success?
         end
       end
     end
