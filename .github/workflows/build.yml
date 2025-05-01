@@ -24,8 +24,17 @@ jobs:
           # Set cache directory to a location in the runner's workspace
           export HRMA_CACHE_DIR=$GITHUB_WORKSPACE/.hrma-cache
 
+          # Enable verbose output for better debugging
+          export HRMA_VERBOSE=true
+
           # Update schemas manifest
           bundle exec hrma schemas manifest update
 
-          # Build documentation
+          # The code will now automatically detect if Ractors are compatible
+          # If RubyGems compatibility issues are detected, it will fall back to sequential processing
+          # Try with 2 cores first, but the auto-detection will handle any issues
+          export HRMA_RACTORS=2
+
+          # Build documentation - with automatic Ractor compatibility detection
+          echo "Building documentation with automatic Ractor compatibility detection..."
           bundle exec hrma build documentation

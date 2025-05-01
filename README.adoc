@@ -36,7 +36,7 @@ controls which schemas should generate documentation.
 
 [source,sh]
 ----
-./bin/hrma schemas manifest SUBCOMMAND
+bundle exec hrma schemas manifest SUBCOMMAND
 ----
 
 Available subcommands:
@@ -52,19 +52,19 @@ Available subcommands:
 [source,sh]
 ----
 # Update schemas.yml with all 3-character XSD and JSON files
-./bin/hrma schemas manifest update
+bundle exec hrma schemas manifest update
 
 # List all schemas in the manifest file
-./bin/hrma schemas manifest list
+bundle exec hrma schemas manifest list
 
 # List only XSD schemas
-./bin/hrma schemas manifest list --type xsd
+bundle exec hrma schemas manifest list --type xsd
 
 # List schemas for document 19115
-./bin/hrma schemas manifest list --doc 19115
+bundle exec hrma schemas manifest list --doc 19115
 
 # Verify all schemas in the manifest exist
-./bin/hrma schemas manifest validate
+bundle exec hrma schemas manifest validate
 ----
 ====
 
@@ -74,7 +74,7 @@ The `build` command generates documentation for schemas defined in the manifest 
 
 [source,sh]
 ----
-./bin/hrma build SUBCOMMAND [OPTIONS]
+bundle exec hrma build SUBCOMMAND [OPTIONS]
 ----
 
 Available subcommands:
@@ -94,22 +94,22 @@ Examples:
 [source,sh]
 ----
 # Generate documentation for schemas
-./bin/hrma build documentation
+bundle exec hrma build documentation
 
 # Generate documentation with custom manifest file
-./bin/hrma build documentation --manifest-path=custom-schemas.yml
+bundle exec hrma build documentation --manifest-path=custom-schemas.yml
 
 # Generate documentation with 4 ractors
-./bin/hrma build documentation --ractors=4
+bundle exec hrma build documentation --ractors=4
 
 # Generate documentation without parallel processing
-./bin/hrma build documentation --no-parallel
+bundle exec hrma build documentation --no-parallel
 
 # Remove generated documentation
-./bin/hrma build clean
+bundle exec hrma build clean
 
 # Remove generated documentation and downloaded tools
-./bin/hrma build distclean
+bundle exec hrma build distclean
 ----
 
 The resulting documentation per schema will be generated in the path:
@@ -123,7 +123,7 @@ The `config` command manages configuration settings.
 
 [source,sh]
 ----
-./bin/hrma config SUBCOMMAND
+bundle exec hrma config SUBCOMMAND
 ----
 
 Available subcommands:
@@ -139,7 +139,7 @@ Supported configuration keys:
 You can set configuration in three ways (in order of precedence):
 
 . Command-line option: `--cache-dir=/path/to/cache`
-. Environment variable: `HRMA_CACHE_DIR=/path/to/cache ./bin/hrma ...`
+. Environment variable: `HRMA_CACHE_DIR=/path/to/cache bundle exec hrma ...`
 . Configuration file: `~/.hrma/config.yml`
 
 Examples:
@@ -147,10 +147,10 @@ Examples:
 [source,sh]
 ----
 # Get current cache directory
-./bin/hrma config get cache_dir
+bundle exec hrma config get cache_dir
 
 # Set cache directory
-./bin/hrma config set cache_dir /path/to/cache
+bundle exec hrma config set cache_dir /path/to/cache
 ----
 
 
@@ -187,7 +187,7 @@ You can manually specify the number of ractors:
 [source,sh]
 ----
 # Use 4 ractors for parallel processing
-./bin/hrma build documentation --ractors=4
+bundle exec hrma build documentation --ractors=4
 ----
 
 To disable parallel processing entirely:
@@ -195,10 +195,10 @@ To disable parallel processing entirely:
 [source,sh]
 ----
 # Disable parallel processing
-./bin/hrma build documentation --no-parallel
+bundle exec hrma build documentation --no-parallel
 
 # Alternative method
-HRMA_DISABLE_RACTORS=1 ./bin/hrma build documentation
+HRMA_DISABLE_RACTORS=1 bundle exec hrma build documentation
 ----
 
 
