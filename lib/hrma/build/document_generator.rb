@@ -43,9 +43,17 @@ module Hrma
         puts "Found #{xsd_files.size} XSD files to process"
         @progressbar = create_progressbar(xsd_files.size)
 
+        # Check if we should use Ractors for parallel processing
         if options[:parallel] && ractor_supported? && !ENV["HRMA_DISABLE_RACTORS"]
-          generate_parallel(xsd_files)
+          begin
+            generate_parallel(xsd_files)
+          rescue => e
+            puts "Error using Ractors for parallel processing: #{e.message}"
+            puts "Falling back to sequential processing"
+            generate_sequential(xsd_files)
+          end
         else
+          puts "Using sequential processing (parallel processing disabled or not supported)"
           generate_sequential(xsd_files)
         end
 
@@ -97,14 +105,18 @@ module Hrma
       # Calculate the optimal number of ractors to use
       #
       # @param file_count [Integer] Number of files to process
+      # @param requested_ractors [Integer, nil] User-requested number of ractors
       # @return [Integer] Optimal number of ractors to use
-      def calculate_auto_ractors(file_count)
+      def calculate_auto_ractors(file_count, requested_ractors = nil)
+        # Return specific numbers if explicitly requested
+        return requested_ractors if requested_ractors && requested_ractors > 0
+
         # Get total number of cores
         cores = Etc.nprocessors
         puts "System has #{cores} CPU cores"
 
         # Calculate optimal ractor count
-        # Use the maximum between 1 and half the number of cores
+        # For "auto" mode, use the maximum between 1 and half the number of cores
         optimal_ractors = [1, cores / 2].max
         puts "Optimal ractors (max of 1 and half cores): #{optimal_ractors}"
 
@@ -125,178 +137,109 @@ module Hrma
         result
       end
 
-      # Generate documentation in parallel using Ractors
+      # Generate documentation in parallel using Ractors in a ring pattern with supervisor
       #
       # @param xsd_files [Array<String>] List of XSD files to process
       # @return [void]
       def generate_parallel(xsd_files)
         # Use provided ractors count or calculate automatically
-        ractor_count = if options[:ractors]
-                         options[:ractors].to_i
-                       else
-                         calculate_auto_ractors(xsd_files.size)
-                       end
+        requested_ractors = options[:ractors] ? options[:ractors].to_i : nil
+        ractor_count = calculate_auto_ractors(xsd_files.size, requested_ractors)
 
-        puts "Generating documentation in parallel using #{ractor_count} ractors..."
+        puts "Generating documentation in parallel using #{ractor_count} ractors in a ring topology..."
 
-        # Pre-load all necessary libraries that might be used by Ractors
-        # These must be loaded in the main thread before any Ractor is created
-        require 'fileutils'
+        # Create log directory per schema if logging is enabled
+        if @log_dir
+          log_dir = @log_dir.to_s
+          FileUtils.mkdir_p(log_dir) unless Dir.exist?(log_dir)
+        else
+          log_dir = nil
+        end
 
-        # Process files in parallel
-        failed_files = []
-        mutex = Mutex.new
-
-        # Pass necessary tool paths to Ractors
-        # Make sure paths are simple strings that can be safely shared across Ractors
+        # Pass necessary tool paths to Ractors - make them shareable
         tools_constants = {
           xsdvi_path: Tools::XSDVI_PATH.to_s,
           xsdmerge_path: Tools::XSDMERGE_PATH.to_s,
           xs3p_path: Tools::XS3P_PATH.to_s
         }
-
-        # Make the hash shareable across Ractors
         tools_constants = Ractor.make_shareable(tools_constants)
 
-        # Create a pool Ractor that will distribute work
-        pool = Ractor.new do
-          # This Ractor acts as a work distributor
-          loop do
-            # Receive a file to process and yield it to any worker that asks
-            file = Ractor.receive
-            puts "Queue: Received file #{file} for processing"
-
-            # Signal which file is being sent to workers
-            Ractor.yield(file)
-          end
-        end
-
-        # Create worker Ractors with improved error handling
-        workers = ractor_count.times.map do |i|
-          # Ensure all values passed to Ractor are shareable
-          log_dir_copy = @log_dir.nil? ? nil : @log_dir.to_s
-          pwd_copy = Dir.pwd.to_s
-          worker_id = i
-
-          # Create worker Ractor with explicitly shareable values
-          Ractor.new(pool, log_dir_copy, pwd_copy, tools_constants, worker_id) do |pool, log_dir, pwd, tool_paths, id|
-            # Worker Ractor
-            loop do
-              begin
-                # Take a file from the pool with timeout to prevent deadlocks
-                file = nil
-                begin
-                  # Print worker ID to help with debugging
-                  puts "Worker #{id}: Waiting for work..."
-                  file = pool.take
-                  puts "Worker #{id}: Processing file #{file}"
-                rescue => e
-                  puts "Worker #{id}: Error taking work: #{e.message}"
-                  # Sleep briefly to avoid tight loop if there's an error
-                  sleep 0.1
-                  next
-                end
-
-                # Process the file with timeout protection
-                result = nil
-                begin
-                  # Use timeout to prevent hanging on external processes
-                  require 'timeout'
-                  result = Timeout.timeout(300) do # 5 minute timeout
-                    Hrma::Build::RactorDocumentProcessor.process_single_file(file, log_dir, pwd, tool_paths)
-                  end
-                rescue Timeout::Error
-                  puts "Worker #{id}: Timeout processing file #{file}"
-                  result = [file, false, "Timeout after 300 seconds"]
-                rescue => e
-                  puts "Worker #{id}: Error processing file #{file}: #{e.message}"
-                  result = [file, false, "Exception: #{e.message}"]
-                end
-
-                # Yield the result
-                Ractor.yield([file, *result])
-              rescue Ractor::ClosedError
-                # Pool is closed, exit the loop
-                puts "Worker #{id}: Pool closed, exiting"
-                break
-              rescue => e
-                # Catch any other errors to prevent worker from dying
-                puts "Worker #{id}: Unexpected error: #{e.class} - #{e.message}"
-                # Don't break the loop, try to continue with next file
-              end
-            end
-          end
-        end
+        # Current working directory as shareable string
+        pwd_copy = Dir.pwd.to_s
 
         # Ensure xsd_files is shareable - convert all entries to simple strings
-        shareable_files = xsd_files.map(&:to_s)
-
-        # Make the array shareable across Ractors
+        shareable_files = xsd_files.map { |f| f.to_s.dup }
         shareable_files = Ractor.make_shareable(shareable_files)
 
-        # Send all files to the pool with better error handling
-        shareable_files.each do |file|
-          begin
-            puts "Main: Sending file #{file} to queue"
-            # File names are passed as plain strings, which are always shareable
-            pool.send(file)
-          rescue => e
-            puts "Main: Error sending file #{file} to queue: #{e.message}"
-            mutex.synchronize do
-              failed_files << "#{file}: Failed to queue - #{e.message}"
-            end
-          end
+        # Initialize current Ractor as start of the ring
+        r = Ractor.current
+
+        # Create ring of ractors following the sample pattern
+        rs = (1..ractor_count).map do |i|
+          r = Hrma::Build::RactorDocumentProcessor.make_processor_ractor(
+            r, i, tools_constants, log_dir, pwd_copy
+          )
         end
 
-        # Process results as they come in with timeout protection
+        # Track processed files and failures
+        failed_files = []
         processed_count = 0
-        begin
-          # Use timeout for the entire processing to prevent hanging
-          require 'timeout'
-          Timeout.timeout(xsd_files.size * 60) do # Allow average 1 minute per file
-            while processed_count < xsd_files.size
-              begin
-                # Wait for any worker to produce a result with a timeout
-                worker, result = Ractor.select(*workers)
 
-                # Process the result - make sure we're handling the result safely
-                # Each result should be an array [file, success, error_message]
-                if result.is_a?(Array) && result.size >= 3
-                  file = result[0].to_s
-                  success = !!result[1]  # Convert to boolean explicitly
-                  error_message = result[2] ? result[2].to_s : nil
-                else
-                  # Handle unexpected result format gracefully
-                  file = "unknown_file"
-                  success = false
-                  error_message = "Invalid result format from worker"
-                  puts "Main: Received unexpected result format: #{result.inspect}"
-                end
+        # Process files following the ring pattern with supervisor and restart
+        shareable_files.each do |file|
+          puts "Processing: #{file}"
+          msg = file
 
-                mutex.synchronize do
-                  processed_count += 1
-                  progressbar.increment
+          begin
+            # Send the file to the first Ractor in the ring
+            rs.first.send(msg)
 
-                  if success
-                    puts "Main: Successfully processed #{file} (#{processed_count}/#{xsd_files.size})"
-                  else
-                    failed_files << "#{file}: #{error_message}"
-                    puts "\nError processing #{file}: #{error_message}"
-                  end
-                end
-              rescue => e
-                puts "Main: Error receiving result: #{e.message}"
-                # Continue trying to receive results
+            # Wait for the result to cycle through the ring back to us
+            result = Ractor.select(*rs, Ractor.current)[1]
+
+            # Process the result
+            if result.is_a?(Array) && result.size >= 3
+              file_path = result[0].to_s
+              success = !!result[1]  # Convert to boolean explicitly
+              error_message = result[2] ? result[2].to_s : nil
+
+              processed_count += 1
+              progressbar.increment
+
+              if success
+                puts "Successfully processed #{file_path} (#{processed_count}/#{xsd_files.size})"
+              else
+                failed_files << "#{file_path}: #{error_message}"
+                puts "\nError processing #{file_path}: #{error_message}"
               end
             end
+
+          rescue Ractor::RemoteError => e
+            puts "Ractor error detected: #{e.message}"
+            puts "Restarting failed Ractor..."
+
+            # Restart the last Ractor in the ring, following the sample pattern
+            r = rs[-1] = Hrma::Build::RactorDocumentProcessor.make_processor_ractor(
+              rs[-2], ractor_count, tools_constants, log_dir, pwd_copy
+            )
+
+            # Use 'x0' as a safe message that won't trigger an error
+            msg = file.gsub('e', 'x')
+
+            # Retry with the safe message
+            retry
           end
-        rescue Timeout::Error
-          puts "\nTimeout waiting for all files to process. Some files may not have been processed."
         end
 
-        # Close the pool to signal workers to exit
-        puts "Main: All files processed, closing pool"
-        pool.close_outgoing
+        # Clean up by sending :exit signal to all Ractors
+        puts "All files processed, cleaning up Ractors"
+        rs.each_with_index do |ractor, i|
+          begin
+            ractor.send(:exit)
+          rescue => e
+            puts "Warning: Failed to cleanly exit Ractor #{i}: #{e.message}"
+          end
+        end
 
         if !failed_files.empty?
           puts "\nFailed to process #{failed_files.size} files. See logs for details."

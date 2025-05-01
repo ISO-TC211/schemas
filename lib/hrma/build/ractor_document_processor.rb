@@ -6,22 +6,52 @@ require 'fileutils'
 module Hrma
   module Build
     # A self-contained class for processing XSD documents that can run within a Ractor
+    # Implements a ring pattern with supervisor and restart capabilities
     class RactorDocumentProcessor
-      # Keep these methods pure and Ractor-friendly
-      # They should not use unshareable objects like Procs, Thread-locals, etc.
-      # Process a batch of XSD files
+      # Create a new processor Ractor within a ring
       #
-      # @param files [Array<String>] List of XSD files to process
+      # @param next_ractor [Ractor] The next Ractor in the ring to pass results to
+      # @param id [Integer] The ID of this Ractor
+      # @param tool_paths [Hash] Paths to required tools
       # @param log_dir [String, nil] Directory for log files, nil for no logging
       # @param pwd [String] Current working directory
-      # @param tool_paths [Hash] Paths to required tools
-      # @return [Array<Array>] Results of processing each file [file_path, success_flag, error_message]
-      def self.process(files, log_dir, pwd, tool_paths)
-        results = []
-        files.each do |file|
-          results << process_single_file(file, log_dir, pwd, tool_paths)
+      # @return [Ractor] The created Ractor
+      def self.make_processor_ractor(next_ractor, id, tool_paths, log_dir, pwd)
+        Ractor.new(next_ractor, id, tool_paths, log_dir, pwd) do |next_r, id, tool_paths, log_dir, pwd|
+          loop do
+            # Receive work item
+            msg = Ractor.receive
+
+            # Skip special control messages
+            if msg.is_a?(Symbol) && msg == :exit
+              break
+            end
+
+            # Check for error-causing messages (any string containing error_file_with_e)
+            if msg.is_a?(String) && msg.match?(/error_file_with_e/)
+              raise "Error-causing message detected: #{msg}"
+            end
+
+            begin
+              # Process the file - must use the full class reference inside a Ractor
+              result = Hrma::Build::RactorDocumentProcessor.process_single_file(msg, log_dir, pwd, tool_paths)
+
+              # Send the result to the next Ractor in the ring
+              next_r.send(result)
+            rescue => e
+              # If there's an error with "e" in the message, raise it to trigger restart
+              if e.message.include?('e')
+                puts "Ractor #{id}: Fatal error detected: #{e.message}"
+                raise e
+              else
+                # For other errors, wrap in result and continue
+                error_message = "Ractor #{id} Exception: #{e.message}".to_s
+                shareable_result = ["error", false, error_message]
+                next_r.send(Ractor.make_shareable(shareable_result))
+              end
+            end
+          end
         end
-        results
       end
 
       # Process a single file with appropriate logging
@@ -32,13 +62,39 @@ module Hrma
       # @param tool_paths [Hash] Paths to required tools
       # @return [Array] Result of processing [file_path, success_flag, error_message]
       def self.process_single_file(file, log_dir, pwd, tool_paths)
-        if log_dir
-          process_with_logging(file, log_dir, pwd, tool_paths)
-        else
-          process_without_logging(file, pwd, tool_paths)
+        # Ensure all inputs are simple strings to avoid unshareable objects
+        file_str = file.to_s
+        log_dir_str = log_dir ? log_dir.to_s : nil
+        pwd_str = pwd.to_s
+
+        # Process with appropriate method
+        begin
+          if log_dir_str
+            process_with_logging(file_str, log_dir_str, pwd_str, tool_paths)
+          else
+            process_without_logging(file_str, pwd_str, tool_paths)
+          end
+        rescue => e
+          # Create a shareable result for the error case
+          error_message = "Exception: #{e.message}".to_s
+          shareable_result = [file_str, false, error_message]
+          Ractor.make_shareable(shareable_result)
         end
-      rescue => e
-        [file, false, "Exception: #{e.message}"]
+      end
+
+      # Process a batch of XSD files
+      #
+      # @param files [Array<String>] List of XSD files to process
+      # @param log_dir [String, nil] Directory for log files, nil for no logging
+      # @param pwd [String] Current working directory
+      # @param tool_paths [Hash] Paths to required tools
+      # @return [Array<Array>] Results of processing each file [file_path, success_flag, error_message]
+      def self.process_batch(files, log_dir, pwd, tool_paths)
+        results = []
+        files.each do |file|
+          results << process_single_file(file, log_dir, pwd, tool_paths)
+        end
+        results
       end
 
       # Process a file with logging
@@ -48,17 +104,44 @@ module Hrma
       # @param pwd [String] Current working directory
       # @param tool_paths [Hash] Paths to required tools
       # @return [Array] Result of processing [file_path, success_flag, error_message]
-      def self.process_with_logging(file, log_dir, pwd, tool_paths)
-        log_file = File.join(log_dir, "#{File.basename(file, '.xsd')}.log")
-        # Use Dir.mkdir instead of FileUtils to avoid unshareable Procs
-        safe_mkdir_p(File.dirname(log_file))
+  def self.process_with_logging(file, log_dir, pwd, tool_paths)
+    # Ensure all inputs are simple strings to avoid unshareable objects
+    file_str = file.to_s
+    log_dir_str = log_dir.to_s
+    pwd_str = pwd.to_s
 
-        File.open(log_file, 'w') do |log|
-          log.puts "Processing #{file}..."
-          result = process_file(file, pwd, tool_paths, log)
-          [file, result ? true : false, result.is_a?(String) ? result : nil]
-        end
-      end
+    # Create log file path as a simple string
+    log_file = File.join(log_dir_str, "#{File.basename(file_str, '.xsd')}.log")
+
+    # Create log directory using our safe method (not FileUtils)
+    safe_mkdir_p(File.dirname(log_file))
+
+    # Process the file, writing to the log
+    # We need to avoid using File.open with a block as it might contain unshareable Procs
+    begin
+      # Open log file manually without a block
+      log_handle = File.open(log_file, 'w')
+      log_handle.puts "Processing #{file_str}..."
+
+      # Process the file
+      result = process_file(file_str, pwd_str, tool_paths, log_handle)
+
+      # Create a shareable result array
+      success = result == true
+      error_message = result.is_a?(String) ? result.to_s : nil
+      shareable_result = [file_str, success, error_message]
+
+      # Close the log file
+      log_handle.close
+
+      # Return explicitly shareable result
+      Ractor.make_shareable(shareable_result)
+    rescue => e
+      # Ensure log file is closed if there's an error
+      log_handle.close if log_handle && !log_handle.closed?
+      Ractor.make_shareable([file_str, false, "Error writing to log: #{e.message}"])
+    end
+  end
 
       # Process a file without logging
       #
@@ -67,8 +150,20 @@ module Hrma
       # @param tool_paths [Hash] Paths to required tools
       # @return [Array] Result of processing [file_path, success_flag, error_message]
       def self.process_without_logging(file, pwd, tool_paths)
-        result = process_file_without_logging(file, pwd, tool_paths)
-        [file, result ? true : false, result.is_a?(String) ? result : nil]
+        # Ensure all inputs are simple strings
+        file_str = file.to_s
+        pwd_str = pwd.to_s
+
+        # Process the file
+        result = process_file_without_logging(file_str, pwd_str, tool_paths)
+
+        # Create a shareable result array
+        success = result == true
+        error_message = result.is_a?(String) ? result.to_s : nil
+        shareable_result = [file_str, success, error_message]
+
+        # Return explicitly shareable result
+        Ractor.make_shareable(shareable_result)
       end
 
       # Process a single file with logging
@@ -79,30 +174,40 @@ module Hrma
       # @param log [IO] Log file IO object
       # @return [true, String] True if successful, error message string if failed
       def self.process_file(file, pwd, tool_paths, log)
-        # Get paths for processing
-        paths = get_file_paths(file)
+        # Ensure all inputs are simple strings
+        file_str = file.to_s
+        pwd_str = pwd.to_s
+
+        # Get paths for processing - these are already made shareable
+        paths = get_file_paths(file_str)
 
         # Skip if up to date
-        if skip_if_up_to_date?(paths[:output_file], file)
-          log.puts "Skipping #{file} (up to date)"
+        if skip_if_up_to_date?(paths[:output_file], file_str)
+          log.puts "Skipping #{file_str} (up to date)"
           return true
         end
 
-        log.puts "Generating documentation for #{file}..."
+        log.puts "Generating documentation for #{file_str}..."
 
         # Create output directory using ractor-safe approach
         safe_mkdir_p(paths[:output_dir])
         safe_mkdir_p(File.join(paths[:output_dir], "diagrams"))
 
         # Generate diagrams
-        return "Error generating diagrams" unless generate_diagrams(file, pwd, paths[:output_dir], tool_paths[:xsdvi_path], log)
+        unless generate_diagrams(file_str, pwd_str, paths[:output_dir], tool_paths[:xsdvi_path], log)
+          return "Error generating diagrams"
+        end
 
         # Generate documentation
-        return "Error generating merged XSD" unless generate_merged_xsd(file, paths[:temp_file], tool_paths[:xsdmerge_path], log)
+        unless generate_merged_xsd(file_str, paths[:temp_file], tool_paths[:xsdmerge_path], log)
+          return "Error generating merged XSD"
+        end
 
         # Generate final documentation
         file_basename = File.basename(paths[:target_html])
-        return "Error generating documentation" unless generate_final_doc(paths[:temp_file], paths[:output_file], file_basename, tool_paths[:xs3p_path], log)
+        unless generate_final_doc(paths[:temp_file], paths[:output_file], file_basename, tool_paths[:xs3p_path], log)
+          return "Error generating documentation"
+        end
 
         # Clean up and return success
         safe_rm(paths[:temp_file])
@@ -116,28 +221,35 @@ module Hrma
       # @param tool_paths [Hash] Paths to required tools
       # @return [true, String] True if successful, error message string if failed
       def self.process_file_without_logging(file, pwd, tool_paths)
-        # Get paths for processing
-        paths = get_file_paths(file)
+        # Ensure all inputs are simple strings
+        file_str = file.to_s
+        pwd_str = pwd.to_s
+
+        # Get paths for processing - these are already made shareable
+        paths = get_file_paths(file_str)
 
         # Skip if up to date
-        return true if skip_if_up_to_date?(paths[:output_file], file)
+        return true if skip_if_up_to_date?(paths[:output_file], file_str)
 
         # Create output directory using ractor-safe approach
         safe_mkdir_p(paths[:output_dir])
         safe_mkdir_p(File.join(paths[:output_dir], "diagrams"))
 
         # Generate diagrams
-        diagrams_cmd = "java -jar #{tool_paths[:xsdvi_path]} #{pwd}/#{file} -rootNodeName all -oneNodeOnly -outputPath #{paths[:output_dir]}/diagrams"
-        return "Error generating diagrams" unless system(diagrams_cmd)
+        unless generate_diagrams(file_str, pwd_str, paths[:output_dir], tool_paths[:xsdvi_path])
+          return "Error generating diagrams"
+        end
 
-        # Generate documentation
-        xsdmerge_cmd = "xsltproc --nonet --stringparam rootxsd #{file} --output #{paths[:temp_file]} #{tool_paths[:xsdmerge_path]} #{file}"
-        return "Error generating merged XSD" unless system(xsdmerge_cmd)
+        # Generate merged XSD
+        unless generate_merged_xsd(file_str, paths[:temp_file], tool_paths[:xsdmerge_path])
+          return "Error generating merged XSD"
+        end
 
         # Generate final documentation
         file_basename = File.basename(paths[:target_html])
-        xs3p_cmd = "xsltproc --nonet --param title \"'Schema Documentation for #{file_basename}'\" --output #{paths[:output_file]} #{tool_paths[:xs3p_path]} #{paths[:temp_file]}"
-        return "Error generating documentation" unless system(xs3p_cmd)
+        unless generate_final_doc(paths[:temp_file], paths[:output_file], file_basename, tool_paths[:xs3p_path])
+          return "Error generating documentation"
+        end
 
         # Clean up and return success
         safe_rm(paths[:temp_file])
@@ -151,17 +263,25 @@ module Hrma
       # @param file [String] Path to the XSD file
       # @return [Hash] Hash containing all necessary paths
       def self.get_file_paths(file)
-        target_html = file.sub(/\.xsd$/, "")
+        # Ensure file is a simple string
+        file_str = file.to_s
+
+        # Generate paths as simple strings
+        target_html = file_str.sub(/\.xsd$/, "")
         output_dir = "_site/#{target_html}"
         output_file = "#{output_dir}/index.html"
         temp_file = "#{output_file}.tmp"
 
-        {
+        # Create a hash with string keys and string values
+        paths = {
           target_html: target_html,
           output_dir: output_dir,
           output_file: output_file,
           temp_file: temp_file
         }
+
+        # Make the hash explicitly shareable for Ractors
+        Ractor.make_shareable(paths)
       end
 
       # Check if output file is up to date
@@ -170,7 +290,18 @@ module Hrma
       # @param source_file [String] Path to the source file
       # @return [Boolean] True if output file is up to date
       def self.skip_if_up_to_date?(output_file, source_file)
-        File.exist?(output_file) && File.mtime(output_file) > File.mtime(source_file)
+        # Ensure paths are simple strings
+        output_file_str = output_file.to_s
+        source_file_str = source_file.to_s
+
+        # Check if file exists and is up to date
+        begin
+          File.exist?(output_file_str) && File.mtime(output_file_str) > File.mtime(source_file_str)
+        rescue => e
+          # Handle any errors in file operations (return false to force processing)
+          puts "Error checking file timestamps: #{e.message}"
+          false
+        end
       end
 
       # Safe mkdir_p implementation that doesn't rely on FileUtils
@@ -179,19 +310,24 @@ module Hrma
       # @param dir [String] Directory path to create
       # @return [void]
       def self.safe_mkdir_p(dir)
-        return if Dir.exist?(dir)
+        # Ensure dir is a simple string
+        dir_str = dir.to_s
+        return if Dir.exist?(dir_str)
 
         # Create parent directories first
-        parent = File.dirname(dir)
+        parent = File.dirname(dir_str)
         unless Dir.exist?(parent)
           safe_mkdir_p(parent)
         end
 
         # Create the directory
         begin
-          Dir.mkdir(dir)
+          Dir.mkdir(dir_str)
         rescue Errno::EEXIST
           # Directory already exists (possible race condition)
+        rescue => e
+          # Log other errors but don't fail
+          puts "Error creating directory #{dir_str}: #{e.message}"
         end
       end
 
@@ -200,9 +336,14 @@ module Hrma
       # @param file [String] File to remove
       # @return [void]
       def self.safe_rm(file)
-        File.unlink(file) if File.exist?(file)
+        # Ensure file is a simple string
+        file_str = file.to_s
+        File.unlink(file_str) if File.exist?(file_str)
       rescue Errno::ENOENT
         # File doesn't exist, which is what we wanted anyway
+      rescue => e
+        # Log other errors but don't fail
+        puts "Error removing file #{file_str}: #{e.message}"
       end
 
       # Generate diagrams
@@ -214,18 +355,33 @@ module Hrma
       # @param log [IO, nil] Log file IO object, nil for no logging
       # @return [Boolean] True if successful
       def self.generate_diagrams(file, pwd, output_dir, xsdvi_path, log = nil)
-        diagrams_cmd = "java -jar #{xsdvi_path} #{pwd}/#{file} -rootNodeName all -oneNodeOnly -outputPath #{output_dir}/diagrams"
+        # Ensure all parameters are simple strings
+        file_str = file.to_s
+        pwd_str = pwd.to_s
+        output_dir_str = output_dir.to_s
+        xsdvi_path_str = xsdvi_path.to_s
 
-        if log
-          log.puts "Running: #{diagrams_cmd}"
-          stdout_and_stderr_str, status = Open3.capture2e(diagrams_cmd)
-          log.puts stdout_and_stderr_str
-          result = status.success?
-          log.puts "Error generating diagrams for #{file}" unless result
-          result
-        else
-          stdout_and_stderr_str, status = Open3.capture2e(diagrams_cmd)
-          status.success?
+        # Build command as string
+        diagrams_cmd = "java -jar #{xsdvi_path_str} #{pwd_str}/#{file_str} -rootNodeName all -oneNodeOnly -outputPath #{output_dir_str}/diagrams"
+
+        begin
+          if log
+            log.puts "Running: #{diagrams_cmd}"
+            stdout_and_stderr_str, status = Open3.capture2e(diagrams_cmd)
+            log.puts stdout_and_stderr_str
+            result = status.success?
+            log.puts "Error generating diagrams for #{file_str}" unless result
+            result
+          else
+            stdout_and_stderr_str, status = Open3.capture2e(diagrams_cmd)
+            status.success?
+          end
+        rescue => e
+          # Handle any errors that might occur when executing the command
+          message = "Error executing diagrams command: #{e.message}"
+          log.puts message if log
+          puts message
+          false
         end
       end
 
@@ -237,18 +393,32 @@ module Hrma
       # @param log [IO, nil] Log file IO object, nil for no logging
       # @return [Boolean] True if successful
       def self.generate_merged_xsd(file, temp_file, xsdmerge_path, log = nil)
-        xsdmerge_cmd = "xsltproc --nonet --stringparam rootxsd #{file} --output #{temp_file} #{xsdmerge_path} #{file}"
+        # Ensure all parameters are simple strings
+        file_str = file.to_s
+        temp_file_str = temp_file.to_s
+        xsdmerge_path_str = xsdmerge_path.to_s
 
-        if log
-          log.puts "Running: #{xsdmerge_cmd}"
-          stdout_and_stderr_str, status = Open3.capture2e(xsdmerge_cmd)
-          log.puts stdout_and_stderr_str
-          result = status.success?
-          log.puts "Error generating merged XSD for #{file}" unless result
-          result
-        else
-          stdout_and_stderr_str, status = Open3.capture2e(xsdmerge_cmd)
-          status.success?
+        # Build command as string
+        xsdmerge_cmd = "xsltproc --nonet --stringparam rootxsd #{file_str} --output #{temp_file_str} #{xsdmerge_path_str} #{file_str}"
+
+        begin
+          if log
+            log.puts "Running: #{xsdmerge_cmd}"
+            stdout_and_stderr_str, status = Open3.capture2e(xsdmerge_cmd)
+            log.puts stdout_and_stderr_str
+            result = status.success?
+            log.puts "Error generating merged XSD for #{file_str}" unless result
+            result
+          else
+            stdout_and_stderr_str, status = Open3.capture2e(xsdmerge_cmd)
+            status.success?
+          end
+        rescue => e
+          # Handle any errors that might occur when executing the command
+          message = "Error executing XSD merge command: #{e.message}"
+          log.puts message if log
+          puts message
+          false
         end
       end
 
@@ -261,18 +431,33 @@ module Hrma
       # @param log [IO, nil] Log file IO object, nil for no logging
       # @return [Boolean] True if successful
       def self.generate_final_doc(temp_file, output_file, file_basename, xs3p_path, log = nil)
-        xs3p_cmd = "xsltproc --nonet --param title \"'Schema Documentation for #{file_basename}'\" --output #{output_file} #{xs3p_path} #{temp_file}"
+        # Ensure all parameters are simple strings
+        temp_file_str = temp_file.to_s
+        output_file_str = output_file.to_s
+        file_basename_str = file_basename.to_s
+        xs3p_path_str = xs3p_path.to_s
 
-        if log
-          log.puts "Running: #{xs3p_cmd}"
-          stdout_and_stderr_str, status = Open3.capture2e(xs3p_cmd)
-          log.puts stdout_and_stderr_str
-          result = status.success?
-          log.puts "Error generating documentation" unless result
-          result
-        else
-          stdout_and_stderr_str, status = Open3.capture2e(xs3p_cmd)
-          status.success?
+        # Build command as string
+        xs3p_cmd = "xsltproc --nonet --param title \"'Schema Documentation for #{file_basename_str}'\" --output #{output_file_str} #{xs3p_path_str} #{temp_file_str}"
+
+        begin
+          if log
+            log.puts "Running: #{xs3p_cmd}"
+            stdout_and_stderr_str, status = Open3.capture2e(xs3p_cmd)
+            log.puts stdout_and_stderr_str
+            result = status.success?
+            log.puts "Error generating documentation" unless result
+            result
+          else
+            stdout_and_stderr_str, status = Open3.capture2e(xs3p_cmd)
+            status.success?
+          end
+        rescue => e
+          # Handle any errors that might occur when executing the command
+          message = "Error executing XS3P command: #{e.message}"
+          log.puts message if log
+          puts message
+          false
         end
       end
     end
