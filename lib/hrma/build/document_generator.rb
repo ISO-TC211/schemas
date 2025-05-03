@@ -137,16 +137,33 @@ module Hrma
         result
       end
 
-      # Generate documentation in parallel using Ractors in a ring pattern with supervisor
+      # Generate documentation in parallel using Ractors with a worker pool pattern
       #
       # @param xsd_files [Array<String>] List of XSD files to process
       # @return [void]
       def generate_parallel(xsd_files)
+        # Set up signal handling for graceful shutdown
+        @shutdown_requested = false
+
+        # Store workers globally so signal handler can access them
+        @workers = []
+
+        # Set up signal handler for Ctrl+C (SIGINT)
+        original_handler = trap('INT') do
+          puts "\nShutdown requested. Cleaning up workers..."
+          @shutdown_requested = true
+
+          # Clean up workers
+          cleanup_workers
+
+          # Exit with non-zero status to indicate interruption
+          exit(1)
+        end
         # Use provided ractors count or calculate automatically
         requested_ractors = options[:ractors] ? options[:ractors].to_i : nil
         ractor_count = calculate_auto_ractors(xsd_files.size, requested_ractors)
 
-        puts "Generating documentation in parallel using #{ractor_count} ractors in a ring topology..."
+        puts "Generating documentation in parallel using #{ractor_count} ractor workers..."
 
         # Create log directory per schema if logging is enabled
         if @log_dir
@@ -171,78 +188,219 @@ module Hrma
         shareable_files = xsd_files.map { |f| f.to_s.dup }
         shareable_files = Ractor.make_shareable(shareable_files)
 
-        # Initialize current Ractor as start of the ring
-        r = Ractor.current
-
-        # Create ring of ractors following the sample pattern
-        rs = (1..ractor_count).map do |i|
-          r = Hrma::Build::RactorDocumentProcessor.make_processor_ractor(
-            r, i, tools_constants, log_dir, pwd_copy
-          )
-        end
-
         # Track processed files and failures
         failed_files = []
         processed_count = 0
 
-        # Process files following the ring pattern with supervisor and restart
-        shareable_files.each do |file|
-          puts "Processing: #{file}"
-          msg = file
+        # Queue of files to process
+        files_queue = shareable_files.dup
 
-          begin
-            # Send the file to the first Ractor in the ring
-            rs.first.send(msg)
+        # Create worker ractors - each one processes files independently
+        puts "Creating #{ractor_count} worker ractors"
+        @workers = (1..ractor_count).map do |i|
+          # Give each worker a descriptive name
+          worker_name = "Worker-#{i}"
+          Hrma::Build::RactorDocumentProcessor.create_worker(i, worker_name, tools_constants, log_dir, pwd_copy)
+        end
 
-            # Wait for the result to cycle through the ring back to us
-            result = Ractor.select(*rs, Ractor.current)[1]
-
-            # Process the result
-            if result.is_a?(Array) && result.size >= 3
-              file_path = result[0].to_s
-              success = !!result[1]  # Convert to boolean explicitly
-              error_message = result[2] ? result[2].to_s : nil
-
-              processed_count += 1
-              progressbar.increment
-
-              if success
-                puts "Successfully processed #{file_path} (#{processed_count}/#{xsd_files.size})"
-              else
-                failed_files << "#{file_path}: #{error_message}"
-                puts "\nError processing #{file_path}: #{error_message}"
-              end
-            end
-
-          rescue Ractor::RemoteError => e
-            puts "Ractor error detected: #{e.message}"
-            puts "Restarting failed Ractor..."
-
-            # Restart the last Ractor in the ring, following the sample pattern
-            r = rs[-1] = Hrma::Build::RactorDocumentProcessor.make_processor_ractor(
-              rs[-2], ractor_count, tools_constants, log_dir, pwd_copy
-            )
-
-            # Use 'x0' as a safe message that won't trigger an error
-            msg = file.gsub('e', 'x')
-
-            # Retry with the safe message
-            retry
+        # Assign initial work to workers
+        puts "Assigning initial work to workers..."
+        @workers.each_with_index do |worker, i|
+          if i < files_queue.size
+            file = files_queue.shift
+            puts "Supervisor assigning file #{file} to Worker ##{i+1} (Worker-#{i+1})"
+            worker.send(file)
           end
         end
 
-        # Clean up by sending :exit signal to all Ractors
-        puts "All files processed, cleaning up Ractors"
-        rs.each_with_index do |ractor, i|
+        # Supervisor loop - process files until all are completed or shutdown requested
+        while processed_count < xsd_files.size && !@shutdown_requested
+          begin
+            if files_queue.empty?
+              # No more files to process, just wait for remaining results
+              if processed_count < xsd_files.size
+                # Use Ractor.select to get results from ANY available worker
+                ready_ractor, result = Ractor.select(*@workers)
+
+                # Unpack the result with worker info
+                # Format: [worker_id, worker_name, file_path, result]
+                worker_id, worker_name, file_path, file_result = result
+
+                # Process result
+                success = file_result[1] # Second element is success flag
+                error_message = file_result[2] # Third element is error message
+
+                puts "Received result from Worker ##{worker_id} (#{worker_name})"
+
+                processed_count += 1
+                progressbar.increment
+
+                if success
+                  puts "Successfully processed #{file_path} (#{processed_count}/#{xsd_files.size})"
+                else
+                  failed_files << "#{file_path}: #{error_message}"
+                  puts "\nError processing #{file_path}: #{error_message}"
+                end
+              end
+            else
+              # Still have files to process - either assign work or get results
+
+              # Try to get results from any finished worker first
+              result = nil
+
+              # Check for results without blocking
+              @workers.each do |worker|
+                begin
+                  # Check if worker has yielded a result
+                  if worker.inspect.include?("yielding")
+                    # Try to take the result without blocking
+                    result = worker.take if worker.inspect.include?("yielding")
+                    break if result
+                  end
+                rescue Ractor::ClosedError
+                  # Worker might have been closed, continue to next
+                  next
+                end
+              end
+
+              if result
+                # Got a result from a worker
+                # Format: [worker_id, worker_name, file_path, result]
+                worker_id, worker_name, file_path, file_result = result
+
+                puts "Received result from Worker ##{worker_id} (#{worker_name})"
+
+                # Process result
+                success = file_result[1] # Second element is success flag
+                error_message = file_result[2] # Third element is error message
+
+                processed_count += 1
+                progressbar.increment
+
+                if success
+                  puts "Successfully processed #{file_path} (#{processed_count}/#{xsd_files.size})"
+                else
+                  failed_files << "#{file_path}: #{error_message}"
+                  puts "\nError processing #{file_path}: #{error_message}"
+                end
+
+                # Assign a new file to this worker if any remain
+                if !files_queue.empty?
+                  next_file = files_queue.shift
+
+                  # Find the worker that just finished
+                  ready_worker = @workers.find { |w| w.inspect.include?("yielding") }
+                  if ready_worker
+                    # We already know which worker is ready from the yielded result
+                    # No need to parse the inspect string
+
+                    puts "Supervisor assigning file #{next_file} to Worker ##{worker_id} (#{worker_name})"
+                    ready_worker.send(next_file)
+                  end
+                end
+              else
+                # No results yet - assign more work if workers are available
+                # Find any available worker
+                ready_worker = @workers.find { |w| w.inspect.include?("blocking") }
+
+                if ready_worker && !files_queue.empty?
+                  next_file = files_queue.shift
+
+                  # Find the worker index in the workers array
+                  ready_worker_index = @workers.index(ready_worker)
+
+                  # Use the index to determine worker ID and name
+                  worker_id = ready_worker_index + 1
+                  worker_name = "Worker-#{worker_id}"
+
+                  puts "Supervisor assigning file #{next_file} to Worker ##{worker_id} (#{worker_name})"
+                  ready_worker.send(next_file)
+                else
+                  # No worker available or no files - wait for a result
+                  ready_ractor, result = Ractor.select(*@workers)
+
+                  # Unpack the result with worker info
+                  # Format: [worker_id, worker_name, file_path, result]
+                  worker_id, worker_name, file_path, file_result = result
+
+                  puts "Received result from Worker ##{worker_id} (#{worker_name})"
+
+                  # Process result
+                  success = file_result[1] # Second element is success flag
+                  error_message = file_result[2] # Third element is error message
+
+                  processed_count += 1
+                  progressbar.increment
+
+                  if success
+                    puts "Successfully processed #{file_path} (#{processed_count}/#{xsd_files.size})"
+                  else
+                    failed_files << "#{file_path}: #{error_message}"
+                    puts "\nError processing #{file_path}: #{error_message}"
+                  end
+
+                  # Assign a new file to this worker if any remain
+                  if !files_queue.empty?
+                    next_file = files_queue.shift
+
+                    # We already know which worker is ready from the yielded result
+                    # No need to parse the inspect string
+
+                    puts "Supervisor assigning file #{next_file} to Worker ##{worker_id} (#{worker_name})"
+                    ready_ractor.send(next_file)
+                  end
+                end
+              end
+            end
+          rescue Ractor::RemoteError => e
+            puts "Ractor error detected: #{e.message}"
+            puts "Restarting failed worker..."
+
+            # Find which worker failed
+            failed_worker_index = @workers.find_index { |w| w.inspect.include?("terminated") }
+
+            if failed_worker_index
+              # Create a replacement worker
+              puts "Creating replacement Worker ##{failed_worker_index + 1}"
+              worker_name = "Worker-#{failed_worker_index + 1}-Replacement"
+              @workers[failed_worker_index] = Hrma::Build::RactorDocumentProcessor.create_worker(
+                failed_worker_index + 1, worker_name, tools_constants, log_dir, pwd_copy
+              )
+
+              # If there was a current file being processed, put it back in the queue
+              # with 'e' replaced by 'x' to avoid errors
+              if !files_queue.empty?
+                current_file = files_queue[0]
+                safe_file = current_file.gsub('e', 'x')
+                files_queue[0] = safe_file
+              end
+            end
+          end
+        end
+
+        # Clean up workers
+        cleanup_workers
+
+        # Restore original signal handler
+        trap('INT', original_handler)
+
+        if !failed_files.empty?
+          puts "\nFailed to process #{failed_files.size} files. See logs for details."
+        end
+      end
+
+      # Clean up workers by sending :exit signal to all Ractors
+      # @return [void]
+      def cleanup_workers
+        return if @workers.nil? || @workers.empty?
+
+        puts "Cleaning up Ractors..."
+        @workers.each_with_index do |ractor, i|
           begin
             ractor.send(:exit)
           rescue => e
             puts "Warning: Failed to cleanly exit Ractor #{i}: #{e.message}"
           end
-        end
-
-        if !failed_files.empty?
-          puts "\nFailed to process #{failed_files.size} files. See logs for details."
         end
       end
 

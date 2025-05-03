@@ -1,6 +1,0 @@
----
-source:
-  schemas:
-    xsd:
-    - non-existent/path/schema.xsd
-    json: []

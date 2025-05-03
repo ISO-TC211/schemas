@@ -8,50 +8,73 @@ module Hrma
     # A self-contained class for processing XSD documents that can run within a Ractor
     # Implements a ring pattern with supervisor and restart capabilities
     class RactorDocumentProcessor
-      # Create a new processor Ractor within a ring
+      # Check if the file should cause an error (for testing purposes)
       #
-      # @param next_ractor [Ractor] The next Ractor in the ring to pass results to
-      # @param id [Integer] The ID of this Ractor
+      # @param file [String] Filename to check
+      # @return [Boolean] True if this file should cause an error
+      def self.error_causing_file?(file)
+        file.to_s.match?(/error_file_with_e/)
+      end
+
+      # Creates a worker Ractor that processes files as they are received
+      #
+      # @param id [Integer] Worker ID number
+      # @param name [String] Worker name for identification
       # @param tool_paths [Hash] Paths to required tools
       # @param log_dir [String, nil] Directory for log files, nil for no logging
       # @param pwd [String] Current working directory
-      # @return [Ractor] The created Ractor
-      def self.make_processor_ractor(next_ractor, id, tool_paths, log_dir, pwd)
-        Ractor.new(next_ractor, id, tool_paths, log_dir, pwd) do |next_r, id, tool_paths, log_dir, pwd|
+      # @return [Ractor] The worker Ractor
+      def self.create_worker(id, name, tool_paths, log_dir, pwd)
+        worker = Ractor.new(id, name, tool_paths, log_dir, pwd) do |id, name, tool_paths, log_dir, pwd|
+          # Print worker startup message
+          puts "Worker ##{id} (#{name}) started and ready for work"
+          # Define error_causing_file? method inside the Ractor
+          error_check = ->(file) { file.to_s.match?(/error_file_with_e/) }
+
+          # Process files as they arrive
           loop do
-            # Receive work item
-            msg = Ractor.receive
+            file = Ractor.receive
 
-            # Skip special control messages
-            if msg.is_a?(Symbol) && msg == :exit
-              break
-            end
+            # Exit signal
+            break if file == :exit
 
-            # Check for error-causing messages (any string containing error_file_with_e)
-            if msg.is_a?(String) && msg.match?(/error_file_with_e/)
-              raise "Error-causing message detected: #{msg}"
-            end
+            # Log that we received work
+            puts "Worker ##{id} (#{name}) received file: #{file}"
 
             begin
-              # Process the file - must use the full class reference inside a Ractor
-              result = Hrma::Build::RactorDocumentProcessor.process_single_file(msg, log_dir, pwd, tool_paths)
+              # Check for error-causing files using the local function
+              if error_check.call(file)
+                raise "Worker #{id} (#{name}): Error-causing file detected: #{file}"
+              end
 
-              # Send the result to the next Ractor in the ring
-              next_r.send(result)
+              # Process the file
+              result = Hrma::Build::RactorDocumentProcessor.process_single_file(
+                file, log_dir, pwd, tool_paths
+              )
+
+              # Log completion
+              puts "Worker ##{id} (#{name}) completed processing: #{file}"
+
+              # Send the result back to the supervisor with worker info
+              # Format: [worker_id, worker_name, file_path, result]
+              Ractor.yield([id, name, file, result])
             rescue => e
-              # If there's an error with "e" in the message, raise it to trigger restart
               if e.message.include?('e')
-                puts "Ractor #{id}: Fatal error detected: #{e.message}"
+                # Fatal errors should be caught by the supervisor
+                puts "Worker #{id} (#{name}): Fatal error detected: #{e.message}"
                 raise e
               else
-                # For other errors, wrap in result and continue
-                error_message = "Ractor #{id} Exception: #{e.message}".to_s
-                shareable_result = ["error", false, error_message]
-                next_r.send(Ractor.make_shareable(shareable_result))
+                # Non-fatal errors are wrapped and returned with worker info
+                error_message = "Worker #{id} (#{name}) Exception: #{e.message}".to_s
+                # Format: [worker_id, worker_name, file_path, result]
+                Ractor.yield([id, name, file, [file, false, error_message]])
               end
             end
           end
         end
+
+        # Return the created worker
+        worker
       end
 
       # Process a single file with appropriate logging
