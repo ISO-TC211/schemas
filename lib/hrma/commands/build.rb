@@ -13,8 +13,6 @@ module Hrma
     class Build < Thor
       class_option :cache_dir, type: :string, desc: "Directory for caching downloaded tools"
       class_option :log_dir, type: :string, desc: "Directory for storing log files"
-      class_option :parallel, type: :boolean, default: true, desc: "Enable parallel processing with Ractors"
-      class_option :ractors, type: :numeric, desc: "Number of parallel ractors to use (default: auto-configured based on CPU cores)"
       class_option :manifest_path, type: :string, desc: "Path to schemas.yml manifest file"
 
       # Initialize with options
@@ -35,6 +33,7 @@ module Hrma
 
       desc "documentation", "Generate documentation for schemas"
       method_option :manifest_path, type: :string, desc: "Path to schemas.yml manifest file"
+      method_option :clean, type: :boolean, default: false, desc: "Clean output directory before generating documentation"
       # Generate documentation for schemas
       #
       # @return [void]
@@ -42,6 +41,13 @@ module Hrma
         # Verify dependencies and setup tools
         Hrma::Build::Tools.verify_dependencies
         Hrma::Build::Tools.setup
+
+        # Clean output directory if requested
+        if options[:clean]
+          puts "Cleaning output directory before generating documentation..."
+          cleaner = Hrma::Build::Cleaner.new
+          cleaner.clean
+        end
 
         # Generate documentation
         generator = Hrma::Build::DocumentGenerator.new(options)

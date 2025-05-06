@@ -2,14 +2,13 @@
 
 require "fileutils"
 require "open-uri"
+require "open3"
 require_relative "../config"
 
 module Hrma
   module Build
-    # Handles downloading and setting up external tools needed for documentation generation
+    # Handles downloading, setting up, and executing external tools needed for documentation generation
     class Tools
-      include FileUtils
-
       # URLs for tools
       XERCES_URL = "https://archive.apache.org/dist/xerces/j/binaries/Xerces-J-bin.2.12.1.tar.gz"
       XSDVI_URL = "https://github.com/metanorma/xsdvi/releases/download/v1.0/xsdvi-1.0.jar"
@@ -21,9 +20,54 @@ module Hrma
       XS3P_PATH = "xsl/xs3p.xsl"
       XSDMERGE_PATH = "xsl/xsdmerge.xsl"
 
-      class << self
-        include FileUtils
+      # Initialize with the current working directory
+      #
+      # @param pwd [String] Current working directory
+      def initialize(pwd: Dir.pwd)
+        @pwd = pwd
+      end
 
+      # Generate diagrams for a schema file
+      #
+      # @param schema_path [String] Path to the schema file
+      # @param output_dir [String] Path to the output directory
+      # @param logger [Logger] Logger for output
+      # @return [Boolean] True if successful
+      def generate_diagrams(schema_path:, output_dir:, logger: nil)
+        # Build command as string
+        diagrams_cmd = "java -jar #{XSDVI_PATH} #{@pwd}/#{schema_path} -rootNodeName all -oneNodeOnly -outputPath #{output_dir}/diagrams"
+
+        execute_command(cmd: diagrams_cmd, error_message: "Error generating diagrams for #{schema_path}", logger: logger)
+      end
+
+      # Generate merged XSD
+      #
+      # @param schema_path [String] Path to the schema file
+      # @param output_path [String] Path to the output file
+      # @param logger [Logger] Logger for output
+      # @return [Boolean] True if successful
+      def generate_merged_xsd(schema_path:, output_path:, logger: nil)
+        # Build command as string
+        xsdmerge_cmd = "xsltproc --nonet --stringparam rootxsd #{schema_path} --output #{output_path} #{XSDMERGE_PATH} #{schema_path}"
+
+        execute_command(cmd: xsdmerge_cmd, error_message: "Error generating merged XSD for #{schema_path}", logger: logger)
+      end
+
+      # Generate documentation using xs3p
+      #
+      # @param input_path [String] Path to the input file (merged XSD)
+      # @param output_path [String] Path to the output file
+      # @param title [String] Title for the documentation
+      # @param logger [Logger] Logger for output
+      # @return [Boolean] True if successful
+      def xs3p(input_path:, output_path:, title:, logger: nil)
+        # Build command as string
+        xs3p_cmd = "xsltproc --nonet --param title \"'Schema Documentation for #{title}'\" --output #{output_path} #{XS3P_PATH} #{input_path}"
+
+        execute_command(cmd: xs3p_cmd, error_message: "Error generating documentation", logger: logger)
+      end
+
+      class << self
         # Setup all required tools by downloading and extracting them
         #
         # @return [void]
@@ -120,7 +164,7 @@ module Hrma
           return if File.exist?(target_path)
 
           puts "Downloading #{url}..."
-          mkdir_p(File.dirname(target_path))
+          FileUtils.mkdir_p(File.dirname(target_path))
 
           begin
             URI.open(url) do |remote_file|
@@ -145,8 +189,8 @@ module Hrma
           return if File.exist?(XSDVI_PATH)
 
           puts "Setting up XSDVI..."
-          mkdir_p(File.dirname(XSDVI_PATH))
-          cp(xsdvi_cache, XSDVI_PATH)
+          FileUtils.mkdir_p(File.dirname(XSDVI_PATH))
+          FileUtils.cp(xsdvi_cache, XSDVI_PATH)
         end
 
         # Setup Xerces tool
@@ -157,12 +201,12 @@ module Hrma
           return if File.exist?(XERCES_PATH)
 
           puts "Setting up Xerces..."
-          mkdir_p(File.dirname(XERCES_PATH))
+          FileUtils.mkdir_p(File.dirname(XERCES_PATH))
           unless system("tar -zxvf #{xerces_cache} -C xsdvi --strip-components=1 xerces-2_12_1/xercesImpl.jar")
             puts "Error extracting Xerces JAR file"
             exit 1
           end
-          touch(XERCES_PATH)
+          FileUtils.touch(XERCES_PATH)
         end
 
         # Setup XS3P tool
@@ -173,12 +217,12 @@ module Hrma
           return if File.exist?(XS3P_PATH)
 
           puts "Setting up XS3P..."
-          mkdir_p(File.dirname(XS3P_PATH))
+          FileUtils.mkdir_p(File.dirname(XS3P_PATH))
           unless system("tar -zxvf #{xs3p_cache} -C xsl --strip-components=2 xs3p-3.0/xsl")
             puts "Error extracting XS3P files"
             exit 1
           end
-          touch(XS3P_PATH)
+          FileUtils.touch(XS3P_PATH)
         end
 
         # Check if a command exists in the system
@@ -187,6 +231,36 @@ module Hrma
         # @return [Boolean] True if the command exists
         def command_exists?(command)
           system("which #{command} > /dev/null 2>&1")
+        end
+      end
+
+      private
+
+      # Execute a command and handle the result
+      #
+      # @param cmd [String] Command to execute
+      # @param error_message [String] Error message to log if the command fails
+      # @param logger [Logger] Logger for output
+      # @return [Boolean] True if successful
+      def execute_command(cmd:, error_message:, logger:)
+        begin
+          if logger
+            logger.info("Running: #{cmd}")
+            stdout_and_stderr_str, status = Open3.capture2e(cmd)
+            logger.info(stdout_and_stderr_str)
+            result = status.success?
+            logger.error(error_message) unless result
+            result
+          else
+            stdout_and_stderr_str, status = Open3.capture2e(cmd)
+            status.success?
+          end
+        rescue => e
+          # Handle any errors that might occur when executing the command
+          message = "Error executing command: #{e.message}"
+          logger.error(message) if logger
+          puts message
+          false
         end
       end
     end

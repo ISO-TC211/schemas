@@ -2,12 +2,14 @@
 
 require 'fileutils'
 require 'timeout'
+require 'logger'
 
 # Add lib directory to load path
 $LOAD_PATH.unshift File.expand_path('../lib', __dir__)
 
 # Require the main library files
-require 'hrma/build/ractor_document_processor'
+require 'hrma/build/tools'
+require 'hrma/build/schema_processor'
 require 'hrma/build/document_generator'
 
 # Configure RSpec
@@ -40,21 +42,5 @@ RSpec.configure do |config|
     FileUtils.rm_rf('tmp')
   end
 
-  # Mock system calls to avoid actual execution during tests
-  config.before(:each) do
-    # Allow FileUtils methods to execute normally
-    allow(FileUtils).to receive(:mkdir_p).and_call_original
-    allow(FileUtils).to receive(:rm_rf).and_call_original
-  end
-end
-
-# Helper module for testing with deadlock detection
-module DeadlockDetection
-  def self.run_with_timeout(timeout_seconds = 5)
-    Timeout.timeout(timeout_seconds) do
-      yield
-    end
-  rescue Timeout::Error
-    raise "Possible deadlock detected - operation timed out after #{timeout_seconds} seconds"
-  end
+  # No mocking - use real system calls
 end
