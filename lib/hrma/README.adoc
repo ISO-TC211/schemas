@@ -1,0 +1,77 @@
+= HRMA Library Documentation
+
+== Overview
+
+The HRMA (Harmonized Resources Maintenance Agency) library provides tools for managing ISO/TC 211 schemas and generating documentation. This document describes the internal structure and components of the library.
+
+== Directory Structure
+
+* `lib/hrma/` - Root directory for the HRMA library
+** `build/` - Documentation generation components
+** `commands/` - Command implementations for the CLI
+** `cli.rb` - Main CLI class
+** `config.rb` - Configuration management
+** `version.rb` - Version information
+
+== Key Components
+
+=== Build System
+
+The build system is responsible for generating documentation from schema files:
+
+* `build/document_generator.rb` - Main class for generating documentation
+* `build/schema_processor.rb` - Processes individual schema files
+* `build/schema_work.rb` - Work item representation for parallel processing
+* `build/schema_worker.rb` - Worker implementation for parallel processing
+* `build/tools.rb` - Handles downloading and setting up external tools
+* `build/cleaner.rb` - Handles cleaning generated files
+
+=== Parallel Processing
+
+The library uses Ruby's Ractor feature for parallel processing of schema files:
+
+* Work is distributed across multiple Ractors using the Fractor framework
+* Each schema file is processed in its own Ractor
+* Results are collected and aggregated
+* The number of Ractors is configurable or auto-detected based on system resources
+
+=== Commands
+
+The command system provides the CLI interface:
+
+* `commands/build.rb` - Commands for building documentation
+* `commands/schemas.rb` - Commands for managing schemas
+* `commands/config.rb` - Commands for managing configuration
+
+=== Configuration
+
+Configuration is managed through:
+
+* Command-line options
+* Environment variables
+* Configuration file (`~/.hrma/config.yml`)
+
+== Development
+
+=== Adding New Features
+
+When adding new features:
+
+1. Identify the appropriate component to modify
+2. Update tests to cover the new functionality
+3. Update documentation (including this README)
+4. Update the main README.adoc if the feature affects user-facing functionality
+
+=== Parallel Processing
+
+The parallel processing system uses the Fractor framework to distribute work across multiple Ractors:
+
+1. `SchemaWork` objects represent individual schema files to process
+2. `SchemaWorker` processes each work item in a separate Ractor
+3. `DocumentGenerator` coordinates the workers and collects results
+
+When modifying the parallel processing system:
+
+* Ensure all objects passed between Ractors are shareable
+* Handle errors appropriately to prevent worker crashes
+* Consider the impact on memory usage and system resources
