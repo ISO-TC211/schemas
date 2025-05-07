@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Main executable for the hrma tool
+# This script is the entry point for the command-line interface
+
+require "thor"
+require_relative "../lib/hrma/cli"
+
+# Start the CLI with command-line arguments
+Hrma::Cli.start(ARGV)
