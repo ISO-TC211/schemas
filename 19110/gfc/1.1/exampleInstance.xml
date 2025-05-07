@@ -10,8 +10,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="
     https://schemas.isotc211.org/19110/gfc/1.1 gfc.xsd
-    http://standards.iso.org/iso/19115/-3/mcc/1.0 http://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd"
+    http://standards.iso.org/iso/19115/-3/mcc/1.0 https://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd"
 	>
+	<!-- File superceeded to correct @codeList in line with ISO 19139-1:2019 Clause 7.3.5.2 
+                "The codeList attribute is intended to contain a URL that references a codeList's details, within a registry or a codelist catalogue" -->
 	<cat:name>
 		<gco:CharacterString>RoadsBridgesCatalogue</gco:CharacterString>
 	</cat:name>
@@ -27,26 +29,32 @@
 	<cat:versionDate>
 		<gco:Date>2015-12-21</gco:Date>
 	</cat:versionDate>
-	<cat:language>
+    <!-- Invalid URL replaced 
 	    <lan:LanguageCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/lan/LanguageCode.xml" codeListValue="eng">eng</lan:LanguageCode>
+	-->
+	<cat:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode>
 	</cat:language>
-	<cat:characterSet>
+    <!-- Invalid URL replaced 
 	    <lan:MD_CharacterSetCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/lan/CharacterSetCode.xml" codeListValue="utf8">UTF-8</lan:MD_CharacterSetCode>
+	--><cat:characterSet>
+	    <lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="utf8">UTF-8</lan:MD_CharacterSetCode>
 	</cat:characterSet>
 	<cat:locale>
 		<lan:PT_Locale id="fra">
-			<lan:language>
+		    <!-- Invalid URL replaced 
 			    <lan:LanguageCode codeListValue="fra" codeList="https://schemas.isotc211.org/19115/resources/Codelist/lan/LanguageCode.xml">fra</lan:LanguageCode>
-			</lan:language>
+			--><lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="fra">fra</lan:LanguageCode></lan:language>
 			<lan:characterEncoding>
+			    <!-- Invalid URL replaced 
 			    <lan:MD_CharacterSetCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/lan/CharacterSetCode.xml" codeListValue="utf8">UTF-8</lan:MD_CharacterSetCode>
-			</lan:characterEncoding>
+			-->
+			    <lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="utf8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
 		</lan:PT_Locale>
 	</cat:locale>
 	<gfc:producer>
 		<cit:CI_Responsibility>
 		    <cit:role>
-		        <cit:CI_RoleCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codeList.xml#CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode>
+		        <cit:CI_RoleCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode>
 		    </cit:role>
 		    <cit:party>
 		        <cit:CI_Organisation>
@@ -206,7 +214,7 @@
 		                                                <gco:Date>2010</gco:Date>
 		                                            </cit:date>
 		                                            <cit:dateType>
-		                                                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codeList.xml#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+		                                                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
 		                                            </cit:dateType>
 		                                        </cit:CI_Date>
 		                                    </cit:date>
@@ -229,7 +237,7 @@
 		                                        <gco:Date>1997-06-01</gco:Date>
 		                                    </cit:date>
 		                                    <cit:dateType>
-		                                        <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codeList.xml#CI_DateTypeCode" codeListValue="publication"/>
+		                                        <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_DateTypeCode" codeListValue="publication"/>
 		                                    </cit:dateType>
 		                                </cit:CI_Date>
 		                            </cit:date>
@@ -374,7 +382,7 @@
 		                                        <gco:Date>1997-06-01</gco:Date>
 		                                    </cit:date>
 		                                    <cit:dateType>
-		                                        <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codeList.xml#CI_DateTypeCode" codeListValue="publication"/>
+		                                        <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#CI_DateTypeCode" codeListValue="publication"/>
 		                                    </cit:dateType>
 		                                </cit:CI_Date>
 		                            </cit:date>
