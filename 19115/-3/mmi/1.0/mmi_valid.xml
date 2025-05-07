@@ -29,8 +29,7 @@
          <mri:resourceMaintenance>
             <mmi:MD_MaintenanceInformation>
                <mmi:maintenanceAndUpdateFrequency>
-                  <mmi:MD_MaintenanceFrequencyCode 
-                     codeList="" 
+                  <mmi:MD_MaintenanceFrequencyCode  codeList="" 
                      codeListValue="asNeeded"/>
                </mmi:maintenanceAndUpdateFrequency>
             </mmi:MD_MaintenanceInformation>

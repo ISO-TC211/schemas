@@ -136,22 +136,29 @@
 
          <mri:defaultLocale>
             <lan:PT_Locale>
-               <lan:language>
-                  <lan:LanguageCode codeList="" codeListValue="eng"/>
-               </lan:language>
-               <lan:characterEncoding>
-                  <lan:MD_CharacterSetCode codeList="" codeListValue=""/>
-               </lan:characterEncoding>
-            </lan:PT_Locale>
+               <!-- Replace invalid URL 
+            <lan:LanguageCode codeList="" codeListValue="eng">eng</lan:LanguageCode>
+         -->
+               <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+               <!-- Replace invalid URL and value
+            <lan:MD_CharacterSetCode codeList="" codeListValue=""></lan:MD_CharacterSetCode>
+        -->
+               <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+               
+             </lan:PT_Locale>
          </mri:defaultLocale>
          
          <mri:otherLocale>
             <lan:PT_Locale>
-               <lan:language>
-                  <lan:LanguageCode codeList="" codeListValue="fre"/>
+               <!-- Replace invalid URL 
+            <lan:LanguageCode codeList="" codeListValue="fre"/>
+         -->
+               <lan:language><lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/langhome.html" codeListValue="fre"/>
                </lan:language>
-               <lan:characterEncoding>
-                  <lan:MD_CharacterSetCode codeList="" codeListValue="UTF-16"/>
+               <!-- Replace invalid URL 
+            <lan:MD_CharacterSetCode codeList="" codeListValue="UTF-16"/>
+         -->
+               <lan:characterEncoding><lan:MD_CharacterSetCode codeList="https://www.iana.org/assignments/character-sets" codeListValue="UTF-16"/>
                </lan:characterEncoding>
             </lan:PT_Locale>
          </mri:otherLocale>
