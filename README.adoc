@@ -83,8 +83,8 @@ Available subcommands:
 ** `--manifest-path PATH` - Path to schemas.yml manifest file
 ** `--cache-dir DIR` - Directory for caching downloaded tools
 ** `--log-dir DIR` - Directory for storing log files
-** `--parallel` / `--no-parallel` - Enable/disable parallel processing with Ractors
-** `--ractors NUM` - Number of parallel ractors to use (default: auto-configured)
+** `--parallel` / `--no-parallel` - Enable/disable parallel processing with Fractors (default: enabled)
+** `--workers NUM` - Number of parallel workers to use (default: auto-configured)
 * `clean` - Remove generated documentation
 * `distclean` - Remove generated documentation and downloaded tools
 ** `--global-cache` - Also clean the global cache directory
@@ -99,8 +99,8 @@ bundle exec hrma build documentation
 # Generate documentation with custom manifest file
 bundle exec hrma build documentation --manifest-path=custom-schemas.yml
 
-# Generate documentation with 4 ractors
-bundle exec hrma build documentation --ractors=4
+# Generate documentation with 4 workers
+bundle exec hrma build documentation --workers=4
 
 # Generate documentation without parallel processing
 bundle exec hrma build documentation --no-parallel
@@ -158,36 +158,35 @@ bundle exec hrma config set cache_dir /path/to/cache
 
 === Parallel processing
 
-The tool supports parallel processing using Ruby's Ractor feature. This
-significantly speeds up documentation generation for large numbers of schema
-files.
+The tool supports parallel processing using Ruby's Ractor feature through the Fractor framework. This
+significantly speeds up documentation generation for large numbers of schema files.
 
-By default, the tool automatically determines the optimal number of ractors to
+By default, the tool automatically determines the optimal number of workers to
 use based on your system resources:
 
-* In "auto" mode (default), the number of ractors is determined by:
+* In "auto" mode (default), the number of workers is determined by:
 ** Using half of your CPU cores (rounded down)
 ** Ensuring at least 2 cores are left free for system processes
-** Using at least 1 ractor
-** Using one ractor per file when possible (up to the calculated maximum)
+** Using at least 1 worker
+** Using one worker per file when possible (up to the calculated maximum)
 
 This auto-configuration provides a good balance between performance and system
 responsiveness.
 
 [example]
 ====
-* With 4 files on a 4-core system: 1 ractor would be used (half cores = 2, but ensuring 2 cores are free = 1)
-* With 4 files on an 8-core system: 4 ractors would be used (half cores = 4, which leaves enough free cores)
-* With 4 files on a 16-core system: 4 ractors would be used (one per file, even though 8 ractors would be available)
-* With 10 files on a 16-core system: 8 ractors would be used (half cores = 8, which is less than file count)
+* With 4 files on a 4-core system: 1 worker would be used (half cores = 2, but ensuring 2 cores are free = 1)
+* With 4 files on an 8-core system: 4 workers would be used (half cores = 4, which leaves enough free cores)
+* With 4 files on a 16-core system: 4 workers would be used (one per file, even though 8 workers would be available)
+* With 10 files on a 16-core system: 8 workers would be used (half cores = 8, which is less than file count)
 ====
 
-You can manually specify the number of ractors:
+You can manually specify the number of workers:
 
 [source,sh]
 ----
-# Use 4 ractors for parallel processing
-bundle exec hrma build documentation --ractors=4
+# Use 4 workers for parallel processing
+bundle exec hrma build documentation --workers=4
 ----
 
 To disable parallel processing entirely:
@@ -196,9 +195,6 @@ To disable parallel processing entirely:
 ----
 # Disable parallel processing
 bundle exec hrma build documentation --no-parallel
-
-# Alternative method
-HRMA_DISABLE_RACTORS=1 bundle exec hrma build documentation
 ----
 
 
@@ -215,8 +211,9 @@ The `hrma` tool is organized into several components:
 === Build system
 
 * `lib/hrma/build/document_generator.rb` - Main class for generating documentation
-* `lib/hrma/build/ractor_document_processor.rb` - Processor for XSD files that can run within a Ractor
-* `lib/hrma/build/documentation.rb` - Module with documentation generation utilities
+* `lib/hrma/build/schema_processor.rb` - Processes individual schema files
+* `lib/hrma/build/schema_work.rb` - Work item representation for parallel processing
+* `lib/hrma/build/schema_worker.rb` - Worker implementation for parallel processing
 * `lib/hrma/build/tools.rb` - Handles downloading and setting up external tools
 * `lib/hrma/build/cleaner.rb` - Handles cleaning generated files
 

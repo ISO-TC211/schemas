@@ -19,4 +19,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "thor", "~> 1.2"
   spec.add_dependency "rake", "~> 13.0"
   spec.add_dependency "ruby-progressbar", "~> 1.13"
+  spec.add_dependency "fractor", "~> 0.1"
 end

@@ -4,8 +4,12 @@ require "yaml"
 require "fileutils"
 require "ruby-progressbar"
 require "logger"
+require "etc"
+require "fractor"
 require_relative "../config"
 require_relative "schema_processor"
+require_relative "schema_work"
+require_relative "schema_worker"
 
 module Hrma
   module Build
@@ -35,9 +39,78 @@ module Hrma
         puts "Found #{xsd_files.size} XSD files to process"
         @progressbar = create_progressbar(xsd_files.size)
 
-        generate_sequential(xsd_files)
+        if options[:parallel] == false
+          generate_sequential(xsd_files)
+        else
+          generate_parallel(xsd_files)
+        end
 
         puts "\nDocumentation generation complete. See _site/ directory."
+      end
+
+      # Generate documentation in parallel using Fractors
+      #
+      # @param xsd_files [Array<String>] List of XSD files to process
+      # @return [void]
+      def generate_parallel(xsd_files)
+        puts "Generating documentation in parallel..."
+
+        # Determine number of workers - use either the specified number or auto-detect
+        num_workers = options[:workers] || [xsd_files.size, Etc.nprocessors].min
+        puts "Using #{num_workers} parallel workers"
+
+        # Create work items - each item contains just the basic string path and log file path
+        work_items = xsd_files.map do |xsd_file|
+          # Create log file path for this file if log_dir is specified
+          log_file = nil
+          if @log_dir
+            log_file_name = "#{File.basename(xsd_file, '.xsd')}.log"
+            log_file = File.join(@log_dir, log_file_name)
+            FileUtils.mkdir_p(File.dirname(log_file))
+          end
+
+          # Use the original string path directly - no nested objects
+          SchemaWork.new({
+            schema_path: xsd_file,  # This is just a string
+            log_file: log_file
+          })
+        end
+
+        # Create supervisor with worker pools
+        supervisor = Fractor::Supervisor.new(
+          worker_pools: [
+            { worker_class: SchemaWorker, num_workers: num_workers }
+          ]
+        )
+
+        # Add work items
+        supervisor.add_work_items(work_items)
+
+        # Run processing
+        supervisor.run
+
+        # Process results
+        process_results(supervisor.results)
+      end
+
+      # Process results from parallel processing
+      #
+      # @param aggregator [Fractor::ResultAggregator] Result aggregator
+      # @return [void]
+      def process_results(aggregator)
+        # Handle successful results
+        aggregator.results.each do |result|
+          schema_path = result.work.input[:schema_path]
+          puts "Successfully processed #{schema_path}"
+          progressbar.increment
+        end
+
+        # Handle errors
+        aggregator.errors.each do |error_result|
+          schema_path = error_result.work.input[:schema_path]
+          puts "Error processing #{schema_path}: #{error_result.error}"
+          progressbar.increment
+        end
       end
 
       private
@@ -59,38 +132,20 @@ module Hrma
         xsd_files
       end
 
-      # Generate documentation sequentially
+      # Generate documentation sequentially (using parallel processing with 1 worker)
       #
       # @param xsd_files [Array<String>] List of XSD files to process
       # @return [void]
       def generate_sequential(xsd_files)
-        puts "Generating documentation sequentially..."
+        puts "Generating documentation sequentially (single worker)..."
 
-        # Create a schema processor
-        processor = SchemaProcessor.new
+        # Just use parallel processing with 1 worker
+        options_with_one_worker = options.dup
+        options_with_one_worker[:workers] = 1
+        @options = options_with_one_worker
 
-        # Process each file
-        xsd_files.each do |xsd_file|
-          puts "Processing: #{xsd_file}"
-
-          # Create a logger for this file if log_dir is specified
-          logger = create_logger(xsd_file) if @log_dir
-
-          # Process the file
-          result = processor.process(schema_path: xsd_file, logger: logger)
-
-          # Close the logger if it was created
-          logger&.close
-
-          # Handle the result
-          if result
-            puts "Successfully processed #{xsd_file}"
-          else
-            puts "Error processing #{xsd_file}"
-          end
-
-          progressbar.increment
-        end
+        # Use the parallel implementation with 1 worker
+        generate_parallel(xsd_files)
       end
 
       # Create a logger for a specific file

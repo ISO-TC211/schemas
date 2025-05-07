@@ -34,6 +34,8 @@ module Hrma
       desc "documentation", "Generate documentation for schemas"
       method_option :manifest_path, type: :string, desc: "Path to schemas.yml manifest file"
       method_option :clean, type: :boolean, default: false, desc: "Clean output directory before generating documentation"
+      method_option :parallel, type: :boolean, default: true, desc: "Use parallel processing with Fractors"
+      method_option :workers, type: :numeric, desc: "Number of parallel workers to use (default: auto-detect)"
       # Generate documentation for schemas
       #
       # @return [void]
