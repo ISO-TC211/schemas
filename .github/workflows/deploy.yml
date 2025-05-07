@@ -14,7 +14,7 @@ jobs:
         run: |
           echo "##[set-output name=value;]deploy_${GITHUB_REF##*/}"
       - name: Trigger dependent repositories
-        uses: peter-evans/repository-dispatch@v1
+        uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.PAT_TOKEN }}
           repository: ISO-TC211/schemas.isotc211.org

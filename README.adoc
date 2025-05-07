@@ -1,36 +1,230 @@
-= ISO/TC 211 XML Schemas
+= ISO/TC 211 Schemas
 
-image:https://github.com/ISO-TC211/schemas/workflows/build/badge.svg["XSD documentation build status", link="https://github.com/ISO-TC211/schemas/actions?workflow=build"]
+image:https://github.com/ISO-TC211/schemas/workflows/build/badge.svg["Documentation build status", link="https://github.com/ISO-TC211/schemas/actions?workflow=build"]
 
 image:https://github.com/ISO-TC211/schemas/workflows/deploy/badge.svg["Deploy status", link="https://github.com/ISO-TC211/schemas/actions?workflow=deploy"]
 
+
 == Introduction
 
-This is the official repository of ISO/TC 211 XML Schemas.
+This is the official repository of ISO/TC 211 Schemas, jointly managed by
+ISO/TC 211/XMG and Ribose.
 
-Jointly managed by ISO/TC 211/XMG and Ribose.
+== Requirements
+
+* Dependencies installation (choose one):
+  - Individual: `gem install thor rake`
+  - Using Bundler: `bundle install`
+  - Build and install gem: `gem build hrma.gemspec && gem install hrma-*.gem`
+* External dependencies:
+  - Java (for generating diagrams)
+  - xsltproc (for generating documentation)
 
 
-== XSD documentation pages
+== Command-line reference
 
-XSD documentation pages are generated using the `build` workflow.
+=== General
 
-The `schemas.yml` file controls which schemas (identified by path)
-should generate XSD documentation.
+The repository includes a command-line tool called `hrma` (Harmonized Resources
+Maintenance Agency) to manage schemas and generate documentation.
+
+
+=== Schema management
+
+The `schemas` command manages the schema manifest file (`schemas.yml`), which
+controls which schemas should generate documentation.
+
+[source,sh]
+----
+bundle exec hrma schemas manifest SUBCOMMAND
+----
+
+Available subcommands:
+
+* `update` - Update schemas.yml with all 3-character XSD and JSON files
+* `list` - List all schemas in the manifest file
+** `--type TYPE` - Filter by schema type (xsd or json)
+** `--doc DOC` - Filter by document number
+* `validate` - Verify all schemas in the manifest exist
+
+[example]
+====
+[source,sh]
+----
+# Update schemas.yml with all 3-character XSD and JSON files
+bundle exec hrma schemas manifest update
+
+# List all schemas in the manifest file
+bundle exec hrma schemas manifest list
+
+# List only XSD schemas
+bundle exec hrma schemas manifest list --type xsd
+
+# List schemas for document 19115
+bundle exec hrma schemas manifest list --doc 19115
+
+# Verify all schemas in the manifest exist
+bundle exec hrma schemas manifest validate
+----
+====
+
+=== Documentation generation
+
+The `build` command generates documentation for schemas defined in the manifest file.
+
+[source,sh]
+----
+bundle exec hrma build SUBCOMMAND [OPTIONS]
+----
+
+Available subcommands:
+
+* `documentation` - Generate documentation for schemas
+** `--manifest-path PATH` - Path to schemas.yml manifest file
+** `--cache-dir DIR` - Directory for caching downloaded tools
+** `--log-dir DIR` - Directory for storing log files
+** `--parallel` / `--no-parallel` - Enable/disable parallel processing with Fractors (default: enabled)
+** `--workers NUM` - Number of parallel workers to use (default: auto-configured)
+* `clean` - Remove generated documentation
+* `distclean` - Remove generated documentation and downloaded tools
+** `--global-cache` - Also clean the global cache directory
+
+Examples:
+
+[source,sh]
+----
+# Generate documentation for schemas
+bundle exec hrma build documentation
+
+# Generate documentation with custom manifest file
+bundle exec hrma build documentation --manifest-path=custom-schemas.yml
+
+# Generate documentation with 4 workers
+bundle exec hrma build documentation --workers=4
+
+# Generate documentation without parallel processing
+bundle exec hrma build documentation --no-parallel
+
+# Remove generated documentation
+bundle exec hrma build clean
+
+# Remove generated documentation and downloaded tools
+bundle exec hrma build distclean
+----
 
 The resulting documentation per schema will be generated in the path:
 
 * HTML page: `_site/{schema-path}/{xsd-name}/index.html`
 * Diagrams: `_site/{schema-path}/{xsd-name}/diagrams/*.svg`
 
+=== Configuration management
 
-== Building documentation
+The `config` command manages configuration settings.
 
 [source,sh]
 ----
-# removes generated artifacts
-make clean
-
-# makes _site
-make all
+bundle exec hrma config SUBCOMMAND
 ----
+
+Available subcommands:
+
+* `get KEY` - Get a configuration value
+* `set KEY VALUE` - Set a configuration value
+
+Supported configuration keys:
+
+* `cache_dir` - Directory for caching downloaded tools (default: `~/.hrma/cache`)
+* `log_dir` - Directory for storing log files (default: `~/.hrma/logs`)
+
+You can set configuration in three ways (in order of precedence):
+
+. Command-line option: `--cache-dir=/path/to/cache`
+. Environment variable: `HRMA_CACHE_DIR=/path/to/cache bundle exec hrma ...`
+. Configuration file: `~/.hrma/config.yml`
+
+Examples:
+
+[source,sh]
+----
+# Get current cache directory
+bundle exec hrma config get cache_dir
+
+# Set cache directory
+bundle exec hrma config set cache_dir /path/to/cache
+----
+
+
+== Advanced features
+
+=== Parallel processing
+
+The tool supports parallel processing using Ruby's Ractor feature through the Fractor framework. This
+significantly speeds up documentation generation for large numbers of schema files.
+
+By default, the tool automatically determines the optimal number of workers to
+use based on your system resources:
+
+* In "auto" mode (default), the number of workers is determined by:
+** Using half of your CPU cores (rounded down)
+** Ensuring at least 2 cores are left free for system processes
+** Using at least 1 worker
+** Using one worker per file when possible (up to the calculated maximum)
+
+This auto-configuration provides a good balance between performance and system
+responsiveness.
+
+[example]
+====
+* With 4 files on a 4-core system: 1 worker would be used (half cores = 2, but ensuring 2 cores are free = 1)
+* With 4 files on an 8-core system: 4 workers would be used (half cores = 4, which leaves enough free cores)
+* With 4 files on a 16-core system: 4 workers would be used (one per file, even though 8 workers would be available)
+* With 10 files on a 16-core system: 8 workers would be used (half cores = 8, which is less than file count)
+====
+
+You can manually specify the number of workers:
+
+[source,sh]
+----
+# Use 4 workers for parallel processing
+bundle exec hrma build documentation --workers=4
+----
+
+To disable parallel processing entirely:
+
+[source,sh]
+----
+# Disable parallel processing
+bundle exec hrma build documentation --no-parallel
+----
+
+
+== Code organization
+
+The `hrma` tool is organized into several components:
+
+=== Command-line interface
+
+* `bin/hrma` - Main executable script
+* `lib/hrma/cli.rb` - Thor-based CLI implementation
+* `lib/hrma/commands/*.rb` - Individual command implementations
+
+=== Build system
+
+* `lib/hrma/build/document_generator.rb` - Main class for generating documentation
+* `lib/hrma/build/schema_processor.rb` - Processes individual schema files
+* `lib/hrma/build/schema_work.rb` - Work item representation for parallel processing
+* `lib/hrma/build/schema_worker.rb` - Worker implementation for parallel processing
+* `lib/hrma/build/tools.rb` - Handles downloading and setting up external tools
+* `lib/hrma/build/cleaner.rb` - Handles cleaning generated files
+
+=== Configuration
+
+* `lib/hrma/config.rb` - Configuration management
+* `lib/hrma/version.rb` - Version information
+
+
+== Copyright and license
+
+Schemas copyright ISO/TC 211.
+
+Other files copyright Ribose Inc.
