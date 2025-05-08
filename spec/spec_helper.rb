@@ -9,7 +9,9 @@ $LOAD_PATH.unshift File.expand_path('../lib', __dir__)
 
 # Require the main library files
 require 'hrma/build/tools'
-require 'hrma/build/schema_processor'
+require 'hrma/build/schema'
+require 'hrma/build/schema_work'
+require 'hrma/build/schema_worker'
 require 'hrma/build/document_generator'
 
 # Configure RSpec
