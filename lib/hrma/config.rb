@@ -10,7 +10,7 @@ module Hrma
     DEFAULT_CACHE_DIR = File.expand_path("~/.hrma/cache")
 
     # Default log directory path
-    DEFAULT_LOG_DIR = File.expand_path("~/.hrma/logs")
+    DEFAULT_LOG_DIR = File.expand_path(File.join(Dir.pwd), "logs")
 
     class << self
       # Get the cache directory path

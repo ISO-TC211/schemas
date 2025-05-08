@@ -7,7 +7,7 @@ require "logger"
 require "etc"
 require "fractor"
 require_relative "../config"
-require_relative "schema_processor"
+require_relative "schema"
 require_relative "schema_work"
 require_relative "schema_worker"
 
@@ -69,8 +69,8 @@ module Hrma
 
           # Create SchemaWork with primitive data only
           SchemaWork.new({
-            schema_path: xsd_file.to_s,  # Ensure it's a string
-            log_file: log_file.to_s      # Ensure it's a string or nil
+            schema_path: xsd_file,
+            log_file: log_file
           })
         end
 

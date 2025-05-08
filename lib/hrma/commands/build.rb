@@ -11,8 +11,8 @@ module Hrma
   module Commands
     # Thor command for building documentation
     class Build < Thor
-      class_option :cache_dir, type: :string, desc: "Directory for caching downloaded tools"
-      class_option :log_dir, type: :string, desc: "Directory for storing log files"
+      class_option :cache_dir, type: :string, desc: "Directory for caching downloaded tools", default: Hrma::Config.cache_dir
+      class_option :log_dir, type: :string, desc: "Directory for storing log files", default: Hrma::Config.log_dir
       class_option :manifest_path, type: :string, desc: "Path to schemas.yml manifest file"
 
       # Initialize with options
