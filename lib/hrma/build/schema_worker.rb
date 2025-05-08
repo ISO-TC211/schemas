@@ -40,13 +40,13 @@ module Hrma
           log_message("Successfully processed #{schema_path}")
 
           # Return result
-          Fractor::WorkResult.new(result: result, work: "SchemaWork: #{schema_path}")
+          Fractor::WorkResult.new(result: result, work: work)
         rescue => e
           # Log error
           log_message("Error processing schema #{schema_path}: #{e.message}")
 
           # Return error result
-          Fractor::WorkResult.new(error: nil, work: "SchemaWork: #{schema_path}")
+          Fractor::WorkResult.new(error: nil, work: work)
         end
       end
 
