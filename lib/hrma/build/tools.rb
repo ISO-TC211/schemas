@@ -246,13 +246,19 @@ module Hrma
         begin
           if logger
             logger.info("Running: #{cmd}")
-            stdout_and_stderr_str, status = Open3.capture2e(cmd)
-            logger.info(stdout_and_stderr_str)
+
+            # Use the safer non-blocking approach instead of capture2e
+            stdout_str, stderr_str, status = safe_capture2e(cmd)
+
+            # Log both stdout and stderr
+            logger.info(stdout_str + stderr_str)
+
             result = status.success?
             logger.error(error_message) unless result
             result
           else
-            stdout_and_stderr_str, status = Open3.capture2e(cmd)
+            # Use the safer approach without logging
+            _, _, status = safe_capture2e(cmd)
             status.success?
           end
         rescue => e
@@ -261,6 +267,41 @@ module Hrma
           logger.error(message) if logger
           puts message
           false
+        end
+      end
+
+      # A safer replacement for Open3.capture2e that avoids deadlocks
+      # when used within Ruby Ractors
+      #
+      # @param cmd [String] Command to execute
+      # @return [Array<String, String, Process::Status>] stdout, stderr, and status
+      def safe_capture2e(cmd)
+        Open3.popen3(cmd) do |i, o, e, t|
+          i.close
+          readables = [o, e]
+          stdout = []
+          stderr = []
+
+          until readables.empty?
+            readable, = IO.select(readables)
+
+            if readable&.include?(o)
+              chunk = o.read_nonblock(4096, exception: false)
+              stdout << chunk if chunk && chunk != :wait_readable
+              readables.delete(o) if chunk.nil?
+            end
+
+            if readable&.include?(e)
+              chunk = e.read_nonblock(4096, exception: false)
+              stderr << chunk if chunk && chunk != :wait_readable
+              readables.delete(e) if chunk.nil?
+            end
+
+            # Remove streams that have reached EOF
+            readables.reject!(&:eof?) if readables.any?
+          end
+
+          [stdout.join, stderr.join, t.value]
         end
       end
     end
