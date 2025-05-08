@@ -129,34 +129,17 @@ module Hrma
       #
       # @return [Array<String>] List of XSD files to process
       def load_xsd_files
-        yaml_path = options[:manifest_path] || File.join(Dir.pwd, "schemas.yml")
+        yaml_path = options[:manifest_path]
         manifest = YAML.load_file(yaml_path)
 
         xsd_files = []
         if manifest.dig("source", "schemas", "xsd")
           xsd_files = manifest["source"]["schemas"]["xsd"]
-        elsif manifest.dig("source", "schemas") && manifest["source"]["schemas"].is_a?(Array)
-          xsd_files = manifest["source"]["schemas"]
+        else
+          puts "No XSD files found in #{yaml_path}"
         end
 
         xsd_files
-      end
-
-      # Create a logger for a specific file
-      #
-      # @param xsd_file [String] Path to the XSD file
-      # @return [Logger] Logger for the file
-      def create_logger(xsd_file)
-        log_file = File.join(@log_dir, "#{File.basename(xsd_file, '.xsd')}.log")
-        FileUtils.mkdir_p(File.dirname(log_file))
-
-        logger = Logger.new(log_file)
-        logger.level = Logger::INFO
-        logger.formatter = proc do |severity, datetime, progname, msg|
-          "#{datetime.strftime('%Y-%m-%d %H:%M:%S')} [#{severity}] #{msg}\n"
-        end
-
-        logger
       end
 
       # Create a progress bar
