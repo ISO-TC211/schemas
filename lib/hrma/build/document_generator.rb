@@ -39,11 +39,8 @@ module Hrma
         puts "Found #{xsd_files.size} XSD files to process"
         @progressbar = create_progressbar(xsd_files.size)
 
-        if options[:parallel] == false
-          generate_sequential(xsd_files)
-        else
-          generate_parallel(xsd_files)
-        end
+        # Always use parallel processing with Fractor
+        generate_parallel(xsd_files)
 
         puts "\nDocumentation generation complete. See _site/ directory."
       end
@@ -59,7 +56,8 @@ module Hrma
         num_workers = options[:workers] || [xsd_files.size, Etc.nprocessors].min
         puts "Using #{num_workers} parallel workers"
 
-        # Create work items - each item contains just the basic string path and log file path
+        # Create work items with simple data structures (strings only)
+        # This ensures Ractor-safety by avoiding complex objects
         work_items = xsd_files.map do |xsd_file|
           # Create log file path for this file if log_dir is specified
           log_file = nil
@@ -69,28 +67,35 @@ module Hrma
             FileUtils.mkdir_p(File.dirname(log_file))
           end
 
-          # Use the original string path directly - no nested objects
+          # Create SchemaWork with primitive data only
           SchemaWork.new({
-            schema_path: xsd_file,  # This is just a string
-            log_file: log_file
+            schema_path: xsd_file.to_s,  # Ensure it's a string
+            log_file: log_file.to_s      # Ensure it's a string or nil
           })
         end
 
         # Create supervisor with worker pools
-        supervisor = Fractor::Supervisor.new(
-          worker_pools: [
-            { worker_class: SchemaWorker, num_workers: num_workers }
-          ]
-        )
+        begin
+          supervisor = Fractor::Supervisor.new(
+            worker_pools: [
+              { worker_class: SchemaWorker, num_workers: num_workers }
+            ]
+          )
 
-        # Add work items
-        supervisor.add_work_items(work_items)
+          # Add work items
+          supervisor.add_work_items(work_items)
 
-        # Run processing
-        supervisor.run
+          # Run processing with timeout handling
+          supervisor.run
 
-        # Process results
-        process_results(supervisor.results)
+          # Process results
+          process_results(supervisor.results)
+        rescue => e
+          puts "Error in parallel processing: #{e.message}"
+          puts e.backtrace.join("\n")
+          # Raise error to stop processing completely
+          raise "Parallel processing failed: #{e.message}"
+        end
       end
 
       # Process results from parallel processing
@@ -100,16 +105,21 @@ module Hrma
       def process_results(aggregator)
         # Handle successful results
         aggregator.results.each do |result|
+          # Access schema_path safely through input hash
           schema_path = result.work.input[:schema_path]
           puts "Successfully processed #{schema_path}"
           progressbar.increment
         end
 
         # Handle errors
-        aggregator.errors.each do |error_result|
-          schema_path = error_result.work.input[:schema_path]
-          puts "Error processing #{schema_path}: #{error_result.error}"
-          progressbar.increment
+        if aggregator.errors.any?
+          puts "\nEncountered errors during processing:"
+          aggregator.errors.each do |error_result|
+            # Access schema_path safely through input hash
+            schema_path = error_result.work.input[:schema_path]
+            puts "Error processing #{schema_path}: #{error_result.error}"
+            progressbar.increment
+          end
         end
       end
 
@@ -130,22 +140,6 @@ module Hrma
         end
 
         xsd_files
-      end
-
-      # Generate documentation sequentially (using parallel processing with 1 worker)
-      #
-      # @param xsd_files [Array<String>] List of XSD files to process
-      # @return [void]
-      def generate_sequential(xsd_files)
-        puts "Generating documentation sequentially (single worker)..."
-
-        # Just use parallel processing with 1 worker
-        options_with_one_worker = options.dup
-        options_with_one_worker[:workers] = 1
-        @options = options_with_one_worker
-
-        # Use the parallel implementation with 1 worker
-        generate_parallel(xsd_files)
       end
 
       # Create a logger for a specific file
