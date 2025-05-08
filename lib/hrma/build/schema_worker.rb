@@ -20,6 +20,8 @@ module Hrma
         schema_path = work.input[:schema_path]
         log_file = work.input[:log_file]
 
+        puts "Processing schema in worker: #{schema_path}, log file: #{log_file.inspect}, schema_path: #{schema_path.inspect}"
+
         logger = create_logger(log_file) if log_file
 
         begin
