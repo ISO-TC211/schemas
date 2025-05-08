@@ -15,9 +15,10 @@ module Hrma
       def process(work)
         processor = SchemaProcessor.new
 
-        # Get schema path and log file directly from work object attributes
-        schema_path = work.schema_path
-        log_file = work.log_file
+        # Safely access data through work.input hash - this is Ractor-safe
+        # This ensures we're accessing the data in a way that's compatible with Ractor's restrictions
+        schema_path = work.input[:schema_path]
+        log_file = work.input[:log_file]
 
         logger = create_logger(log_file) if log_file
 
