@@ -3258,7 +3258,6 @@
       <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
       -->
                   <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
-                  codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                   </lan:PT_Locale></cat:locale>
                <!--============================= Codelists  for Metadata for Common Classes =======================================-->
    <cat:codelistItem>
@@ -3710,7 +3709,6 @@
       <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
       -->
                   <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
-                  codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                   </lan:PT_Locale></cat:locale>
                <!--============================= Codelists  for Metadata for Common Classes =======================================-->
                <cat:codelistItem>
@@ -3962,7 +3960,6 @@
       <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
       -->
                   <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
-                  codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                   </lan:PT_Locale></cat:locale>
                <!--============================= Codelists  for  Metadata for ACquisition =======================================-->
                <cat:codelistItem xlink:title="Code list items for Context from the Metadata for ACquisition (mac) Namespace">
@@ -5319,7 +5316,6 @@
       <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
       -->
                   <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
-                  codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                </lan:PT_Locale></cat:locale>
                <!--   ............................................................................. -->
                <!--   ............................................................................. -->
@@ -5492,7 +5488,6 @@
       <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
       -->
             <lan:characterEncoding><lan:MD_CharacterSetCode codeList="http://www.iana.org/assignments/character-sets" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
-            codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
          </lan:PT_Locale></cat:locale>
          <!--=====Sub-Sub-Catalogue description Imagery and Gidded Data namespace=====-->
          <cat:subCatalogue xlink:title="Codelists from the Imagery and Gidded Data (igd) Namespace">
