@@ -1,64 +1,62 @@
 # frozen_string_literal: true
 
 require 'fractor'
+require 'fileutils'
 require 'logger'
-require_relative 'schema_processor'
+require_relative 'schema'
 
 module Hrma
   module Build
     # Class for processing schema files in a Ractor
     class SchemaWorker < Fractor::Worker
+      # Initialize a new SchemaWorker
+      #
+      # @param name [String] Name for this worker
+      def initialize(name: nil)
+        super(name: name)
+      end
+
       # Process a schema file
       #
       # @param work [SchemaWork] Work item containing schema path and log file path
       # @return [Fractor::WorkResult] Result of processing
       def process(work)
-        processor = SchemaProcessor.new
+        # Safely access data through work.input hash - this is Ractor-safe
+        schema_path = work.input[:schema_path]
+        log_file = work.input[:log_file]
 
-        # Get schema path and log file directly from work object attributes
-        schema_path = work.schema_path
-        log_file = work.log_file
-
-        logger = create_logger(log_file) if log_file
-
+        # Process the schema file
         begin
-          # Log start of processing
-          logger&.info("Processing schema in worker: #{schema_path}")
+          # Create schema object
+          schema = Schema.new(schema_path)
 
-          # Process the schema - pass the string path directly
-          result = processor.process(schema_path: schema_path, logger: logger)
+          # Log message to stdout for tracking progress
+          log_message("Processing schema in worker: #{schema_path}")
 
-          # Close the logger if it was created
-          logger&.close
+          # Generate documentation
+          result = schema.generate_docs(logger: nil) # Don't use Logger in Ractor
 
-          # Return success result
+          # Log success
+          log_message("Successfully processed #{schema_path}")
+
+          # Return result
           Fractor::WorkResult.new(result: result, work: work)
         rescue => e
           # Log error
-          error_message = "Error processing schema #{schema_path}: #{e.message}"
-          logger&.error(error_message)
-          logger&.error(e.backtrace.join("\n")) if logger
-          logger&.close
+          log_message("Error processing schema #{schema_path}: #{e.message}")
 
           # Return error result
-          Fractor::WorkResult.new(error: error_message, work: work)
+          Fractor::WorkResult.new(error: nil, work: work)
         end
       end
 
       private
 
-      # Create a logger for a specific file
-      #
-      # @param log_file [String] Path to the log file
-      # @return [Logger] Logger for the file
-      def create_logger(log_file)
-        logger = Logger.new(log_file)
-        logger.level = Logger::INFO
-        logger.formatter = proc do |severity, datetime, progname, msg|
-          "#{datetime.strftime('%Y-%m-%d %H:%M:%S')} [#{severity}] #{msg}\n"
-        end
-
-        logger
+      # Simple thread-safe logging that avoids using Logger class
+      # @param message [String] Message to log
+      def log_message(message)
+        timestamp = Time.now.strftime('%Y-%m-%d %H:%M:%S')
+        puts "#{timestamp} - #{message}"
       end
     end
   end

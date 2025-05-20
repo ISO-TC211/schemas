@@ -246,13 +246,20 @@ module Hrma
         begin
           if logger
             logger.info("Running: #{cmd}")
-            stdout_and_stderr_str, status = Open3.capture2e(cmd)
-            logger.info(stdout_and_stderr_str)
+
+            # Use thread-based solution to prevent deadlocks
+            # This is safer within Ractors compared to direct Open3.capture2e
+            stdout_str, stderr_str, status = thread_safe_capture2e(cmd)
+
+            # Log both stdout and stderr
+            logger.info(stdout_str + stderr_str)
+
             result = status.success?
             logger.error(error_message) unless result
             result
           else
-            stdout_and_stderr_str, status = Open3.capture2e(cmd)
+            # Use the thread-safe approach without logging
+            _, _, status = thread_safe_capture2e(cmd)
             status.success?
           end
         rescue => e
@@ -261,6 +268,27 @@ module Hrma
           logger.error(message) if logger
           puts message
           false
+        end
+      end
+
+      # A thread-safe replacement for Open3.capture2e that avoids mutex issues in Ractors
+      #
+      # @param cmd [String] Command to execute
+      # @return [Array<String, String, Process::Status>] stdout, stderr, and status
+      def thread_safe_capture2e(cmd)
+        Open3.popen3(cmd) do |i, o, e, t|
+          i.close # Close stdin since we don't need it
+
+          # Read stdout and stderr in separate threads to avoid deadlocks
+          out_thread = Thread.new { o.read }
+          err_thread = Thread.new { e.read }
+
+          # Wait for both threads to complete
+          stdout_str = out_thread.value
+          stderr_str = err_thread.value
+
+          # Return output and status similar to capture2e
+          [stdout_str, stderr_str, t.value]
         end
       end
     end
