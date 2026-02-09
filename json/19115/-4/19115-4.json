@@ -63,7 +63,7 @@
           "type": "object",
           "properties": {
             "properties": {
-              "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_Metadata"
+              "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#MD_Metadata"
             }
           },
           "required": [

@@ -1,7 +1,7 @@
 {
   "$comment": "JSON Schema document created by ShapeChange - https://shapechange.net/; edited by hand",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json",
+  "$id": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json",
   "$defs": {
     "Abstract_ConstraintUnion": {
       "$anchor": "Abstract_ConstraintUnion",
@@ -1096,7 +1096,7 @@
         "dataQualityInfo": {
           "type": "array",
           "items": {
-            "$ref": "https://schemas.isotc211.org/json/19157/-1/dqc/1.0.0/dqc.json#DataQuality"
+            "$ref": "https://schemas.isotc211.org/schemas/json/19157/-1/dqc/1.0.0/dqc.json#DataQuality"
           },
           "uniqueItems": true
         },
