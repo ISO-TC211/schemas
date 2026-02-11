@@ -1,7 +1,7 @@
 {
   "$comment": "JSON Schema document created by ShapeChange - https://shapechange.net/; edited by hand",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schemas.isotc211.org/json/19157/-1/dqc/1.0.0/dqc.json",
+  "$id": "https://schemas.isotc211.org/schemas/json/19157/-1/dqc/1.0.0/dqc.json",
   "$defs": {
     "AbsolutePositionalAccuracy": {
       "$anchor": "AbsolutePositionalAccuracy",
@@ -94,19 +94,19 @@
           "$ref": "#EvaluationMethodTypeCode"
         },
         "evaluationProcedure": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
         },
         "dateTime": {
           "type": "array",
           "items": {
-            "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
+            "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
           },
           "uniqueItems": true
         },
         "referenceDoc": {
           "type": "array",
           "items": {
-            "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
+            "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
           },
           "uniqueItems": true
         },
@@ -272,16 +272,16 @@
           "const": "ConformanceResult"
         },
         "dateTime": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
         },
         "resultScope": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_Scope"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#MD_Scope"
         },
         "pass": {
           "type": "boolean"
         },
         "specification": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
         },
         "explanation": {
           "type": "string"
@@ -301,13 +301,13 @@
           "const": "CoverageResult"
         },
         "dateTime": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
         },
         "resultScope": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_Scope"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#MD_Scope"
         },
         "spatialRepresentationType": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_SpatialRepresentationTypeCode"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#MD_SpatialRepresentationTypeCode"
         }
       },
       "required": [
@@ -334,7 +334,7 @@
       "type": "object",
       "properties": {
         "scope": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_Scope"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#MD_Scope"
         },
         "report": {
           "type": "array",
@@ -359,10 +359,10 @@
           "const": "DescriptiveResult"
         },
         "dateTime": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
         },
         "resultScope": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_Scope"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#MD_Scope"
         },
         "statement": {
           "type": "string"
@@ -513,19 +513,19 @@
           "$ref": "#EvaluationMethodTypeCode"
         },
         "evaluationProcedure": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
         },
         "dateTime": {
           "type": "array",
           "items": {
-            "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
+            "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
           },
           "uniqueItems": true
         },
         "referenceDoc": {
           "type": "array",
           "items": {
-            "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
+            "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
           },
           "uniqueItems": true
         },
@@ -631,19 +631,19 @@
           "$ref": "#EvaluationMethodTypeCode"
         },
         "evaluationProcedure": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
         },
         "dateTime": {
           "type": "array",
           "items": {
-            "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
+            "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
           },
           "uniqueItems": true
         },
         "referenceDoc": {
           "type": "array",
           "items": {
-            "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
+            "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
           },
           "uniqueItems": true
         },
@@ -720,7 +720,7 @@
       "type": "object",
       "properties": {
         "measureIdentification": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_Identifier"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#MD_Identifier"
         },
         "nameOfMeasure": {
           "type": "array",
@@ -913,7 +913,7 @@
       "type": "object",
       "properties": {
         "reportReference": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
         },
         "abstract": {
           "type": "string"
@@ -942,7 +942,7 @@
           "const": "QualityMeasure"
         },
         "measureIdentifier": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_Identifier"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#MD_Identifier"
         },
         "name": {
           "type": "string"
@@ -1072,10 +1072,10 @@
           "const": "QuantitativeResult"
         },
         "dateTime": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
         },
         "resultScope": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_Scope"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#MD_Scope"
         },
         "value": {
           "type": "array",
@@ -1185,19 +1185,19 @@
           "$ref": "#EvaluationMethodTypeCode"
         },
         "evaluationProcedure": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
         },
         "dateTime": {
           "type": "array",
           "items": {
-            "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
+            "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
           },
           "uniqueItems": true
         },
         "referenceDoc": {
           "type": "array",
           "items": {
-            "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
+            "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
           },
           "uniqueItems": true
         },
@@ -1226,7 +1226,7 @@
       "type": "object",
       "properties": {
         "citation": {
-          "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
+          "$ref": "https://schemas.isotc211.org/schemas/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
         }
       },
       "required": [
