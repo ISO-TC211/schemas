@@ -1,83 +1,64 @@
 {
-  "id": "CIS_50",
+  "id": "CIS_55",
   "coverageStructure": "coverageByPartitioning",
-
   "partitionSet": {
-    "partition": [ {
-      "envelope": {
-        "srsName": "[EPSG:4326]",
-        "axisLabels": "Lat Lon d",
-        "axisExtent": [ {
-          "axisLabel": "Lat",
-          "uomLabel": "deg",
-          "lowerBound": -80,
-          "upperBound": -70
-        },{
-          "axisLabel": "Lon",
-          "uomLabel": "deg",
-          "lowerBound": 0,
-          "upperBound": 10
-        },{
-          "axisLabel": "date",
-          "uomLabel": "d",
-          "lowerBound": "2025-06-01",
-          "upperBound": "2025-06-01"
-        } ]
+    "partition": [
+      {
+        "envelope": {
+          "srsName": "[OGC:AnsiDate]",
+          "axes": [
+            {
+              "axisLabel": "date",
+              "uomLabel": "d",
+              "lowerBound": "2025-06-01",
+              "upperBound": "2025-06-10"
+            }
+          ]
+        },
+        "coverageRef": "https://www.acme.com/CIS_55_p1.json"
       },
-      "coverageRef": "https://www.acme.com/CIS_10.json"
-    },{
-      "envelope": {
-        "srsName": "[EPSG:4326]",
-        "axisLabels": "Lat Lon d",
-        "axisExtent": [ {
-          "axisLabel": "Lat",
-          "uomLabel": "deg",
-          "lowerBound": -80,
-          "upperBound": -70
-        },{
-          "axisLabel": "Lon",
-          "uomLabel": "deg",
-          "lowerBound": 0,
-          "upperBound": 10
-        },{
-          "axisLabel": "date",
-          "uomLabel": "d",
-          "lowerBound": "2025-06-02",
-          "upperBound": "2025-06-02"
-        } ]
+      {
+        "envelope": {
+          "srsName": "[OGC:AnsiDate]",
+          "axes": [
+            {
+              "axisLabel": "date",
+              "uomLabel": "d",
+              "lowerBound": "2025-06-11",
+              "upperBound": "2025-06-20"
+            }
+          ]
+        },
+        "coverageRef": "https://www.acme.com/CIS_55_p2.json"
       },
-      "coverageRef": "CIS_50b"
-    },{
-      "envelope": {
-        "srsName": "[EPSG:4326]",
-        "axisLabels": "Lat Lon d",
-        "axisExtent": [ {
-          "axisLabel": "Lat",
-          "uomLabel": "deg",
-          "lowerBound": -80,
-          "upperBound": -70
-        },{
-          "axisLabel": "Lon",
-          "uomLabel": "deg",
-          "lowerBound": 0,
-          "upperBound": 10
-        },{
-          "axisLabel": "date",
-          "uomLabel": "d",
-          "lowerBound": "2025-06-03",
-          "upperBound": "2025-06-03"
-        } ]
-      },
-      "coverageRef": "http://www.acme.com/wcs?SERVICE=WCS&amp;VERSION=2.0&amp;REQUEST=GetCoverage&amp;COVERAGEID=CIS_50c"
-    } ]
+      {
+        "envelope": {
+          "srsName": "[OGC:AnsiDate]",
+          "axes": [
+            {
+              "axisLabel": "date",
+              "uomLabel": "d",
+              "lowerBound": "2025-06-21",
+              "upperBound": "2025-06-30"
+            }
+          ]
+        },
+        "coverageRef": "https://www.acme.com/CIS_55_p3.json"
+      }
+    ]
   },
-
-  "rangeType": { 
-    "field":[{ 
-      "name": "singleBand",
-      "definition": "integer",
-      "type": "Quantity",
-      "uom": "W.m-2.sr-1.nm-1"
-    }]
-  }  
+  "rangeType": {
+    "type": "DataRecord",
+    "fields": [
+      {
+        "name": "dailyValue",
+        "definition": "http://www.opengis.net/def/property/OGC/0/dailyValue",
+        "type": "Quantity",
+        "label": "Daily Value",
+        "uom": {
+          "code": "1"
+        }
+      }
+    ]
+  }
 }
