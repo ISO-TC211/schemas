@@ -1,30 +1,38 @@
 {
   "id": "CIS_00",
   "coverageStructure": "coverageByDomainAndRange",
-  "domainSet":{
-    "domainType": "generalGrid",
-    "srsName": "[OGC:Index2D]",
-    "axisLabels": [ "i", "j" ],
-    "uomLabels": [ "1", "1" ],
-    "axes": [{ 
-      "axisLabel": "i",
-      "uomLabel": "1",
-      "lowerBound": 0,
-      "upperBound": 2
-    },{
-      "axisLabel": "j",
-      "uomLabel": "1",
-      "lowerBound": 0,
-      "upperBound": 2
-    }]
+  "domainSet": {
+    "generalGrid": {
+      "srsName": "[OGC:Index2D]",
+      "axisLabels": [ "i", "j" ],
+      "uomLabels": [ "1", "1" ],
+      "axes": [
+        { 
+          "axisType": "index",
+          "axisLabel": "i",
+          "lowerBound": 0,
+          "upperBound": 2
+        },
+        {
+          "axisType": "index",
+          "axisLabel": "j",
+          "lowerBound": 0,
+          "upperBound": 2
+        }
+      ]
+    }
   },
   "rangeSet": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
   "rangeType": { 
-    "field":[{ 
-      "name": "itemCount",
-      "definition": "integer",
-      "type": "Count"
-    }]
+    "type": "DataRecord",
+    "fields": [
+      { 
+        "name": "itemCount",
+        "definition": "http://www.opengis.net/def/property/OGC/0/itemCount",
+        "type": "Count",
+        "label": "Item Count"
+      }
+    ]
   },
   "metadata": [
     "This is the metadata part of the coverage.",
