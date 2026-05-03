@@ -10,5 +10,5 @@
     </annotation>
     <include schemaLocation="../../../../19163/-1/igd/1.1.0/IE_ImageryAndGriddedData.xsd"/>
     <include schemaLocation="../../../../19163/-1/igd/1.1.0/IE_ThematicGriddedData.xsd"/>
-    <include schemaLocation="../../../../19163/-1/igd/1.1.0/IE_Imagery.xsd "/>
+    <include schemaLocation="../../../../19163/-1/igd/1.1.0/IE_Imagery.xsd"/>
 </schema>
