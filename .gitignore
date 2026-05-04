@@ -1,7 +1,7 @@
 .DS_Store
 *.log
 xsdvi/
-xsl/
+transforms/
 .archive/
 .vscode/
 19115/newProject.xpr
