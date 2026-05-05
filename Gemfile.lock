@@ -1,0 +1,62 @@
+PATH
+  remote: .
+  specs:
+    hrma (0.1.0)
+      fractor (~> 0.1)
+      rake (~> 13.0)
+      ruby-progressbar (~> 1.13)
+      thor (~> 1.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    benchmark (0.5.0)
+    diff-lcs (1.6.2)
+    fractor (0.1.10)
+      benchmark
+      logger
+    logger (1.7.0)
+    rake (13.4.2)
+    rspec (3.13.2)
+      rspec-core (~> 3.13.0)
+      rspec-expectations (~> 3.13.0)
+      rspec-mocks (~> 3.13.0)
+    rspec-core (3.13.6)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.5)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.8)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-support (3.13.7)
+    ruby-progressbar (1.13.0)
+    thor (1.5.0)
+
+PLATFORMS
+  arm64-darwin-23
+  ruby
+
+DEPENDENCIES
+  hrma!
+  rake (~> 13.0)
+  rspec
+
+CHECKSUMS
+  benchmark (0.5.0)
+  bundler (4.0.11) sha256=5bcec0fb78302e48d02ee46f10ee6e6942be647ba5b44a6d1ddfda9a240ce785
+  diff-lcs (1.6.2)
+  fractor (0.1.10)
+  hrma (0.1.0)
+  logger (1.7.0)
+  rake (13.4.2)
+  rspec (3.13.2)
+  rspec-core (3.13.6)
+  rspec-expectations (3.13.5)
+  rspec-mocks (3.13.8)
+  rspec-support (3.13.7)
+  ruby-progressbar (1.13.0)
+  thor (1.5.0)
+
+BUNDLED WITH
+  4.0.11
