@@ -1,0 +1,65 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Validate manifests
+        run: ruby tools/validate_manifests.rb
+
+      - name: Install xmllint
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
+
+      - name: Validate XSD well-formedness
+        run: |
+          errors=0
+          count=0
+          while IFS= read -r f; do
+            count=$((count + 1))
+            if ! xmllint --noout "$f" 2>/dev/null; then
+              echo "::error file=$f::XSD is not well-formed XML"
+              errors=$((errors + 1))
+            fi
+          done < <(ruby tools/validate_manifests.rb --list-files | grep '\.xsd$')
+          echo "Checked $count XSD files, $errors errors"
+          [ "$errors" -eq 0 ]
+
+      - name: Validate JSON well-formedness
+        run: |
+          errors=0
+          count=0
+          while IFS= read -r f; do
+            count=$((count + 1))
+            if ! python3 -m json.tool "$f" > /dev/null 2>&1; then
+              echo "::error file=$f::Invalid JSON"
+              errors=$((errors + 1))
+            fi
+          done < <(ruby tools/validate_manifests.rb --list-files | grep '\.json$')
+          echo "Checked $count JSON files, $errors errors"
+          [ "$errors" -eq 0 ]
+
+  trigger-deploy:
+    needs: validate
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - name: Trigger site rebuild
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+          repository: ISO-TC211/schemas.isotc211.org
+          event-type: deploy
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
