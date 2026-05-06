@@ -26,7 +26,7 @@
       implementations.</documentation></annotation>
   <include schemaLocation="metadataDataServices.xsd"/>
   <import namespace="http://standards.iso.org/iso/19110/fcc/1.0"
-    schemaLocation="../../../../19110/fcc/1.0/fcc.xsd"/>
+    schemaLocation="../../../../19110/-/fcc/1.0/fcc.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gex/1.0"
     schemaLocation="../../../../19115/-3/gex/1.0/gex.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/mac/1.0"
