@@ -2,18 +2,13 @@ name: deploy
 
 on:
   push:
-    branches: [ main, staging ]
+    branches: [ main ]
 
 jobs:
   trigger-deploy:
-    name: Trigger master deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Build event type
-        id: event_type
-        run: |
-          echo "##[set-output name=value;]deploy_${GITHUB_REF##*/}"
-      - name: Trigger dependent repositories
+      - name: Trigger site rebuild
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.PAT_TOKEN }}
