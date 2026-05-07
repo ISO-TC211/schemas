@@ -95,6 +95,11 @@ jobs:
         with:
           ruby-version: '3.3'
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Install lutaml-xsd
         run: |
           cat > Gemfile.ci <<'GEMFILE'
@@ -103,6 +108,9 @@ jobs:
           gem "lutaml-xsd", path: "_tools/lutaml-xsd"
           GEMFILE
           BUNDLE_GEMFILE=Gemfile.ci bundle install
+
+      - name: Build lutaml-xsd frontend
+        run: cd _tools/lutaml-xsd/frontend && npm install && npm run build
 
       - name: Generate build config
         env:
