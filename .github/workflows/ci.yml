@@ -130,10 +130,22 @@ jobs:
             --validate \
             --output "pkg/${{ matrix.package.name }}.lxr"
 
+      - name: Build LXR SPA documentation
+        run: |
+          BUNDLE_GEMFILE=Gemfile.ci bundle exec lutaml-xsd spa \
+            "pkg/${{ matrix.package.name }}.lxr" \
+            --output "pkg/${{ matrix.package.name }}.html" \
+            --title "${{ matrix.package.title }}"
+
       - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.package.name }}.lxr
           path: pkg/${{ matrix.package.name }}.lxr
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.package.name }}.html
+          path: pkg/${{ matrix.package.name }}.html
 
   build-ljr:
     needs: setup-matrix
@@ -180,6 +192,16 @@ jobs:
             ${{ join(matrix.package.files, ' ') }} \
             --output "pkg/${{ matrix.package.name }}" \
             --title "${{ matrix.package.title }}"
+
+      - name: Zip LJR SPA for download
+        run: |
+          cd pkg
+          zip -r "${{ matrix.package.name }}.zip" "${{ matrix.package.name }}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.package.name }}.zip
+          path: pkg/${{ matrix.package.name }}.zip
 
       - uses: actions/upload-artifact@v4
         with:
