@@ -250,6 +250,7 @@ bundle install
 === Validate manifests
 
 [source,sh]
+----
 # Validate structure, required keys, file existence, no duplicates
 ruby tools/validate_manifests.rb
 
