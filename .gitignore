@@ -1,8 +1,4 @@
 .DS_Store
 *.log
-xsdvi/
-xsl/
-.archive/
-.vscode/
-19115/newProject.xpr
 _site/
+vendor/

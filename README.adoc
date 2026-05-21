@@ -1,230 +1,430 @@
 = ISO/TC 211 Schemas
 
-image:https://github.com/ISO-TC211/schemas/workflows/build/badge.svg["Documentation build status", link="https://github.com/ISO-TC211/schemas/actions?workflow=build"]
-
-image:https://github.com/ISO-TC211/schemas/workflows/deploy/badge.svg["Deploy status", link="https://github.com/ISO-TC211/schemas/actions?workflow=deploy"]
+image:https://github.com/ISO-TC211/schemas/workflows/ci/badge.svg["CI status", link="https://github.com/ISO-TC211/schemas/actions?workflow=ci"]
 
 
-== Introduction
+== Overview
 
-This is the official repository of ISO/TC 211 Schemas, jointly managed by
-ISO/TC 211/XMG and Ribose.
+This is the official repository of ISO/TC 211 XML (XSD) and JSON schemas,
+jointly managed by ISO/TC 211/XMG and Ribose.
 
-== Requirements
+The schemas are served at https://schemas.isotc211.org/ and published as
+interactive schema browsers built by two LutaML tools:
 
-* Dependencies installation (choose one):
-  - Individual: `gem install thor rake`
-  - Using Bundler: `bundle install`
-  - Build and install gem: `gem build hrma.gemspec && gem install hrma-*.gem`
-* External dependencies:
-  - Java (for generating diagrams)
-  - xsltproc (for generating documentation)
-
-
-== Command-line reference
-
-=== General
-
-The repository includes a command-line tool called `hrma` (Harmonized Resources
-Maintenance Agency) to manage schemas and generate documentation.
+* https://lutaml.github.io/lutaml-xsd/[LutaML XSD] (`lutaml-xsd`) — parses XSD
+  into `.lxr` packages, validates resolution, and generates standalone HTML
+  documentation.
+* https://github.com/lutaml/lutaml-jsonschema/[LutaML JSON Schema]
+  (`lutaml-jsonschema`) — validates JSON schemas and generates interactive SPA
+  documentation.
 
 
-=== Schema management
+== Directory structure
 
-The `schemas` command manages the schema manifest file (`schemas.yml`), which
-controls which schemas should generate documentation.
+=== XSD schemas
+
+All XSD files follow the `{standard}/{-part}/{module}/{version}/` pattern:
+
+[source]
+----
+{standard}/{-part}/{module}/{version}/
+  {module}.xsd              # Main schema entry point (3-letter lowercase)
+  *.xsd                     # Additional type/import schemas
+  *.sch                     # Schematron validation rules
+  index.adoc                # Per-module documentation
+  *.png                     # UML/diagram images
+  examples/*.xml            # Example XML instances
+----
+
+.Naming conventions
+[cols="1,2,3"]
+|===
+| Component | Pattern | Example
+
+| Standard
+| 5 digits
+| `19115`
+
+| Part
+| `-1`, `-2`, `-3`; use `-` for standalone
+| `-1`
+
+| Module
+| 3 lowercase letters matching the main XSD filename
+| `cit`, `mdb`, `gml`
+
+| Version
+| Semantic version
+| `1.0`, `1.3.0`, `2.2.0`
+|===
+
+=== Resources
+
+[source]
+----
+{standard}/resources/
+  transforms/               # XSLT transform stylesheets
+  codelists/                # Codelist dictionary XML files
+  schematron/               # Cross-cutting Schematron rules
+  bundles/                  # ZIP download packages
+  namespace-tools/          # Namespace information and tools
+  tools/                    # Helper scripts and utilities
+  CHANGES.md                # Per-standard maintenance log
+----
+
+=== JSON schemas
+
+[source]
+----
+json/{standard}/{-part}/{module}/{version}/
+  *.json                    # JSON Schema definitions
+  examples/*.json           # JSON example instances
+----
+
+
+== Package manifests
+
+Packages define which schemas are grouped into a single interactive browser.
+Two manifest files define all packages:
+
+`lxr_packages.yml`:: XSD (LXR) packages — each groups one or more `.xsd` files
+`ljr_packages.yml`:: JSON (LJR) packages — each groups one or more `.json` files
+
+=== Package fields
+
+[cols="1,1,2"]
+|===
+| Field | Required | Description
+
+| `name`
+| Yes
+| Unique package identifier (e.g. `19115-1-1.3.0`)
+
+| `title`
+| Yes
+| Human-readable title for the browser
+
+| `standard`
+| Yes
+| ISO standard number (e.g. `19115`)
+
+| `files`
+| Yes
+| List of file paths relative to repo root
+
+| `status`
+| No
+| One of `current`, `draft`, `historical`
+
+| `description`
+| No
+| Short description
+
+| `part`
+| No
+| Part identifier (e.g. `-1`, `-2`)
+|===
+
+=== Example: XSD package
+
+[source,yaml]
+----
+- name: "19103-gco-1.2.0"
+  title: "ISO 19103 — Conceptual Schema Language (gco, gcx)"
+  standard: "19103"
+  status: "current"
+  description: "General conceptual schema language types and XML data types."
+  files:
+    - "19103/-/gco/1.2.0/gco.xsd"
+    - "19103/-/gcx/1.2.0/gcx.xsd"
+----
+
+=== Example: JSON schema package
+
+[source,yaml]
+----
+- name: "19157-1-dqc-json-1.0.0"
+  title: "ISO 19157-1 — Data Quality Measures JSON (v1.0.0)"
+  standard: "19157"
+  part: "-1"
+  status: "current"
+  files:
+    - "json/19157/-1/dqc/1.0.0/dqc.json"
+----
+
+
+== Adding an XML (XSD) schema
+
+. Create the directory and place schema files:
++
+[source,sh]
+----
+mkdir -p 19115/-1/new/1.0
+# Place new.xsd (entry point), newType.xsd, etc.
+----
+
+. Optionally add Schematron rules, examples, and documentation:
++
+[source]
+----
+19115/-1/new/1.0/
+  new.xsd           # Main entry point (3-letter lowercase name)
+  newType.xsd       # Additional type definitions
+  new.sch           # Schematron rules (optional)
+  index.adoc        # Documentation (optional)
+  examples/*.xml    # Example instances (optional)
+----
+
+. Register in `lxr_packages.yml`:
++
+[source,yaml]
+----
+- name: "19115-new-1.0"
+  title: "ISO 19115-1 — New Module (new v1.0)"
+  standard: "19115"
+  status: "current"
+  files:
+    - "19115/-1/new/1.0/new.xsd"
+----
+
+. Validate the manifest:
++
+[source,sh]
+----
+ruby tools/validate_manifests.rb
+----
+
+. Test the package locally (see <<local_testing,Local testing>> below).
+
+. Push — CI validates and builds automatically.
+
+
+== Adding a JSON schema
+
+. Create the directory and place schema files:
++
+[source,sh]
+----
+mkdir -p json/19115/-4/new/1.0
+# Place new.json
+----
+
+. Register in `ljr_packages.yml`:
++
+[source,yaml]
+----
+- name: "19115-4-json-1.0"
+  title: "ISO 19115-4 — New Module JSON (v1.0)"
+  standard: "19115"
+  status: "current"
+  files:
+    - "json/19115/-4/new/1.0/new.json"
+----
+
+. Validate the manifest:
++
+[source,sh]
+----
+ruby tools/validate_manifests.rb
+----
+
+. Test the package locally (see <<local_testing,Local testing>> below).
+
+. Push — CI validates and builds automatically.
+
+
+[[local_testing]]
+== Local testing
+
+=== Prerequisites
+
+* Ruby 3.3+ with Bundler
+* Node.js 20+ (for `lutaml-jsonschema` SPA builds only)
+
+Install gems:
+[source,sh]
+----
+bundle install
+----
+
+=== Validate manifests
 
 [source,sh]
 ----
-bundle exec hrma schemas manifest SUBCOMMAND
+# Validate structure, required keys, file existence, no duplicates
+ruby tools/validate_manifests.rb
+
+# List all referenced files (for piping to xmllint, json.tool, etc.)
+ruby tools/validate_manifests.rb --list-files
 ----
 
-Available subcommands:
+=== Testing an XSD package
 
-* `update` - Update schemas.yml with all 3-character XSD and JSON files
-* `list` - List all schemas in the manifest file
-** `--type TYPE` - Filter by schema type (xsd or json)
-** `--doc DOC` - Filter by document number
-* `validate` - Verify all schemas in the manifest exist
-
-[example]
-====
-[source,sh]
-----
-# Update schemas.yml with all 3-character XSD and JSON files
-bundle exec hrma schemas manifest update
-
-# List all schemas in the manifest file
-bundle exec hrma schemas manifest list
-
-# List only XSD schemas
-bundle exec hrma schemas manifest list --type xsd
-
-# List schemas for document 19115
-bundle exec hrma schemas manifest list --doc 19115
-
-# Verify all schemas in the manifest exist
-bundle exec hrma schemas manifest validate
-----
-====
-
-=== Documentation generation
-
-The `build` command generates documentation for schemas defined in the manifest file.
+Build the `.lxr` package from the build template + your manifest entry:
 
 [source,sh]
 ----
-bundle exec hrma build SUBCOMMAND [OPTIONS]
+# Generate a build config for your package
+ruby -rjson -ryaml -e '
+  files = ["19115/-1/new/1.0/new.xsd"]  # your file list
+  template = YAML.load_file("tools/lxr_build_template.yml")
+  template["metadata"]["name"] = "19115-new-1.0"
+  template["metadata"]["title"] = "ISO 19115-1 — New Module (new v1.0)"
+  template["files"] = files
+  File.write("build_config.yml", YAML.dump(template))
+'
+
+# Build the package
+bundle exec lutaml-xsd build from-config build_config.yml \
+  --name "19115-new-1.0" \
+  --validate \
+  --output "pkg/19115-new-1.0.lxr"
 ----
 
-Available subcommands:
-
-* `documentation` - Generate documentation for schemas
-** `--manifest-path PATH` - Path to schemas.yml manifest file
-** `--cache-dir DIR` - Directory for caching downloaded tools
-** `--log-dir DIR` - Directory for storing log files
-** `--parallel` / `--no-parallel` - Enable/disable parallel processing with Fractors (default: enabled)
-** `--workers NUM` - Number of parallel workers to use (default: auto-configured)
-* `clean` - Remove generated documentation
-* `distclean` - Remove generated documentation and downloaded tools
-** `--global-cache` - Also clean the global cache directory
-
-Examples:
+Validate that all type/element/group references resolve:
 
 [source,sh]
 ----
-# Generate documentation for schemas
-bundle exec hrma build documentation
-
-# Generate documentation with custom manifest file
-bundle exec hrma build documentation --manifest-path=custom-schemas.yml
-
-# Generate documentation with 4 workers
-bundle exec hrma build documentation --workers=4
-
-# Generate documentation without parallel processing
-bundle exec hrma build documentation --no-parallel
-
-# Remove generated documentation
-bundle exec hrma build clean
-
-# Remove generated documentation and downloaded tools
-bundle exec hrma build distclean
+bundle exec lutaml-xsd build validate-resolution pkg/19115-new-1.0.lxr
+# Use --strict to fail on warnings too
 ----
 
-The resulting documentation per schema will be generated in the path:
-
-* HTML page: `_site/{schema-path}/{xsd-name}/index.html`
-* Diagrams: `_site/{schema-path}/{xsd-name}/diagrams/*.svg`
-
-=== Configuration management
-
-The `config` command manages configuration settings.
+Generate a standalone HTML browser to preview locally:
 
 [source,sh]
 ----
-bundle exec hrma config SUBCOMMAND
+bundle exec lutaml-xsd spa pkg/19115-new-1.0.lxr \
+  --output pkg/19115-new-1.0.html \
+  --title "ISO 19115-1 — New Module"
+# Open pkg/19115-new-1.0.html in a browser
 ----
 
-Available subcommands:
+=== Testing a JSON schema package
 
-* `get KEY` - Get a configuration value
-* `set KEY VALUE` - Set a configuration value
-
-Supported configuration keys:
-
-* `cache_dir` - Directory for caching downloaded tools (default: `~/.hrma/cache`)
-* `log_dir` - Directory for storing log files (default: `~/.hrma/logs`)
-
-You can set configuration in three ways (in order of precedence):
-
-. Command-line option: `--cache-dir=/path/to/cache`
-. Environment variable: `HRMA_CACHE_DIR=/path/to/cache bundle exec hrma ...`
-. Configuration file: `~/.hrma/config.yml`
-
-Examples:
+Validate the JSON schema file:
 
 [source,sh]
 ----
-# Get current cache directory
-bundle exec hrma config get cache_dir
-
-# Set cache directory
-bundle exec hrma config set cache_dir /path/to/cache
+bundle exec lutaml-jsonschema validate json/19115/-4/new/1.0/new.json
 ----
 
-
-== Advanced features
-
-=== Parallel processing
-
-The tool supports parallel processing using Ruby's Ractor feature through the Fractor framework. This
-significantly speeds up documentation generation for large numbers of schema files.
-
-By default, the tool automatically determines the optimal number of workers to
-use based on your system resources:
-
-* In "auto" mode (default), the number of workers is determined by:
-** Using half of your CPU cores (rounded down)
-** Ensuring at least 2 cores are left free for system processes
-** Using at least 1 worker
-** Using one worker per file when possible (up to the calculated maximum)
-
-This auto-configuration provides a good balance between performance and system
-responsiveness.
-
-[example]
-====
-* With 4 files on a 4-core system: 1 worker would be used (half cores = 2, but ensuring 2 cores are free = 1)
-* With 4 files on an 8-core system: 4 workers would be used (half cores = 4, which leaves enough free cores)
-* With 4 files on a 16-core system: 4 workers would be used (one per file, even though 8 workers would be available)
-* With 10 files on a 16-core system: 8 workers would be used (half cores = 8, which is less than file count)
-====
-
-You can manually specify the number of workers:
+Generate an SPA browser to preview:
 
 [source,sh]
 ----
-# Use 4 workers for parallel processing
-bundle exec hrma build documentation --workers=4
-----
-
-To disable parallel processing entirely:
-
-[source,sh]
-----
-# Disable parallel processing
-bundle exec hrma build documentation --no-parallel
+bundle exec lutaml-jsonschema spa \
+  json/19115/-4/new/1.0/new.json \
+  --output pkg/19115-4-json-1.0 \
+  --title "ISO 19115-4 — New Module JSON"
+# Open pkg/19115-4-json-1.0/index.html in a browser
 ----
 
 
-== Code organization
+== CI pipeline
 
-The `hrma` tool is organized into several components:
+Every push and pull request runs the full pipeline
+(`.github/workflows/ci.yml`) in five stages:
 
-=== Command-line interface
+[cols="1,5"]
+|===
+| Stage | Description
 
-* `bin/hrma` - Main executable script
-* `lib/hrma/cli.rb` - Thor-based CLI implementation
-* `lib/hrma/commands/*.rb` - Individual command implementations
+| **validate**
+| Runs `tools/validate_manifests.rb` to check YAML structure, required keys,
+file existence, and no duplicate names. Then validates all `.xsd` files with
+`xmllint --noout` and all `.json` files with `python3 -m json.tool`.
 
-=== Build system
+| **setup-matrix**
+| Parses `lxr_packages.yml` and `ljr_packages.yml` into JSON arrays for the
+matrix strategy. Each package becomes one matrix entry.
 
-* `lib/hrma/build/document_generator.rb` - Main class for generating documentation
-* `lib/hrma/build/schema_processor.rb` - Processes individual schema files
-* `lib/hrma/build/schema_work.rb` - Work item representation for parallel processing
-* `lib/hrma/build/schema_worker.rb` - Worker implementation for parallel processing
-* `lib/hrma/build/tools.rb` - Handles downloading and setting up external tools
-* `lib/hrma/build/cleaner.rb` - Handles cleaning generated files
+| **build-lxr** (matrix)
+| Runs in parallel — one job per LXR package:
+  1. Checks out `lutaml/lutaml-xsd` and installs it.
+  2. Generates a per-package build config by merging the shared
+     `tools/lxr_build_template.yml` with the package's file list.
+  3. Runs `lutaml-xsd build from-config` with `--validate` to produce a
+     `.lxr` data package.
+  4. Runs `lutaml-xsd spa` to produce a standalone `.html` browser.
 
-=== Configuration
+| **build-ljr** (matrix)
+| Runs in parallel — one job per LJR package:
+  1. Checks out `lutaml/lutaml-jsonschema` and installs it (including
+     Node.js frontend build).
+  2. Runs `lutaml-jsonschema spa` to produce an SPA directory.
+  3. Zips the SPA directory for convenient download.
 
-* `lib/hrma/config.rb` - Configuration management
-* `lib/hrma/version.rb` - Version information
+| **trigger-deploy**
+| On push to `main` only — dispatches a rebuild to the
+https://github.com/ISO-TC211/schemas.isotc211.org[site repo].
+|===
+
+
+=== Artifacts
+
+Each CI run produces downloadable artifacts for every package:
+
+[cols="1,2,2"]
+|===
+| Artifact | Format | Contents
+
+| `{name}.lxr`
+| Binary
+| LXR data package (resolved XSD model, for programmatic use)
+
+| `{name}.html`
+| Single HTML file
+| Standalone interactive XSD browser (works with `file://`)
+
+| `{name}.zip`
+| ZIP archive
+| LJR SPA directory (contains `index.html` + assets)
+
+| `{name}` (directory)
+| Artifact directory
+| Same LJR SPA files (unzipped)
+|===
+
+
+== Downloading built packages
+
+Built packages are available as GitHub Actions artifacts:
+
+. Go to https://github.com/ISO-TC211/schemas/actions[Actions] in the repository.
+. Select the workflow run (green check = success).
+. Scroll to the **Artifacts** section at the bottom.
+. Click any artifact to download it:
+  * `19136-gml-1.0.lxr` — the data package
+  * `19136-gml-1.0.html` — standalone HTML browser (open in any browser)
+  * `19115-4-json-1.0.0.zip` — zipped LJR SPA directory
+
+NOTE: Artifacts are retained for 90 days. Each push to `main` produces a fresh
+set. Artifacts from pull requests are available to collaborators.
+
+
+== Build configuration
+
+The shared build template `tools/lxr_build_template.yml` provides:
+
+`metadata`:: ISO/TC 211 branding, license, authorship, tags, and links.
+Applied to all LXR packages.
+
+`schema_location_mappings`:: Rules for resolving `schemaLocation` URLs to local
+files. When `pattern: true`, the `from` field is a regex and `to` supports
+`\1` backreferences. First match wins, so order matters. Key mappings:
+
+* `schemas.isotc211.org/schemas/...` URLs → strip the double `/schemas/`
+* `schemas.isotc211.org/19110/{fcc,gfc}/...` → insert the missing `-/`
+* `schemas.isotc211.org/...` → strip the domain prefix
+* `schemas.opengis.net/gml/3.2.1/...` → map to local `19136/-/gml/1.0/`
+* Legacy `standards.iso.org/...` ISO GML URLs → same local copy
+
+`namespace_mappings`:: Common namespace prefixes (`xs`, `gml`, `xlink`).
+
+`appearance`:: Color scheme and typography for generated browsers.
 
 
 == Copyright and license
 
 Schemas copyright ISO/TC 211.
-
 Other files copyright Ribose Inc.

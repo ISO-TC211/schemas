@@ -1,0 +1,230 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Validate manifests
+        run: ruby tools/validate_manifests.rb
+
+      - name: Install xmllint
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
+
+      - name: Validate XSD well-formedness
+        run: |
+          errors=0
+          count=0
+          while IFS= read -r f; do
+            count=$((count + 1))
+            if ! xmllint --noout "$f" 2>/dev/null; then
+              echo "::error file=$f::XSD is not well-formed XML"
+              errors=$((errors + 1))
+            fi
+          done < <(ruby tools/validate_manifests.rb --list-files | grep '\.xsd$')
+          echo "Checked $count XSD files, $errors errors"
+          [ "$errors" -eq 0 ]
+
+      - name: Validate JSON well-formedness
+        run: |
+          errors=0
+          count=0
+          while IFS= read -r f; do
+            count=$((count + 1))
+            if ! python3 -m json.tool "$f" > /dev/null 2>&1; then
+              echo "::error file=$f::Invalid JSON"
+              errors=$((errors + 1))
+            fi
+          done < <(ruby tools/validate_manifests.rb --list-files | grep '\.json$')
+          echo "Checked $count JSON files, $errors errors"
+          [ "$errors" -eq 0 ]
+
+  setup-matrix:
+    needs: validate
+    runs-on: ubuntu-latest
+    outputs:
+      lxr: ${{ steps.matrix.outputs.lxr }}
+      ljr: ${{ steps.matrix.outputs.ljr }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: matrix
+        run: |
+          ruby -ryaml -rjson -e '
+            lxr = YAML.load_file("lxr_packages.yml")["packages"].map { |p|
+              { "name" => p["name"], "files" => p["files"], "title" => p["title"] }
+            }
+            ljr = YAML.load_file("ljr_packages.yml")["packages"].map { |p|
+              { "name" => p["name"], "files" => p["files"], "title" => p["title"] }
+            }
+            File.open(ENV["GITHUB_OUTPUT"], "a") do |f|
+              f.puts "lxr=#{lxr.to_json}"
+              f.puts "ljr=#{ljr.to_json}"
+            end
+          '
+
+  build-lxr:
+    needs: setup-matrix
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        package: ${{ fromJson(needs.setup-matrix.outputs.lxr) }}
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Checkout lutaml-xsd
+        uses: actions/checkout@v4
+        with:
+          repository: lutaml/lutaml-xsd
+          path: _tools/lutaml-xsd
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install lutaml-xsd
+        run: |
+          cat > Gemfile.ci <<'GEMFILE'
+          # frozen_string_literal: true
+          source "https://rubygems.org"
+          gem "lutaml-xsd", path: "_tools/lutaml-xsd"
+          GEMFILE
+          BUNDLE_GEMFILE=Gemfile.ci bundle install
+
+      - name: Build lutaml-xsd frontend
+        run: cd _tools/lutaml-xsd/frontend && npm install && npm run build
+
+      - name: Generate build config
+        env:
+          PKG_NAME: ${{ matrix.package.name }}
+          PKG_TITLE: ${{ matrix.package.title }}
+          PKG_FILES: ${{ toJson(matrix.package.files) }}
+        run: |
+          ruby -rjson -ryaml -e '
+            files = JSON.parse(ENV["PKG_FILES"])
+            template = YAML.load_file("tools/lxr_build_template.yml")
+
+            # Merge package-specific metadata
+            template["metadata"]["name"] = ENV["PKG_NAME"]
+            template["metadata"]["title"] = ENV["PKG_TITLE"]
+            template["files"] = files
+
+            File.write("build_config.yml", YAML.dump(template))
+          '
+
+      - name: Build LXR package
+        run: |
+          mkdir -p pkg
+          BUNDLE_GEMFILE=Gemfile.ci bundle exec lutaml-xsd build from-config build_config.yml \
+            --name "${{ matrix.package.name }}" \
+            --validate \
+            --output "pkg/${{ matrix.package.name }}.lxr"
+
+      - name: Build LXR SPA documentation
+        run: |
+          BUNDLE_GEMFILE=Gemfile.ci bundle exec lutaml-xsd spa \
+            "pkg/${{ matrix.package.name }}.lxr" \
+            --output "pkg/${{ matrix.package.name }}.html" \
+            --title "${{ matrix.package.title }}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.package.name }}.lxr
+          path: pkg/${{ matrix.package.name }}.lxr
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.package.name }}.html
+          path: pkg/${{ matrix.package.name }}.html
+
+  build-ljr:
+    needs: setup-matrix
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        package: ${{ fromJson(needs.setup-matrix.outputs.ljr) }}
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Checkout lutaml-jsonschema
+        uses: actions/checkout@v4
+        with:
+          repository: lutaml/lutaml-jsonschema
+          path: _tools/lutaml-jsonschema
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build lutaml-jsonschema frontend
+        run: cd _tools/lutaml-jsonschema/frontend && npm install && npm run build
+
+      - name: Install lutaml-jsonschema
+        run: |
+          cat > Gemfile.ci <<'GEMFILE'
+          # frozen_string_literal: true
+          source "https://rubygems.org"
+          gem "lutaml-jsonschema", path: "_tools/lutaml-jsonschema"
+          GEMFILE
+          BUNDLE_GEMFILE=Gemfile.ci bundle install
+
+      - name: Build LJR SPA
+        run: |
+          mkdir -p pkg
+          BUNDLE_GEMFILE=Gemfile.ci bundle exec lutaml-jsonschema spa \
+            ${{ join(matrix.package.files, ' ') }} \
+            --output "pkg/${{ matrix.package.name }}" \
+            --title "${{ matrix.package.title }}"
+
+      - name: Zip LJR SPA for download
+        run: |
+          cd pkg
+          zip -r "${{ matrix.package.name }}.zip" "${{ matrix.package.name }}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.package.name }}.zip
+          path: pkg/${{ matrix.package.name }}.zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.package.name }}
+          path: pkg/${{ matrix.package.name }}/
+
+  trigger-deploy:
+    needs: [build-lxr, build-ljr]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - name: Trigger site rebuild
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+          repository: ISO-TC211/schemas.isotc211.org
+          event-type: deploy
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'

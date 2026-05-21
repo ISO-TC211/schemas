@@ -1,0 +1,42 @@
+# JSON Schema package definitions for ISO/TC 211
+# One package per standard+part+version
+# Paths are relative to the schemas repo root (e.g., json/19115/-4/19115-4.json)
+
+packages:
+  - name: "19115-4-json-1.0.0"
+    title: "ISO 19115-4 — Metadata JSON Encoding (v1.0.0)"
+    standard: "19115"
+    part: "-4"
+    status: "current"
+    description: "JSON encoding of ISO 19115-1/19157-1 metadata (proof of concept)."
+    files:
+      - "json/19115/-4/mdj/1.0.0/19115-4.json"
+      - "json/19115/-4/mdj/1.0.0/mdj.json"
+      - "json/19115/-4/mdj/1.0.0/Feature.json"
+
+  - name: "19123-2-cis-json-1.2"
+    title: "ISO 19123-2 — Coverage Implementation Schema JSON (v1.2)"
+    standard: "19123"
+    part: "-2"
+    status: "current"
+    description: "JSON encoding of the Coverage Implementation Schema (CIS 1.2) with SWE Common components."
+    files:
+      - "json/19123/-2/cis/1.2/coverage-schema.json"
+      - "json/19123/-2/cis/1.2/sweCommon.json"
+      - "json/19123/-2/cis/1.2/basicTypes.json"
+      - "json/19123/-2/cis/1.2/DataRecord.json"
+      - "json/19123/-2/cis/1.2/Quantity.json"
+      - "json/19123/-2/cis/1.2/Count.json"
+      - "json/19123/-2/cis/1.2/Boolean.json"
+      - "json/19123/-2/cis/1.2/Text.json"
+      - "json/19123/-2/cis/1.2/Category.json"
+      - "json/19123/-2/cis/1.2/Time.json"
+
+  - name: "19157-1-dqc-json-1.0.0"
+    title: "ISO 19157-1 — Data Quality Measures JSON (v1.0.0)"
+    standard: "19157"
+    part: "-1"
+    status: "current"
+    description: "JSON Schema for data quality measures."
+    files:
+      - "json/19157/-1/dqc/1.0.0/dqc.json"
