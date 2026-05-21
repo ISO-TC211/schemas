@@ -1,6 +1,9 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-gem 'rake', '~> 13.0'
-gem "rspec"
+source "https://rubygems.org"
 
-gemspec
+gem "lutaml-xsd", "~> 1.1"
+gem "lutaml-model", "~> 0.8.0"
+gem "lutaml-jsonschema"
+gem "moxml"
+gem "canon"
