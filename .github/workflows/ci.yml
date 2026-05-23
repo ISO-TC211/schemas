@@ -37,6 +37,21 @@ jobs:
           echo "Checked $count XSD files, $errors errors"
           [ "$errors" -eq 0 ]
 
+      - name: Validate file permissions
+        run: |
+          errors=0
+          while IFS=$'\t' read -r mode file; do
+            if [ "$mode" = "100755" ]; then
+              case "$file" in
+                *.sh) ;;  # scripts may be executable
+                *) echo "::error file=$file::File has executable permission but is not a script (.sh)"
+                   errors=$((errors + 1)) ;;
+              esac
+            fi
+          done < <(git ls-files -s | awk '{print $1 "\t" $4}')
+          echo "Checked file permissions, $errors errors"
+          [ "$errors" -eq 0 ]
+
       - name: Validate JSON well-formedness
         run: |
           errors=0
