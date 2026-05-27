@@ -124,22 +124,6 @@ jobs:
           GEMFILE
           BUNDLE_GEMFILE=Gemfile.ci bundle install
 
-      - name: Patch lutaml-xsd frontend with ISO branding
-        run: |
-          ISO_LOGO="https://www.isotc211.org/assets/iso-red.svg"
-          SIDEBAR="_tools/lutaml-xsd/frontend/src/components/AppSidebar.vue"
-          sed -i "s|https://raw.githubusercontent.com/lutaml/branding/refs/heads/main/svg/lutaml-logo_logo-icon-light.svg|${ISO_LOGO}|g" "$SIDEBAR"
-          sed -i "s|https://raw.githubusercontent.com/lutaml/branding/refs/heads/main/svg/lutaml-logo_logo-icon-dark.svg|${ISO_LOGO}|g" "$SIDEBAR"
-          sed -i "s|https://raw.githubusercontent.com/lutaml/branding/refs/heads/main/svg/lutaml-logo_logo-full-light.svg|${ISO_LOGO}|g" "$SIDEBAR"
-          sed -i "s|https://raw.githubusercontent.com/lutaml/branding/refs/heads/main/svg/lutaml-logo_logo-full-dark.svg|${ISO_LOGO}|g" "$SIDEBAR"
-          sed -i 's/alt="LutaML"/alt="ISO"/g' "$SIDEBAR"
-          sed -i 's/LXR Package/ISO\/TC 211 Schemas/g' "$SIDEBAR"
-          sed -i 's|href="https://www.lutaml.org"|href="https://isotc211.org"|g' "$SIDEBAR"
-          sed -i 's/title="LutaML"/title="ISO\/TC 211"/g' "$SIDEBAR"
-          sed -i 's|Generated on|Built on|g' "$SIDEBAR"
-          sed -i 's|<a href="https://github.com/lutaml/lutaml-xsd"|<a href="https://schemas.isotc211.org"|g' "$SIDEBAR"
-          sed -i 's|>LutaML XSD</a>|>ISO\/TC 211 Schema Browser</a>|g' "$SIDEBAR"
-
       - name: Build lutaml-xsd frontend
         run: cd _tools/lutaml-xsd/frontend && npm install && npm run build
 
@@ -212,22 +196,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Patch lutaml-jsonschema frontend with ISO branding
-        run: |
-          ISO_LOGO="https://www.isotc211.org/assets/iso-red.svg"
-          SIDEBAR="_tools/lutaml-jsonschema/frontend/src/components/AppSidebar.vue"
-          sed -i "s|https://raw.githubusercontent.com/lutaml/branding/refs/heads/main/svg/lutaml-logo_logo-icon-light.svg|${ISO_LOGO}|g" "$SIDEBAR"
-          sed -i "s|https://raw.githubusercontent.com/lutaml/branding/refs/heads/main/svg/lutaml-logo_logo-icon-dark.svg|${ISO_LOGO}|g" "$SIDEBAR"
-          sed -i "s|https://raw.githubusercontent.com/lutaml/branding/refs/heads/main/svg/lutaml-logo_logo-full-light.svg|${ISO_LOGO}|g" "$SIDEBAR"
-          sed -i "s|https://raw.githubusercontent.com/lutaml/branding/refs/heads/main/svg/lutaml-logo_logo-full-dark.svg|${ISO_LOGO}|g" "$SIDEBAR"
-          sed -i 's/alt="LutaML"/alt="ISO"/g' "$SIDEBAR"
-          sed -i 's/LutaML JSON Schema/ISO\/TC 211 Schemas/g' "$SIDEBAR"
-          sed -i 's|href="https://www.lutaml.org"|href="https://isotc211.org"|g' "$SIDEBAR"
-          sed -i 's/title="LutaML"/title="ISO\/TC 211"/g' "$SIDEBAR"
-          sed -i 's|Generated with|Built with|g' "$SIDEBAR"
-          sed -i 's|<a href="https://github.com/lutaml/lutaml-jsonschema"|<a href="https://schemas.isotc211.org"|g' "$SIDEBAR"
-          sed -i 's|>LutaML JSON Schema</a>|>ISO\/TC 211 Schema Browser</a>|g' "$SIDEBAR"
-
       - name: Build lutaml-jsonschema frontend
         run: cd _tools/lutaml-jsonschema/frontend && npm install && npm run build
 
@@ -246,7 +214,9 @@ jobs:
           BUNDLE_GEMFILE=Gemfile.ci bundle exec lutaml-jsonschema spa \
             ${{ join(matrix.package.files, ' ') }} \
             --output "pkg/${{ matrix.package.name }}" \
-            --title "${{ matrix.package.title }}"
+            --title "${{ matrix.package.title }}" \
+            --logo "https://www.isotc211.org/assets/iso-red.svg" \
+            --subtitle "ISO/TC 211 Schemas"
 
       - name: Zip LJR SPA for download
         run: |
