@@ -70,6 +70,22 @@ namespace_mappings:
     uri: "http://www.w3.org/1999/xlink"
 
 appearance:
+  logos:
+    square:
+      light:
+        url: "https://www.isotc211.org/assets/iso-red.svg"
+      dark:
+        url: "https://www.isotc211.org/assets/iso-red.svg"
+    long:
+      light:
+        url: "https://www.isotc211.org/assets/iso-red.svg"
+      dark:
+        url: "https://www.isotc211.org/assets/iso-red.svg"
+    icon:
+      light:
+        url: "https://www.isotc211.org/assets/iso-red.svg"
+      dark:
+        url: "https://www.isotc211.org/assets/iso-red.svg"
   colors:
     primary: "#0062cc"
     primary_light: "#3388dd"
