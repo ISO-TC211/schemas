@@ -89,7 +89,7 @@
         <mcc:authority><cit:CI_Citation>
             <cit:title><gco:CharacterString>Metadata Identity Dispensary</gco:CharacterString></cit:title>
             <cit:citedResponsibleParty><cit:CI_Responsibility>
-                <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode></cit:role>
+                <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode></cit:role>
                 <cit:party><cit:CI_Organisation>
                     <cit:name><gco:CharacterString>Metadata Identity Dispensing Agency</gco:CharacterString></cit:name>
                     <cit:contactInfo><cit:CI_Contact>
@@ -101,7 +101,7 @@
                             <cit:number><gco:CharacterString>+99 9999 999 999</gco:CharacterString></cit:number>
                             <!-- Telephone Type (standard codes are: voice; facsimile; sms)-->
                             <!-- OPTIONAL [0..1] -->
-                            <cit:numberType><cit:CI_TelephoneTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_TelephoneTypeCode" codeListValue="sms">sms</cit:CI_TelephoneTypeCode></cit:numberType>
+                            <cit:numberType><cit:CI_TelephoneTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_TelephoneTypeCode" codeListValue="sms">sms</cit:CI_TelephoneTypeCode></cit:numberType>
                         </cit:CI_Telephone></cit:phone>
                         <!-- Metadata Contact Telephone END -->
                         <!-- Addess is OPIONAL [0..*] -->
@@ -117,7 +117,7 @@
                         <cit:onlineResource><cit:CI_OnlineResource>
                             <cit:linkage><gcx:Anchor xlink:href="https://www.gnihton.zo"/></cit:linkage>
                             <cit:protocol><gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString></cit:protocol>
-                            <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode></cit:function>
+                            <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode></cit:function>
                         </cit:CI_OnlineResource></cit:onlineResource>
                         <cit:contactType><gco:CharacterString>Office</gco:CharacterString></cit:contactType>
                     </cit:CI_Contact></cit:contactInfo>
@@ -174,7 +174,7 @@
         <!-- The party responsible for the parent metadata BEGIN -->
         <!-- OPTIONAL [0..1] useful if the party responsilbe of the parent record differes from the party responsible for this metadata record -->
         <cit:citedResponsibleParty><cit:CI_Responsibility>
-                 <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
+                 <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
                  <cit:party><cit:CI_Organisation>
                      <!-- Name of the party responsible for the Parent metadata record -->
                      <!-- CONDITIONAL [0..1] if cited responsible party is envoked ALTERNATIVE - use organisation's logo -->
@@ -192,7 +192,7 @@
                          <cit:onlineResource><cit:CI_OnlineResource>
                              <cit:linkage><gcx:Anchor xlink:href="https://www.gnihton.zo"/></cit:linkage>
                              <cit:protocol><gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString></cit:protocol>
-                             <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode></cit:function>
+                             <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode></cit:function>
                          </cit:CI_OnlineResource></cit:onlineResource>
                          <cit:contactType><gco:CharacterString>Office</gco:CharacterString></cit:contactType>
                      </cit:CI_Contact></cit:contactInfo>
@@ -204,7 +204,7 @@
         <cit:onlineResource><cit:CI_OnlineResource>
             <cit:linkage><gcx:Anchor xlink:href="https://www.gnihton.zo"/></cit:linkage>
             <cit:protocol><gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString></cit:protocol>
-            <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode></cit:function>
+            <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode></cit:function>
         </cit:CI_OnlineResource></cit:onlineResource>
         <cit:onlineResource></cit:onlineResource>
         <!-- Link to the parent metadata record END -->
@@ -214,7 +214,7 @@
     <!-- Details of the party resonsible for this metadata record  BEGIN -->
     <!-- MANDATORY [1..*] -->
     <mdb:contact><cit:CI_Responsibility>
-        <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
+        <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
             <!-- The party or parties responsible having that role. - BEGIN -->
                <!-- Each party might be: an organisation, an organisation with one or more individuals, or an individual (by name or position) -->
         <!-- MANDATORY [1..*] -->
@@ -239,7 +239,7 @@
                 <cit:onlineResource><cit:CI_OnlineResource>
                     <cit:linkage><gcx:Anchor xlink:href="https://www.gnihton.zo"/></cit:linkage>
                     <cit:protocol><gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString></cit:protocol>
-                    <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode></cit:function>
+                    <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode></cit:function>
                 </cit:CI_OnlineResource></cit:onlineResource>
                 <cit:contactType><gco:CharacterString>Office</gco:CharacterString></cit:contactType>
             </cit:CI_Contact></cit:contactInfo>
@@ -268,7 +268,7 @@
         <cit:date><gco:DateTime>2004-03-12T12:00:00</gco:DateTime></cit:date>
         <!-- dateType is codelist identifying what happened at that Date/DateTime -->
         <!-- MANDATORY [1..1] -->
-        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
         </cit:CI_Date>
     </mdb:dateInfo>
     <!-- Date(s) associated with the metadata record. END -->
@@ -281,7 +281,7 @@
         <cit:title><gco:CharacterString>ISO 19115-3:2023</gco:CharacterString></cit:title>
         <cit:date><cit:CI_Date>
             <cit:date><gco:Date>2023-08</gco:Date></cit:date>
-            <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
+            <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
         </cit:CI_Date></cit:date>
         <cit:edition><gco:CharacterString>Edition 2</gco:CharacterString></cit:edition>
     </cit:CI_Citation></mdb:metadataStandard>
@@ -325,11 +325,11 @@
                 <cit:title><gco:CharacterString>EPSG Geodetic Parameter Dataset</gco:CharacterString></cit:title>
                 <cit:date><cit:CI_Date>
                     <cit:date><gco:Date>2024-03-03</gco:Date></cit:date>
-                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
                 </cit:CI_Date></cit:date>
                 <cit:edition><gco:CharacterString>Version 11.004</gco:CharacterString></cit:edition>
                 <cit:citedResponsibleParty><cit:CI_Responsibility>
-                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="publisher">publisher</cit:CI_RoleCode></cit:role>
+                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="publisher">publisher</cit:CI_RoleCode></cit:role>
                     <cit:party><cit:CI_Organisation>
                         <cit:name><gco:CharacterString>International Association of Oil and Gas Producers (IOGP)</gco:CharacterString></cit:name>
                     </cit:CI_Organisation></cit:party>
@@ -362,7 +362,7 @@
         -->
         <!-- Reference System Type indicates the type of reference system being used -->
     <!--
-        <mrs:referenceSystemType><mrs:MD_ReferenceSystemTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mrs.MD_ReferenceSystemTypeCode" codeListValue="geodeticGeographic2D">geodeticGeographic2D</mrs:MD_ReferenceSystemTypeCode></mrs:referenceSystemType>
+        <mrs:referenceSystemType><mrs:MD_ReferenceSystemTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mrs.MD_ReferenceSystemTypeCode" codeListValue="geodeticGeographic2D">geodeticGeographic2D</mrs:MD_ReferenceSystemTypeCode></mrs:referenceSystemType>
     </mrs:MD_ReferenceSystem></mdb:referenceSystemInfo>
     -->
     <!--  Reference System Information provides information about the reference frame for data END-->     
@@ -400,7 +400,7 @@
                         creation; publication; reviion; expiry; inForce; released; adopted; distribution; deprecated; superseded; unavailable;
                         lastUpdate; lastRevision; nextUpdate; validityBegins; validityExpires -->
                     <!-- MANDATORY [1..1] -->
-                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>    
                 <!-- Date(s) associated with the resource. END -->
                 <!-- .......................... -->
@@ -440,7 +440,7 @@
                          resourceProvider; custodian; owner; originator; principalInvestigator; processor; publisher; 
                          author; sponsor; coAuthor; collaborator; editor; mediator; rightsHolder; contributor; funder;  
                          It would be unusual for the cited responsible party to be: stakeholder; user; distributor; pointOfContact -->
-                     <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO191151-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
+                     <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO191151-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
                      <!-- The party or parties responsible having this role. - BEGIN -->
                      <!-- Each party might be: an organisation, an organisation with one or more individuals, or an individual (by name or position) -->
                      <!-- there might be multiple individuals within multiple organissations who are all authors, thus all fitting into one citedResponsibleParty -->
@@ -466,7 +466,7 @@
                              <cit:onlineResource><cit:CI_OnlineResource>
                                  <cit:linkage><gcx:Anchor xlink:href="https://www.gnihton.zo"/></cit:linkage>
                                  <cit:protocol><gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString></cit:protocol>
-                                 <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode></cit:function>
+                                 <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode></cit:function>
                              </cit:CI_OnlineResource></cit:onlineResource>
                              <cit:contactType><gco:CharacterString>Office</gco:CharacterString></cit:contactType>
                          </cit:CI_Contact></cit:contactInfo>
@@ -487,7 +487,7 @@
                                      <cit:number><gco:CharacterString>+99 9999 999 999</gco:CharacterString></cit:number>
                                      <!-- Telephone Type (standard codes are: voice; facsimile; sms)-->
                                      <!-- OPTIONAL [0..1] -->
-                                     <cit:numberType><cit:CI_TelephoneTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_TelephoneTypeCode" codeListValue="sms">sms</cit:CI_TelephoneTypeCode></cit:numberType>
+                                     <cit:numberType><cit:CI_TelephoneTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_TelephoneTypeCode" codeListValue="sms">sms</cit:CI_TelephoneTypeCode></cit:numberType>
                                  </cit:CI_Telephone></cit:phone>
                                  <!-- Responsible party individual's Telephone END -->
                                  <!-- Responsible party individual's Address BEGIN -->
@@ -524,7 +524,7 @@
                 <!-- Standard code values are: documentDigital; documentHardcopy; imageDigital; imageHardcopy; mapDigital; mapHardcopy; 
                     modelDigital; modelHardcopy; proileDigital; proileHardcopy; tableDigital; tableHardcopy; videoDigital; videoHardcopy;
                     audioDigital; audioHardcopy; multimediaDigital; multimediaHardcopy; physicalObject; diagramDigital; diagramHardcopy -->
-                <cit:presentationForm><cit:CI_PresentationFormCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_PresentationFormCode" codeListValue="documentDigital"></cit:CI_PresentationFormCode></cit:presentationForm>
+                <cit:presentationForm><cit:CI_PresentationFormCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_PresentationFormCode" codeListValue="documentDigital"></cit:CI_PresentationFormCode></cit:presentationForm>
                 <!-- The Form that the resource is presented in. BEGIN -->
                 <!-- Information about the resource in relation to the series to which it belongs. BEGIN -->
                 <!-- OPTIONAL [0..1] Only relevant if part of a series. If it is it is very useful -->
@@ -603,14 +603,14 @@
          <!-- .......................... -->
          <!-- The Status of the resource (from idea to retirement). -->
          <!-- OPTIONAL [0..*] Value from codeSet: Standard set is: completed; historicalArchive; obsolete; onGoing; planned; required; underDevelopment; final; pending; retired; superseded; tentative; valid; accepted; notAccepted; withdrawn; proposed; deprecated-->
-         <mri:status><mcc:MD_ProgressCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mcc.MD_ProgressCode" codeListValue="tentative">tentative</mcc:MD_ProgressCode></mri:status>
+         <mri:status><mcc:MD_ProgressCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mcc.MD_ProgressCode" codeListValue="tentative">tentative</mcc:MD_ProgressCode></mri:status>
          <!-- .......................... -->
          <!-- Point of Contact - who to contact for <information about the resource/the resource> BEGIN -->
          <!-- OPTIONAL [0..*] Information about who and how to make connections with the person or organisation associated with the resource -->
          <mri:pointOfContact><cit:CI_Responsibility>
              <!-- the role of the person(s) or organisation who is/are the point of contact -->
              <!-- Their role is only very occasionally "point of contact", usually they are the custodian or author or principle investigator -->
-             <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="collaborator">collaborator</cit:CI_RoleCode></cit:role>
+             <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="collaborator">collaborator</cit:CI_RoleCode></cit:role>
              <!-- The party or parties responsible having this role. - BEGIN -->
              <!-- Each party might be: an organisation, an organisation with one or more individuals, or an individual (by name or position) -->
              <!-- there might be multiple individuals within multiple organissations who are all authors, thus all fitting into one citedResponsibleParty -->
@@ -636,7 +636,7 @@
                      <cit:onlineResource><cit:CI_OnlineResource>
                          <cit:linkage><gcx:Anchor xlink:href="https://www.gnihton.zo"/></cit:linkage>
                          <cit:protocol><gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString></cit:protocol>
-                         <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode></cit:function>
+                         <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode></cit:function>
                      </cit:CI_OnlineResource></cit:onlineResource>
                      <cit:contactType><gco:CharacterString>Office</gco:CharacterString></cit:contactType>
                  </cit:CI_Contact></cit:contactInfo>
@@ -657,7 +657,7 @@
                              <cit:number><gco:CharacterString>+99 9999 999 999</gco:CharacterString></cit:number>
                              <!-- Telephone Type (standard codes are: voice; facsimile; sms)-->
                              <!-- OPTIONAL [0..1] -->
-                             <cit:numberType><cit:CI_TelephoneTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_TelephoneTypeCode" codeListValue="sms">sms</cit:CI_TelephoneTypeCode></cit:numberType>
+                             <cit:numberType><cit:CI_TelephoneTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_TelephoneTypeCode" codeListValue="sms">sms</cit:CI_TelephoneTypeCode></cit:numberType>
                          </cit:CI_Telephone></cit:phone>
                          <!-- Responsible party individual's Telephone END -->
                          <!-- Responsible party individual's Address BEGIN -->
@@ -690,7 +690,7 @@
          <!-- .......................... -->
          <!-- Spatial representation type indicator of how thge data is represented. -->
          <!-- OPTIONAL [0..*] Value from a code set. Standard values are (limited): vector; grid; textTable' tin; stereoModel; video -->
-         <mri:spatialRepresentationType><mcc:MD_SpatialRepresentationTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mcc.MD_SpatialRepresentationTypeCode" codeListValue="vector">vector</mcc:MD_SpatialRepresentationTypeCode></mri:spatialRepresentationType>
+         <mri:spatialRepresentationType><mcc:MD_SpatialRepresentationTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mcc.MD_SpatialRepresentationTypeCode" codeListValue="vector">vector</mcc:MD_SpatialRepresentationTypeCode></mri:spatialRepresentationType>
          <!-- .......................... -->
          <!-- Temporal Resolution as a period. -->
          <!-- OPTIONAL [0..*] [not sure how multiplicity is unbounded] -->
@@ -832,7 +832,7 @@
          <!-- OPTIONAL [0..1] Information about how often and when the resource was last/next updated -->
          <!-- Values from code set. Standard values are: continual; daily; weekly; fortnightly; monthly; quarterly; biannually; annually; asNeeded; irregular; notPlanned; unknown; periodic; semimonthly; biennially -->
          <mri:resourceMaintenance><mmi:MD_MaintenanceInformation>
-             <mmi:maintenanceAndUpdateFrequency><mmi:MD_MaintenanceFrequencyCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mmi.MD_MaintenanceFrequencyCode" codeListValue="asNeeded">asNeeded</mmi:MD_MaintenanceFrequencyCode></mmi:maintenanceAndUpdateFrequency>
+             <mmi:maintenanceAndUpdateFrequency><mmi:MD_MaintenanceFrequencyCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mmi.MD_MaintenanceFrequencyCode" codeListValue="asNeeded">asNeeded</mmi:MD_MaintenanceFrequencyCode></mmi:maintenanceAndUpdateFrequency>
          </mmi:MD_MaintenanceInformation></mri:resourceMaintenance>
          <!-- Maintenance of the resource. END -->
          <!-- .......................... -->
@@ -871,10 +871,10 @@
                  <!-- Note: this is the date that is associated with the format (not the resource) -->
                  <cit:date><cit:CI_Date>
                      <cit:date><gco:Date>2008</gco:Date></cit:date>
-                     <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
+                     <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
                  </cit:CI_Date></cit:date>
                  <cit:citedResponsibleParty><cit:CI_Responsibility>
-                     <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="rightsHolder">rightsHolder</cit:CI_RoleCode></cit:role>
+                     <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="rightsHolder">rightsHolder</cit:CI_RoleCode></cit:role>
                      <cit:party><cit:CI_Organisation>
                          <cit:name><gco:CharacterString>ADOBE Systems</gco:CharacterString></cit:name>
                      </cit:CI_Organisation></cit:party>
@@ -907,7 +907,7 @@
              <!-- Keyword type sets the domain for the keywords above -->
              <!-- Values from a code set. Standard codes are: discipline; place; stratum; temporal; theme; dataCentre; featureType; 
                  instrument; platform; process; project; service; product; subTopicCategory; taxon-->
-             <mri:type><mri:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mri.MD_KeywordTypeCode" codeListValue="theme">theme</mri:MD_KeywordTypeCode></mri:type>
+             <mri:type><mri:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mri.MD_KeywordTypeCode" codeListValue="theme">theme</mri:MD_KeywordTypeCode></mri:type>
              <!-- If the keywords are drawn from a thesaurus then the thesaurus should be identified -->
              <!-- Thesaurus information OPTIONAL [0..1] -->
              <!-- 
@@ -962,7 +962,7 @@
              <mco:releasability><mco:MD_Releasability>
                  <!-- Addressee - OPTIONAL [0..1] Person or organisation who can (or cannot) have access to the resource -->
                  <mco:addressee><cit:CI_Responsibility>
-                     <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="user">user</cit:CI_RoleCode></cit:role>
+                     <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="user">user</cit:CI_RoleCode></cit:role>
                      <cit:party><cit:CI_Individual>
                          <cit:name><gco:CharacterString>ANY</gco:CharacterString></cit:name>
                      </cit:CI_Individual></cit:party>
@@ -972,12 +972,12 @@
                  <!-- Dissemination restriction code -->
                  <!-- OPTIONAL [0..1] value from code set: Standard values are: copyright; patent; patentPending; trademark; licence; intellectualPropertyRights; 
                      restricted; otherRestrictions; unrestricted; licenceUnrestricted; licenceEndUser; licenceDistributor; private; statutory; confidential; sensitiveButUnclassified; in-confidence-->
-                 <mco:disseminationConstraints><mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mco.MD_RestrictionCode" codeListValue="copyright">copyright</mco:MD_RestrictionCode></mco:disseminationConstraints>
+                 <mco:disseminationConstraints><mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mco.MD_RestrictionCode" codeListValue="copyright">copyright</mco:MD_RestrictionCode></mco:disseminationConstraints>
              </mco:MD_Releasability></mco:releasability>
              <!-- Party responsible for managing the constraints -->
              <!-- OPTIONAL [0..*] -->
              <mco:responsibleParty><cit:CI_Responsibility>
-                 <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
+                 <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
                  <cit:party><cit:CI_Organisation>
                      <cit:name><gco:CharacterString>Gnihton Inc.</gco:CharacterString></cit:name>
                  </cit:CI_Organisation></cit:party>
@@ -995,7 +995,7 @@
              <mco:reference><cit:CI_Citation>
                   <cit:title><gco:CharacterString>Creative Commons By Attribution 4.0</gco:CharacterString></cit:title>
                  <cit:citedResponsibleParty><cit:CI_Responsibility>
-                     <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
+                     <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
                      <cit:party><cit:CI_Organisation>
                          <cit:name><gco:CharacterString>Creative Commons</gco:CharacterString></cit:name>
                      </cit:CI_Organisation></cit:party>
@@ -1020,13 +1020,13 @@
              <!-- Standard code set contains terms that may not really be applicable -->
              <!-- PROBABLY NOT APPLICABLE: copyright; patent; patentPending; trademark; licence; -->
              <!-- POSSIBLY APPLICABLE: intellectualPropertyRights; restricted; unrestricted; otherRestrictions; licenceUnrestricted; licenceEndUser; licenceDistributor; private; statutory; confidential; sensitiveButUnclassified; in-confidence  -->
-             <mco:accessConstraints><mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mco.MD_RestrictionCode" codeListValue="unrestricted">unrestricted</mco:MD_RestrictionCode></mco:accessConstraints>
+             <mco:accessConstraints><mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mco.MD_RestrictionCode" codeListValue="unrestricted">unrestricted</mco:MD_RestrictionCode></mco:accessConstraints>
              <!-- Constraint type for USE to the resource -->
              <!-- OPTIONAL [0..*] Frome code set. Note this is about getting the resource NOT USING IT -->
              <!-- Standard code set: -->
              <!-- copyright; patent; patentPending; trademark; licence; intellectualPropertyRights; restricted; unrestricted; otherRestrictions; licenceUnrestricted; licenceEndUser; licenceDistributor; private; statutory; confidential; sensitiveButUnclassified; in-confidence  -->
-             <mco:useConstraints><mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mco.MD_RestrictionCode" codeListValue="copyright">copyright</mco:MD_RestrictionCode></mco:useConstraints>
-             <mco:useConstraints><mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mco.MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</mco:MD_RestrictionCode></mco:useConstraints>
+             <mco:useConstraints><mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mco.MD_RestrictionCode" codeListValue="copyright">copyright</mco:MD_RestrictionCode></mco:useConstraints>
+             <mco:useConstraints><mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mco.MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</mco:MD_RestrictionCode></mco:useConstraints>
              <!-- Other constraints that apply to the resource -->
              <!-- CONDITIONAL [0..*] If otherConstraint used then one instance of either accessConstraints OR useConstraints must be set to otherRestrictions -->
              <mco:otherConstraints><gco:CharacterString>CreativeCommons 4.0 by Attribution</gco:CharacterString></mco:otherConstraints>
@@ -1043,15 +1043,15 @@
          <mri:resourceConstraints><mco:MD_SecurityConstraints>
              <mco:releasability><mco:MD_Releasability>
                  <mco:statement><gco:CharacterString>This resource is not to be made available to any external agents</gco:CharacterString></mco:statement>
-                 <mco:disseminationConstraints><mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="private">private</mco:MD_RestrictionCode></mco:disseminationConstraints>
+                 <mco:disseminationConstraints><mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="private">private</mco:MD_RestrictionCode></mco:disseminationConstraints>
              </mco:MD_Releasability></mco:releasability>
              <mco:responsibleParty><cit:CI_Responsibility>
-                 <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
+                 <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
                  <cit:party><cit:CI_Organisation>
                      <cit:name><gco:CharacterString>Gnihton Inc.</gco:CharacterString></cit:name>
                  </cit:CI_Organisation></cit:party>
              </cit:CI_Responsibility></mco:responsibleParty>
-             <mco:classification><mco:MD_ClassificationCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mco.MD_ClassificationCode" codeListValue="confidential">confidential</mco:MD_ClassificationCode></mco:classification>
+             <mco:classification><mco:MD_ClassificationCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mco.MD_ClassificationCode" codeListValue="confidential">confidential</mco:MD_ClassificationCode></mco:classification>
              <mco:userNote><gco:CharacterString>Only for use within Gnihton Inc.</gco:CharacterString></mco:userNote>
              <mco:classificationSystem><gco:CharacterString>Gnihton Inc. Security System</gco:CharacterString></mco:classificationSystem>
              <mco:handlingDescription><gco:CharacterString>Not to be placed on the company internet server</gco:CharacterString></mco:handlingDescription>
@@ -1076,11 +1076,11 @@
              <!-- MANDATORY [1..1] values from codeset -->
              <!-- choose from standard codes: 
                  crossReference; largerWorkCitation; partOfSeamlessDatabase; stereoMate; isComposedOf; collectiveTitle; series; dependency; revisionOf -->
-             <mri:associationType><mri:DS_AssociationTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mri:DS_AssociationTypeCode" codeListValue="dependency">dependency</mri:DS_AssociationTypeCode></mri:associationType>
+             <mri:associationType><mri:DS_AssociationTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mri:DS_AssociationTypeCode" codeListValue="dependency">dependency</mri:DS_AssociationTypeCode></mri:associationType>
              <!-- OPTIONAL [0..1] values from codeset -->
              <!-- choose from standard codes:
                  campaign; collection; exercise; experiment; investigation; mission; sensor; operation; platform; process; program; project; study; task; trial -->
-            <mri:initiativeType><mri:DS_InitiativeTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mri.DS_InitiativeTypeCode" codeListValue="program">program</mri:DS_InitiativeTypeCode></mri:initiativeType>
+            <mri:initiativeType><mri:DS_InitiativeTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mri.DS_InitiativeTypeCode" codeListValue="program">program</mri:DS_InitiativeTypeCode></mri:initiativeType>
              <!-- CONDITIONAL [0..1] - Either metadataReference (logically if available) or name (if metadata not available) -->
              <mri:metadataReference><cit:CI_Citation>
                  <cit:title><gco:CharacterString>Sample assay datadaset metadata</gco:CharacterString></cit:title>
@@ -1148,12 +1148,12 @@
                 <cit:title><gco:CharacterString>Gnihton catalogue of important datasets</gco:CharacterString></cit:title>
                 <cit:date><cit:CI_Date>
                     <cit:date><gco:Date>2024-01-01</gco:Date></cit:date>
-                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="lastUpdate">lastUpdate</cit:CI_DateTypeCode></cit:dateType>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="lastUpdate">lastUpdate</cit:CI_DateTypeCode></cit:dateType>
                 </cit:CI_Date></cit:date>
                 <cit:onlineResource><cit:CI_OnlineResource>
                     <cit:linkage><gcx:Anchor xlink:href="https://www.gnihton.zo/GCID.ora"/></cit:linkage>
                     <cit:protocol><gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString></cit:protocol>
-                    <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode></cit:function>
+                    <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="information">information</cit:CI_OnLineFunctionCode></cit:function>
                 </cit:CI_OnlineResource></cit:onlineResource>
             </cit:CI_Citation>
         </mrc:featureCatalogueCitation>
@@ -1182,7 +1182,7 @@
             <mcc:code><gco:CharacterString>complete</gco:CharacterString></mcc:code>
         </mcc:MD_Identifier></mrc:processingLevelCode>
         <mrc:attributeGroup><mrc:MD_AttributeGroup>
-            <mrc:contentType><mrc:MD_CoverageContentTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mrc.MD_CoverageContentTypeCode" codeListValue="thematicClassification">thematicClassification</mrc:MD_CoverageContentTypeCode></mrc:contentType>
+            <mrc:contentType><mrc:MD_CoverageContentTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mrc.MD_CoverageContentTypeCode" codeListValue="thematicClassification">thematicClassification</mrc:MD_CoverageContentTypeCode></mrc:contentType>
             <mrc:attribute><mrc:MD_RangeDimension>
                 <mrc:sequenceIdentifier><gco:MemberName>
                     <gco:aName><gco:CharacterString>Gnihton</gco:CharacterString></gco:aName>
@@ -1370,12 +1370,12 @@
                 <!-- note: this is the date of the format not the resource -->
                 <cit:date><cit:CI_Date>
                     <cit:date><gco:Date>2017-05-25</gco:Date></cit:date>
-                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
                 </cit:CI_Date></cit:date>
                 <cit:edition><gco:CharacterString>1.0</gco:CharacterString></cit:edition>
                 <cit:editionDate><gco:DateTime>2017-05-25T00:00:00</gco:DateTime></cit:editionDate>
                 <cit:citedResponsibleParty><cit:CI_Responsibility>
-                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="author">author</cit:CI_RoleCode></cit:role>
+                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="author">author</cit:CI_RoleCode></cit:role>
                     <cit:party><cit:CI_Organisation>
                         <cit:name><gco:CharacterString>Oracle (R)</gco:CharacterString></cit:name>
                     </cit:CI_Organisation></cit:party>
@@ -1387,7 +1387,7 @@
         </mrd:MD_Format></mrd:distributionFormat>
         <mrd:distributor><mrd:MD_Distributor>
             <mrd:distributorContact><cit:CI_Responsibility>
-                <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
+                <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
                 <cit:party><cit:CI_Organisation>
                     <cit:name><gco:CharacterString>Distributor for one or more resources having simple or aggrogate format</gco:CharacterString></cit:name>
                     <cit:contactInfo><cit:CI_Contact>
@@ -1421,7 +1421,7 @@
                     <cit:applicationProfile><gco:CharacterString>simple https link</gco:CharacterString></cit:applicationProfile>
                     <cit:name><gco:CharacterString>Gnihton mineral lease location map and associated lease information</gco:CharacterString></cit:name>
                     <cit:description><gco:CharacterString>Oracle database extract in ASCII format. Contains information about leases held by Gnihton, other neighbouring leases,and exclusion zones</gco:CharacterString></cit:description>
-                    <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
+                    <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
                     <cit:protocolRequest><gco:CharacterString>Form that the request should take - usually used for service requests</gco:CharacterString></cit:protocolRequest>
                 </cit:CI_OnlineResource></mrd:onLine>
             </mrd:MD_DigitalTransferOptions></mrd:transferOptions>
@@ -1434,7 +1434,7 @@
                 <cit:applicationProfile><gco:CharacterString>simple https link</gco:CharacterString></cit:applicationProfile>
                 <cit:name><gco:CharacterString>Gnihton mineral lease activity map, including associated lease information</gco:CharacterString></cit:name>
                 <cit:description><gco:CharacterString>Oracle database extract in ASCII format. Contains information about leases held by Gnihton, the activity on those leases and other neighbouring leases,except for exclusion zones</gco:CharacterString></cit:description>
-                <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
+                <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
                 <cit:protocolRequest><gco:CharacterString>Form that the request should take - usually used for service requests</gco:CharacterString></cit:protocolRequest>
             </cit:CI_OnlineResource></mrd:onLine>
         </mrd:MD_DigitalTransferOptions></mrd:transferOptions>
@@ -1449,7 +1449,7 @@
             more than one distributor is to provide the same file format</gco:CharacterString></mrd:description>
         <mrd:distributor><mrd:MD_Distributor>
             <mrd:distributorContact><cit:CI_Responsibility>
-                <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
+                <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
                 <cit:party><cit:CI_Organisation>
                     <cit:name><gco:CharacterString>Distributor for one or more resources having having the same simple or aggrogate format</gco:CharacterString></cit:name>
                     <cit:contactInfo><cit:CI_Contact>
@@ -1479,12 +1479,12 @@
                 <!-- note: this is the date of the format not the resource -->
                 <cit:date><cit:CI_Date>
                     <cit:date><gco:Date>2017-05-25</gco:Date></cit:date>
-                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
                 </cit:CI_Date></cit:date>
                 <cit:edition><gco:CharacterString>1.0</gco:CharacterString></cit:edition>
                 <cit:editionDate><gco:DateTime>2017-05-25T00:00:00</gco:DateTime></cit:editionDate>
                 <cit:citedResponsibleParty><cit:CI_Responsibility>
-                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="author">author</cit:CI_RoleCode></cit:role>
+                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="author">author</cit:CI_RoleCode></cit:role>
                     <cit:party><cit:CI_Organisation>
                         <cit:name><gco:CharacterString>Oracle (R)</gco:CharacterString></cit:name>
                     </cit:CI_Organisation></cit:party>
@@ -1500,12 +1500,12 @@
                     <!-- note: this is the date of the format not the resource -->
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2016</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                     <cit:edition><gco:CharacterString>2016</gco:CharacterString></cit:edition>
                     <cit:editionDate><gco:DateTime>2015-07-09T00:00:00</gco:DateTime></cit:editionDate>
                     <cit:citedResponsibleParty><cit:CI_Responsibility>
-                        <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="rightsHolder">rightsHolder</cit:CI_RoleCode></cit:role>
+                        <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="rightsHolder">rightsHolder</cit:CI_RoleCode></cit:role>
                         <cit:party><cit:CI_Organisation>
                             <cit:name><gco:CharacterString>MicroSoft (R)</gco:CharacterString></cit:name>
                         </cit:CI_Organisation></cit:party>
@@ -1525,7 +1525,7 @@
                 <cit:applicationProfile><gco:CharacterString>simple https link</gco:CharacterString></cit:applicationProfile>
                 <cit:name><gco:CharacterString>Gnihton mineral lease location map and associated lease information</gco:CharacterString></cit:name>
                 <cit:description><gco:CharacterString>Resouce documentation in MS Word plus Oracle database extract in ASCII format. Contains information about leases held by Gnihton, other neighbouring leases,and exclusion zones</gco:CharacterString></cit:description>
-                <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
+                <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
                 <cit:protocolRequest><gco:CharacterString>Form that the request should take - usually used for service requests</gco:CharacterString></cit:protocolRequest>
             </cit:CI_OnlineResource></mrd:onLine>
         </mrd:MD_DigitalTransferOptions></mrd:transferOptions>
@@ -1538,7 +1538,7 @@
                 <cit:applicationProfile><gco:CharacterString>simple https link</gco:CharacterString></cit:applicationProfile>
                 <cit:name><gco:CharacterString>Gnihton mineral lease activity map, including associated lease information</gco:CharacterString></cit:name>
                 <cit:description><gco:CharacterString>Oracle database extract in ASCII format. Contains information about leases held by Gnihton, the activity on those leases and other neighbouring leases,except for exclusion zones</gco:CharacterString></cit:description>
-                <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
+                <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
                 <cit:protocolRequest><gco:CharacterString>Form that the request should take - usually used for service requests</gco:CharacterString></cit:protocolRequest>
             </cit:CI_OnlineResource></mrd:onLine>
         </mrd:MD_DigitalTransferOptions></mrd:transferOptions>
@@ -1556,7 +1556,7 @@
             more than one distributor is to provide the same file format, each needing a seperate D / T / F</gco:CharacterString></mrd:description>
         <mrd:distributor><mrd:MD_Distributor>
             <mrd:distributorContact><cit:CI_Responsibility>
-                <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
+                <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
                 <cit:party><cit:CI_Organisation>
                     <cit:name><gco:CharacterString>Distributor for one or more resources EACH having the a (mostly) different simple or aggrogate format</gco:CharacterString></cit:name>
                     <cit:contactInfo><cit:CI_Contact>
@@ -1589,7 +1589,7 @@
                     <cit:applicationProfile><gco:CharacterString>simple https link</gco:CharacterString></cit:applicationProfile>
                     <cit:name><gco:CharacterString>Gnihton mineral lease location map and associated lease information</gco:CharacterString></cit:name>
                     <cit:description><gco:CharacterString>Resouce documentation in MS Word plus Oracle database extract in ASCII format. Contains information about leases held by Gnihton, other neighbouring leases,and exclusion zones</gco:CharacterString></cit:description>
-                    <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
+                    <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
                     <cit:protocolRequest><gco:CharacterString>Form that the request should take - usually used for service requests</gco:CharacterString></cit:protocolRequest>
                 </cit:CI_OnlineResource></mrd:onLine>
                 <mrd:distributionFormat><mrd:MD_Format>
@@ -1598,12 +1598,12 @@
                         <!-- note: this is the date of the format not the resource -->
                         <cit:date><cit:CI_Date>
                             <cit:date><gco:Date>2017-05-25</gco:Date></cit:date>
-                            <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
+                            <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
                         </cit:CI_Date></cit:date>
                         <cit:edition><gco:CharacterString>1.0</gco:CharacterString></cit:edition>
                         <cit:editionDate><gco:DateTime>2017-05-25T00:00:00</gco:DateTime></cit:editionDate>
                         <cit:citedResponsibleParty><cit:CI_Responsibility>
-                            <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="author">author</cit:CI_RoleCode></cit:role>
+                            <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="author">author</cit:CI_RoleCode></cit:role>
                             <cit:party><cit:CI_Organisation>
                                 <cit:name><gco:CharacterString>Oracle (R)</gco:CharacterString></cit:name>
                             </cit:CI_Organisation></cit:party>
@@ -1619,12 +1619,12 @@
                         <!-- note: this is the date of the format not the resource -->
                         <cit:date><cit:CI_Date>
                             <cit:date><gco:Date>2016</gco:Date></cit:date>
-                            <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
+                            <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
                         </cit:CI_Date></cit:date>
                         <cit:edition><gco:CharacterString>2016</gco:CharacterString></cit:edition>
                         <cit:editionDate><gco:DateTime>2015-07-09T00:00:00</gco:DateTime></cit:editionDate>
                         <cit:citedResponsibleParty><cit:CI_Responsibility>
-                            <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="rightsHolder">rightsHolder</cit:CI_RoleCode></cit:role>
+                            <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="rightsHolder">rightsHolder</cit:CI_RoleCode></cit:role>
                             <cit:party><cit:CI_Organisation>
                                 <cit:name><gco:CharacterString>MicroSoft (R)</gco:CharacterString></cit:name>
                             </cit:CI_Organisation></cit:party>
@@ -1644,7 +1644,7 @@
                     <cit:applicationProfile><gco:CharacterString>simple https link</gco:CharacterString></cit:applicationProfile>
                     <cit:name><gco:CharacterString>Gnihton mineral lease location map and associated lease information</gco:CharacterString></cit:name>
                     <cit:description><gco:CharacterString>Resouce documentation in MS Word. Contains information table structure used in the mineral lease database</gco:CharacterString></cit:description>
-                    <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
+                    <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
                     <cit:protocolRequest><gco:CharacterString>Form that the request should take - usually used for service requests</gco:CharacterString></cit:protocolRequest>
                 </cit:CI_OnlineResource></mrd:onLine>
                 <mrd:distributionFormat><mrd:MD_Format>
@@ -1653,12 +1653,12 @@
                         <!-- note: this is the date of the format not the resource -->
                         <cit:date><cit:CI_Date>
                             <cit:date><gco:Date>2016</gco:Date></cit:date>
-                            <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
+                            <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
                         </cit:CI_Date></cit:date>
                         <cit:edition><gco:CharacterString>2016</gco:CharacterString></cit:edition>
                         <cit:editionDate><gco:DateTime>2015-07-09T00:00:00</gco:DateTime></cit:editionDate>
                         <cit:citedResponsibleParty><cit:CI_Responsibility>
-                            <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="rightsHolder">rightsHolder</cit:CI_RoleCode></cit:role>
+                            <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="rightsHolder">rightsHolder</cit:CI_RoleCode></cit:role>
                             <cit:party><cit:CI_Organisation>
                                 <cit:name><gco:CharacterString>MicroSoft (R)</gco:CharacterString></cit:name>
                             </cit:CI_Organisation></cit:party>
@@ -1688,12 +1688,12 @@
                 <!-- note: this is the date of the format not the resource -->
                 <cit:date><cit:CI_Date>
                     <cit:date><gco:Date>2017-05-25</gco:Date></cit:date>
-                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
                 </cit:CI_Date></cit:date>
                 <cit:edition><gco:CharacterString>1.0</gco:CharacterString></cit:edition>
                 <cit:editionDate><gco:DateTime>2017-05-25T00:00:00</gco:DateTime></cit:editionDate>
                 <cit:citedResponsibleParty><cit:CI_Responsibility>
-                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="author">author</cit:CI_RoleCode></cit:role>
+                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="author">author</cit:CI_RoleCode></cit:role>
                     <cit:party><cit:CI_Organisation>
                         <cit:name><gco:CharacterString>Oracle (R)</gco:CharacterString></cit:name>
                     </cit:CI_Organisation></cit:party>
@@ -1704,7 +1704,7 @@
             <mrd:fileDecompressionTechnique><gco:CharacterString>UNZIP and TAR</gco:CharacterString></mrd:fileDecompressionTechnique>
             <mrd:formatDistributor><mrd:MD_Distributor>
                 <mrd:distributorContact><cit:CI_Responsibility>
-                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
+                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
                     <cit:party><cit:CI_Organisation>
                         <cit:name><gco:CharacterString>1st distributor Simple Format delivered by one or more Distributors each having responsibility for delivering one or more resources in that single format</gco:CharacterString></cit:name>
                         <cit:contactInfo><cit:CI_Contact>
@@ -1737,14 +1737,14 @@
                         <cit:applicationProfile><gco:CharacterString>simple https link</gco:CharacterString></cit:applicationProfile>
                         <cit:name><gco:CharacterString>Gnihton mineral lease location map and associated lease information</gco:CharacterString></cit:name>
                         <cit:description><gco:CharacterString>Oracle database extract in ASCII format. Contains information about leases held by Gnihton, other neighbouring leases,and exclusion zones</gco:CharacterString></cit:description>
-                        <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
+                        <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
                         <cit:protocolRequest><gco:CharacterString>Form that the request should take - usually used for service requests</gco:CharacterString></cit:protocolRequest>
                     </cit:CI_OnlineResource></mrd:onLine>
                 </mrd:MD_DigitalTransferOptions></mrd:distributorTransferOptions>
             </mrd:MD_Distributor></mrd:formatDistributor>
             <mrd:formatDistributor><mrd:MD_Distributor>
                 <mrd:distributorContact><cit:CI_Responsibility>
-                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
+                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
                     <cit:party><cit:CI_Organisation>
                         <cit:name><gco:CharacterString>2nd distributor Simple Format delivered by one or more Distributors each having responsibility for delivering one or more resources in that single format</gco:CharacterString></cit:name>
                         <cit:contactInfo><cit:CI_Contact>
@@ -1777,7 +1777,7 @@
                         <cit:applicationProfile><gco:CharacterString>simple https link</gco:CharacterString></cit:applicationProfile>
                         <cit:name><gco:CharacterString>Gnihton mineral lease location map and associated lease information</gco:CharacterString></cit:name>
                         <cit:description><gco:CharacterString>Oracle database extract in ASCII format. Lease information and activity information about the area around and including leases held by Gnihton. It does not included information about exclusion zones near leases held by Gnihton.</gco:CharacterString></cit:description>
-                        <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
+                        <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
                         <cit:protocolRequest><gco:CharacterString>Form that the request should take - usually used for service requests</gco:CharacterString></cit:protocolRequest>
                     </cit:CI_OnlineResource></mrd:onLine>
                 </mrd:MD_DigitalTransferOptions></mrd:distributorTransferOptions>
@@ -1790,14 +1790,14 @@
                         <cit:applicationProfile><gco:CharacterString>simple https link</gco:CharacterString></cit:applicationProfile>
                         <cit:name><gco:CharacterString>Gnihton mineral lease location map and associated topographic information</gco:CharacterString></cit:name>
                         <cit:description><gco:CharacterString>Oracle database extract in ASCII format. Topographic information about the area around and including leases held by Gnihton. It does not included information about exclusion zones near leases held by Gnihton.</gco:CharacterString></cit:description>
-                        <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
+                        <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
                         <cit:protocolRequest><gco:CharacterString>Form that the request should take - usually used for service requests</gco:CharacterString></cit:protocolRequest>
                     </cit:CI_OnlineResource></mrd:onLine>
                 </mrd:MD_DigitalTransferOptions></mrd:distributorTransferOptions>
             </mrd:MD_Distributor></mrd:formatDistributor>
             <mrd:formatDistributor><mrd:MD_Distributor>
                 <mrd:distributorContact><cit:CI_Responsibility>
-                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
+                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
                     <cit:party><cit:CI_Organisation>
                         <cit:name><gco:CharacterString>3rd distributor. Simple Format delivered by one or more Distributors each having responsibility for delivering one or more resources in that single format</gco:CharacterString></cit:name>
                         <cit:contactInfo><cit:CI_Contact>
@@ -1830,7 +1830,7 @@
                         <cit:applicationProfile><gco:CharacterString>simple https link</gco:CharacterString></cit:applicationProfile>
                         <cit:name><gco:CharacterString>Gnihton mineral lease location map and associated lease information</gco:CharacterString></cit:name>
                         <cit:description><gco:CharacterString>Oracle database extract in ASCII format. Lease information and activity information about the area around and including leases held by Gnihton. It does not included information about exclusion zones near leases held by Gnihton.</gco:CharacterString></cit:description>
-                        <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
+                        <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
                         <cit:protocolRequest><gco:CharacterString>Form that the request should take - usually used for service requests</gco:CharacterString></cit:protocolRequest>
                     </cit:CI_OnlineResource></mrd:onLine>
                 </mrd:MD_DigitalTransferOptions></mrd:distributorTransferOptions>
@@ -1854,12 +1854,12 @@
                 <!-- note: this is the date of the format not the resource -->
                 <cit:date><cit:CI_Date>
                     <cit:date><gco:Date>2017-05-25</gco:Date></cit:date>
-                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
                 </cit:CI_Date></cit:date>
                 <cit:edition><gco:CharacterString>1.0</gco:CharacterString></cit:edition>
                 <cit:editionDate><gco:DateTime>2017-05-25T00:00:00</gco:DateTime></cit:editionDate>
                 <cit:citedResponsibleParty><cit:CI_Responsibility>
-                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="author">author</cit:CI_RoleCode></cit:role>
+                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="author">author</cit:CI_RoleCode></cit:role>
                     <cit:party><cit:CI_Organisation>
                         <cit:name><gco:CharacterString>Oracle (R)</gco:CharacterString></cit:name>
                     </cit:CI_Organisation></cit:party>
@@ -1870,7 +1870,7 @@
             <mrd:fileDecompressionTechnique><gco:CharacterString>UNZIP and TAR</gco:CharacterString></mrd:fileDecompressionTechnique>
             <mrd:formatDistributor><mrd:MD_Distributor>
                 <mrd:distributorContact><cit:CI_Responsibility>
-                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
+                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
                     <cit:party><cit:CI_Organisation>
                         <cit:name><gco:CharacterString>1st distributor Simple Format delivered by one or more Distributors each having responsibility for delivering one or more resources in that single format</gco:CharacterString></cit:name>
                         <cit:contactInfo><cit:CI_Contact>
@@ -1903,14 +1903,14 @@
                         <cit:applicationProfile><gco:CharacterString>simple https link</gco:CharacterString></cit:applicationProfile>
                         <cit:name><gco:CharacterString>Gnihton mineral lease location map and associated lease information</gco:CharacterString></cit:name>
                         <cit:description><gco:CharacterString>Oracle database extract in ASCII format. Contains information about leases held by Gnihton, other neighbouring leases,and exclusion zones</gco:CharacterString></cit:description>
-                        <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
+                        <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
                         <cit:protocolRequest><gco:CharacterString>Form that the request should take - usually used for service requests</gco:CharacterString></cit:protocolRequest>
                     </cit:CI_OnlineResource></mrd:onLine>
                 </mrd:MD_DigitalTransferOptions></mrd:distributorTransferOptions>
             </mrd:MD_Distributor></mrd:formatDistributor>
             <mrd:formatDistributor><mrd:MD_Distributor>
                 <mrd:distributorContact><cit:CI_Responsibility>
-                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
+                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
                     <cit:party><cit:CI_Organisation>
                         <cit:name><gco:CharacterString>2nd distributor Simple Format delivered by one or more Distributors each having responsibility for delivering one or more resources in that single format</gco:CharacterString></cit:name>
                         <cit:contactInfo><cit:CI_Contact>
@@ -1943,7 +1943,7 @@
                         <cit:applicationProfile><gco:CharacterString>simple https link</gco:CharacterString></cit:applicationProfile>
                         <cit:name><gco:CharacterString>Gnihton mineral lease location map and associated lease information</gco:CharacterString></cit:name>
                         <cit:description><gco:CharacterString>Oracle database extract in ASCII format. Lease information and activity information about the area around and including leases held by Gnihton. It does not included information about exclusion zones near leases held by Gnihton.</gco:CharacterString></cit:description>
-                        <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
+                        <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
                         <cit:protocolRequest><gco:CharacterString>Form that the request should take - usually used for service requests</gco:CharacterString></cit:protocolRequest>
                     </cit:CI_OnlineResource></mrd:onLine>
                 </mrd:MD_DigitalTransferOptions></mrd:distributorTransferOptions>
@@ -1956,14 +1956,14 @@
                         <cit:applicationProfile><gco:CharacterString>simple https link</gco:CharacterString></cit:applicationProfile>
                         <cit:name><gco:CharacterString>Gnihton mineral lease location map and associated topographic information</gco:CharacterString></cit:name>
                         <cit:description><gco:CharacterString>Oracle database extract in ASCII format. Topographic information about the area around and including leases held by Gnihton. It does not included information about exclusion zones near leases held by Gnihton.</gco:CharacterString></cit:description>
-                        <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
+                        <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
                         <cit:protocolRequest><gco:CharacterString>Form that the request should take - usually used for service requests</gco:CharacterString></cit:protocolRequest>
                     </cit:CI_OnlineResource></mrd:onLine>
                 </mrd:MD_DigitalTransferOptions></mrd:distributorTransferOptions>
             </mrd:MD_Distributor></mrd:formatDistributor>
             <mrd:formatDistributor><mrd:MD_Distributor>
                 <mrd:distributorContact><cit:CI_Responsibility>
-                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
+                    <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
                     <cit:party><cit:CI_Organisation>
                         <cit:name><gco:CharacterString>3rd distributor. Simple Format delivered by one or more Distributors each having responsibility for delivering one or more resources in that single format</gco:CharacterString></cit:name>
                         <cit:contactInfo><cit:CI_Contact>
@@ -1996,7 +1996,7 @@
                         <cit:applicationProfile><gco:CharacterString>simple https link</gco:CharacterString></cit:applicationProfile>
                         <cit:name><gco:CharacterString>Gnihton mineral lease location map and associated lease information</gco:CharacterString></cit:name>
                         <cit:description><gco:CharacterString>Oracle database extract in ASCII format. Lease information and activity information about the area around and including leases held by Gnihton. It does not included information about exclusion zones near leases held by Gnihton.</gco:CharacterString></cit:description>
-                        <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
+                        <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
                         <cit:protocolRequest><gco:CharacterString>Form that the request should take - usually used for service requests</gco:CharacterString></cit:protocolRequest>
                     </cit:CI_OnlineResource></mrd:onLine>
                 </mrd:MD_DigitalTransferOptions></mrd:distributorTransferOptions>
@@ -2011,7 +2011,7 @@
                 <cit:applicationProfile><gco:CharacterString>simple https link</gco:CharacterString></cit:applicationProfile>
                 <cit:name><gco:CharacterString>Gnihton mineral lease location map and associated lease information</gco:CharacterString></cit:name>
                 <cit:description><gco:CharacterString>Oracle database extract in ASCII format. Contains information about leases held by Gnihton, other neighbouring leases,and exclusion zones</gco:CharacterString></cit:description>
-                <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
+                <cit:function><cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="download">download</cit:CI_OnLineFunctionCode></cit:function>
                 <cit:protocolRequest><gco:CharacterString>Form that the request should take - usually used for service requests</gco:CharacterString></cit:protocolRequest>
             </cit:CI_OnlineResource></mrd:onLine>
         <mrd:distributionFormat><mrd:MD_Format>
@@ -2066,7 +2066,7 @@
     for the transport network feature types.-->
     <mdb:dataQualityInfo><mdq:DataQuality>
         <mdq:scope><mcc:MD_Scope>
-            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
         </mcc:MD_Scope></mdq:scope>
         <mdq:report><mdq:Commission id="quantitative_commission">
             <mdq:measure><mdq:MeasureReference>
@@ -2078,11 +2078,11 @@
             </mdq:MeasureReference></mdq:measure>
             <mdq:evaluationMethod><mdq:FullInspection>
                 <mdq:evaluationMethodDescription><gco:CharacterString>Compare count of items in the dataset against count of items in universe of discourse.</gco:CharacterString></mdq:evaluationMethodDescription>
-                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="directExternal">directExternal</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="directExternal">directExternal</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
             </mdq:FullInspection></mdq:evaluationMethod>
             <mdq:result><mdq:QuantitativeResult>
                 <mdq:resultScope><mcc:MD_Scope>
-                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
+                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
                     <mcc:levelDescription><mcc:MD_ScopeDescription>
                         <mcc:features><gco:CharacterString>path</gco:CharacterString></mcc:features>
                     </mcc:MD_ScopeDescription></mcc:levelDescription>
@@ -2105,11 +2105,11 @@
             </mdq:MeasureReference></mdq:measure>
             <mdq:evaluationMethod><mdq:AggregationDerivation>
                 <mdq:evaluationMethodDescription><gco:CharacterString>derivation from quantitatve result</gco:CharacterString></mdq:evaluationMethodDescription>
-                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
             </mdq:AggregationDerivation></mdq:evaluationMethod>
             <mdq:result><mdq:ConformanceResult>
                 <mdq:resultScope><mcc:MD_Scope>
-                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="feature">feature</mcc:MD_ScopeCode></mcc:level>
+                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="feature">feature</mcc:MD_ScopeCode></mcc:level>
                     <mcc:levelDescription><mcc:MD_ScopeDescription>
                         <mcc:features><gco:CharacterString>path</gco:CharacterString></mcc:features>
                     </mcc:MD_ScopeDescription></mcc:levelDescription>
@@ -2118,14 +2118,14 @@
                     <cit:title><gco:CharacterString>Data product specification. Maximum of two items can be missing from each feature type.</gco:CharacterString></cit:title>
                 <cit:date><cit:CI_Date>
                     <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                 </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:specification>
                 <mdq:pass><gco:Boolean>true</gco:Boolean></mdq:pass>
             </mdq:ConformanceResult></mdq:result>
             <mdq:result><mdq:ConformanceResult>
                 <mdq:resultScope><mcc:MD_Scope>
-                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
+                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
                     <mcc:levelDescription><mcc:MD_ScopeDescription>
                         <mcc:features><gco:CharacterString>road</gco:CharacterString></mcc:features>
                     </mcc:MD_ScopeDescription></mcc:levelDescription>
@@ -2134,7 +2134,7 @@
                     <cit:title><gco:CharacterString>Data product specification. Maximum of two items can be missing from each feature type.</gco:CharacterString></cit:title>
                 <cit:date><cit:CI_Date>
                     <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                 </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:specification>
                 <mdq:pass><gco:Boolean>true</gco:Boolean></mdq:pass>
@@ -2146,7 +2146,7 @@
                 <cit:title><gco:CharacterString>Data Quality Report ISO 19157-1 Annex D/D4.1.2/Table D.12</gco:CharacterString></cit:title>
                 <cit:date><cit:CI_Date>
                     <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                 </cit:CI_Date></cit:date>
             </cit:CI_Citation></mdq:reportReference>
             <mdq:abstract><gco:CharacterString>The quality evaluation report attached to this quality evauation is providing more details on the derivation and aggregation method.</gco:CharacterString></mdq:abstract>
@@ -2154,7 +2154,7 @@
     </mdq:DataQuality></mdb:dataQualityInfo>
     <mdb:dataQualityInfo><mdq:DataQuality id="agg_commission1">
         <mdq:scope><mcc:MD_Scope>
-            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
             <mcc:levelDescription><mcc:MD_ScopeDescription>
                 <mcc:features><gco:CharacterString>transportNetwork (road and path)</gco:CharacterString></mcc:features>
             </mcc:MD_ScopeDescription></mcc:levelDescription>
@@ -2163,12 +2163,12 @@
             <!-- measure concept missing --><mdq:measure/>
              <mdq:evaluationMethod><mdq:AggregationDerivation>
                 <mdq:evaluationMethodDescription><gco:CharacterString>100percent pass  fail aggregation of the conformance commission result for roads and paths</gco:CharacterString></mdq:evaluationMethodDescription>
-                 <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                 <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
                 <mdq:evaluationProcedure><cit:CI_Citation>
                     <cit:title><gco:CharacterString>Aggregation of data quality results</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:evaluationProcedure>
             </mdq:AggregationDerivation></mdq:evaluationMethod>
@@ -2177,7 +2177,7 @@
                     <cit:title><gco:CharacterString>Data product specification. Maximum of two items can be missing from each feature type.</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:specification>
                 <mdq:pass><gco:Boolean>true</gco:Boolean></mdq:pass>
@@ -2190,7 +2190,7 @@
     for the buildings feature types.-->
     <mdb:dataQualityInfo><mdq:DataQuality>
         <mdq:scope><mcc:MD_Scope>
-            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
         </mcc:MD_Scope></mdq:scope>
         <mdq:report><mdq:ThematicClassificationCorrectness id="conformance_classification">
             <mdq:measure><mdq:MeasureReference>
@@ -2201,11 +2201,11 @@
              </mdq:MeasureReference></mdq:measure>
             <mdq:evaluationMethod><mdq:AggregationDerivation>
                 <mdq:evaluationMethodDescription><gco:CharacterString>Derivation from quantitative results reported in qyuality evaluation report.</gco:CharacterString></mdq:evaluationMethodDescription>
-                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
             </mdq:AggregationDerivation></mdq:evaluationMethod>
             <mdq:result><mdq:ConformanceResult>
                 <mdq:resultScope><mcc:MD_Scope>
-                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
+                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
                     <mcc:levelDescription><mcc:MD_ScopeDescription>
                         <mcc:features><gco:CharacterString>industrial building</gco:CharacterString></mcc:features>
                     </mcc:MD_ScopeDescription></mcc:levelDescription>
@@ -2214,7 +2214,7 @@
                     <cit:title><gco:CharacterString>Data product specification. Maximum of two feature instances can be misclassified as another of the building feature types and zero as other feature types.</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:specification>
                 <mdq:explanation><gco:CharacterString>The original quantitative result is provided in ... of the quality evaluation report</gco:CharacterString></mdq:explanation>
@@ -2222,7 +2222,7 @@
             </mdq:ConformanceResult></mdq:result>
             <mdq:result><mdq:ConformanceResult>
                 <mdq:resultScope><mcc:MD_Scope>
-                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
+                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
                     <mcc:levelDescription><mcc:MD_ScopeDescription>
                         <mcc:features><gco:CharacterString>house</gco:CharacterString></mcc:features>
                     </mcc:MD_ScopeDescription></mcc:levelDescription>
@@ -2231,7 +2231,7 @@
                     <cit:title><gco:CharacterString>Data product specification. Maximum of two feature instances can be misclassified as another of the building feature types and zero as other feature types.</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:specification>
                 <mdq:explanation><gco:CharacterString>The original quantitative result is provided in the quality evaluation report</gco:CharacterString></mdq:explanation>
@@ -2243,7 +2243,7 @@
                 <cit:title><gco:CharacterString>Data Quality Report ISO 19157-1 Annex D/D4.1.2/Table D.13</gco:CharacterString></cit:title>
                 <cit:date><cit:CI_Date>
                     <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                 </cit:CI_Date></cit:date>
             </cit:CI_Citation></mdq:reportReference>
             <mdq:abstract><gco:CharacterString>The quality evaluation report attached to this quality evauation is providing all the quantitative results 
@@ -2253,7 +2253,7 @@
     </mdq:DataQuality></mdb:dataQualityInfo>
     <mdb:dataQualityInfo><mdq:DataQuality id="agg_commission2">
         <mdq:scope><mcc:MD_Scope>
-            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
             <mcc:levelDescription><mcc:MD_ScopeDescription>
                 <mcc:features><gco:CharacterString>buildings (industrial and house)</gco:CharacterString></mcc:features>
             </mcc:MD_ScopeDescription></mcc:levelDescription>
@@ -2263,12 +2263,12 @@
             <mdq:measure></mdq:measure>
             <mdq:evaluationMethod><mdq:AggregationDerivation>
                 <mdq:evaluationMethodDescription><gco:CharacterString>100percent pass fail aggregation of the conformance classification correctness result for inductrial buildings and houses</gco:CharacterString></mdq:evaluationMethodDescription>
-                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
                 <mdq:evaluationProcedure><cit:CI_Citation>
                     <cit:title><gco:CharacterString>Aggregation of data quality results</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:evaluationProcedure>
             </mdq:AggregationDerivation></mdq:evaluationMethod>
@@ -2277,7 +2277,7 @@
                     <cit:title><gco:CharacterString>Data product specification. Maximum of two items can be miss-classified.</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:specification>
                 <mdq:pass><gco:Boolean>true</gco:Boolean></mdq:pass>
@@ -2290,7 +2290,7 @@
     by aggregating the results for the different requirements.-->
     <mdb:dataQualityInfo><mdq:DataQuality>
         <mdq:scope><mcc:MD_Scope>
-            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
         </mcc:MD_Scope></mdq:scope>
         <!-- have substituted "Confidence" in for incorrect class name in example -->
         <mdq:report><mdq:Confidence id="aggregate">
@@ -2303,12 +2303,12 @@
             </mdq:MeasureReference></mdq:measure>
             <mdq:evaluationMethod><mdq:AggregationDerivation>
                 <mdq:evaluationMethodDescription><gco:CharacterString>100percent pass fail aggregate of each conformance result for the requirement expressed in the data product specification.</gco:CharacterString></mdq:evaluationMethodDescription>
-                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
                 <mdq:evaluationProcedure><cit:CI_Citation>
                     <cit:title><gco:CharacterString>Aggregation of data quality results</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:evaluationProcedure>
             </mdq:AggregationDerivation></mdq:evaluationMethod>
@@ -2317,7 +2317,7 @@
                     <cit:title><gco:CharacterString>Data product specification.</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2010-07-10</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:specification>
                 <mdq:explanation><gco:CharacterString>3 requirements out of 11 are not fulfilled: the dataset is not conformant</gco:CharacterString></mdq:explanation>
@@ -2346,7 +2346,7 @@
                 Reporting as quality evaluation report </gco:CharacterString></cit:title>
                 <cit:date><cit:CI_Date>
                     <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                 </cit:CI_Date></cit:date>
             </cit:CI_Citation></mdq:reportReference>
             <mdq:abstract><gco:CharacterString>The quality evaluation report attached to this quality evauation is providing fully-detailed information 
@@ -2357,7 +2357,7 @@
     It presents an example of how to report descriptive result, metaquality and sampling procedures.-->
     <mdb:dataQualityInfo><mdq:DataQuality>
         <mdq:scope><mcc:MD_Scope>
-            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
         </mcc:MD_Scope></mdq:scope>
         <mdq:report><mdq:RelativePositionalAccuracy>
             <!-- measure/MeasureReference missing from Table D.15 -->
@@ -2368,7 +2368,7 @@
             <mdq:evaluationMethod><mdq:IndirectEvaluation>
                 <mdq:evaluationMethodDescription><gco:CharacterString>Compares absolute possitional accuracy of the archaeological object and
                     the absolute positional accuracy of the river.</gco:CharacterString></mdq:evaluationMethodDescription>
-                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
                 <mdq:deductiveSource><gco:CharacterString>Positional accuracy of the rivers nearby the archaeological camp.</gco:CharacterString></mdq:deductiveSource>
             </mdq:IndirectEvaluation></mdq:evaluationMethod>
             <mdq:result><mdq:DescriptiveResult>
@@ -2385,7 +2385,7 @@
 .-->
     <mdb:dataQualityInfo><mdq:DataQuality>
         <mdq:scope><mcc:MD_Scope>
-            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
         </mcc:MD_Scope></mdq:scope>
         <mdq:report><mdq:AbsolutePositionalAccuracy>
             <mdq:measure></mdq:measure>
@@ -2406,12 +2406,12 @@
                     <cit:title><gco:CharacterString>IGN data quality evaluation procedure</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>1995-02-09</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:evaluationProcedure>
             </mdq:FullInspection></mdq:evaluationMethod>
             <mdq:evaluationMethod><mdq:AggregationDerivation>
-                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="directExternal">directExternal</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="directExternal">directExternal</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
             </mdq:AggregationDerivation></mdq:evaluationMethod>
             <mdq:result><mdq:QuantitativeResult>
                 <mdq:value><gco:Record>
@@ -2434,7 +2434,7 @@
                         <cit:title><gco:CharacterString>IGN Measures</gco:CharacterString></cit:title>
                         <cit:date><cit:CI_Date>
                             <cit:date><gco:Date>1995-01-01</gco:Date></cit:date>
-                            <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                            <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                         </cit:CI_Date></cit:date>
                     </cit:CI_Citation></mcc:authority>
                     <mcc:code><gco:CharacterString>1</gco:CharacterString></mcc:code>
@@ -2450,7 +2450,7 @@
                     <cit:title><gco:CharacterString>Arr&#226;t&#233; 2003 (French legislation)</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2003</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:evaluationProcedure>
            </mdq:FullInspection></mdq:evaluationMethod>
@@ -2472,7 +2472,7 @@
         <!-- Scope of DQ - BEGIN -->
         <!-- MANDATORY [1..1] -->
         <mdq:scope><mcc:MD_Scope>
-            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
             <mcc:extent><gex:EX_Extent>
                 <!-- all the usual spaatia/temporal extent stuff goes here -->
             </gex:EX_Extent></mcc:extent>

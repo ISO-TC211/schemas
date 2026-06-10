@@ -165,7 +165,7 @@
          <mac:scope>
             <mcc:MD_Scope>
                <mcc:level>
-                  <mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#" codeListValue="mcc:MD_ScopeCode">mcc:MD_ScopeCode</mcc:MD_ScopeCode>
+                  <mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#" codeListValue="mcc:MD_ScopeCode">mcc:MD_ScopeCode</mcc:MD_ScopeCode>
                </mcc:level>
                <mcc:extent>
                   <gex:EX_Extent>
