@@ -35,10 +35,6 @@ containing XML elements in the cit 2.0 namespace or by XML Schema documents impo
 the cit 2.0 namespace. This XML schema includes (indirectly) all the implemented
 concepts of the cit namespace, but it does not contain the declaration of any types.
 
-NOTE: The XML Schema for cit 2.0 are available link:cit.zip[here]. A zip archive
-including all the XML Schema Implementations defined in ISO/TS 19115-3 and related
-standards is also
-https://schemas.isotc211.org/19115/19115AllNamespaces.zip[available].
 
 === Related XML Schema for cit 2.0
 

@@ -38,10 +38,6 @@ containing XML elements in the mdt 1.0 namespace or by XML Schema documents impo
 the mdt 1.0 namespace. This XML schema includes (indirectly) all the implemented
 concepts of the mdt namespace, but it does not contain the declaration of any types.
 
-NOTE: The XML Schema for mdt 1.0 are available link:mdt.zip[here]. A zip archive
-including all the XML Schema Implementations defined in ISO/TS 19115-3 and related
-standards is also
-https://schemas.isotc211.org/19115/19115AllNamespaces.zip[available].
 
 === Related XML Schema for mdt 1.0
 
