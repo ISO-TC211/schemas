@@ -183,6 +183,16 @@
   </xsl:template>
 
 
+  <xsl:template match="gmd:updateScopeDescription" priority="5" mode="from19139to19115-3">
+    <mmi:maintenanceScope>
+      <mcc:MD_Scope>
+        <mcc:levelDescription>
+          <xsl:apply-templates select="gmd:MD_ScopeDescription/*" mode="from19139to19115-3"/>
+        </mcc:levelDescription>
+      </mcc:MD_Scope>
+    </mmi:maintenanceScope>
+  </xsl:template>
+
   <xsl:template match="gmd:hierarchyLevel" priority="5" mode="from19139to19115-3">
     <!-- ************************************************************************ -->
     <!-- gmd:hierarchyLevel and gmd:hierarchyLevelName are combined into a
