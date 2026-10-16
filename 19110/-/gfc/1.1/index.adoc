@@ -35,9 +35,6 @@ containing XML elements in the gfc 1.1 namespace or by XML Schema documents impo
 the gfc 1.1 namespace. This XML schema includes (indirectly) all the implemented
 concepts of the gfc namespace, but it does not contain the declaration of any types.
 
-NOTE: The XML Schema for gfc 1.1 are available link:gfc.zip[here]. A zip archive
-including all the XML Schema Implementations defined in ISO/TS 19115-3 and related
-standards is also https://schemas.isotc211.org/19115/19115AllNamespaces.zip[available].
 
 === Related XML Schema for gfc 1.1
 

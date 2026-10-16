@@ -26,7 +26,7 @@
     <mdb:contact>
         <cit:CI_Responsibility>
             <cit:role>
-                <cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode>
+                <cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115.cit.CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode>
             </cit:role>
             <cit:party>
                 <cit:CI_Organisation>
@@ -44,7 +44,7 @@
                 <gco:DateTime>2004-03-12T12:00:00</gco:DateTime>
             </cit:date>
             <cit:dateType>
-                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115.cit.CI_DateTypeCode" codeListValue="creation">creator</cit:CI_DateTypeCode>
+                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115.cit.CI_DateTypeCode" codeListValue="creation">creator</cit:CI_DateTypeCode>
             </cit:dateType>
         </cit:CI_Date>
     </mdb:dateInfo>
@@ -63,7 +63,7 @@
                                 <gco:DateTime>1993-01-01T12:00:00</gco:DateTime>
                             </cit:date>
                             <cit:dateType>
-                                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+                                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
                             </cit:dateType>
                         </cit:CI_Date>
                     </cit:date>    

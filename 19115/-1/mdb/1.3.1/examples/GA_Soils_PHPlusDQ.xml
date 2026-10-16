@@ -97,7 +97,7 @@
      <mdb:contact>
         <cit:CI_Responsibility>
             <cit:role>
-                <cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="pointOfContact"/>
+                <cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="pointOfContact"/>
             </cit:role>
             <cit:party>
                 <cit:CI_Organisation>
@@ -112,7 +112,7 @@
                                         <gco:CharacterString>1800 800 173</gco:CharacterString>
                                     </cit:number>
                                     <cit:numberType>
-                                        <cit:CI_TelephoneTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_TelephoneTypeCode" codeListValue="voice"/>
+                                        <cit:CI_TelephoneTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_TelephoneTypeCode" codeListValue="voice"/>
                                     </cit:numberType>
                                 </cit:CI_Telephone>
                             </cit:phone>
@@ -153,7 +153,7 @@
                 <gco:DateTime>2018-04-20T06:19:51</gco:DateTime>
             </cit:date>
             <cit:dateType>
-                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="revision"/>
+                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="revision"/>
             </cit:dateType>
         </cit:CI_Date>
     </mdb:dateInfo>
@@ -163,7 +163,7 @@
                 <gco:DateTime>2010-02-04T00:00:00</gco:DateTime>
             </cit:date>
             <cit:dateType>
-                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation"/>
+                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation"/>
             </cit:dateType>
         </cit:CI_Date>
     </mdb:dateInfo>
@@ -239,7 +239,7 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
                 <gco:CharacterString xsi:type="gco:CodeType" codeSpace="http://pid.geoscience.gov.au/def/schema/ga/ISO19115-3-2016/codelist/ga_profile_codelists.xml#gapCI_ProtocolTypeCode"/>
             </cit:protocol>
             <cit:function>
-                <cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="completeMetadata"/>
+                <cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="completeMetadata"/>
             </cit:function>
         </cit:CI_OnlineResource>
     </mdb:metadataLinkage>
@@ -268,7 +268,7 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
                                 <gco:DateTime>2010-01-01T00:00:00</gco:DateTime>
                             </cit:date>
                             <cit:dateType>
-                                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication"/>
+                                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication"/>
                             </cit:dateType>
                         </cit:CI_Date>
                     </cit:date>
@@ -285,7 +285,7 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
                     <cit:citedResponsibleParty>
                         <cit:CI_Responsibility>
                             <cit:role>
-                                <cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="author"/>
+                                <cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="author"/>
                             </cit:role>
                             <cit:party>
                                 <cit:CI_Individual>
@@ -306,7 +306,7 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
                     <cit:citedResponsibleParty>
                         <cit:CI_Responsibility>
                             <cit:role>
-                                <cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="author"/>
+                                <cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="author"/>
                             </cit:role>
                             <cit:party>
                                 <cit:CI_Individual>
@@ -346,7 +346,7 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
             <mri:pointOfContact>
                 <cit:CI_Responsibility>
                     <cit:role>
-                        <cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian"/>
+                        <cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian"/>
                     </cit:role>
                     <cit:party>
                         <cit:CI_Organisation>
@@ -367,7 +367,7 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
             <mri:pointOfContact>
                 <cit:CI_Responsibility>
                     <cit:role>
-                        <cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="owner"/>
+                        <cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="owner"/>
                     </cit:role>
                     <cit:party>
                         <cit:CI_Organisation>
@@ -381,7 +381,7 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
             <mri:pointOfContact>
                 <cit:CI_Responsibility>
                     <cit:role>
-                        <cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian"/>
+                        <cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian"/>
                     </cit:role>
                     <cit:party>
                         <cit:CI_Organisation>
@@ -396,7 +396,7 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
                                                 <gco:CharacterString>1800 800 173</gco:CharacterString>
                                             </cit:number>
                                             <cit:numberType>
-                                                <cit:CI_TelephoneTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_TelephoneTypeCode" codeListValue="voice"/>
+                                                <cit:CI_TelephoneTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_TelephoneTypeCode" codeListValue="voice"/>
                                             </cit:numberType>
                                         </cit:CI_Telephone>
                                     </cit:phone>
@@ -435,8 +435,8 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
                     </cit:party>
                 </cit:CI_Responsibility>
             </mri:pointOfContact>
-            <mri:spatialRepresentationType><mcc:MD_SpatialRepresentationTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mcc.MD_SpatialRepresentationTypeCode" codeListValue="textTable">textTable</mcc:MD_SpatialRepresentationTypeCode></mri:spatialRepresentationType>
-            <mri:spatialRepresentationType><mcc:MD_SpatialRepresentationTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mcc.MD_SpatialRepresentationTypeCode" codeListValue="vector">vector</mcc:MD_SpatialRepresentationTypeCode></mri:spatialRepresentationType>
+            <mri:spatialRepresentationType><mcc:MD_SpatialRepresentationTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mcc.MD_SpatialRepresentationTypeCode" codeListValue="textTable">textTable</mcc:MD_SpatialRepresentationTypeCode></mri:spatialRepresentationType>
+            <mri:spatialRepresentationType><mcc:MD_SpatialRepresentationTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mcc.MD_SpatialRepresentationTypeCode" codeListValue="vector">vector</mcc:MD_SpatialRepresentationTypeCode></mri:spatialRepresentationType>
             <mri:spatialResolution><mri:MD_Resolution>
                 <mri:distance><gco:Distance uom="metre">250</gco:Distance></mri:distance>
             </mri:MD_Resolution></mri:spatialResolution>
@@ -472,7 +472,7 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
             <mri:resourceMaintenance>
                 <mmi:MD_MaintenanceInformation>
                     <mmi:maintenanceAndUpdateFrequency>
-                        <mmi:MD_MaintenanceFrequencyCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mmi.MD_MaintenanceFrequencyCode" codeListValue="asNeeded"/>
+                        <mmi:MD_MaintenanceFrequencyCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mmi.MD_MaintenanceFrequencyCode" codeListValue="asNeeded"/>
                     </mmi:maintenanceAndUpdateFrequency>
                 </mmi:MD_MaintenanceInformation>
             </mri:resourceMaintenance>
@@ -481,7 +481,7 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
                     <cit:title><gco:CharacterString>Portable Document Format (PDF)</gco:CharacterString></cit:title>
                     <cit:edition><gco:CharacterString>1.6</gco:CharacterString></cit:edition>
                     <cit:citedResponsibleParty><cit:CI_Responsibility>
-                        <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="rightsHolder">rightsHolder</cit:CI_RoleCode></cit:role>
+                        <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="rightsHolder">rightsHolder</cit:CI_RoleCode></cit:role>
                         <cit:party><cit:CI_Organisation>
                             <cit:name><gco:CharacterString>ADOBE Inc</gco:CharacterString></cit:name>
                         </cit:CI_Organisation></cit:party>
@@ -516,7 +516,7 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
                         <gco:CharacterString>soils</gco:CharacterString>
                     </mri:keyword>
                     <mri:type>
-                        <mri:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mri.MD_KeywordTypeCode" codeListValue="theme"/>
+                        <mri:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mri.MD_KeywordTypeCode" codeListValue="theme"/>
                     </mri:type>
                 </mri:MD_Keywords>
             </mri:descriptiveKeywords>
@@ -526,7 +526,7 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
                         <gco:CharacterString>mapping</gco:CharacterString>
                     </mri:keyword>
                     <mri:type>
-                        <mri:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mri.MD_KeywordTypeCode" codeListValue="theme"/>
+                        <mri:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mri.MD_KeywordTypeCode" codeListValue="theme"/>
                     </mri:type>
                 </mri:MD_Keywords>
             </mri:descriptiveKeywords>
@@ -536,7 +536,7 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
                         <gco:CharacterString>environmental</gco:CharacterString>
                     </mri:keyword>
                     <mri:type>
-                        <mri:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mri.MD_KeywordTypeCode" codeListValue="theme"/>
+                        <mri:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mri.MD_KeywordTypeCode" codeListValue="theme"/>
                     </mri:type>
                 </mri:MD_Keywords>
             </mri:descriptiveKeywords>
@@ -546,7 +546,7 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
                         <gco:CharacterString>mineral exploration</gco:CharacterString>
                     </mri:keyword>
                     <mri:type>
-                        <mri:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mri.MD_KeywordTypeCode" codeListValue="theme"/>
+                        <mri:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mri.MD_KeywordTypeCode" codeListValue="theme"/>
                     </mri:type>
                 </mri:MD_Keywords>
             </mri:descriptiveKeywords>
@@ -575,7 +575,7 @@ Australian and New Zealand Standard Research Classification (ANZSRC)
                                         <gco:DateTime>2008-03-31T00:00:00+11:00</gco:DateTime>
                                     </cit:date>
                                     <cit:dateType>
-                                        <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication"/>
+                                        <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication"/>
                                     </cit:dateType>
                                 </cit:CI_Date>
                             </cit:date>
@@ -661,10 +661,10 @@ Creative Commons Attribution 4.0 International Licence
                         </cit:CI_Citation>
                     </mco:reference>
                     <mco:accessConstraints>
-                        <mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mco.MD_RestrictionCode" codeListValue="license"/>
+                        <mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mco.MD_RestrictionCode" codeListValue="license"/>
                     </mco:accessConstraints>
                     <mco:useConstraints>
-                        <mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mco.MD_RestrictionCode" codeListValue="license"/>
+                        <mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mco.MD_RestrictionCode" codeListValue="license"/>
                     </mco:useConstraints>
                 </mco:MD_LegalConstraints>
             </mri:resourceConstraints>
@@ -695,7 +695,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                         </cit:CI_Citation>
                     </mco:reference>
                     <mco:classification>
-                        <mco:MD_ClassificationCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mco.MD_ClassificationCode" codeListValue="unclassified"/>
+                        <mco:MD_ClassificationCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mco.MD_ClassificationCode" codeListValue="unclassified"/>
                     </mco:classification>
                 </mco:MD_SecurityConstraints>
             </mri:resourceConstraints>
@@ -731,7 +731,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                                                   <gco:CharacterString>1800 800 173</gco:CharacterString>
                                                   </cit:number>
                                                   <cit:numberType>
-                                                      <cit:CI_TelephoneTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_TelephoneTypeCode" codeListValue="voice"/>
+                                                      <cit:CI_TelephoneTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_TelephoneTypeCode" codeListValue="voice"/>
                                                   </cit:numberType>
                                                 </cit:CI_Telephone>
                                             </cit:phone>
@@ -783,7 +783,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                                         <gco:CharacterString>Zipped collection of maps (PDF) tabular data (CSV) and text files (TXT)</gco:CharacterString>
                                     </cit:description>
                                     <cit:function>
-                                        <cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="information"/>
+                                        <cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="information"/>
                                     </cit:function>
                                 </cit:CI_OnlineResource>
                             </mrd:onLine>
@@ -826,7 +826,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
     for the transport network feature types.-->
     <mdb:dataQualityInfo><mdq:DataQuality>
         <mdq:scope><mcc:MD_Scope>
-            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
         </mcc:MD_Scope></mdq:scope>
         <mdq:report><mdq:Commission id="quantitative_commission">
             <mdq:measure><mdq:MeasureReference>
@@ -838,11 +838,11 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
             </mdq:MeasureReference></mdq:measure>
             <mdq:evaluationMethod><mdq:FullInspection>
                 <mdq:evaluationMethodDescription><gco:CharacterString>Compare count of items in the dataset against count of items in universe of discourse.</gco:CharacterString></mdq:evaluationMethodDescription>
-                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="directExternal">directExternal</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="directExternal">directExternal</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
             </mdq:FullInspection></mdq:evaluationMethod>
             <mdq:result><mdq:QuantitativeResult>
                 <mdq:resultScope><mcc:MD_Scope>
-                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
+                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
                     <mcc:levelDescription><mcc:MD_ScopeDescription>
                         <mcc:features><gco:CharacterString>path</gco:CharacterString></mcc:features>
                     </mcc:MD_ScopeDescription></mcc:levelDescription>
@@ -865,11 +865,11 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
             </mdq:MeasureReference></mdq:measure>
             <mdq:evaluationMethod><mdq:AggregationDerivation>
                 <mdq:evaluationMethodDescription><gco:CharacterString>derivation from quantitatve result</gco:CharacterString></mdq:evaluationMethodDescription>
-                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
             </mdq:AggregationDerivation></mdq:evaluationMethod>
             <mdq:result><mdq:ConformanceResult>
                 <mdq:resultScope><mcc:MD_Scope>
-                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="feature">feature</mcc:MD_ScopeCode></mcc:level>
+                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="feature">feature</mcc:MD_ScopeCode></mcc:level>
                     <mcc:levelDescription><mcc:MD_ScopeDescription>
                         <mcc:features><gco:CharacterString>path</gco:CharacterString></mcc:features>
                     </mcc:MD_ScopeDescription></mcc:levelDescription>
@@ -878,14 +878,14 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                     <cit:title><gco:CharacterString>Data product specification. Maximum of two items can be missing from each feature type.</gco:CharacterString></cit:title>
                 <cit:date><cit:CI_Date>
                     <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                 </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:specification>
                 <mdq:pass><gco:Boolean>true</gco:Boolean></mdq:pass>
             </mdq:ConformanceResult></mdq:result>
             <mdq:result><mdq:ConformanceResult>
                 <mdq:resultScope><mcc:MD_Scope>
-                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
+                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
                     <mcc:levelDescription><mcc:MD_ScopeDescription>
                         <mcc:features><gco:CharacterString>road</gco:CharacterString></mcc:features>
                     </mcc:MD_ScopeDescription></mcc:levelDescription>
@@ -894,7 +894,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                     <cit:title><gco:CharacterString>Data product specification. Maximum of two items can be missing from each feature type.</gco:CharacterString></cit:title>
                 <cit:date><cit:CI_Date>
                     <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                 </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:specification>
                 <mdq:pass><gco:Boolean>true</gco:Boolean></mdq:pass>
@@ -906,7 +906,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                 <cit:title><gco:CharacterString>Data Quality Report ISO 19157-1 Annex D/D4.1.2/Table D.12</gco:CharacterString></cit:title>
                 <cit:date><cit:CI_Date>
                     <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                 </cit:CI_Date></cit:date>
             </cit:CI_Citation></mdq:reportReference>
             <mdq:abstract><gco:CharacterString>The quality evaluation report attached to this quality evauation is providing more details on the derivation and aggregation method.</gco:CharacterString></mdq:abstract>
@@ -914,7 +914,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
     </mdq:DataQuality></mdb:dataQualityInfo>
     <mdb:dataQualityInfo><mdq:DataQuality id="agg_commission1">
         <mdq:scope><mcc:MD_Scope>
-            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
             <mcc:levelDescription><mcc:MD_ScopeDescription>
                 <mcc:features><gco:CharacterString>transportNetwork (road and path)</gco:CharacterString></mcc:features>
             </mcc:MD_ScopeDescription></mcc:levelDescription>
@@ -923,12 +923,12 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
             <!-- measure concept missing --><mdq:measure/>
              <mdq:evaluationMethod><mdq:AggregationDerivation>
                 <mdq:evaluationMethodDescription><gco:CharacterString>100percent pass  fail aggregation of the conformance commission result for roads and paths</gco:CharacterString></mdq:evaluationMethodDescription>
-                 <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                 <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
                 <mdq:evaluationProcedure><cit:CI_Citation>
                     <cit:title><gco:CharacterString>Aggregation of data quality results</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:evaluationProcedure>
             </mdq:AggregationDerivation></mdq:evaluationMethod>
@@ -937,7 +937,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                     <cit:title><gco:CharacterString>Data product specification. Maximum of two items can be missing from each feature type.</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:specification>
                 <mdq:pass><gco:Boolean>true</gco:Boolean></mdq:pass>
@@ -950,7 +950,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
     for the buildings feature types.-->
     <mdb:dataQualityInfo><mdq:DataQuality>
         <mdq:scope><mcc:MD_Scope>
-            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
         </mcc:MD_Scope></mdq:scope>
         <mdq:report><mdq:ThematicClassificationCorrectness id="conformance_classification">
             <mdq:measure><mdq:MeasureReference>
@@ -961,11 +961,11 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
              </mdq:MeasureReference></mdq:measure>
             <mdq:evaluationMethod><mdq:AggregationDerivation>
                 <mdq:evaluationMethodDescription><gco:CharacterString>Derivation from quantitative results reported in qyuality evaluation report.</gco:CharacterString></mdq:evaluationMethodDescription>
-                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
             </mdq:AggregationDerivation></mdq:evaluationMethod>
             <mdq:result><mdq:ConformanceResult>
                 <mdq:resultScope><mcc:MD_Scope>
-                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
+                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
                     <mcc:levelDescription><mcc:MD_ScopeDescription>
                         <mcc:features><gco:CharacterString>industrial building</gco:CharacterString></mcc:features>
                     </mcc:MD_ScopeDescription></mcc:levelDescription>
@@ -974,7 +974,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                     <cit:title><gco:CharacterString>Data product specification. Maximum of two feature instances can be misclassified as another of the building feature types and zero as other feature types.</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:specification>
                 <mdq:explanation><gco:CharacterString>The original quantitative result is provided in ... of the quality evaluation report</gco:CharacterString></mdq:explanation>
@@ -982,7 +982,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
             </mdq:ConformanceResult></mdq:result>
             <mdq:result><mdq:ConformanceResult>
                 <mdq:resultScope><mcc:MD_Scope>
-                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
+                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
                     <mcc:levelDescription><mcc:MD_ScopeDescription>
                         <mcc:features><gco:CharacterString>house</gco:CharacterString></mcc:features>
                     </mcc:MD_ScopeDescription></mcc:levelDescription>
@@ -991,7 +991,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                     <cit:title><gco:CharacterString>Data product specification. Maximum of two feature instances can be misclassified as another of the building feature types and zero as other feature types.</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:specification>
                 <mdq:explanation><gco:CharacterString>The original quantitative result is provided in the quality evaluation report</gco:CharacterString></mdq:explanation>
@@ -1003,7 +1003,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                 <cit:title><gco:CharacterString>Data Quality Report ISO 19157-1 Annex D/D4.1.2/Table D.13</gco:CharacterString></cit:title>
                 <cit:date><cit:CI_Date>
                     <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                 </cit:CI_Date></cit:date>
             </cit:CI_Citation></mdq:reportReference>
             <mdq:abstract><gco:CharacterString>The quality evaluation report attached to this quality evauation is providing all the quantitative results 
@@ -1013,7 +1013,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
     </mdq:DataQuality></mdb:dataQualityInfo>
     <mdb:dataQualityInfo><mdq:DataQuality id="agg_commission2">
         <mdq:scope><mcc:MD_Scope>
-            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
             <mcc:levelDescription><mcc:MD_ScopeDescription>
                 <mcc:features><gco:CharacterString>buildings (industrial and house)</gco:CharacterString></mcc:features>
             </mcc:MD_ScopeDescription></mcc:levelDescription>
@@ -1023,12 +1023,12 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
             <mdq:measure></mdq:measure>
             <mdq:evaluationMethod><mdq:AggregationDerivation>
                 <mdq:evaluationMethodDescription><gco:CharacterString>100percent pass fail aggregation of the conformance classification correctness result for inductrial buildings and houses</gco:CharacterString></mdq:evaluationMethodDescription>
-                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
                 <mdq:evaluationProcedure><cit:CI_Citation>
                     <cit:title><gco:CharacterString>Aggregation of data quality results</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:evaluationProcedure>
             </mdq:AggregationDerivation></mdq:evaluationMethod>
@@ -1037,7 +1037,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                     <cit:title><gco:CharacterString>Data product specification. Maximum of two items can be miss-classified.</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:specification>
                 <mdq:pass><gco:Boolean>true</gco:Boolean></mdq:pass>
@@ -1050,7 +1050,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
     by aggregating the results for the different requirements.-->
     <mdb:dataQualityInfo><mdq:DataQuality>
         <mdq:scope><mcc:MD_Scope>
-            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
         </mcc:MD_Scope></mdq:scope>
         <!-- have substituted "Confidence" in for incorrect class name in example -->
         <mdq:report><mdq:Confidence id="aggregate">
@@ -1063,12 +1063,12 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
             </mdq:MeasureReference></mdq:measure>
             <mdq:evaluationMethod><mdq:AggregationDerivation>
                 <mdq:evaluationMethodDescription><gco:CharacterString>100percent pass fail aggregate of each conformance result for the requirement expressed in the data product specification.</gco:CharacterString></mdq:evaluationMethodDescription>
-                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
                 <mdq:evaluationProcedure><cit:CI_Citation>
                     <cit:title><gco:CharacterString>Aggregation of data quality results</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:evaluationProcedure>
             </mdq:AggregationDerivation></mdq:evaluationMethod>
@@ -1077,7 +1077,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                     <cit:title><gco:CharacterString>Data product specification.</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2010-07-10</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:specification>
                 <mdq:explanation><gco:CharacterString>3 requirements out of 11 are not fulfilled: the dataset is not conformant</gco:CharacterString></mdq:explanation>
@@ -1106,7 +1106,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                 Reporting as quality evaluation report </gco:CharacterString></cit:title>
                 <cit:date><cit:CI_Date>
                     <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
-                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                 </cit:CI_Date></cit:date>
             </cit:CI_Citation></mdq:reportReference>
             <mdq:abstract><gco:CharacterString>The quality evaluation report attached to this quality evauation is providing fully-detailed information 
@@ -1117,7 +1117,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
     It presents an example of how to report descriptive result, metaquality and sampling procedures.-->
     <mdb:dataQualityInfo><mdq:DataQuality>
         <mdq:scope><mcc:MD_Scope>
-            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
         </mcc:MD_Scope></mdq:scope>
         <mdq:report><mdq:RelativePositionalAccuracy>
             <!-- measure/MeasureReference missing from Table D.15 -->
@@ -1128,7 +1128,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
             <mdq:evaluationMethod><mdq:IndirectEvaluation>
                 <mdq:evaluationMethodDescription><gco:CharacterString>Compares absolute possitional accuracy of the archaeological object and
                     the absolute positional accuracy of the river.</gco:CharacterString></mdq:evaluationMethodDescription>
-                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
                 <mdq:deductiveSource><gco:CharacterString>Positional accuracy of the rivers nearby the archaeological camp.</gco:CharacterString></mdq:deductiveSource>
             </mdq:IndirectEvaluation></mdq:evaluationMethod>
             <mdq:result><mdq:DescriptiveResult>
@@ -1145,7 +1145,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
 .-->
     <mdb:dataQualityInfo><mdq:DataQuality>
         <mdq:scope><mcc:MD_Scope>
-            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
         </mcc:MD_Scope></mdq:scope>
         <mdq:report><mdq:AbsolutePositionalAccuracy>
             <mdq:measure></mdq:measure>
@@ -1166,12 +1166,12 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                     <cit:title><gco:CharacterString>IGN data quality evaluation procedure</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>1995-02-09</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:evaluationProcedure>
             </mdq:FullInspection></mdq:evaluationMethod>
             <mdq:evaluationMethod><mdq:AggregationDerivation>
-                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="directExternal">directExternal</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="directExternal">directExternal</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
             </mdq:AggregationDerivation></mdq:evaluationMethod>
             <mdq:result><mdq:QuantitativeResult>
                 <mdq:value><gco:Record>
@@ -1194,7 +1194,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                         <cit:title><gco:CharacterString>IGN Measures</gco:CharacterString></cit:title>
                         <cit:date><cit:CI_Date>
                             <cit:date><gco:Date>1995-01-01</gco:Date></cit:date>
-                            <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                            <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
                         </cit:CI_Date></cit:date>
                     </cit:CI_Citation></mcc:authority>
                     <mcc:code><gco:CharacterString>1</gco:CharacterString></mcc:code>
@@ -1210,7 +1210,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                     <cit:title><gco:CharacterString>Arr&#226;t&#233; 2003 (French legislation)</gco:CharacterString></cit:title>
                     <cit:date><cit:CI_Date>
                         <cit:date><gco:Date>2003</gco:Date></cit:date>
-                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:evaluationProcedure>
            </mdq:FullInspection></mdq:evaluationMethod>
@@ -1252,7 +1252,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                 </cit:CI_Citation>
             </mco:reference>
             <mco:classification>
-                <mco:MD_ClassificationCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mco.MD_ClassificationCode" codeListValue="unclassified"/>
+                <mco:MD_ClassificationCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.mco.MD_ClassificationCode" codeListValue="unclassified"/>
             </mco:classification>
         </mco:MD_SecurityConstraints>
     </mdb:metadataConstraints>
@@ -1266,7 +1266,7 @@ Data was collected in the field during the sample collection phase of the Nation
             <mrl:scope>
                 <mcc:MD_Scope>
                     <mcc:level>
-                        <mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset"/>
+                        <mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset"/>
                     </mcc:level>
                 </mcc:MD_Scope>
             </mrl:scope>
@@ -1282,7 +1282,7 @@ Data was collected in the field during the sample collection phase of the Nation
     <mdb:metadataScope>
         <mdb:MD_MetadataScope id="dataset">
             <mdb:resourceScope>
-                <mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset"/>
+                <mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/resources/codelists/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset"/>
             </mdb:resourceScope>
             <mdb:name>
                 <gco:CharacterString>dataset</gco:CharacterString>
