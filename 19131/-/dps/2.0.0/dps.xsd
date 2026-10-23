@@ -1337,8 +1337,3 @@ NOTE It is important to have a link to a diagram in form av a de-referenceable U
 		<attribute ref="gco:nilReason"/>
 	</complexType>
 </schema>
-In this proposal we would prefer to use ISO-3166 Alpha-3 codes for the CCC as this is consistent with those already used in the RINEX standard and the IGS metadata records.
-
-This proposal would allow Australia to have more than 1000 stations (which is currently close to what already exists). As with the first preference of Proposal 3, the CCC would be ISO-3166 Alpha-3.
-
-This solution is possible as it is still compatible with existing standards however the retro-compatability with the current DOMES could be an issue.
