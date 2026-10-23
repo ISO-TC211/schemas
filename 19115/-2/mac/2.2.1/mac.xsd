@@ -5,6 +5,6 @@
   xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.2"
    elementFormDefault="qualified"
   targetNamespace="https://schemas.isotc211.org/19115/-2/mac/2.2"
-  version="2.2.0"> 
+  version="2.2.1"> 
   <include schemaLocation="../../../../19115/-2/mac/2.2.1/acquisitionInformationImagery.xsd"/> 
 </schema>
