@@ -1,0 +1,116 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://standards.iso.org/19178/2/1.0/ai_tdChangeset.json",
+    "title": "ISO 19178-2 JSON Schema — AI_TDChangeset",
+    "description": "ISO 19178-2 Training data markup language for artificial intelligence — Part 2: JSON encoding. Defines additions, deletions and modifications to training data. Last updated: 2026-10-20. Copyright (c) ISO. All rights reserved.",
+    "type": "object",
+    "required": [
+        "type",
+        "id",
+        "changeCount"
+    ],
+    "properties": {
+        "type": {
+            "type": "string",
+            "enum": [
+                "AI_TDChangeset"
+            ]
+        },
+        "add": {
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {
+                        "allOf": [
+                            {
+                                "properties": {
+                                    "type": {
+                                        "const": "AI_AbstractTrainingData"
+                                    }
+                                },
+                                "required": [
+                                    "type"
+                                ]
+                            },
+                            {
+                                "$ref": "https://standards.iso.org/19178/2/1.0/ai_trainingData.json"
+                            }
+                        ]
+                    },
+                    {
+                        "$ref": "https://standards.iso.org/19178/2/1.0/ai_eoTrainingData.json"
+                    }
+                ]
+            }
+        },
+        "changeCount": {
+            "type": "integer"
+        },
+        "datasetId": {
+            "type": "string"
+        },
+        "delete": {
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {
+                        "allOf": [
+                            {
+                                "properties": {
+                                    "type": {
+                                        "const": "AI_AbstractTrainingData"
+                                    }
+                                },
+                                "required": [
+                                    "type"
+                                ]
+                            },
+                            {
+                                "$ref": "https://standards.iso.org/19178/2/1.0/ai_trainingData.json"
+                            }
+                        ]
+                    },
+                    {
+                        "$ref": "https://standards.iso.org/19178/2/1.0/ai_eoTrainingData.json"
+                    }
+                ]
+            }
+        },
+        "id": {
+            "type": "string"
+        },
+        "modify": {
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {
+                        "allOf": [
+                            {
+                                "properties": {
+                                    "type": {
+                                        "const": "AI_AbstractTrainingData"
+                                    }
+                                },
+                                "required": [
+                                    "type"
+                                ]
+                            },
+                            {
+                                "$ref": "https://standards.iso.org/19178/2/1.0/ai_trainingData.json"
+                            }
+                        ]
+                    },
+                    {
+                        "$ref": "https://standards.iso.org/19178/2/1.0/ai_eoTrainingData.json"
+                    }
+                ]
+            }
+        },
+        "version": {
+            "type": "string"
+        },
+        "createdTime": {
+            "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
+        }
+    }
+}

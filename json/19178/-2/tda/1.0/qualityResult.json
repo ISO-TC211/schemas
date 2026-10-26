@@ -1,0 +1,80 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://standards.iso.org/19178/2/1.0/qualityResult.json",
+    "title": "ISO 19178-2 JSON Schema — QualityResult",
+    "description": "ISO 19178-2 Training data markup language for artificial intelligence — Part 2: JSON encoding. Defines the JSON representation of QualityResult. Last updated: 2026-10-20. Copyright (c) ISO. All rights reserved.",
+    "oneOf": [
+        {
+            "type": "object",
+            "required": [
+                "quantitativeResult"
+            ],
+            "properties": {
+                "dateTime": {
+                    "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
+                },
+                "resultScope": {
+                    "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_Scope"
+                },
+                "quantitativeResult": {
+                    "$ref": "https://standards.iso.org/19178/2/1.0/quantitativeResult.json"
+                }
+            },
+            "additionalProperties": false
+        },
+        {
+            "type": "object",
+            "required": [
+                "conformanceResult"
+            ],
+            "properties": {
+                "dateTime": {
+                    "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
+                },
+                "resultScope": {
+                    "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_Scope"
+                },
+                "conformanceResult": {
+                    "$ref": "https://standards.iso.org/19178/2/1.0/conformanceResult.json"
+                }
+            },
+            "additionalProperties": false
+        },
+        {
+            "type": "object",
+            "required": [
+                "descriptiveResult"
+            ],
+            "properties": {
+                "dateTime": {
+                    "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
+                },
+                "resultScope": {
+                    "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_Scope"
+                },
+                "descriptiveResult": {
+                    "$ref": "https://standards.iso.org/19178/2/1.0/descriptiveResult.json"
+                }
+            },
+            "additionalProperties": false
+        },
+        {
+            "type": "object",
+            "required": [
+                "coverageResult"
+            ],
+            "properties": {
+                "dateTime": {
+                    "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
+                },
+                "resultScope": {
+                    "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_Scope"
+                },
+                "coverageResult": {
+                    "$ref": "https://standards.iso.org/19178/2/1.0/coverageResult.json"
+                }
+            },
+            "additionalProperties": false
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://standards.iso.org/19178/2/1.0/ai_metricsInLiterature.json",
+    "title": "ISO 19178-2 JSON Schema — AI_MetricsInLiterature",
+    "description": "ISO 19178-2 Training data markup language for artificial intelligence — Part 2: JSON encoding. Defines the JSON representation of AI_MetricsInLiterature. Last updated: 2026-10-20. Copyright (c) ISO. All rights reserved.",
+    "type": "object",
+    "required": [
+        "doi",
+        "metrics"
+    ],
+    "properties": {
+        "algorithm": {
+            "type": "string"
+        },
+        "doi": {
+            "type": "string"
+        },
+        "metrics": {
+            "type": "array",
+            "items": {
+                "$ref": "https://standards.iso.org/19178/2/1.0/namedValue.json"
+            },
+            "minItems": 1
+        }
+    }
+}

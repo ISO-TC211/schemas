@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://standards.iso.org/19178/2/1.0/ai_classBalanceDegree.json",
+    "title": "ISO 19178-2 JSON Schema — AI_ClassBalanceDegree",
+    "description": "ISO 19178-2 Training data markup language for artificial intelligence — Part 2: JSON encoding. Defines the JSON representation of AI_ClassBalanceDegree. Last updated: 2026-10-20. Copyright (c) ISO. All rights reserved.",
+    "type": "object",
+    "required": [
+        "type",
+        "measure",
+        "evaluationMethod",
+        "result"
+    ],
+    "properties": {
+        "type": {
+            "type": "string",
+            "enum": [
+                "AI_ClassBalanceDegree"
+            ]
+        },
+        "measure": {
+            "$ref": "https://standards.iso.org/19178/2/1.0/measureReference.json"
+        },
+        "evaluationMethod": {
+            "type": "array",
+            "items": {
+                "$ref": "https://standards.iso.org/19178/2/1.0/evaluationMethod.json"
+            },
+            "minItems": 1
+        },
+        "result": {
+            "type": "array",
+            "items": {
+                "$ref": "https://standards.iso.org/19178/2/1.0/qualityResult.json"
+            },
+            "minItems": 1
+        }
+    }
+}

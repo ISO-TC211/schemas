@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://standards.iso.org/19178/2/1.0/evaluationMethod.json",
+    "title": "ISO 19178-2 JSON Schema — EvaluationMethod",
+    "description": "ISO 19178-2 Training data markup language for artificial intelligence — Part 2: JSON encoding. Defines the JSON representation of EvaluationMethod. Last updated: 2026-10-20. Copyright (c) ISO. All rights reserved.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "evaluationMethodDescription": {
+            "type": "string"
+        },
+        "evaluationMethodType": {
+            "$ref": "https://standards.iso.org/19178/2/1.0/evaluationMethodTypeCode.json"
+        },
+        "evaluationProcedure": {
+            "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
+        },
+        "dateTime": {
+            "type": "array",
+            "items": {
+                "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
+            }
+        },
+        "referenceDoc": {
+            "type": "array",
+            "items": {
+                "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
+            }
+        },
+        "deductiveSource": {
+            "type": "string"
+        }
+    }
+}

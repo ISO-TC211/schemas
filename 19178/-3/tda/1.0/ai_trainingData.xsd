@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://www.opengis.net/trainingdml-ai/part3/1.0"
+	targetNamespace="http://www.opengis.net/trainingdml-ai/part3/1.0"
+	xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+	xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
+	xmlns:mrl="https://schemas.isotc211.org/19115/-1/mrl/1.3"
+	elementFormDefault="qualified" version="1.0.1">
+  <xs:annotation>
+    <xs:documentation xml:lang="en">
+      This is a draft XML Schema for ISO 19178-3,
+      Training data markup language for artificial intelligence - Part 3: XML encoding.
+      This draft is provided for expert review.
+      This XML Schema Document includes abstract training data definitions.
+      Last updated: 2026-10-20
+      Copyright (c) [Year] ISO. All rights reserved.
+
+      OGC Training Data Markup Language for Artificial Intelligence
+			(TrainingDML-AI) is an OGC Standard. Copyright (c) 2025 Open Geospatial Consortium. To
+			obtain additional rights of use, visit https://www.ogc.org/legal/ .
+    </xs:documentation>
+  </xs:annotation>
+	
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3"
+		schemaLocation="https://schemas.isotc211.org/19115/-1/cit/1.3.0/citation.xsd" />
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/gex/1.3"
+		schemaLocation="https://schemas.isotc211.org/19115/-1/gex/1.3.0/extent.xsd" />
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mrl/1.3"
+		schemaLocation="https://schemas.isotc211.org/19115/-1/mrl/1.3.0/lineage.xsd" />
+	<xs:include schemaLocation="./ai_label.xsd" />
+	<xs:include schemaLocation="./ai_labeling.xsd" />
+	<xs:include schemaLocation="./ai_trainingTypeCode.xsd" />
+	<xs:include schemaLocation="./dataQuality.xsd" />
+	<xs:include schemaLocation="./ai_eoTrainingData.xsd" />
+	<xs:element name="AI_AbstractTrainingData" type="AI_AbstractTrainingData" />
+	<xs:complexType name="AI_AbstractTrainingData" abstract="true">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" />
+			<xs:element name="datasetId" type="xs:string" minOccurs="0" />
+			<xs:element name="trainingType" type="AI_TrainingTypeCode" minOccurs="0" />
+			<xs:element name="numberOfLabels" type="xs:int" minOccurs="0" />
+			<xs:element name="dataSources" type="cit:CI_Citation_Type" minOccurs="0"
+				maxOccurs="unbounded" />
+			<xs:element name="extent" type="gex:EX_Extent_Type" minOccurs="0" />
+			<xs:element name="dataTime" type="xs:dateTime" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="lineage" type="mrl:LI_Lineage_Type" minOccurs="0"
+				maxOccurs="unbounded" />
+
+			<xs:element name="labels" type="AI_AbstractLabel" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="labeling" type="AI_Labeling" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="quality" type="DataQuality" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://standards.iso.org/19178/2/1.0/md_browseGraphic.json",
+    "title": "ISO 19178-2 JSON Schema — MD_BrowseGraphic",
+    "description": "ISO 19178-2 Training data markup language for artificial intelligence — Part 2: JSON encoding. Defines the JSON representation of MD_BrowseGraphic. Last updated: 2026-10-20. Copyright (c) ISO. All rights reserved.",
+    "type": "object",
+    "required": [
+        "fileName"
+    ],
+    "properties": {
+        "fileName": {
+            "type": "string"
+        },
+        "fileDescription": {
+            "type": "string"
+        },
+        "fileType": {
+            "type": "string"
+        },
+        "imageConstraints": {
+            "type": "array",
+            "items": {
+                "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_Constraints"
+            }
+        },
+        "linkage": {
+            "type": "array",
+            "items": {
+                "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#CI_OnlineResource"
+            }
+        }
+    }
+}

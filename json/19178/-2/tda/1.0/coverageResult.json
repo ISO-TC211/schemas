@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://standards.iso.org/19178/2/1.0/coverageResult.json",
+    "title": "ISO 19178-2 JSON Schema — CoverageResult",
+    "description": "ISO 19178-2 Training data markup language for artificial intelligence — Part 2: JSON encoding. Defines the JSON representation of CoverageResult. Last updated: 2026-10-20. Copyright (c) ISO. All rights reserved.",
+    "type": "object",
+    "required": [
+        "spatialRepresentationType",
+        "resultSpatialRepresentation"
+    ],
+    "properties": {
+        "spatialRepresentationType": {
+            "type": "string"
+        },
+        "resultSpatialRepresentation": {
+            "$ref": "https://standards.iso.org/19178/2/1.0/md_spatialRepresentation.json"
+        },
+        "resultContent": {
+            "type": "array",
+            "items": {
+                "$ref": "https://standards.iso.org/19178/2/1.0/md_rangeDimension.json"
+            }
+        },
+        "resultFormat": {
+            "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_Format"
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://standards.iso.org/19178/2/1.0/quantitativeResult.json",
+    "title": "ISO 19178-2 JSON Schema — QuantitativeResult",
+    "description": "ISO 19178-2 Training data markup language for artificial intelligence — Part 2: JSON encoding. Defines the JSON representation of QuantitativeResult. Last updated: 2026-10-20. Copyright (c) ISO. All rights reserved.",
+    "type": "object",
+    "required": [
+        "value"
+    ],
+    "properties": {
+        "value": {
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {
+                        "type": "string"
+                    },
+                    {
+                        "type": "object"
+                    },
+                    {
+                        "type": "number"
+                    },
+                    {
+                        "type": "array"
+                    },
+                    {
+                        "type": "boolean"
+                    },
+                    {
+                        "type": "null"
+                    }
+                ]
+            }
+        },
+        "valueUnit": {
+            "type": "string"
+        },
+        "valueRecordType": {
+            "type": "string"
+        }
+    }
+}

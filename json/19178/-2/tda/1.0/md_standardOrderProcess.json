@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://standards.iso.org/19178/2/1.0/md_standardOrderProcess.json",
+    "title": "ISO 19178-2 JSON Schema — MD_StandardOrderProcess",
+    "description": "ISO 19178-2 Training data markup language for artificial intelligence — Part 2: JSON encoding. Defines the JSON representation of MD_StandardOrderProcess. Last updated: 2026-10-20. Copyright (c) ISO. All rights reserved.",
+    "type": "object",
+    "properties": {
+        "fees": {
+            "type": "string"
+        },
+        "plannedAvailableDateTime": {
+            "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
+        },
+        "orderingInstructions": {
+            "type": "string"
+        },
+        "turnaround": {
+            "type": "string"
+        },
+        "orderOptionsType": {
+            "type": "string"
+        },
+        "orderOptions": {
+            "type": "string"
+        }
+    }
+}

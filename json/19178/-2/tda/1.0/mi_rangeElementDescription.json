@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://standards.iso.org/19178/2/1.0/mi_rangeElementDescription.json",
+    "title": "ISO 19178-2 JSON Schema — MI_RangeElementDescription",
+    "description": "ISO 19178-2 Training data markup language for artificial intelligence — Part 2: JSON encoding. Defines the JSON representation of MI_RangeElementDescription. Last updated: 2026-10-20. Copyright (c) ISO. All rights reserved.",
+    "type": "object",
+    "required": [
+        "name",
+        "definition",
+        "rangeElement"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "definition": {
+            "type": "string"
+        },
+        "rangeElement": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 1
+        }
+    }
+}

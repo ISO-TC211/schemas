@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://standards.iso.org/19178/2/1.0/md_gridSpatialRepresentation.json",
+    "title": "ISO 19178-2 JSON Schema — MD_GridSpatialRepresentation",
+    "description": "ISO 19178-2 Training data markup language for artificial intelligence — Part 2: JSON encoding. Defines the JSON representation of MD_GridSpatialRepresentation. Last updated: 2026-10-20. Copyright (c) ISO. All rights reserved.",
+    "type": "object",
+    "required": [
+        "numberOfDimensions",
+        "cellGeometry",
+        "transformationParameterAvailability"
+    ],
+    "properties": {
+        "scope": {
+            "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_Scope"
+        },
+        "numberOfDimensions": {
+            "type": "integer"
+        },
+        "axisDimensionProperties": {
+            "type": "array",
+            "items": {
+                "$ref": "https://standards.iso.org/19178/2/1.0/md_dimension.json"
+            }
+        },
+        "cellGeometry": {
+            "type": "string"
+        },
+        "transformationParameterAvailability": {
+            "type": "boolean"
+        }
+    }
+}

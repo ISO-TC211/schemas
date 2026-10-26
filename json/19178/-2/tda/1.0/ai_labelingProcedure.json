@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://standards.iso.org/19178/2/1.0/ai_labelingProcedure.json",
+    "title": "ISO 19178-2 JSON Schema — AI_LabelingProcedure",
+    "description": "ISO 19178-2 Training data markup language for artificial intelligence — Part 2: JSON encoding. Defines the JSON representation of AI_LabelingProcedure. Last updated: 2026-10-20. Copyright (c) ISO. All rights reserved.",
+    "type": "object",
+    "required": [
+        "type",
+        "id",
+        "methods"
+    ],
+    "properties": {
+        "type": {
+            "type": "string",
+            "enum": [
+                "AI_LabelingProcedure"
+            ]
+        },
+        "id": {
+            "type": "string"
+        },
+        "methods": {
+            "type": "array",
+            "items": {
+                "$ref": "https://standards.iso.org/19178/2/1.0/ai_labelingMethodCode.json"
+            },
+            "minItems": 1
+        },
+        "tools": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}

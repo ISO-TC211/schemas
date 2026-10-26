@@ -1,0 +1,179 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://standards.iso.org/19178/2/1.0/ai_trainingDataset.json",
+    "title": "ISO 19178-2 JSON Schema — AI_AbstractTrainingDataset",
+    "description": "ISO 19178-2 Training data markup language for artificial intelligence — Part 2: JSON encoding. Defines the common properties of a training dataset. Last updated: 2026-10-20. Copyright (c) ISO. All rights reserved.",
+    "type": "object",
+    "required": [
+        "id",
+        "name",
+        "description",
+        "license",
+        "tasks",
+        "data",
+        "type"
+    ],
+    "properties": {
+        "type": {
+            "type": "string"
+        },
+        "amountOfTrainingData": {
+            "type": "integer"
+        },
+        "classes": {
+            "type": "array",
+            "items": {
+                "$ref": "https://standards.iso.org/19178/2/1.0/namedValue.json"
+            }
+        },
+        "classificationScheme": {
+            "type": "string"
+        },
+        "createdTime": {
+            "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
+        },
+        "dataSources": {
+            "type": "array",
+            "items": {
+                "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#CI_Citation"
+            }
+        },
+        "description": {
+            "type": "string"
+        },
+        "doi": {
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "keywords": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "license": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "numberOfClasses": {
+            "type": "integer"
+        },
+        "providers": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "scope": {
+            "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_Scope"
+        },
+        "statisticsInfo": {
+            "type": "array",
+            "items": {
+                "$ref": "https://standards.iso.org/19178/2/1.0/namedValue.json"
+            }
+        },
+        "updatedTime": {
+            "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#DateOrDateTime"
+        },
+        "version": {
+            "type": "string"
+        },
+        "extent": {
+            "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#EX_Extent"
+        },
+        "referenceSystem": {
+            "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_ReferenceSystem"
+        },
+        "lineage": {
+            "type": "array",
+            "items": {
+                "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#LI_Lineage"
+            }
+        },
+        "labeling": {
+            "type": "array",
+            "items": {
+                "$ref": "https://standards.iso.org/19178/2/1.0/ai_labeling.json"
+            }
+        },
+        "metricsInLIT": {
+            "type": "array",
+            "items": {
+                "$ref": "https://standards.iso.org/19178/2/1.0/ai_metricsInLiterature.json"
+            }
+        },
+        "tasks": {
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {
+                        "allOf": [
+                            {
+                                "properties": {
+                                    "type": {
+                                        "const": "AI_AbstractTask"
+                                    }
+                                },
+                                "required": [
+                                    "type"
+                                ]
+                            },
+                            {
+                                "$ref": "https://standards.iso.org/19178/2/1.0/ai_task.json"
+                            }
+                        ]
+                    },
+                    {
+                        "$ref": "https://standards.iso.org/19178/2/1.0/ai_eoTask.json"
+                    }
+                ]
+            },
+            "minItems": 1
+        },
+        "quality": {
+            "type": "array",
+            "items": {
+                "$ref": "https://standards.iso.org/19178/2/1.0/dataQuality.json"
+            }
+        },
+        "changesets": {
+            "type": "array",
+            "items": {
+                "$ref": "https://standards.iso.org/19178/2/1.0/ai_tdChangeset.json"
+            }
+        },
+        "data": {
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {
+                        "allOf": [
+                            {
+                                "properties": {
+                                    "type": {
+                                        "const": "AI_AbstractTrainingData"
+                                    }
+                                },
+                                "required": [
+                                    "type"
+                                ]
+                            },
+                            {
+                                "$ref": "https://standards.iso.org/19178/2/1.0/ai_trainingData.json"
+                            }
+                        ]
+                    },
+                    {
+                        "$ref": "https://standards.iso.org/19178/2/1.0/ai_eoTrainingData.json"
+                    }
+                ]
+            },
+            "minItems": 1
+        }
+    }
+}
