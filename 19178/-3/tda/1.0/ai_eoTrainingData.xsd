@@ -1,31 +1,37 @@
 <?xml version='1.0' encoding='utf-8'?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns="http://www.opengis.net/trainingdml-ai/part3/1.0"
-  targetNamespace="http://www.opengis.net/trainingdml-ai/part3/1.0"
+  xmlns="https://schemas.isotc211.org/schemas/19178/-3/tda/1.0"
+  xmlns:tda="https://schemas.isotc211.org/schemas/19178/-3/tda/1.0"
+  targetNamespace="https://schemas.isotc211.org/schemas/19178/-3/tda/1.0"
   xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/1.3"
   elementFormDefault="qualified" version="1.0.1">
   <xs:annotation>
     <xs:documentation xml:lang="en">
-      This is a draft XML Schema for ISO 19178-3,
+      This is the XML Schema for ISO 19178-3:2026
       Training data markup language for artificial intelligence - Part 3: XML encoding.
-      This draft is provided for expert review.
-      This XML Schema Document includes Earth observation training data definitions.
-      Last updated: 2026-10-20
-      Copyright (c) [Year] ISO. All rights reserved.
 
+      This XML Schema Document includes Earth observation training data definitions.
+
+      Last updated: 2026-10-28
+
+      Copyright (c) 2026 ISO. All rights reserved.
+
+      This work is a derived work based on OGC Standard 24-007r1,
       OGC Training Data Markup Language for Artificial Intelligence
-      (TrainingDML-AI) is an OGC Standard. Copyright (c) 2025 Open Geospatial Consortium. To obtain
-      additional rights of use, visit https://www.ogc.org/legal/ .
+      (TrainingDML-AI) Part 3: XML Encoding Standard,
+      copyright (c) 2025 Open Geospatial Consortium (OGC). Used with permission.
+
+      To obtain additional rights of use from OGC, visit https://www.ogc.org/legal/
     </xs:documentation>
   </xs:annotation>
   
   <xs:import namespace="https://schemas.isotc211.org/19115/-1/mri/1.3"
     schemaLocation="https://schemas.isotc211.org/19115/-1/mri/1.3.0/identification.xsd" />
   <xs:include schemaLocation="./ai_trainingData.xsd" />
-  <xs:element name="AI_EOTrainingData" type="AI_EOTrainingData" />
+  <xs:element name="AI_EOTrainingData" type="tda:AI_EOTrainingData" />
   <xs:complexType name="AI_EOTrainingData">
     <xs:complexContent>
-      <xs:extension base="AI_AbstractTrainingData">
+      <xs:extension base="tda:AI_AbstractTrainingData">
         <xs:sequence>
           <xs:element name="spatialResolution" type="mri:MD_Resolution_Type" minOccurs="0" />
           <xs:element name="dataURL" type="xs:anyURI" maxOccurs="unbounded" />

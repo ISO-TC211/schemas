@@ -1,25 +1,31 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns="http://www.opengis.net/trainingdml-ai/part3/1.0" targetNamespace="http://www.opengis.net/trainingdml-ai/part3/1.0" xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns="https://schemas.isotc211.org/schemas/19178/-3/tda/1.0"
+  xmlns:tda="https://schemas.isotc211.org/schemas/19178/-3/tda/1.0" targetNamespace="https://schemas.isotc211.org/schemas/19178/-3/tda/1.0" xmlns:gml="http://www.opengis.net/gml/3.2"
 	elementFormDefault="qualified" version="1.0.1">
   <xs:annotation>
     <xs:documentation xml:lang="en">
-      This is a draft XML Schema for ISO 19178-3,
+      This is the XML Schema for ISO 19178-3:2026
       Training data markup language for artificial intelligence - Part 3: XML encoding.
-      This draft is provided for expert review.
-      This XML Schema Document includes abstract, object, pixel, and scene label definitions.
-      Last updated: 2026-10-20
-      Copyright (c) [Year] ISO. All rights reserved.
 
-      OGC Training Data Markup Language for Artificial Intelligence (TrainingDML-AI) is an OGC Standard.
-			Copyright (c) 2025 Open Geospatial Consortium.
-			To obtain additional rights of use, visit https://www.ogc.org/legal/ .
+      This XML Schema Document includes abstract, object, pixel, and scene label definitions.
+
+      Last updated: 2026-10-28
+
+      Copyright (c) 2026 ISO. All rights reserved.
+
+      This work is a derived work based on OGC Standard 24-007r1,
+      OGC Training Data Markup Language for Artificial Intelligence
+      (TrainingDML-AI) Part 3: XML Encoding Standard,
+      copyright (c) 2025 Open Geospatial Consortium (OGC). Used with permission.
+
+      To obtain additional rights of use from OGC, visit https://www.ogc.org/legal/
     </xs:documentation>
   </xs:annotation>
 	
 	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/feature.xsd"/>
 	<xs:include schemaLocation="./ai_imageFormatCode.xsd"/>
-	<xs:element name="AI_AbstractLabel" type="AI_AbstractLabel"/>
+	<xs:element name="AI_AbstractLabel" type="tda:AI_AbstractLabel"/>
 	<xs:complexType name="AI_AbstractLabelType" abstract="true">
 		<xs:sequence>
 			<xs:element name="type" type="xs:string" default="AI_AbstractLabel"/>
@@ -34,18 +40,18 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:element name="_Labels" type="AI_AbstractLabelType" abstract="true" />
+	<xs:element name="_Labels" type="tda:AI_AbstractLabelType" abstract="true" />
 	<xs:complexType name="AI_AbstractLabel">
 	  <xs:sequence>
-		  <xs:element ref="_Labels"/>
+		  <xs:element ref="tda:_Labels"/>
 	  </xs:sequence>
 	</xs:complexType>
-	<xs:element name="AI_ObjectLabel" type="AI_ObjectLabel" substitutionGroup="_Labels"/>
+	<xs:element name="AI_ObjectLabel" type="tda:AI_ObjectLabel" substitutionGroup="tda:_Labels"/>
 	<xs:complexType name="AI_ObjectLabel">
 		<xs:complexContent>
-			<xs:extension base="AI_AbstractLabelType">
+			<xs:extension base="tda:AI_AbstractLabelType">
 			<xs:sequence>
-				<xs:element name="object" type="Feature"/>
+				<xs:element name="object" type="tda:Feature"/>
 				<xs:element name="bboxType" type="xs:string" minOccurs="0"/>
 				<xs:element name="class" type="xs:string"/>
 				<xs:element name="dateTime" type="xs:dateTime" minOccurs="0"/>
@@ -62,21 +68,21 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="AI_PixelLabel" type="AI_PixelLabel"  substitutionGroup="_Labels"/>
+	<xs:element name="AI_PixelLabel" type="tda:AI_PixelLabel"  substitutionGroup="tda:_Labels"/>
 	<xs:complexType name="AI_PixelLabel" >
 		<xs:complexContent>
-			<xs:extension base="AI_AbstractLabelType">
+			<xs:extension base="tda:AI_AbstractLabelType">
 			<xs:sequence>
 				<xs:element name="imageURL" type="xs:anyURI" maxOccurs="unbounded"/>
-				<xs:element name="imageFormat" type="AI_ImageFormatCode" maxOccurs="unbounded"/>
+				<xs:element name="imageFormat" type="tda:AI_ImageFormatCode" maxOccurs="unbounded"/>
 			</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="AI_SceneLabel" type="AI_SceneLabel"  substitutionGroup="_Labels"/>
+	<xs:element name="AI_SceneLabel" type="tda:AI_SceneLabel"  substitutionGroup="tda:_Labels"/>
 	<xs:complexType name="AI_SceneLabel" >
 		<xs:complexContent>
-			<xs:extension base="AI_AbstractLabelType">
+			<xs:extension base="tda:AI_AbstractLabelType">
 			<xs:sequence>
 				<xs:element name="class" type="xs:string"/>
 			</xs:sequence>

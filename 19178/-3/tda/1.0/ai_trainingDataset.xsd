@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns="http://www.opengis.net/trainingdml-ai/part3/1.0"
-    targetNamespace="http://www.opengis.net/trainingdml-ai/part3/1.0"
+    xmlns="https://schemas.isotc211.org/schemas/19178/-3/tda/1.0"
+  xmlns:tda="https://schemas.isotc211.org/schemas/19178/-3/tda/1.0"
+    targetNamespace="https://schemas.isotc211.org/schemas/19178/-3/tda/1.0"
     xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
     xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
     xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
@@ -10,16 +11,21 @@
     elementFormDefault="qualified" version="1.0.1">
   <xs:annotation>
     <xs:documentation xml:lang="en">
-      This is a draft XML Schema for ISO 19178-3,
+      This is the XML Schema for ISO 19178-3:2026
       Training data markup language for artificial intelligence - Part 3: XML encoding.
-      This draft is provided for expert review.
-      This XML Schema Document includes abstract training dataset definitions.
-      Last updated: 2026-10-20
-      Copyright (c) [Year] ISO. All rights reserved.
 
+      This XML Schema Document includes abstract training dataset definitions.
+
+      Last updated: 2026-10-28
+
+      Copyright (c) 2026 ISO. All rights reserved.
+
+      This work is a derived work based on OGC Standard 24-007r1,
       OGC Training Data Markup Language for Artificial Intelligence
-            (TrainingDML-AI) is an OGC Standard. Copyright (c) 2025 Open Geospatial Consortium. To
-            obtain additional rights of use, visit https://www.ogc.org/legal/ .
+      (TrainingDML-AI) Part 3: XML Encoding Standard,
+      copyright (c) 2025 Open Geospatial Consortium (OGC). Used with permission.
+
+      To obtain additional rights of use from OGC, visit https://www.ogc.org/legal/
     </xs:documentation>
   </xs:annotation>
     
@@ -40,7 +46,7 @@
     <xs:include schemaLocation="./dataQuality.xsd" />
     <xs:include schemaLocation="./ai_trainingData.xsd" />
     <xs:include schemaLocation="./ai_tdChangeset.xsd" />
-    <xs:element name="AI_AbstractTrainingDataset" type="AI_AbstractTrainingDataset" />
+    <xs:element name="AI_AbstractTrainingDataset" type="tda:AI_AbstractTrainingDataset" />
     <xs:complexType name="AI_AbstractTrainingDataset" abstract="true">
         <xs:sequence>
             <xs:element name="id" type="xs:string" />
@@ -55,24 +61,24 @@
             <xs:element name="updatedTime" type="xs:dateTime" minOccurs="0" />
             <xs:element name="providers" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="keywords" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="metricsInLIT" type="AI_MetricsInLiterature" minOccurs="0"
+            <xs:element name="metricsInLIT" type="tda:AI_MetricsInLiterature" minOccurs="0"
                 maxOccurs="unbounded" />
-            <xs:element name="statisticsInfo" type="NamedValue" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="statisticsInfo" type="tda:NamedValue" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="dataSources" type="cit:CI_Citation_Type" minOccurs="0"
                 maxOccurs="unbounded" />
             <xs:element name="numberOfClasses" type="xs:int" minOccurs="0" />
             <xs:element name="classificationScheme" type="xs:string" minOccurs="0" />
-            <xs:element name="classes" type="NamedValue" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="classes" type="tda:NamedValue" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="extent" type="gex:EX_Extent_Type" minOccurs="0" />
             <xs:element name="referenceSystem" type="mrs:MD_ReferenceSystem_Type" minOccurs="0" />
             <xs:element name="lineage" type="mrl:LI_Lineage_Type" minOccurs="0"
                 maxOccurs="unbounded" />
 
-            <xs:element name="tasks" type="AI_AbstractTask" maxOccurs="unbounded" />
-            <xs:element name="labeling" type="AI_Labeling" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="quality" type="DataQuality" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="data" type="AI_AbstractTrainingData" maxOccurs="unbounded" />
-            <xs:element name="changesets" type="AI_TDChangeset" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="tasks" type="tda:AI_AbstractTask" maxOccurs="unbounded" />
+            <xs:element name="labeling" type="tda:AI_Labeling" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="quality" type="tda:DataQuality" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="data" type="tda:AI_AbstractTrainingData" maxOccurs="unbounded" />
+            <xs:element name="changesets" type="tda:AI_TDChangeset" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
     </xs:complexType>
 </xs:schema>
