@@ -1,0 +1,50 @@
+{
+    "$schema": "https://json-schema.org",
+    "$id": "https://standards.iso.org/19178/2/1.0/ai_entityLabel.json",
+    "title": "ISO 19178-2 JSON Schema",
+    "description": "ISO 19178-2:2026 Training data markup language for artificial intelligence — Part 2: JSON encoding. Defines an entity label derived from AI_AbstractLabel. Extension properties have multiplicity [0..*]; class also accepts the singleton string encoding used by existing SCIERC data. Last updated: 2026-10-28. Copyright (c) 2026 ISO. All rights reserved. This work is a derived work based on OGC Standard 24-006r4, copyright (c) 2026 Open Geospatial Consortium (OGC). Used with permission. To obtain additional rights of use from OGC, visit http://www.opengeospatial.org/legal/",
+    "allOf": [
+        {
+            "$ref": "https://standards.iso.org/19178/2/1.0/ai_label.json"
+        },
+        {
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "const": "AI_EntityLabel"
+                },
+                "class": {
+                    "description": "Zero or more entity class names [0..*], encoded as an array. A single string is also accepted as a singleton for compatibility with existing SCIERC data.",
+                    "oneOf": [
+                        {
+                            "type": "array",
+                            "minItems": 0,
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "objectSpan": {
+                    "description": "Zero or more entity spans [0..*]. Each span is a pair of zero-based inclusive token indices [start, end] in the flattened document token sequence.",
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                            "type": "integer",
+                            "minimum": 0
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

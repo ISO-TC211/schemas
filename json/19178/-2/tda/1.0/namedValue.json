@@ -1,8 +1,8 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$schema": "https://json-schema.org",
     "$id": "https://standards.iso.org/19178/2/1.0/namedValue.json",
-    "title": "ISO 19178-2 JSON Schema — NamedValue",
-    "description": "ISO 19178-2 Training data markup language for artificial intelligence — Part 2: JSON encoding. Defines the JSON representation of NamedValue. Last updated: 2026-10-20. Copyright (c) ISO. All rights reserved.",
+    "title": "ISO 19178-2 JSON Schema",
+    "description": "ISO 19178-2:2026 Training data markup language for artificial intelligence — Part 2: JSON encoding. Defines the JSON representation of NamedValue. Last updated: 2026-10-28. Copyright (c) 2026 ISO. All rights reserved. This work is a derived work based on OGC Standard 24-006r4, copyright (c) 2026 Open Geospatial Consortium (OGC). Used with permission. To obtain additional rights of use from OGC, visit http://www.opengeospatial.org/legal/",
     "type": "object",
     "required": [
         "key",

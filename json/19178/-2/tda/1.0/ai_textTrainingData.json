@@ -1,0 +1,33 @@
+{
+    "$schema": "https://json-schema.org",
+    "$id": "https://standards.iso.org/19178/2/1.0/ai_textTrainingData.json",
+    "title": "ISO 19178-2 JSON Schema",
+    "description": "ISO 19178-2:2026 Training data markup language for artificial intelligence — Part 2: JSON encoding. Defines a text training sample derived from AI_AbstractTrainingData. TextData retains the case and sentence/token structure used by SCIERC. Extension properties have multiplicity [0..*]. Last updated: 2026-10-28. Copyright (c) 2026 ISO. All rights reserved. This work is a derived work based on OGC Standard 24-006r4, copyright (c) 2026 Open Geospatial Consortium (OGC). Used with permission. To obtain additional rights of use from OGC, visit http://www.opengeospatial.org/legal/",
+    "allOf": [
+        {
+            "$ref": "https://standards.iso.org/19178/2/1.0/ai_trainingData.json"
+        },
+        {
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "const": "AI_TextTrainingData"
+                },
+                "TextData": {
+                    "description": "Zero or more tokenized sentences [0..*]. Each sentence contains zero or more string tokens; token order is preserved.",
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                        "type": "array",
+                        "minItems": 0,
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
